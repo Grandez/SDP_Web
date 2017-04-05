@@ -1,0 +1,259 @@
+\documentclass[twoside]{book}
+
+% Packages required by doxygen
+\usepackage{fixltx2e}
+\usepackage{calc}
+\usepackage{doxygen}
+\usepackage[export]{adjustbox} % also loads graphicx
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage{multirow}
+\PassOptionsToPackage{warn}{textcomp}
+\usepackage{textcomp}
+\usepackage[nointegrals]{wasysym}
+\usepackage[table]{xcolor}
+
+% NLS support packages
+\usepackage[spanish]{babel}
+% Font selection
+\usepackage[T1]{fontenc}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{amssymb}
+\usepackage{sectsty}
+\renewcommand{\familydefault}{\sfdefault}
+\allsectionsfont{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\renewcommand{\DoxyLabelFont}{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+
+% Page & text layout
+\usepackage{geometry}
+\geometry{%
+  a4paper,%
+  top=2.5cm,%
+  bottom=2.5cm,%
+  left=2.5cm,%
+  right=2.5cm%
+}
+\tolerance=750
+\hfuzz=15pt
+\hbadness=750
+\setlength{\emergencystretch}{15pt}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0.2cm}
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@parafont%
+  }%
+}
+\renewcommand{\subparagraph}{%
+  \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@subparafont%
+  }%
+}
+\makeatother
+
+% Headers & footers
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead[LE]{\fancyplain{}{\bfseries\thepage}}
+\fancyhead[CE]{\fancyplain{}{}}
+\fancyhead[RE]{\fancyplain{}{\bfseries\leftmark}}
+\fancyhead[LO]{\fancyplain{}{\bfseries\rightmark}}
+\fancyhead[CO]{\fancyplain{}{}}
+\fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
+\fancyfoot[LE]{\fancyplain{}{}}
+\fancyfoot[CE]{\fancyplain{}{}}
+\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Generado el Lunes, 24 de Agosto de 2015 12\+:52\+:21 para Proyecto de Fin de Carrera por Doxygen }}
+\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Generado el Lunes, 24 de Agosto de 2015 12\+:52\+:21 para Proyecto de Fin de Carrera por Doxygen }}
+\fancyfoot[CO]{\fancyplain{}{}}
+\fancyfoot[RO]{\fancyplain{}{}}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\chaptermark}[1]{%
+  \markboth{#1}{}%
+}
+\renewcommand{\sectionmark}[1]{%
+  \markright{\thesection\ #1}%
+}
+
+% Indices & bibliography
+\usepackage{natbib}
+\usepackage[titles]{tocloft}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{5}
+\makeindex
+
+% Hyperlinks (required, but should be loaded last)
+\usepackage{ifpdf}
+\ifpdf
+  \usepackage[pdftex,pagebackref=true]{hyperref}
+\else
+  \usepackage[ps2pdf,pagebackref=true]{hyperref}
+\fi
+\hypersetup{%
+  colorlinks=true,%
+  linkcolor=blue,%
+  citecolor=blue,%
+  unicode%
+}
+
+% Custom commands
+\newcommand{\clearemptydoublepage}{%
+  \newpage{\pagestyle{empty}\cleardoublepage}%
+}
+
+
+%===== C O N T E N T S =====
+
+\begin{document}
+
+% Titlepage & ToC
+\hypersetup{pageanchor=false,
+             bookmarks=true,
+             bookmarksnumbered=true,
+             pdfencoding=unicode
+            }
+\pagenumbering{roman}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}%
+{\Large Proyecto de Fin de Carrera \\[1ex]\large 2.\+0 }\\
+\vspace*{1cm}
+{\large Generado por Doxygen 1.8.10}\\
+\vspace*{0.5cm}
+{\small Lunes, 24 de Agosto de 2015 12:52:21}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true}
+
+%--- Begin generated contents ---
+\chapter{Índice de estructura de datos}
+\input{annotated}
+\chapter{Indice de archivos}
+\input{files}
+\chapter{Documentación de las estructuras de datos}
+\input{struct_m_d5___c_t_x}
+\input{struct_s_h_a256___c_t_x}
+\input{struct_s_h_a256_context}
+\input{struct_s_t___c_n_t}
+\input{struct_s_t___m_o_d}
+\input{struct_s_t___p_i_l_a}
+\input{struct_s_t___s_d_p}
+\input{struct_s_t___t_i_m_e_r}
+\input{struct_s_t___t_o_k_e_n}
+\input{structtag_m_q_a_i_r}
+\input{structtag_m_q_b_m_h_o}
+\input{structtag_m_q_b_o}
+\input{structtag_m_q_c_b_c}
+\input{structtag_m_q_c_b_d}
+\input{structtag_m_q_c_h_a_r_v}
+\input{structtag_m_q_c_i_h}
+\input{structtag_m_q_c_m_h_o}
+\input{structtag_m_q_c_n_o}
+\input{structtag_m_q_c_s_p}
+\input{structtag_m_q_c_t_l_o}
+\input{structtag_m_q_d_h}
+\input{structtag_m_q_d_l_h}
+\input{structtag_m_q_d_m_h_o}
+\input{structtag_m_q_d_m_p_o}
+\input{structtag_m_q_g_m_o}
+\input{structtag_m_q_i_i_h}
+\input{structtag_m_q_i_m_p_o}
+\input{structtag_m_q_m_d}
+\input{structtag_m_q_m_d1}
+\input{structtag_m_q_m_d2}
+\input{structtag_m_q_m_d_e}
+\input{structtag_m_q_m_h_b_o}
+\input{structtag_m_q_o_d}
+\input{structtag_m_q_o_r}
+\input{structtag_m_q_p_d}
+\input{structtag_m_q_p_m_o}
+\input{structtag_m_q_r_f_h}
+\input{structtag_m_q_r_f_h2}
+\input{structtag_m_q_r_m_h}
+\input{structtag_m_q_r_r}
+\input{structtag_m_q_s_c_o}
+\input{structtag_m_q_s_d}
+\input{structtag_m_q_s_m_p_o}
+\input{structtag_m_q_s_r_o}
+\input{structtag_m_q_s_t_s}
+\input{structtag_m_q_t_m}
+\input{structtag_m_q_t_m_c2}
+\input{structtag_m_q_w_i_h}
+\input{structtag_m_q_x_q_h}
+\chapter{Documentación de archivos}
+\input{amqsdp_8h}
+\input{cmqc_8h}
+\input{cob2c_8h}
+\input{global_8h}
+\input{jggsal_8h}
+\input{md5_8h}
+\input{md5__mit_8h}
+\input{messages_8h}
+\input{modulos_8h}
+\input{pila_8h}
+\input{pilaptr_8h}
+\input{salw32_8h}
+\input{sdpconfig_8h}
+\input{_s_d_p_t_r_a_p_8h}
+\input{_s_d_p_t_r_a_p_b_8h}
+\input{sdp_types_8h}
+\input{sha-private_8h}
+\input{sha256_8h}
+\input{sha256be_8h}
+\input{sha256le_8h}
+\input{timer_8h}
+\input{timerlnx_8h}
+\input{timerwin_8h}
+\input{token_8h}
+\input{trapcodes_8h}
+\input{_m_d5_8cpp}
+\input{_m_d5_2_m_d5_2stdafx_8cpp}
+\input{_s_d_p_t_r_a_p_b_2_s_d_p_t_r_a_p_b_2stdafx_8cpp}
+\input{_t_s_t_s_d_p_t_r_a_p_b_2tst_s_d_p_t_r_a_p_b_2stdafx_8cpp}
+\input{_m_d5_2_m_d5_2stdafx_8h}
+\input{_s_d_p_t_r_a_p_b_2_s_d_p_t_r_a_p_b_2stdafx_8h}
+\input{_t_s_t_s_d_p_t_r_a_p_b_2tst_s_d_p_t_r_a_p_b_2stdafx_8h}
+\input{_m_d5_2_m_d5_2targetver_8h}
+\input{_s_d_p_t_r_a_p_b_2_s_d_p_t_r_a_p_b_2targetver_8h}
+\input{_t_s_t_s_d_p_t_r_a_p_b_2tst_s_d_p_t_r_a_p_b_2targetver_8h}
+\input{dllmain_8cpp}
+\input{_s_d_p_t_r_a_p_b_8cpp}
+\input{amqsdp_8c}
+\input{cob2c_8c}
+\input{md5_8c}
+\input{messages_8c}
+\input{modulos_8c}
+\input{pila_8c}
+\input{salw32_8c}
+\input{_s_d_p_t_r_a_p_b_8c}
+\input{sha256_8c}
+\input{sha256be_8c}
+\input{sha256le_8c}
+\input{timer_lnx_8c}
+\input{timer_win_8c}
+\input{tst_s_d_p_t_r_a_p_b_8cpp}
+%--- End generated contents ---
+
+% Index
+\backmatter
+\newpage
+\phantomsection
+\clearemptydoublepage
+\addcontentsline{toc}{chapter}{Índice}
+\printindex
+
+\end{document}

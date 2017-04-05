@@ -1,0 +1,27 @@
+<div class="contenedor col-lg-12" data-ng-show="modulo.tiempos.length == 0">
+    <div id="noTiempos"  class="panel col-md-12" >
+        <h2>{{MSG.NO_EXE_SEL}}</h2>
+    </div>
+</div>
+<div class="contenedor col-lg-12" data-ng-show="modulo.tiempos.length != 0">
+    <div id="grfTiempos" class="panel col-md-10"></div>
+
+    <div id="tmpFiltro" class="panel col-md-2">
+        <div class="sdpBox col-md-12" style="margin-left: 0.5em">
+            <div class="sdpBoxTitle">&nbsp;{{MSG.PNL_ORDEN}}&nbsp;</div>
+            <label><input type="radio" ng-model="sdp.ordenSesiones" value=0 ng-change="reordenaSesiones($scope)">Fecha</label>
+            </br>
+            <label><input type="radio" ng-model="sdp.ordenSesiones" value=1 ng-change="reordenaSesiones($scope)">Entradas</label>
+            </br>
+            <label><input type="radio" ng-model="sdp.ordenSesiones" value=2 ng-change="reordenaSesiones($scope)">Salidas</label>
+        </div>
+        <button class="btn btn-default btn-lg btn-primary"
+                type="button"
+                style="margin-left: 0.5em"
+                data-ng-click="toggleArbol()">
+                {{showArbol == 1 ? MSG.BTN_COMPARAR : MSG.BTN_NOCOMPARAR}}
+        </button>
+    </div>
+
+</div>
+

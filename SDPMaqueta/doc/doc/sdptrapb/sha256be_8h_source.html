@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Proyecto de Fin de Carrera: Fichero Fuente include/sha256be.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Proyecto de Fin de Carrera
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Trapper SDPTRAPB</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Estructuras&#160;de&#160;Datos</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('sha256be_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">sha256be.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="sha256be_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/**************************** sha.h ****************************/</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/***************** See RFC 6234 for details. *******************/</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">   Copyright (c) 2011 IETF Trust and the persons identified as</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">   authors of the code.  All rights reserved.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">   Redistribution and use in source and binary forms, with or</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">   without modification, are permitted provided that the following</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">   conditions are met:</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">   - Redistributions of source code must retain the above</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">     copyright notice, this list of conditions and</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">     the following disclaimer.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">   - Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">     with the distribution.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">   - Neither the name of Internet Society, IETF or IETF Trust, nor</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">     the names of specific contributors, may be used to endorse or</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">     promote products derived from this software without specific</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">     prior written permission.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">   CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES,</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">   INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">   MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">   DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">   CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">   NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">   LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">   HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">   OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">   EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#ifndef _SHA256BE_H_</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#define _SHA256BE_H_</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#undef _EXT_</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#ifdef _SHA256BE_C_</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">  #define _EXT_</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="sha256be_8h.html#adfbc1051df776564281ac4220ba53a9e">   46</a></span>&#160;<span class="preprocessor">  #define _EXT_ extern</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment"> *  Description:</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"> *      This file implements the Secure Hash Algorithms</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"> *      as defined in the U.S. National Institute of Standards</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"> *      and Technology Federal Information Processing Standards</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"> *      Publication (FIPS PUB) 180-3 published in October 2008</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"> *      and formerly defined in its predecessors, FIPS PUB 180-1</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment"> *      and FIP PUB 180-2.</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment"> *      A combined document showing all algorithms is available at</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"> *              http://csrc.nist.gov/publications/fips/</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment"> *                     fips180-3/fips180-3_final.pdf</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"> *      The five hashes are defined in these sizes:</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"> *              SHA-1           20 byte / 160 bit</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"> *              SHA-224         28 byte / 224 bit</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"> *              SHA-256         32 byte / 256 bit</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"> *              SHA-384         48 byte / 384 bit</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"> *              SHA-512         64 byte / 512 bit</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"> *  Compilation Note:</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment"> *    These files may be compiled with two options:</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"> *        USE_32BIT_ONLY - use 32-bit arithmetic only, for systems</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment"> *                         without 64-bit integers</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment"> *        USE_MODIFIED_MACROS - use alternate form of the SHA_Ch()</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment"> *                         and SHA_Maj() macros that are equivalent</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment"> *                         and potentially faster on many systems</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"> * If you do not have the ISO standard stdint.h header file, then you</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"> * must typedef the following:</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment"> *    name              meaning</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"> *  uint64_t         unsigned 64-bit integer</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"> *  uint32_t         unsigned 32-bit integer</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment"> *  uint8_t          unsigned 8-bit integer (i.e., unsigned char)</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment"> *  int_least16_t    integer of &gt;= 16 bits</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment"> * See stdint-example.h</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#ifndef _SHA_enum_</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="sha256be_8h.html#a0155b221bb2170bc51a0a7aafc77d034">   93</a></span>&#160;<span class="preprocessor">#define _SHA_enum_</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment"> *  All SHA functions return one of these values.</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="sha256be_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba581d05c0e86b0ca3a00c6e24ea81b3fa">   98</a></span>&#160;    <a class="code" href="sha256be_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba581d05c0e86b0ca3a00c6e24ea81b3fa">shaSuccess</a> = 0,</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="sha256be_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae801efd0a808fb77467a5bdf8ad5ee70">   99</a></span>&#160;    <a class="code" href="sha256be_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae801efd0a808fb77467a5bdf8ad5ee70">shaNull</a>,            <span class="comment">/* Null pointer parameter */</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="sha256be_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba383493bb8927060f349e11f915cbb636">  100</a></span>&#160;    <a class="code" href="sha256be_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba383493bb8927060f349e11f915cbb636">shaInputTooLong</a>,    <span class="comment">/* input data too long */</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="sha256be_8h.html#a06fc87d81c62e9abb8790b6e5713c55baf95bed729cc00460585fb8d76f0c384d">  101</a></span>&#160;    <a class="code" href="sha256be_8h.html#a06fc87d81c62e9abb8790b6e5713c55baf95bed729cc00460585fb8d76f0c384d">shaStateError</a>,      <span class="comment">/* called Input after FinalBits or Result */</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="sha256be_8h.html#a06fc87d81c62e9abb8790b6e5713c55bab338542dac4fd7886c1bcbdfcb58db50">  102</a></span>&#160;    <a class="code" href="sha256be_8h.html#a06fc87d81c62e9abb8790b6e5713c55bab338542dac4fd7886c1bcbdfcb58db50">shaBadParam</a>         <span class="comment">/* passed a bad parameter */</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;};</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _SHA_enum_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment"> *  These constants hold size information for each of the SHA</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment"> *  hashing operations</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7afb2361a9dd54ccd78a2727ca4c47f792">  111</a></span>&#160;    <a class="code" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a394854ff4f1518f8a047ea885d7d4f60">SHA1_Message_Block_Size</a> = 64, <a class="code" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7afb2361a9dd54ccd78a2727ca4c47f792">SHA224_Message_Block_Size</a> = 64,</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a4c82bc2f6b15a4717d5cd8125ca31e03">  112</a></span>&#160;    <a class="code" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7af163926be4ff6a506a77f737295b6884">SHA256_Message_Block_Size</a> = 64, <a class="code" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a4c82bc2f6b15a4717d5cd8125ca31e03">SHA384_Message_Block_Size</a> = 128,</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7abba971af4f20bede9e0e62472e03e755">  113</a></span>&#160;    <a class="code" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7abba971af4f20bede9e0e62472e03e755">SHA512_Message_Block_Size</a> = 128,</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a082a5cabbe9ad6382a0606cd0a9c9c47">  114</a></span>&#160;    <a class="code" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a082a5cabbe9ad6382a0606cd0a9c9c47">USHA_Max_Message_Block_Size</a> = <a class="code" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7abba971af4f20bede9e0e62472e03e755">SHA512_Message_Block_Size</a>,</div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a3a8b66cf5d0bd8cc0e375a86a754ab28">  115</a></span>&#160;    <a class="code" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7ae6b440886f3edd40e1854e8bb5406835">SHA1HashSize</a> = 20, <a class="code" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a8f590c65273a356a4703c90cc1f1584f">SHA224HashSize</a> = 28, <a class="code" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a3a8b66cf5d0bd8cc0e375a86a754ab28">SHA256HashSize</a> = 32,</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a9c2b656e2a8c7b981612de8ddaf2f7be">  116</a></span>&#160;    <a class="code" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a1f2e28eb98ef458a8c54e32e9cbe3322">SHA384HashSize</a> = 48, <a class="code" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a9c2b656e2a8c7b981612de8ddaf2f7be">SHA512HashSize</a> = 64,</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7ab3907d0aaeac7086349a0c920c301145">  117</a></span>&#160;    <a class="code" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7ab3907d0aaeac7086349a0c920c301145">USHAMaxHashSize</a> = <a class="code" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a9c2b656e2a8c7b981612de8ddaf2f7be">SHA512HashSize</a>,</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a1d000b90626950f5ceae6353d4648e59">  119</a></span>&#160;    <a class="code" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a3cee11b61cecb950ddad59399caab2e3">SHA1HashSizeBits</a> = 160, <a class="code" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a1d000b90626950f5ceae6353d4648e59">SHA224HashSizeBits</a> = 224,</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a2bf86ed4893af8bff6df06951fcd65df">  120</a></span>&#160;    <a class="code" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7af8b7a9e3bd026320a4b418bc35ba21a7">SHA256HashSizeBits</a> = 256, <a class="code" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a2bf86ed4893af8bff6df06951fcd65df">SHA384HashSizeBits</a> = 384,</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7aeb9a635b6c798bf545965b19aef992fd">  121</a></span>&#160;    <a class="code" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a44595cd183133d2dca15294777f6b6eb">SHA512HashSizeBits</a> = 512, <a class="code" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7aeb9a635b6c798bf545965b19aef992fd">USHAMaxHashSizeBits</a> = <a class="code" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a44595cd183133d2dca15294777f6b6eb">SHA512HashSizeBits</a></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;};</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment"> *  This structure will hold context information for the SHA-256</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment"> *  hashing operation.</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="struct_s_h_a256_context.html">  129</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct_s_h_a256_context.html">SHA256Context</a> {</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="struct_s_h_a256_context.html#a5d9aeb28e3a5c2f444066c1c9685ac91">  130</a></span>&#160;    uint32_t <a class="code" href="struct_s_h_a256_context.html#a5d9aeb28e3a5c2f444066c1c9685ac91">Intermediate_Hash</a>[<a class="code" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a3a8b66cf5d0bd8cc0e375a86a754ab28">SHA256HashSize</a>/4]; <span class="comment">/* Message Digest */</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="struct_s_h_a256_context.html#a73f82f23d8acae6d67b249511811d654">  132</a></span>&#160;    uint32_t <a class="code" href="struct_s_h_a256_context.html#a73f82f23d8acae6d67b249511811d654">Length_High</a>;               <span class="comment">/* Message length in bits */</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="struct_s_h_a256_context.html#a188eef03938236a9a58c9382166aa002">  133</a></span>&#160;    uint32_t <a class="code" href="struct_s_h_a256_context.html#a188eef03938236a9a58c9382166aa002">Length_Low</a>;                <span class="comment">/* Message length in bits */</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="struct_s_h_a256_context.html#ad7bf01bcc0244679564a37f2c25ffc8c">  135</a></span>&#160;    int_least16_t <a class="code" href="struct_s_h_a256_context.html#ad7bf01bcc0244679564a37f2c25ffc8c">Message_Block_Index</a>;  <span class="comment">/* Message_Block array index */</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                                        <span class="comment">/* 512-bit message blocks */</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="struct_s_h_a256_context.html#a84b3f788f46b63afe4b879ed78e73051">  137</a></span>&#160;    uint8_t <a class="code" href="struct_s_h_a256_context.html#a84b3f788f46b63afe4b879ed78e73051">Message_Block</a>[<a class="code" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7af163926be4ff6a506a77f737295b6884">SHA256_Message_Block_Size</a>];</div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="struct_s_h_a256_context.html#aeb5a7a168bb512db53299543094702aa">  138</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_s_h_a256_context.html#aeb5a7a168bb512db53299543094702aa">Computed</a>;                   <span class="comment">/* Is the hash computed? */</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="struct_s_h_a256_context.html#a4bc60740c300c7929a676f997d9484a9">  139</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_s_h_a256_context.html#a4bc60740c300c7929a676f997d9484a9">Corrupted</a>;                  <span class="comment">/* Cumulative corruption code */</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;} <a class="code" href="sha256be_8h.html#a274920c71f772dca134f6cd3d65a60c7">SHA256Context</a>;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">/* SHA-256 */</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<a class="code" href="sha256be_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">int</span> <a class="code" href="sha256be_8h.html#a4759856371c1423123eed1f383183499">SHA256Reset</a>(<a class="code" href="struct_s_h_a256_context.html">SHA256Context</a> *);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<a class="code" href="sha256be_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">int</span> <a class="code" href="sha256be_8h.html#a1db210617bf20e738d86ea9b8e2bbd4a">SHA256Input</a>(<a class="code" href="struct_s_h_a256_context.html">SHA256Context</a> *, <span class="keyword">const</span> uint8_t *bytes,</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                       <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> bytecount);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<a class="code" href="sha256be_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">int</span> <a class="code" href="sha256be_8h.html#a30677d82cc26d20c312ed3af4e4ef807">SHA256FinalBits</a>(<a class="code" href="struct_s_h_a256_context.html">SHA256Context</a> *, uint8_t bits,</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                           <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> bit_count);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<a class="code" href="sha256be_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">int</span> <a class="code" href="sha256be_8h.html#a7f819a41a7046ec551d56f24fc88f00c">SHA256Result</a>(<a class="code" href="struct_s_h_a256_context.html">SHA256Context</a> *,</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                        uint8_t Message_Digest[<a class="code" href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a3a8b66cf5d0bd8cc0e375a86a754ab28">SHA256HashSize</a>]);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _SHA_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="sha256be_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba581d05c0e86b0ca3a00c6e24ea81b3fa"><div class="ttname"><a href="sha256be_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba581d05c0e86b0ca3a00c6e24ea81b3fa">shaSuccess</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00098">sha256be.h:98</a></div></div>
+<div class="ttc" id="struct_s_h_a256_context_html_a188eef03938236a9a58c9382166aa002"><div class="ttname"><a href="struct_s_h_a256_context.html#a188eef03938236a9a58c9382166aa002">SHA256Context::Length_Low</a></div><div class="ttdeci">uint32_t Length_Low</div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00133">sha256be.h:133</a></div></div>
+<div class="ttc" id="struct_s_h_a256_context_html_a4bc60740c300c7929a676f997d9484a9"><div class="ttname"><a href="struct_s_h_a256_context.html#a4bc60740c300c7929a676f997d9484a9">SHA256Context::Corrupted</a></div><div class="ttdeci">int Corrupted</div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00139">sha256be.h:139</a></div></div>
+<div class="ttc" id="sha256be_8h_html_adf764cbdea00d65edcd07bb9953ad2b7a082a5cabbe9ad6382a0606cd0a9c9c47"><div class="ttname"><a href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a082a5cabbe9ad6382a0606cd0a9c9c47">USHA_Max_Message_Block_Size</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00114">sha256be.h:114</a></div></div>
+<div class="ttc" id="sha256be_8h_html_adf764cbdea00d65edcd07bb9953ad2b7a394854ff4f1518f8a047ea885d7d4f60"><div class="ttname"><a href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a394854ff4f1518f8a047ea885d7d4f60">SHA1_Message_Block_Size</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00111">sha256be.h:111</a></div></div>
+<div class="ttc" id="sha256be_8h_html_adf764cbdea00d65edcd07bb9953ad2b7a1d000b90626950f5ceae6353d4648e59"><div class="ttname"><a href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a1d000b90626950f5ceae6353d4648e59">SHA224HashSizeBits</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00119">sha256be.h:119</a></div></div>
+<div class="ttc" id="sha256be_8h_html_adf764cbdea00d65edcd07bb9953ad2b7ab3907d0aaeac7086349a0c920c301145"><div class="ttname"><a href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7ab3907d0aaeac7086349a0c920c301145">USHAMaxHashSize</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00117">sha256be.h:117</a></div></div>
+<div class="ttc" id="sha256be_8h_html_adf764cbdea00d65edcd07bb9953ad2b7af8b7a9e3bd026320a4b418bc35ba21a7"><div class="ttname"><a href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7af8b7a9e3bd026320a4b418bc35ba21a7">SHA256HashSizeBits</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00120">sha256be.h:120</a></div></div>
+<div class="ttc" id="sha256be_8h_html_a1db210617bf20e738d86ea9b8e2bbd4a"><div class="ttname"><a href="sha256be_8h.html#a1db210617bf20e738d86ea9b8e2bbd4a">SHA256Input</a></div><div class="ttdeci">_EXT_ int SHA256Input(SHA256Context *, const uint8_t *bytes, unsigned int bytecount)</div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8c_source.html#l00144">sha256be.c:144</a></div></div>
+<div class="ttc" id="sha256be_8h_html_adf764cbdea00d65edcd07bb9953ad2b7a3a8b66cf5d0bd8cc0e375a86a754ab28"><div class="ttname"><a href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a3a8b66cf5d0bd8cc0e375a86a754ab28">SHA256HashSize</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00115">sha256be.h:115</a></div></div>
+<div class="ttc" id="sha256be_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba383493bb8927060f349e11f915cbb636"><div class="ttname"><a href="sha256be_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba383493bb8927060f349e11f915cbb636">shaInputTooLong</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00100">sha256be.h:100</a></div></div>
+<div class="ttc" id="sha256be_8h_html_a06fc87d81c62e9abb8790b6e5713c55bae801efd0a808fb77467a5bdf8ad5ee70"><div class="ttname"><a href="sha256be_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae801efd0a808fb77467a5bdf8ad5ee70">shaNull</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00099">sha256be.h:99</a></div></div>
+<div class="ttc" id="struct_s_h_a256_context_html_a5d9aeb28e3a5c2f444066c1c9685ac91"><div class="ttname"><a href="struct_s_h_a256_context.html#a5d9aeb28e3a5c2f444066c1c9685ac91">SHA256Context::Intermediate_Hash</a></div><div class="ttdeci">uint32_t Intermediate_Hash[SHA256HashSize/4]</div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00130">sha256be.h:130</a></div></div>
+<div class="ttc" id="sha256be_8h_html_a30677d82cc26d20c312ed3af4e4ef807"><div class="ttname"><a href="sha256be_8h.html#a30677d82cc26d20c312ed3af4e4ef807">SHA256FinalBits</a></div><div class="ttdeci">_EXT_ int SHA256FinalBits(SHA256Context *, uint8_t bits, unsigned int bit_count)</div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8c_source.html#l00185">sha256be.c:185</a></div></div>
+<div class="ttc" id="sha256be_8h_html_a4759856371c1423123eed1f383183499"><div class="ttname"><a href="sha256be_8h.html#a4759856371c1423123eed1f383183499">SHA256Reset</a></div><div class="ttdeci">_EXT_ int SHA256Reset(SHA256Context *)</div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8c_source.html#l00103">sha256be.c:103</a></div></div>
+<div class="ttc" id="sha256be_8h_html_adf764cbdea00d65edcd07bb9953ad2b7a4c82bc2f6b15a4717d5cd8125ca31e03"><div class="ttname"><a href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a4c82bc2f6b15a4717d5cd8125ca31e03">SHA384_Message_Block_Size</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00112">sha256be.h:112</a></div></div>
+<div class="ttc" id="sha256be_8h_html_a06fc87d81c62e9abb8790b6e5713c55baf95bed729cc00460585fb8d76f0c384d"><div class="ttname"><a href="sha256be_8h.html#a06fc87d81c62e9abb8790b6e5713c55baf95bed729cc00460585fb8d76f0c384d">shaStateError</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00101">sha256be.h:101</a></div></div>
+<div class="ttc" id="sha256be_8h_html_adf764cbdea00d65edcd07bb9953ad2b7abba971af4f20bede9e0e62472e03e755"><div class="ttname"><a href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7abba971af4f20bede9e0e62472e03e755">SHA512_Message_Block_Size</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00113">sha256be.h:113</a></div></div>
+<div class="ttc" id="sha256be_8h_html_a274920c71f772dca134f6cd3d65a60c7"><div class="ttname"><a href="sha256be_8h.html#a274920c71f772dca134f6cd3d65a60c7">SHA256Context</a></div><div class="ttdeci">struct SHA256Context SHA256Context</div></div>
+<div class="ttc" id="sha256be_8h_html_a7f819a41a7046ec551d56f24fc88f00c"><div class="ttname"><a href="sha256be_8h.html#a7f819a41a7046ec551d56f24fc88f00c">SHA256Result</a></div><div class="ttdeci">_EXT_ int SHA256Result(SHA256Context *, uint8_t Message_Digest[SHA256HashSize])</div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8c_source.html#l00231">sha256be.c:231</a></div></div>
+<div class="ttc" id="struct_s_h_a256_context_html_ad7bf01bcc0244679564a37f2c25ffc8c"><div class="ttname"><a href="struct_s_h_a256_context.html#ad7bf01bcc0244679564a37f2c25ffc8c">SHA256Context::Message_Block_Index</a></div><div class="ttdeci">int_least16_t Message_Block_Index</div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00135">sha256be.h:135</a></div></div>
+<div class="ttc" id="struct_s_h_a256_context_html_a84b3f788f46b63afe4b879ed78e73051"><div class="ttname"><a href="struct_s_h_a256_context.html#a84b3f788f46b63afe4b879ed78e73051">SHA256Context::Message_Block</a></div><div class="ttdeci">uint8_t Message_Block[SHA256_Message_Block_Size]</div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00137">sha256be.h:137</a></div></div>
+<div class="ttc" id="sha256be_8h_html_adf764cbdea00d65edcd07bb9953ad2b7ae6b440886f3edd40e1854e8bb5406835"><div class="ttname"><a href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7ae6b440886f3edd40e1854e8bb5406835">SHA1HashSize</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00115">sha256be.h:115</a></div></div>
+<div class="ttc" id="sha256be_8h_html_adf764cbdea00d65edcd07bb9953ad2b7af163926be4ff6a506a77f737295b6884"><div class="ttname"><a href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7af163926be4ff6a506a77f737295b6884">SHA256_Message_Block_Size</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00112">sha256be.h:112</a></div></div>
+<div class="ttc" id="sha256be_8h_html_a06fc87d81c62e9abb8790b6e5713c55bab338542dac4fd7886c1bcbdfcb58db50"><div class="ttname"><a href="sha256be_8h.html#a06fc87d81c62e9abb8790b6e5713c55bab338542dac4fd7886c1bcbdfcb58db50">shaBadParam</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00102">sha256be.h:102</a></div></div>
+<div class="ttc" id="sha256be_8h_html_adf764cbdea00d65edcd07bb9953ad2b7a44595cd183133d2dca15294777f6b6eb"><div class="ttname"><a href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a44595cd183133d2dca15294777f6b6eb">SHA512HashSizeBits</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00121">sha256be.h:121</a></div></div>
+<div class="ttc" id="sha256be_8h_html_adf764cbdea00d65edcd07bb9953ad2b7afb2361a9dd54ccd78a2727ca4c47f792"><div class="ttname"><a href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7afb2361a9dd54ccd78a2727ca4c47f792">SHA224_Message_Block_Size</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00111">sha256be.h:111</a></div></div>
+<div class="ttc" id="struct_s_h_a256_context_html_aeb5a7a168bb512db53299543094702aa"><div class="ttname"><a href="struct_s_h_a256_context.html#aeb5a7a168bb512db53299543094702aa">SHA256Context::Computed</a></div><div class="ttdeci">int Computed</div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00138">sha256be.h:138</a></div></div>
+<div class="ttc" id="sha256be_8h_html_adf764cbdea00d65edcd07bb9953ad2b7a8f590c65273a356a4703c90cc1f1584f"><div class="ttname"><a href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a8f590c65273a356a4703c90cc1f1584f">SHA224HashSize</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00115">sha256be.h:115</a></div></div>
+<div class="ttc" id="sha256be_8h_html_adf764cbdea00d65edcd07bb9953ad2b7a9c2b656e2a8c7b981612de8ddaf2f7be"><div class="ttname"><a href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a9c2b656e2a8c7b981612de8ddaf2f7be">SHA512HashSize</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00116">sha256be.h:116</a></div></div>
+<div class="ttc" id="sha256be_8h_html_adf764cbdea00d65edcd07bb9953ad2b7a3cee11b61cecb950ddad59399caab2e3"><div class="ttname"><a href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a3cee11b61cecb950ddad59399caab2e3">SHA1HashSizeBits</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00119">sha256be.h:119</a></div></div>
+<div class="ttc" id="sha256be_8h_html_adf764cbdea00d65edcd07bb9953ad2b7a1f2e28eb98ef458a8c54e32e9cbe3322"><div class="ttname"><a href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a1f2e28eb98ef458a8c54e32e9cbe3322">SHA384HashSize</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00116">sha256be.h:116</a></div></div>
+<div class="ttc" id="sha256be_8h_html_adfbc1051df776564281ac4220ba53a9e"><div class="ttname"><a href="sha256be_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a></div><div class="ttdeci">#define _EXT_</div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00046">sha256be.h:46</a></div></div>
+<div class="ttc" id="sha256be_8h_html_adf764cbdea00d65edcd07bb9953ad2b7aeb9a635b6c798bf545965b19aef992fd"><div class="ttname"><a href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7aeb9a635b6c798bf545965b19aef992fd">USHAMaxHashSizeBits</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00121">sha256be.h:121</a></div></div>
+<div class="ttc" id="struct_s_h_a256_context_html_a73f82f23d8acae6d67b249511811d654"><div class="ttname"><a href="struct_s_h_a256_context.html#a73f82f23d8acae6d67b249511811d654">SHA256Context::Length_High</a></div><div class="ttdeci">uint32_t Length_High</div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00132">sha256be.h:132</a></div></div>
+<div class="ttc" id="sha256be_8h_html_adf764cbdea00d65edcd07bb9953ad2b7a2bf86ed4893af8bff6df06951fcd65df"><div class="ttname"><a href="sha256be_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a2bf86ed4893af8bff6df06951fcd65df">SHA384HashSizeBits</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00120">sha256be.h:120</a></div></div>
+<div class="ttc" id="struct_s_h_a256_context_html"><div class="ttname"><a href="struct_s_h_a256_context.html">SHA256Context</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00129">sha256be.h:129</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="sha256be_8h.html">sha256be.h</a></li>
+    <li class="footer">Generado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<map id="include/SDPTRAP.h" name="include/SDPTRAP.h">
+<area shape="rect" id="node2" href="$amqsdp_8c.html" title="Cliente Websphere MQSeries. " alt="" coords="5,80,107,107"/>
+<area shape="rect" id="node3" href="$messages_8c.html" title="Gestiona la generacion de los diferentes mensajes que se deben enviar. " alt="" coords="131,80,245,107"/>
+<area shape="rect" id="node4" href="$modulos_8c.html" title="Mantiene la lista de modulos activos con sus ID. " alt="" coords="269,80,373,107"/>
+<area shape="rect" id="node5" href="$_s_d_p_t_r_a_p_b_8c.html" title="SDPTRAPB DLL de captura de datos de ejecucion del programa COBOL Utiliza un unico punto de entrada: S..." alt="" coords="397,80,523,107"/>
+</map>

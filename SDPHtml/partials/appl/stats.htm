@@ -1,0 +1,32 @@
+<div class="panel-heading">{{MSG.TITLE_STATS}}</div>
+<div class="panel-body">
+
+    <table class="table table-hover">
+        <tr class="listado" data-ng-show="vista ==  1">
+            <td class="col-md-7">{{MSG.APPL}}</td>
+            <td class="col-md-5 text-right tbLinea">{{stats.aplicaciones | number}}</td>
+        </tr>
+        <tr class="listado">
+            <td class="col-md-7 tbLinea ">{{MSG.MODS}}</td>
+            <td class="col-md-5 tbLinea text-right">{{stats.modulos | number}}</td>
+        </tr>
+
+        <tr class="listado">
+            <td class="col-md-7 tbLinea ">{{MSG.MONITOR}}</td>
+            <td class="col-md-5 tbLinea text-right">{{stats.activos | number}}</td>
+        </tr>
+
+        <tr class="listado">
+            <td class="col-md-7 tbLinea ">{{MSG.PER_VAR}}</td>
+            <td class="col-md-5 tbLinea text-right ">{{stats.variacion | number}}</td>
+        </tr>
+
+        <tr class="listado">
+            <td class="col-md-7">{{MSG.PER_EXE}}</td>
+            <td class="col-md-5 text-right">{{stats.sesiones | number}}</td>
+        </tr>
+
+    </table>
+
+</div>
+</div>

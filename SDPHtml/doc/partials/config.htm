@@ -1,0 +1,57 @@
+<div class="pull-left" style="margin: 1em;">
+    <a href="http://localhost:8080/sdp/admin/config/get" download="SDP.properties"
+            class="btn btn-default btn-md btn-primary">Descargar</a>
+</div>
+<div class="pull-right" style="margin: 1em;">
+    <a href="http://localhost:8080/sdp/admin/config/get" download="SDP.properties"
+       class="btn btn-default btn-md btn-primary">Descargar</a>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="container" >
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th class="col-md-1 panel-heading clickable" data-ng-click="cambiaOrden(0)">
+                        <span class="glyphicon glyphicon-triangle-top"    data-ng-show="adm.orden[0] ==  1"></span>
+                        <span class="glyphicon glyphicon-triangle-bottom" data-ng-show="adm.orden[0] == -1"></span>
+                        Grupo
+                    </th>
+                    <th class="col-md-2 panel-heading clickable" data-ng-click="cambiaOrden(1)">
+                        <span class="glyphicon glyphicon-triangle-top"    data-ng-show="adm.orden[1] ==  1"></span>
+                        <span class="glyphicon glyphicon-triangle-bottom" data-ng-show="adm.orden[1] == -1"></span>
+                        Clave
+                    </th>
+                    <th class="col-md-2 panel-heading clickable" data-ng-click="cambiaOrden(2)">
+                        <span class="glyphicon glyphicon-triangle-top"    data-ng-show="adm.orden[2] ==  1"></span>
+                        <span class="glyphicon glyphicon-triangle-bottom" data-ng-show="adm.orden[2] == -1"></span>
+                        Valor
+                    </th>
+                    <th class="col-xs-1 panel-heading">
+                    </th>
+
+                </tr>
+
+                </thead>
+                <tbody>
+                <tr class="listado" data-ng-repeat="fila in cfg">
+                    <td class="clickable" data-ng-click="winUser(fila.uid)">{{adm.cfgLabels[fila.grupo]}}</td>
+                    <td class="clickable" data-ng-click="winUser(fila.uid)">{{fila.clave}}</td>
+                    <td class="clickable" data-ng-click="winUser(fila.uid)">
+                        <input type="text" style="width: 100%;" data-ng-class="sdpRight: fila.tipo == 2" data-ng-model="fila.valor" data-ng-change="fila.chg = 1">
+                    </td>
+                    <td data-ng-show="fila.chg == 1" style="padding-left: 1em;">
+                        <button data-ng-click="cfgSave(fila.id)"
+                                class="btn btn-default btn-xs btn-primary" type="button">Modificar</button>
+                    </td>
+
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Proyecto de Fin de Carrera: Fichero Fuente src/sha256le.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Proyecto de Fin de Carrera
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Trapper SDPTRAPB</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Estructuras&#160;de&#160;Datos</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('sha256le_8c_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">sha256le.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="sha256le_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">* Filename:   sha256.c</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">* Author:     Brad Conte (brad AT bradconte.com)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">* Copyright:</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">* Disclaimer: This code is presented &quot;as is&quot; without any guarantees.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">* Details:    Implementation of the SHA-256 hashing algorithm.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">              SHA-256 is one of the three algorithms in the SHA2</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">              specification. The others, SHA-384 and SHA-512, are not</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">              offered in this implementation.</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">              Algorithm specification can be found here:</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">               * http://csrc.nist.gov/publications/fips/fips180-2/fips180-2withchangenotice.pdf</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">              This implementation uses little endian byte order.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">*********************************************************************/</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">/*************************** HEADER FILES ***************************/</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="sha256le_8c.html#ab613c67bd01e9661d17f7e0ddc04c1f0">   16</a></span>&#160;<span class="preprocessor">#define _SHA256LE_C_</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;memory.h&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="sha256le_8h.html">sha256le.h</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">/****************************** MACROS ******************************/</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="sha256le_8c.html#aa554f63b1bff923e477da72974a8ca9a">   23</a></span>&#160;<span class="preprocessor">#define ROTLEFT(a,b) (((a) &lt;&lt; (b)) | ((a) &gt;&gt; (32-(b))))</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="sha256le_8c.html#a3f24e956e9863a34a6f07be0b06b093a">   24</a></span>&#160;<span class="preprocessor">#define ROTRIGHT(a,b) (((a) &gt;&gt; (b)) | ((a) &lt;&lt; (32-(b))))</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="sha256le_8c.html#a0ed6c9c714485592a8c317a8ad91c83b">   26</a></span>&#160;<span class="preprocessor">#define CH(x,y,z) (((x) &amp; (y)) ^ (~(x) &amp; (z)))</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="sha256le_8c.html#ae2f6c7a0b4fdb15387259356b16854c9">   27</a></span>&#160;<span class="preprocessor">#define MAJ(x,y,z) (((x) &amp; (y)) ^ ((x) &amp; (z)) ^ ((y) &amp; (z)))</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="sha256le_8c.html#ac0ae633634f25ba56304236388a04290">   28</a></span>&#160;<span class="preprocessor">#define EP0(x) (ROTRIGHT(x,2) ^ ROTRIGHT(x,13) ^ ROTRIGHT(x,22))</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="sha256le_8c.html#a0438f3b09eae5f53b75f5d76f9724880">   29</a></span>&#160;<span class="preprocessor">#define EP1(x) (ROTRIGHT(x,6) ^ ROTRIGHT(x,11) ^ ROTRIGHT(x,25))</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="sha256le_8c.html#a2f0da11cf6577ba2dd4aea7685d0268e">   30</a></span>&#160;<span class="preprocessor">#define SIG0(x) (ROTRIGHT(x,7) ^ ROTRIGHT(x,18) ^ ((x) &gt;&gt; 3))</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="sha256le_8c.html#a865de5131d1e990ca62d66220a527d2c">   31</a></span>&#160;<span class="preprocessor">#define SIG1(x) (ROTRIGHT(x,17) ^ ROTRIGHT(x,19) ^ ((x) &gt;&gt; 10))</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">/**************************** VARIABLES *****************************/</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="sha256le_8h.html#ad2baa11c897721ff6f14b452b547f9bc">WORD</a> k[64] = {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">/*********************** FUNCTION DEFINITIONS ***********************/</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="sha256le_8c.html#af0b9aa0b4a0569dadbce029bb4c534b0">   46</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="sha256le_8c.html#af0b9aa0b4a0569dadbce029bb4c534b0">sha256_transform</a>(<a class="code" href="struct_s_h_a256___c_t_x.html">SHA256_CTX</a> *ctx, <span class="keyword">const</span> <a class="code" href="sha256le_8h.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a> data[])</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="sha256le_8h.html#ad2baa11c897721ff6f14b452b547f9bc">WORD</a> a, b, c, d, e, f, g, h, i, j, t1, t2, m[64];</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">for</span> (i = 0, j = 0; i &lt; 16; ++i, j += 4)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        m[i] = (data[j] &lt;&lt; 24) | (data[j + 1] &lt;&lt; 16) | (data[j + 2] &lt;&lt; 8) | (data[j + 3]);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">for</span> ( ; i &lt; 64; ++i)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        m[i] = <a class="code" href="sha256le_8c.html#a865de5131d1e990ca62d66220a527d2c">SIG1</a>(m[i - 2]) + m[i - 7] + <a class="code" href="sha256le_8c.html#a2f0da11cf6577ba2dd4aea7685d0268e">SIG0</a>(m[i - 15]) + m[i - 16];</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    a = ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[0];</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    b = ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[1];</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    c = ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[2];</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    d = ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[3];</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    e = ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[4];</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    f = ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[5];</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    g = ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[6];</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    h = ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[7];</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; 64; ++i) {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        t1 = h + <a class="code" href="sha256le_8c.html#a0438f3b09eae5f53b75f5d76f9724880">EP1</a>(e) + <a class="code" href="sha256le_8c.html#a0ed6c9c714485592a8c317a8ad91c83b">CH</a>(e,f,g) + k[i] + m[i];</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        t2 = <a class="code" href="sha256le_8c.html#ac0ae633634f25ba56304236388a04290">EP0</a>(a) + <a class="code" href="sha256le_8c.html#ae2f6c7a0b4fdb15387259356b16854c9">MAJ</a>(a,b,c);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        h = g;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        g = f;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        f = e;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        e = d + t1;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        d = c;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        c = b;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        b = a;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        a = t1 + t2;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[0] += a;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[1] += b;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[2] += c;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[3] += d;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[4] += e;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[5] += f;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[6] += g;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[7] += h;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="sha256le_8c.html#ade6fde6ef9ea137449d72891931c77ef">   87</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="sha256le_8c.html#ade6fde6ef9ea137449d72891931c77ef">sha256_init</a>(<a class="code" href="struct_s_h_a256___c_t_x.html">SHA256_CTX</a> *ctx)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#ab94b143853886bff721a273cc7242171">datalen</a> = 0;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a9ef8c3daffe76c802a308b323158fc79">bitlen</a> = 0;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[0] = 0x6a09e667;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[1] = 0xbb67ae85;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[2] = 0x3c6ef372;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[3] = 0xa54ff53a;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[4] = 0x510e527f;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[5] = 0x9b05688c;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[6] = 0x1f83d9ab;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[7] = 0x5be0cd19;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="sha256le_8c.html#ac98a25de627f4cded12b7312dee1ffa0">  101</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="sha256le_8c.html#ac98a25de627f4cded12b7312dee1ffa0">sha256_update</a>(<a class="code" href="struct_s_h_a256___c_t_x.html">SHA256_CTX</a> *ctx, <span class="keyword">const</span> <a class="code" href="sha256le_8h.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a> data[], <span class="keywordtype">size_t</span> len)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;{</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="sha256le_8h.html#ad2baa11c897721ff6f14b452b547f9bc">WORD</a> i;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; len; ++i) {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a8a17db6f40bbecb79cbb64aaeeaeba5e">data</a>[ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#ab94b143853886bff721a273cc7242171">datalen</a>] = data[i];</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#ab94b143853886bff721a273cc7242171">datalen</a>++;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">if</span> (ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#ab94b143853886bff721a273cc7242171">datalen</a> == 64) {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <a class="code" href="sha256le_8c.html#af0b9aa0b4a0569dadbce029bb4c534b0">sha256_transform</a>(ctx, ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a8a17db6f40bbecb79cbb64aaeeaeba5e">data</a>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a9ef8c3daffe76c802a308b323158fc79">bitlen</a> += 512;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#ab94b143853886bff721a273cc7242171">datalen</a> = 0;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="sha256le_8c.html#a8f4b55bd1e49af6e4620bc9ba9549397">  116</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="sha256le_8c.html#a8f4b55bd1e49af6e4620bc9ba9549397">sha256_final</a>(<a class="code" href="struct_s_h_a256___c_t_x.html">SHA256_CTX</a> *ctx, <a class="code" href="sha256le_8h.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a> hash[])</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;{</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="sha256le_8h.html#ad2baa11c897721ff6f14b452b547f9bc">WORD</a> i;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    i = ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#ab94b143853886bff721a273cc7242171">datalen</a>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="comment">// Pad whatever data is left in the buffer.</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">if</span> (ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#ab94b143853886bff721a273cc7242171">datalen</a> &lt; 56) {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a8a17db6f40bbecb79cbb64aaeeaeba5e">data</a>[i++] = 0x80;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordflow">while</span> (i &lt; 56)</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a8a17db6f40bbecb79cbb64aaeeaeba5e">data</a>[i++] = 0x00;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a8a17db6f40bbecb79cbb64aaeeaeba5e">data</a>[i++] = 0x80;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordflow">while</span> (i &lt; 64)</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a8a17db6f40bbecb79cbb64aaeeaeba5e">data</a>[i++] = 0x00;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="code" href="sha256le_8c.html#af0b9aa0b4a0569dadbce029bb4c534b0">sha256_transform</a>(ctx, ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a8a17db6f40bbecb79cbb64aaeeaeba5e">data</a>);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        memset(ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a8a17db6f40bbecb79cbb64aaeeaeba5e">data</a>, 0, 56);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="comment">// Append to the padding the total message&#39;s length in bits and transform.</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a9ef8c3daffe76c802a308b323158fc79">bitlen</a> += ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#ab94b143853886bff721a273cc7242171">datalen</a> * 8;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a8a17db6f40bbecb79cbb64aaeeaeba5e">data</a>[63] = ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a9ef8c3daffe76c802a308b323158fc79">bitlen</a>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a8a17db6f40bbecb79cbb64aaeeaeba5e">data</a>[62] = ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a9ef8c3daffe76c802a308b323158fc79">bitlen</a> &gt;&gt; 8;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a8a17db6f40bbecb79cbb64aaeeaeba5e">data</a>[61] = ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a9ef8c3daffe76c802a308b323158fc79">bitlen</a> &gt;&gt; 16;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a8a17db6f40bbecb79cbb64aaeeaeba5e">data</a>[60] = ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a9ef8c3daffe76c802a308b323158fc79">bitlen</a> &gt;&gt; 24;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a8a17db6f40bbecb79cbb64aaeeaeba5e">data</a>[59] = ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a9ef8c3daffe76c802a308b323158fc79">bitlen</a> &gt;&gt; 32;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a8a17db6f40bbecb79cbb64aaeeaeba5e">data</a>[58] = ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a9ef8c3daffe76c802a308b323158fc79">bitlen</a> &gt;&gt; 40;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a8a17db6f40bbecb79cbb64aaeeaeba5e">data</a>[57] = ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a9ef8c3daffe76c802a308b323158fc79">bitlen</a> &gt;&gt; 48;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a8a17db6f40bbecb79cbb64aaeeaeba5e">data</a>[56] = ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a9ef8c3daffe76c802a308b323158fc79">bitlen</a> &gt;&gt; 56;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <a class="code" href="sha256le_8c.html#af0b9aa0b4a0569dadbce029bb4c534b0">sha256_transform</a>(ctx, ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a8a17db6f40bbecb79cbb64aaeeaeba5e">data</a>);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="comment">// Since this implementation uses little endian byte ordering and SHA uses big endian,</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="comment">// reverse all the bytes when copying the final state to the output hash.</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; 4; ++i) {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        hash[i]      = (ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[0] &gt;&gt; (24 - i * 8)) &amp; 0x000000ff;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        hash[i + 4]  = (ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[1] &gt;&gt; (24 - i * 8)) &amp; 0x000000ff;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        hash[i + 8]  = (ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[2] &gt;&gt; (24 - i * 8)) &amp; 0x000000ff;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        hash[i + 12] = (ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[3] &gt;&gt; (24 - i * 8)) &amp; 0x000000ff;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        hash[i + 16] = (ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[4] &gt;&gt; (24 - i * 8)) &amp; 0x000000ff;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        hash[i + 20] = (ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[5] &gt;&gt; (24 - i * 8)) &amp; 0x000000ff;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        hash[i + 24] = (ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[6] &gt;&gt; (24 - i * 8)) &amp; 0x000000ff;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        hash[i + 28] = (ctx-&gt;<a class="code" href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">state</a>[7] &gt;&gt; (24 - i * 8)) &amp; 0x000000ff;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;}</div>
+<div class="ttc" id="struct_s_h_a256___c_t_x_html_ab94b143853886bff721a273cc7242171"><div class="ttname"><a href="struct_s_h_a256___c_t_x.html#ab94b143853886bff721a273cc7242171">SHA256_CTX::datalen</a></div><div class="ttdeci">WORD datalen</div><div class="ttdef"><b>Definition:</b> <a href="sha256le_8h_source.html#l00024">sha256le.h:24</a></div></div>
+<div class="ttc" id="struct_s_h_a256___c_t_x_html"><div class="ttname"><a href="struct_s_h_a256___c_t_x.html">SHA256_CTX</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256le_8h_source.html#l00022">sha256le.h:22</a></div></div>
+<div class="ttc" id="sha256le_8c_html_ac98a25de627f4cded12b7312dee1ffa0"><div class="ttname"><a href="sha256le_8c.html#ac98a25de627f4cded12b7312dee1ffa0">sha256_update</a></div><div class="ttdeci">void sha256_update(SHA256_CTX *ctx, const BYTE data[], size_t len)</div><div class="ttdef"><b>Definition:</b> <a href="sha256le_8c_source.html#l00101">sha256le.c:101</a></div></div>
+<div class="ttc" id="sha256le_8c_html_a2f0da11cf6577ba2dd4aea7685d0268e"><div class="ttname"><a href="sha256le_8c.html#a2f0da11cf6577ba2dd4aea7685d0268e">SIG0</a></div><div class="ttdeci">#define SIG0(x)</div><div class="ttdef"><b>Definition:</b> <a href="sha256le_8c_source.html#l00030">sha256le.c:30</a></div></div>
+<div class="ttc" id="sha256le_8c_html_ae2f6c7a0b4fdb15387259356b16854c9"><div class="ttname"><a href="sha256le_8c.html#ae2f6c7a0b4fdb15387259356b16854c9">MAJ</a></div><div class="ttdeci">#define MAJ(x, y, z)</div><div class="ttdef"><b>Definition:</b> <a href="sha256le_8c_source.html#l00027">sha256le.c:27</a></div></div>
+<div class="ttc" id="sha256le_8c_html_af0b9aa0b4a0569dadbce029bb4c534b0"><div class="ttname"><a href="sha256le_8c.html#af0b9aa0b4a0569dadbce029bb4c534b0">sha256_transform</a></div><div class="ttdeci">void sha256_transform(SHA256_CTX *ctx, const BYTE data[])</div><div class="ttdef"><b>Definition:</b> <a href="sha256le_8c_source.html#l00046">sha256le.c:46</a></div></div>
+<div class="ttc" id="struct_s_h_a256___c_t_x_html_a8a17db6f40bbecb79cbb64aaeeaeba5e"><div class="ttname"><a href="struct_s_h_a256___c_t_x.html#a8a17db6f40bbecb79cbb64aaeeaeba5e">SHA256_CTX::data</a></div><div class="ttdeci">BYTE data[64]</div><div class="ttdef"><b>Definition:</b> <a href="sha256le_8h_source.html#l00023">sha256le.h:23</a></div></div>
+<div class="ttc" id="sha256le_8c_html_a8f4b55bd1e49af6e4620bc9ba9549397"><div class="ttname"><a href="sha256le_8c.html#a8f4b55bd1e49af6e4620bc9ba9549397">sha256_final</a></div><div class="ttdeci">void sha256_final(SHA256_CTX *ctx, BYTE hash[])</div><div class="ttdef"><b>Definition:</b> <a href="sha256le_8c_source.html#l00116">sha256le.c:116</a></div></div>
+<div class="ttc" id="sha256le_8c_html_ade6fde6ef9ea137449d72891931c77ef"><div class="ttname"><a href="sha256le_8c.html#ade6fde6ef9ea137449d72891931c77ef">sha256_init</a></div><div class="ttdeci">void sha256_init(SHA256_CTX *ctx)</div><div class="ttdef"><b>Definition:</b> <a href="sha256le_8c_source.html#l00087">sha256le.c:87</a></div></div>
+<div class="ttc" id="struct_s_h_a256___c_t_x_html_a6cde2322d13788f1d9740d1cae5d58a0"><div class="ttname"><a href="struct_s_h_a256___c_t_x.html#a6cde2322d13788f1d9740d1cae5d58a0">SHA256_CTX::state</a></div><div class="ttdeci">WORD state[8]</div><div class="ttdef"><b>Definition:</b> <a href="sha256le_8h_source.html#l00026">sha256le.h:26</a></div></div>
+<div class="ttc" id="sha256le_8c_html_a0ed6c9c714485592a8c317a8ad91c83b"><div class="ttname"><a href="sha256le_8c.html#a0ed6c9c714485592a8c317a8ad91c83b">CH</a></div><div class="ttdeci">#define CH(x, y, z)</div><div class="ttdef"><b>Definition:</b> <a href="sha256le_8c_source.html#l00026">sha256le.c:26</a></div></div>
+<div class="ttc" id="sha256le_8h_html_a4ae1dab0fb4b072a66584546209e7d58"><div class="ttname"><a href="sha256le_8h.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a></div><div class="ttdeci">unsigned char BYTE</div><div class="ttdef"><b>Definition:</b> <a href="sha256le_8h_source.html#l00019">sha256le.h:19</a></div></div>
+<div class="ttc" id="sha256le_8h_html_ad2baa11c897721ff6f14b452b547f9bc"><div class="ttname"><a href="sha256le_8h.html#ad2baa11c897721ff6f14b452b547f9bc">WORD</a></div><div class="ttdeci">unsigned int WORD</div><div class="ttdef"><b>Definition:</b> <a href="sha256le_8h_source.html#l00020">sha256le.h:20</a></div></div>
+<div class="ttc" id="sha256le_8c_html_a0438f3b09eae5f53b75f5d76f9724880"><div class="ttname"><a href="sha256le_8c.html#a0438f3b09eae5f53b75f5d76f9724880">EP1</a></div><div class="ttdeci">#define EP1(x)</div><div class="ttdef"><b>Definition:</b> <a href="sha256le_8c_source.html#l00029">sha256le.c:29</a></div></div>
+<div class="ttc" id="sha256le_8h_html"><div class="ttname"><a href="sha256le_8h.html">sha256le.h</a></div></div>
+<div class="ttc" id="sha256le_8c_html_a865de5131d1e990ca62d66220a527d2c"><div class="ttname"><a href="sha256le_8c.html#a865de5131d1e990ca62d66220a527d2c">SIG1</a></div><div class="ttdeci">#define SIG1(x)</div><div class="ttdef"><b>Definition:</b> <a href="sha256le_8c_source.html#l00031">sha256le.c:31</a></div></div>
+<div class="ttc" id="sha256le_8c_html_ac0ae633634f25ba56304236388a04290"><div class="ttname"><a href="sha256le_8c.html#ac0ae633634f25ba56304236388a04290">EP0</a></div><div class="ttdeci">#define EP0(x)</div><div class="ttdef"><b>Definition:</b> <a href="sha256le_8c_source.html#l00028">sha256le.c:28</a></div></div>
+<div class="ttc" id="struct_s_h_a256___c_t_x_html_a9ef8c3daffe76c802a308b323158fc79"><div class="ttname"><a href="struct_s_h_a256___c_t_x.html#a9ef8c3daffe76c802a308b323158fc79">SHA256_CTX::bitlen</a></div><div class="ttdeci">unsigned long long bitlen</div><div class="ttdef"><b>Definition:</b> <a href="sha256le_8h_source.html#l00025">sha256le.h:25</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="sha256le_8c.html">sha256le.c</a></li>
+    <li class="footer">Generado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

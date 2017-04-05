@@ -1,0 +1,11 @@
+digraph "MQDisconnect"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="MQDisconnect",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="MQClose",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$amqsdp_8c.html#ae93fe1e642e758fbbe9c892ab8033aa4"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="MQDisconn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$amqsdp_8c.html#acc12f0f1458385b0f5c5a6234f817205"];
+}

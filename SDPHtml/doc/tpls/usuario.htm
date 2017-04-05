@@ -1,0 +1,66 @@
+<div class="panel-primary">
+<div class="panel-heading" data-ng-show="user.nuevo == true" >Alta de Usuario</div>
+<div class="panel-heading" data-ng-show="user.nuevo == false">Modificacion de Usuario</div>
+<div class="panel-body" >
+
+<form name="frmUser" novalidate>
+    <table>
+       <tr>
+           <td class="sdpForm" data-ng-class="{sdpFormErr: user.tbErr[0] != 0}">Usuario:  </td>
+           <td class="sdpForm" colspan="3" data-ng-class="{sdpFormErr: user.tbErr[0] != 0}">
+               <input type="text" style="width: 100%;" ng-model="user.uid">
+           </td>
+           <td class="sdpFormErr" data-ng-show="user.tbErr[0] != 0">*</td>
+       </tr>
+       <tr>
+           <td class="sdpForm" width="30%" data-ng-class="{sdpFormErr: user.tbErr[1] != 0}">Nombre:   </td>
+           <td class="sdpForm" width="65%" colspan="3" data-ng-class="{sdpFormErr: user.tbErr[1] != 0}">
+               <input type="text" style="width: 100%;" ng-model="user.nombre">
+           </td>
+           <td class="sdpFormErr" data-ng-show="user.tbErr[1] != 0">*</td>
+       </tr>
+       <tr>
+           <td class="sdpForm" width="30%" data-ng-class="{sdpFormErr: user.tbErr[2] != 0}">Apellidos:</td>
+           <td class="sdpForm" width="65%" colspan="3" data-ng-class="{sdpFormErr: user.tbErr[2] != 0}">
+               <input type="text" style="width: 100%;" ng-model="user.apellido">
+           </td>
+           <td class="sdpFormErr" data-ng-show="user.tbErr[2] != 0">*</td>
+       </tr>
+       <tr>
+           <td class="sdpForm" width="30%" data-ng-class="{sdpFormErr: user.tbErr[3] != 0}">Correo:   </td>
+           <td class="sdpForm" colspan="3" data-ng-class="{sdpFormErr: user.tbErr[3] != 0}">
+               <input type="text" style="width: 100%;" ng-model="user.correo">
+           </td>
+           <td class="sdpFormErr" data-ng-show="user.tbErr[3] != 0">*</td>
+       </tr>
+       <tr>
+           <td class="sdpForm" width="30%" data-ng-class="{sdpFormErr: user.tbErr[4] != 0}">Rol:      </td>
+           <td class="sdpForm" width="65%" colspan="3" data-ng-class="{sdpFormErr: user.tbErr[4] != 0}">
+               <select ng-init="user.rol = 0" ng-model="user.rol" convert-to-number>
+                       <option value="0">Usuario</option>
+                       <option value="1">Administrador</option>
+
+              </select>
+           </td>
+           <td class="sdpFormErr" data-ng-show="user.tbErr[4] != 0">*</td>
+       </tr>
+        <tr>
+            <td colspan="5"><span class="sdpFormErr">{{ user.msgErr }}</span></br></td>
+        </tr>
+        <tr>
+            <td colsapn="1"> </td>
+            <td colspan="4">
+                <button data-ng-show="user.nuevo == true" type="button" class="btn btn-md btn-primary" data-ng-click="submitUser()">Alta</button>
+                <button data-ng-show="user.nuevo == false" type="button" class="btn btn-md btn-primary" data-ng-click="submitUser()">Modificar</button>
+                <button data-ng-show="user.nuevo == false" type="button" class="btn btn-md btn-info" data-ng-click="submitPwd()">Reset Pwd</button>
+                <button data-ng-show="user.nuevo == false" type="button" class="btn btn-md btn-danger" data-ng-click="deleteUser()">Baja</button>
+                <button type="button" class="btn btn-md btn-warning" data-ng-click="hUser.close()">Cancelar</button>
+
+            </td>
+        </tr>
+
+    </table>
+
+</form>
+    </div>
+</div>

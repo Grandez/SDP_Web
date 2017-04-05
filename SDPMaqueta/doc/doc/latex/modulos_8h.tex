@@ -1,0 +1,280 @@
+\hypertarget{modulos_8h}{}\section{Referencia del Archivo include/modulos.h}
+\label{modulos_8h}\index{include/modulos.\+h@{include/modulos.\+h}}
+
+
+Funciones de gestion de los modulos activos en una sesion.  
+
+
+Gráfico de los archivos que directa o indirectamente incluyen a este archivo\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modulos_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\textquotesingle{}defines\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{modulos_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+}~extern
+\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} \hyperlink{sdp_types_8h_a54a4473e20ff51d4dcb4158acf8a5979}{M\+O\+D} $\ast$ \hyperlink{modulos_8h_a3f474d9711cf3cb795b314712a2e3ac0}{add\+Module} (\hyperlink{sdp_types_8h_a8ba8f2a87560d14f1152da6646649dfd}{S\+D\+P} $\ast$\hyperlink{global_8h_a44585a47047393e8faf0eef343b3b39d}{sdp}, int mode)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{modulos_8h_ab51f00229afd22e9e548484293344b2a}{add\+Call} (\hyperlink{sdp_types_8h_a94c0315eea22344f1e853cc7c90592bb}{T\+I\+M\+E\+R} $\ast$modulo)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{modulos_8h_a30a68f431bcf69251c926de4907ae96d}{add\+Parrafo} (\hyperlink{sdp_types_8h_a94c0315eea22344f1e853cc7c90592bb}{T\+I\+M\+E\+R} $\ast$timer)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{modulos_8h_af07af364ecc66b66d207e0b107c76200}{add\+Coverage} (char $\ast$mask)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{modulos_8h_a9e7d1c20f4e8e68f9034be766dccf5b2}{add\+Uso\+Parrafos} (unsigned long $\ast$tb\+Parrs, int largo)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{modulos_8h_a5ce834a5648027699b47d9e9403e051e}{add\+Files} (unsigned long $\ast$tb\+Files, int largo)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{modulos_8h_a1e01cf23f52295f32d523f2eb9c581b3}{reset\+Module} (void)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{modulos_8h_a1276112603f3ff77e47304a5f64de662}{set\+Current\+Module} (\hyperlink{sdp_types_8h_a54a4473e20ff51d4dcb4158acf8a5979}{M\+O\+D} $\ast$mod)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} \hyperlink{sdp_types_8h_a54a4473e20ff51d4dcb4158acf8a5979}{M\+O\+D} $\ast$ \hyperlink{modulos_8h_ad78a749464520b4648848c4fdfa84dcd}{get\+Current\+Module} (void)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} \hyperlink{sdp_types_8h_a54a4473e20ff51d4dcb4158acf8a5979}{M\+O\+D} $\ast$ \hyperlink{modulos_8h_af35a13350900ec8ccab35265c62f7a49}{get\+First\+Module} (void)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} \hyperlink{sdp_types_8h_a54a4473e20ff51d4dcb4158acf8a5979}{M\+O\+D} $\ast$ \hyperlink{modulos_8h_ae601bfcdf47e0167fc21c8be2abeb81b}{get\+Next\+Module} (void)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{modulos_8h_a230d4f404c68f3232804e3ad1d7eff7a}{clean\+Modules} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Funciones de gestion de los modulos activos en una sesion. 
+
+\begin{DoxyAuthor}{Autor}
+\+: Javier Gonzalez 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+\+: 01/03/15 
+\end{DoxyDate}
+\begin{DoxyVersion}{Versión}
+\+: 2.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\hypertarget{modulos_8h_adfbc1051df776564281ac4220ba53a9e}{}\index{modulos.\+h@{modulos.\+h}!\+\_\+\+E\+X\+T\+\_\+@{\+\_\+\+E\+X\+T\+\_\+}}
+\index{\+\_\+\+E\+X\+T\+\_\+@{\+\_\+\+E\+X\+T\+\_\+}!modulos.\+h@{modulos.\+h}}
+\subsubsection[{\+\_\+\+E\+X\+T\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+E\+X\+T\+\_\+~extern}\label{modulos_8h_adfbc1051df776564281ac4220ba53a9e}
+
+
+Definición en la línea 21 del archivo modulos.\+h.
+
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{modulos_8h_ab51f00229afd22e9e548484293344b2a}{}\index{modulos.\+h@{modulos.\+h}!add\+Call@{add\+Call}}
+\index{add\+Call@{add\+Call}!modulos.\+h@{modulos.\+h}}
+\subsubsection[{add\+Call(\+T\+I\+M\+E\+R $\ast$modulo)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void add\+Call (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+E\+R} $\ast$}]{timer}
+\end{DoxyParamCaption}
+)}\label{modulos_8h_ab51f00229afd22e9e548484293344b2a}
+Inserta una nueva llamada desde ese modulo a otro 
+\begin{DoxyParams}{Parámetros}
+{\em modulo} & Puntero al T\+I\+M\+E\+R obtenido al entrar en la rutina\\
+\hline
+\end{DoxyParams}
+Inserta una nueva llamada desde ese modulo a otro 
+\begin{DoxyParams}{Parámetros}
+{\em timer} & Puntero al T\+I\+M\+E\+R obtenido al entrar en la rutina \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 76 del archivo modulos.\+c.
+
+\hypertarget{modulos_8h_af07af364ecc66b66d207e0b107c76200}{}\index{modulos.\+h@{modulos.\+h}!add\+Coverage@{add\+Coverage}}
+\index{add\+Coverage@{add\+Coverage}!modulos.\+h@{modulos.\+h}}
+\subsubsection[{add\+Coverage(char $\ast$mask)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void add\+Coverage (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{mask}
+\end{DoxyParamCaption}
+)}\label{modulos_8h_af07af364ecc66b66d207e0b107c76200}
+Inserta la informacion relativa a la cobertura de codigo 
+\begin{DoxyParams}{Parámetros}
+{\em mask} & Datos de la cobertura \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 94 del archivo modulos.\+c.
+
+\hypertarget{modulos_8h_a5ce834a5648027699b47d9e9403e051e}{}\index{modulos.\+h@{modulos.\+h}!add\+Files@{add\+Files}}
+\index{add\+Files@{add\+Files}!modulos.\+h@{modulos.\+h}}
+\subsubsection[{add\+Files(unsigned long $\ast$tb\+Files, int largo)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void add\+Files (
+\begin{DoxyParamCaption}
+\item[{unsigned long $\ast$}]{tb\+Files, }
+\item[{int}]{largo}
+\end{DoxyParamCaption}
+)}\label{modulos_8h_a5ce834a5648027699b47d9e9403e051e}
+Inserta la informacion relativa al uso de los ficheros del modulo 
+\begin{DoxyParams}{Parámetros}
+{\em tb\+Files} & Tabla de contadores de uso de los ficheros \\
+\hline
+{\em largo} & Numero de ficheros (Elementos en tb\+Files) \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 121 del archivo modulos.\+c.
+
+\hypertarget{modulos_8h_a3f474d9711cf3cb795b314712a2e3ac0}{}\index{modulos.\+h@{modulos.\+h}!add\+Module@{add\+Module}}
+\index{add\+Module@{add\+Module}!modulos.\+h@{modulos.\+h}}
+\subsubsection[{add\+Module(\+S\+D\+P $\ast$sdp, int mode)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} {\bf M\+O\+D}$\ast$ add\+Module (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+P} $\ast$}]{sdp, }
+\item[{int}]{mode}
+\end{DoxyParamCaption}
+)}\label{modulos_8h_a3f474d9711cf3cb795b314712a2e3ac0}
+Inserta un modulo en la lista de modulos 
+\begin{DoxyParams}{Parámetros}
+{\em sdp} & Puntero a la estructura S\+D\+P actual \\
+\hline
+{\em mode} & Indicador de disponibilidad de la estructura S\+D\+P \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 53 del archivo modulos.\+c.
+
+\hypertarget{modulos_8h_a30a68f431bcf69251c926de4907ae96d}{}\index{modulos.\+h@{modulos.\+h}!add\+Parrafo@{add\+Parrafo}}
+\index{add\+Parrafo@{add\+Parrafo}!modulos.\+h@{modulos.\+h}}
+\subsubsection[{add\+Parrafo(\+T\+I\+M\+E\+R $\ast$timer)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void add\+Parrafo (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+E\+R} $\ast$}]{timer}
+\end{DoxyParamCaption}
+)}\label{modulos_8h_a30a68f431bcf69251c926de4907ae96d}
+Inserta una nueva llamada a un parrafo en ese modulo 
+\begin{DoxyParams}{Parámetros}
+{\em modulo} & Puntero al T\+I\+M\+E\+R obtenido al entrar en la rutina\\
+\hline
+\end{DoxyParams}
+Inserta una nueva llamada a un parrafo en ese modulo 
+\begin{DoxyParams}{Parámetros}
+{\em timer} & Puntero al T\+I\+M\+E\+R obtenido al entrar en la rutina \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 86 del archivo modulos.\+c.
+
+\hypertarget{modulos_8h_a9e7d1c20f4e8e68f9034be766dccf5b2}{}\index{modulos.\+h@{modulos.\+h}!add\+Uso\+Parrafos@{add\+Uso\+Parrafos}}
+\index{add\+Uso\+Parrafos@{add\+Uso\+Parrafos}!modulos.\+h@{modulos.\+h}}
+\subsubsection[{add\+Uso\+Parrafos(unsigned long $\ast$tb\+Parrs, int largo)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void add\+Uso\+Parrafos (
+\begin{DoxyParamCaption}
+\item[{unsigned long $\ast$}]{tb\+Parrs, }
+\item[{int}]{largo}
+\end{DoxyParamCaption}
+)}\label{modulos_8h_a9e7d1c20f4e8e68f9034be766dccf5b2}
+Inserta la informacion relativa al uso global de los parraos del modulo 
+\begin{DoxyParams}{Parámetros}
+{\em tb\+Parras} & Tabla de contadores de uso de parrafos \\
+\hline
+{\em largo} & Longitud de la tabla\\
+\hline
+\end{DoxyParams}
+Inserta la informacion relativa al uso global de los parraos del modulo 
+\begin{DoxyParams}{Parámetros}
+{\em tb\+Parrs} & Tabla de contadores de uso de parrafos \\
+\hline
+{\em largo} & Longitud de la tabla \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 106 del archivo modulos.\+c.
+
+\hypertarget{modulos_8h_a230d4f404c68f3232804e3ad1d7eff7a}{}\index{modulos.\+h@{modulos.\+h}!clean\+Modules@{clean\+Modules}}
+\index{clean\+Modules@{clean\+Modules}!modulos.\+h@{modulos.\+h}}
+\subsubsection[{clean\+Modules(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void clean\+Modules (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{modulos_8h_a230d4f404c68f3232804e3ad1d7eff7a}
+Realiza los procesos de limpieza de memoria 
+
+Definición en la línea 189 del archivo modulos.\+c.
+
+\hypertarget{modulos_8h_ad78a749464520b4648848c4fdfa84dcd}{}\index{modulos.\+h@{modulos.\+h}!get\+Current\+Module@{get\+Current\+Module}}
+\index{get\+Current\+Module@{get\+Current\+Module}!modulos.\+h@{modulos.\+h}}
+\subsubsection[{get\+Current\+Module(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} {\bf M\+O\+D}$\ast$ get\+Current\+Module (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{modulos_8h_ad78a749464520b4648848c4fdfa84dcd}
+Devuelve el modulo activo \begin{DoxyReturn}{Devuelve}
+Puntero al modulo activo 
+\end{DoxyReturn}
+
+
+Definición en la línea 164 del archivo modulos.\+c.
+
+\hypertarget{modulos_8h_af35a13350900ec8ccab35265c62f7a49}{}\index{modulos.\+h@{modulos.\+h}!get\+First\+Module@{get\+First\+Module}}
+\index{get\+First\+Module@{get\+First\+Module}!modulos.\+h@{modulos.\+h}}
+\subsubsection[{get\+First\+Module(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} {\bf M\+O\+D}$\ast$ get\+First\+Module (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{modulos_8h_af35a13350900ec8ccab35265c62f7a49}
+Devuelve el primer modulo de la lista de modulos ejecutados \begin{DoxyReturn}{Devuelve}
+Puntero al primer modulo 
+\end{DoxyReturn}
+
+
+Definición en la línea 172 del archivo modulos.\+c.
+
+\hypertarget{modulos_8h_ae601bfcdf47e0167fc21c8be2abeb81b}{}\index{modulos.\+h@{modulos.\+h}!get\+Next\+Module@{get\+Next\+Module}}
+\index{get\+Next\+Module@{get\+Next\+Module}!modulos.\+h@{modulos.\+h}}
+\subsubsection[{get\+Next\+Module(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} {\bf M\+O\+D}$\ast$ get\+Next\+Module (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{modulos_8h_ae601bfcdf47e0167fc21c8be2abeb81b}
+Devuelve el siguiente modulo de la lista de modulos ejecutados \begin{DoxyReturn}{Devuelve}
+Puntero al siguiente modulo 
+\end{DoxyReturn}
+
+
+Definición en la línea 181 del archivo modulos.\+c.
+
+\hypertarget{modulos_8h_a1e01cf23f52295f32d523f2eb9c581b3}{}\index{modulos.\+h@{modulos.\+h}!reset\+Module@{reset\+Module}}
+\index{reset\+Module@{reset\+Module}!modulos.\+h@{modulos.\+h}}
+\subsubsection[{reset\+Module(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void reset\+Module (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{modulos_8h_a1e01cf23f52295f32d523f2eb9c581b3}
+Inicializa el modulo Se utiliza cuando el modo de proceso es M\+O\+D\+E\+\_\+\+M\+O\+D\+U\+L\+E 
+
+Definición en la línea 140 del archivo modulos.\+c.
+
+\hypertarget{modulos_8h_a1276112603f3ff77e47304a5f64de662}{}\index{modulos.\+h@{modulos.\+h}!set\+Current\+Module@{set\+Current\+Module}}
+\index{set\+Current\+Module@{set\+Current\+Module}!modulos.\+h@{modulos.\+h}}
+\subsubsection[{set\+Current\+Module(\+M\+O\+D $\ast$mod)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void set\+Current\+Module (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+O\+D} $\ast$}]{mod}
+\end{DoxyParamCaption}
+)}\label{modulos_8h_a1276112603f3ff77e47304a5f64de662}
+Establece el modulo pasado como parametro como modulo acivo 
+\begin{DoxyParams}{Parámetros}
+{\em puntero} & a M\+O\+D con el modulo activo\\
+\hline
+\end{DoxyParams}
+Establece el modulo pasado como parametro como modulo activo Se sabe que existe 
+\begin{DoxyParams}{Parámetros}
+{\em mod} & puntero a M\+O\+D con el modulo activo \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 156 del archivo modulos.\+c.
+

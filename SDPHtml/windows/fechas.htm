@@ -1,0 +1,40 @@
+<div  data-ng-controller="sdpFechas">
+<div class="form-group">
+    <div class="radio">
+        <label>
+            <input type="radio" name="rangoFechas" value="1" data-ng-model="rango">
+            Dia
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="rangoFechas" value="2" data-ng-model="rango">
+            Semana
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="rangoFechas" value="3" data-ng-model="rango">
+            Mes
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="rangoFechas" value="4" data-ng-model="rango">
+            Trimestre
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="rangoFechas" value="5" data-ng-model="rango">
+            Todo
+        </label>
+    </div>
+
+    <br>
+    <input type="text" id="idR"   data-ng-model="rango"/>
+</div>
+    <button ng-click="rango = rango + 1">Increment    </button>
+    <button class="btn btn-success" ng-click="procesar()">Increment    </button>
+    <button class="btn btn-success" data-ng-click="$scope.procesar()">
+</div>

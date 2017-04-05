@@ -1,0 +1,82 @@
+<div ui-layout="{flow : 'row'}" >
+    <div ui-layout-container size="55%" >
+        <div class="contenedor col-md-4">
+            <div class="panel panel-primary"
+                 ng-include="'partials/appl/alertas.htm'">
+            </div>
+            <div class="panel panel-primary"
+                 ng-include="'partials/appl/stats.htm'">
+            </div>
+        </div>
+        <div class="contenedor col-md-8">
+            <div class="panel panel-primary col-md-12 pull-right">
+                <div class="panel-heading clickable"
+                     data-ng-click="panelGrafico(2, 'grfAppl')"
+                     title={{MSG.WIN_MAX}}
+                     data-toggle="tooltip"
+                     data-placement="top" tooltip>
+                     {{MSG.GRF_EXECS}}
+                </div>
+                <div class="panel-body" style="height:190px;">
+                    <div id="grfAppl"
+                         data-ng-show="grfApplData ==  1"
+                         style="height:185px;">
+                    </div>
+                    <div id="grfApplNoData"
+                         data-ng-show="grfApplData ==  0"
+                         data-ng-include="'partials/appl/noEjecucion.htm'">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="contenedor col-md-8">
+            <div class="panel panel-primary col-md-12">
+                <div class="panel-heading clickable"
+                     title={{MSG.WIN_MAX}}
+                     data-toggle="tooltip"
+                     data-placement="top" tooltip>
+                    {{MSG.GRF_MOD_EXEC}}
+                </div>
+                <div class="panel-body" style="height:225px;">
+                    <div id="grfEjecuciones"
+                         data-ng-show="grfApplData ==  1"
+                         style="height:225px;">
+                    </div>
+                    <div id="grfEjeNoData"
+                         data-ng-show="grfApplData ==  0"
+                         data-ng-include="'partials/appl/noEjecucion.htm'">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor col-md-4 pull-right" >
+            <div class="panel panel-primary col-md-12">
+                <div class="panel-heading clickable"
+                     title={{MSG.WIN_MAX}}
+                     data-toggle="tooltip"
+                     data-placement="top" tooltip>
+                     {{MSG.GRF_TIMES}}
+                </div>
+                <div class="panel-body" style="height:225px;">
+                    <div id="grfElapsed"
+                         data-ng-show="grfApplData ==  1"
+                         style="height:225px;">
+                    </div>
+                    <div id="grfElapsedNoData"
+                         data-ng-show="grfApplData ==  0"
+                         data-ng-include="'partials/appl/noEjecucion.htm'">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div ui-layout-container>
+        <div class="contenedor" style="overflow: auto;">
+            <div class="panel panel-primary"
+                 ng-include="'partials/appl/logging.htm'">
+            </div>
+        </div>
+    </div>
+</div>

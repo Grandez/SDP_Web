@@ -1,0 +1,11 @@
+digraph "addParrafo"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="addParrafo",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="addCounter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$modulos_8c.html#ab87d90ccd6dcf3bda267f4845b8363b6"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="findParrafo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$modulos_8c.html#af911b9d5146ac99210cffd9c91982b97"];
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Proyecto de Fin de Carrera: Fichero Fuente src/cob2c.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Proyecto de Fin de Carrera
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Trapper SDPTRAPB</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Estructuras&#160;de&#160;Datos</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('cob2c_8c_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">cob2c.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="cob2c_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="cob2c_8c.html#a9962ebca68275c4d6d133d05d60582b9">   17</a></span>&#160;<span class="preprocessor">#define _COB2C_SRC_</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="jggsal_8h.html">jggsal.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="cob2c_8h.html">cob2c.h</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">/************************************************/</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">/***           PROTOTYPES                     ***/</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/************************************************/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cob2c_8c.html#a856e2f15c2efc7ab8b303f6493b661cd">removeSpaces</a>(<span class="keywordtype">char</span> *data, <span class="keywordtype">int</span> left);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">/************************************************/</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">/***       PUBLIC FUNCTIONS                   ***/</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">/************************************************/</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="cob2c_8c.html#a0f66a67a6eaa67847b0d9aa277050763">   32</a></span>&#160;<a class="code" href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> FILE *<a class="code" href="cob2c_8c.html#a0f66a67a6eaa67847b0d9aa277050763">traza</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="cob2c_8c.html#a7b6a88dac211a2521b42d23d3080c09d">   43</a></span>&#160;<a class="code" href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">void</span> <a class="code" href="cob2c_8c.html#a7b6a88dac211a2521b42d23d3080c09d">copyCobolToCStruct</a>(<a class="code" href="struct_s_t___s_d_p.html">SDP</a> *<a class="code" href="global_8h.html#a44585a47047393e8faf0eef343b3b39d">sdp</a>, <span class="keywordtype">char</span> *data, <span class="keywordtype">char</span> *modulo, <span class="keywordtype">int</span> len) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">int</span> idx = 0;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    memset(sdp, 0x0, <span class="keyword">sizeof</span>(<a class="code" href="struct_s_t___s_d_p.html">SDP</a>));</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    memcpy(sdp-&gt;<a class="code" href="struct_s_t___s_d_p.html#a59b9df3193b6f874922b75715fc1bc81">nombre</a> , &amp;(data[<a class="code" href="cob2c_8h.html#afa323e34c9deb45e73e32b53576d0bb1">COB_MODULE</a>]), <a class="code" href="cob2c_8h.html#a88feec3e2f6624a0184397c642fe24aa">COB_MODULE_LEN</a>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">while</span> (sdp-&gt;<a class="code" href="struct_s_t___s_d_p.html#a59b9df3193b6f874922b75715fc1bc81">nombre</a>[idx] != <span class="charliteral">&#39; &#39;</span> &amp;&amp; idx &lt; <a class="code" href="cob2c_8h.html#a88feec3e2f6624a0184397c642fe24aa">COB_MODULE_LEN</a>) idx++;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span> (idx &lt; <a class="code" href="cob2c_8h.html#a88feec3e2f6624a0184397c642fe24aa">COB_MODULE_LEN</a>) sdp-&gt;<a class="code" href="struct_s_t___s_d_p.html#a59b9df3193b6f874922b75715fc1bc81">nombre</a>[idx] = 0x0;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    memcpy(sdp-&gt;<a class="code" href="struct_s_t___s_d_p.html#a11de7bbb4add4ed0cf596ea7a05cb841">firma</a>  , &amp;(data[<a class="code" href="cob2c_8h.html#ab271e7b9c5c70e78b5a7ea7cc57ddc34">COB_FIRMA</a>]),  <a class="code" href="cob2c_8h.html#a88e1886caff473b8b3186f64bd454cd4">COB_FIRMA_LEN</a>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">if</span> (len == 0) {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        strcpy(sdp-&gt;<a class="code" href="struct_s_t___s_d_p.html#aa62a205ca9e35b3b88632d2ec557a5a0">label</a>, sdp-&gt;<a class="code" href="struct_s_t___s_d_p.html#a59b9df3193b6f874922b75715fc1bc81">nombre</a>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        strncpy(sdp-&gt;<a class="code" href="struct_s_t___s_d_p.html#aa62a205ca9e35b3b88632d2ec557a5a0">label</a>, modulo, len);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    memcpy(&amp;(sdp-&gt;<a class="code" href="struct_s_t___s_d_p.html#a2524760e620af27370f7dbf1a45750a5">bloques</a>),      &amp;(data[<a class="code" href="cob2c_8h.html#a766a2c4b0a1e9717482033befc922102">COB_BLK</a>]),  <span class="keyword">sizeof</span>(<span class="keywordtype">long</span>));</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    memcpy(&amp;(sdp-&gt;<a class="code" href="struct_s_t___s_d_p.html#a00d906c1e1a889fb8b6f26c73b188936">parrafos</a>),     &amp;(data[COB_BLK  +  <span class="keyword">sizeof</span>(<span class="keywordtype">long</span>)]), <span class="keyword">sizeof</span>(<span class="keywordtype">long</span>));</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    memcpy(&amp;(sdp-&gt;<a class="code" href="struct_s_t___s_d_p.html#a256f4cda4f61488d2d766c867e813014">persistencia</a>), &amp;(data[COB_BLK  + (<span class="keyword">sizeof</span>(<span class="keywordtype">long</span>) * 2)]), <span class="keyword">sizeof</span>(<span class="keywordtype">long</span>));</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}   </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="cob2c_8c.html#a52791a6fd5e0a12300b88aae37cab9dc">   67</a></span>&#160;<a class="code" href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">void</span> <a class="code" href="cob2c_8c.html#a52791a6fd5e0a12300b88aae37cab9dc">initSDP</a>(<a class="code" href="struct_s_t___s_d_p.html">SDP</a> *<a class="code" href="global_8h.html#a44585a47047393e8faf0eef343b3b39d">sdp</a>) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">char</span> coverage[] = <span class="stringliteral">&quot;111111&quot;</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    memset(sdp, <span class="charliteral">&#39; &#39;</span>, <span class="keyword">sizeof</span>(<a class="code" href="struct_s_t___s_d_p.html">SDP</a>));</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    sdp-&gt;<a class="code" href="struct_s_t___s_d_p.html#a88033942c6a9207d32af22c3f69cc31e">coverage</a> = strdup(<span class="stringliteral">&quot;111111&quot;</span>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="cob2c_8c.html#a21fbbb691be0601c25b2c0bd3489d7e8">   73</a></span>&#160;<a class="code" href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">void</span> <a class="code" href="cob2c_8c.html#a21fbbb691be0601c25b2c0bd3489d7e8">setModuleName</a>(<a class="code" href="struct_s_t___s_d_p.html">SDP</a> *<a class="code" href="global_8h.html#a44585a47047393e8faf0eef343b3b39d">sdp</a>, <span class="keywordtype">char</span> *<a class="code" href="struct_s_t___t_o_k_e_n.html#a5ac083a645d964373f022d03df4849c8">name</a>) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    strcpy(sdp-&gt;<a class="code" href="struct_s_t___s_d_p.html#a59b9df3193b6f874922b75715fc1bc81">nombre</a>, name);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="cob2c_8c.html#a659faa5ba4c3abd0450afda8b4d222b4">   77</a></span>&#160;<a class="code" href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">void</span> <a class="code" href="cob2c_8c.html#a659faa5ba4c3abd0450afda8b4d222b4">setCoverage</a>(<a class="code" href="struct_s_t___s_d_p.html">SDP</a> *<a class="code" href="global_8h.html#a44585a47047393e8faf0eef343b3b39d">sdp</a>, <span class="keywordtype">char</span> *<a class="code" href="struct_s_t___t_o_k_e_n.html#a5ac083a645d964373f022d03df4849c8">name</a>) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    sdp-&gt;<a class="code" href="struct_s_t___s_d_p.html#a88033942c6a9207d32af22c3f69cc31e">coverage</a> = strdup(name);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">/************************************************/</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">/***        PRIVATE FUNCTIONS                 ***/</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">/************************************************/</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="cob2c_8c.html#a856e2f15c2efc7ab8b303f6493b661cd">   85</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="cob2c_8c.html#a856e2f15c2efc7ab8b303f6493b661cd">removeSpaces</a>(<span class="keywordtype">char</span> *data, <span class="keywordtype">int</span> left) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">int</span> idx = left - 1;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">while</span> (idx &gt;= 0 &amp;&amp; data[idx] == <span class="charliteral">&#39; &#39;</span>) idx--;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    data[++idx] = 0x0;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="ttc" id="struct_s_t___s_d_p_html_a256f4cda4f61488d2d766c867e813014"><div class="ttname"><a href="struct_s_t___s_d_p.html#a256f4cda4f61488d2d766c867e813014">ST_SDP::persistencia</a></div><div class="ttdeci">unsigned long persistencia</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00032">sdpTypes.h:32</a></div></div>
+<div class="ttc" id="cob2c_8c_html_a21fbbb691be0601c25b2c0bd3489d7e8"><div class="ttname"><a href="cob2c_8c.html#a21fbbb691be0601c25b2c0bd3489d7e8">setModuleName</a></div><div class="ttdeci">_EXT_ void setModuleName(SDP *sdp, char *name)</div><div class="ttdef"><b>Definition:</b> <a href="cob2c_8c_source.html#l00073">cob2c.c:73</a></div></div>
+<div class="ttc" id="struct_s_t___s_d_p_html_a00d906c1e1a889fb8b6f26c73b188936"><div class="ttname"><a href="struct_s_t___s_d_p.html#a00d906c1e1a889fb8b6f26c73b188936">ST_SDP::parrafos</a></div><div class="ttdeci">unsigned long parrafos</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00031">sdpTypes.h:31</a></div></div>
+<div class="ttc" id="global_8h_html_a44585a47047393e8faf0eef343b3b39d"><div class="ttname"><a href="global_8h.html#a44585a47047393e8faf0eef343b3b39d">sdp</a></div><div class="ttdeci">SDP sdp</div></div>
+<div class="ttc" id="cob2c_8h_html"><div class="ttname"><a href="cob2c_8h.html">cob2c.h</a></div><div class="ttdoc">Fichero de cabecera para convertir la copy COBOL en una estructura SDP. </div></div>
+<div class="ttc" id="struct_s_t___s_d_p_html_aa62a205ca9e35b3b88632d2ec557a5a0"><div class="ttname"><a href="struct_s_t___s_d_p.html#aa62a205ca9e35b3b88632d2ec557a5a0">ST_SDP::label</a></div><div class="ttdeci">char label[MAX_PARRAFO+1]</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00029">sdpTypes.h:29</a></div></div>
+<div class="ttc" id="struct_s_t___t_o_k_e_n_html_a5ac083a645d964373f022d03df4849c8"><div class="ttname"><a href="struct_s_t___t_o_k_e_n.html#a5ac083a645d964373f022d03df4849c8">ST_TOKEN::name</a></div><div class="ttdeci">char * name</div><div class="ttdef"><b>Definition:</b> <a href="token_8h_source.html#l00027">token.h:27</a></div></div>
+<div class="ttc" id="cob2c_8c_html_a856e2f15c2efc7ab8b303f6493b661cd"><div class="ttname"><a href="cob2c_8c.html#a856e2f15c2efc7ab8b303f6493b661cd">removeSpaces</a></div><div class="ttdeci">void removeSpaces(char *data, int left)</div><div class="ttdef"><b>Definition:</b> <a href="cob2c_8c_source.html#l00085">cob2c.c:85</a></div></div>
+<div class="ttc" id="cob2c_8h_html_a766a2c4b0a1e9717482033befc922102"><div class="ttname"><a href="cob2c_8h.html#a766a2c4b0a1e9717482033befc922102">COB_BLK</a></div><div class="ttdeci">#define COB_BLK</div><div class="ttdef"><b>Definition:</b> <a href="cob2c_8h_source.html#l00028">cob2c.h:28</a></div></div>
+<div class="ttc" id="struct_s_t___s_d_p_html_a11de7bbb4add4ed0cf596ea7a05cb841"><div class="ttname"><a href="struct_s_t___s_d_p.html#a11de7bbb4add4ed0cf596ea7a05cb841">ST_SDP::firma</a></div><div class="ttdeci">char firma[HASH_SIZE+1]</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00027">sdpTypes.h:27</a></div></div>
+<div class="ttc" id="cob2c_8c_html_a0f66a67a6eaa67847b0d9aa277050763"><div class="ttname"><a href="cob2c_8c.html#a0f66a67a6eaa67847b0d9aa277050763">traza</a></div><div class="ttdeci">_EXT_ FILE * traza</div><div class="ttdef"><b>Definition:</b> <a href="cob2c_8c_source.html#l00032">cob2c.c:32</a></div></div>
+<div class="ttc" id="struct_s_t___s_d_p_html_a2524760e620af27370f7dbf1a45750a5"><div class="ttname"><a href="struct_s_t___s_d_p.html#a2524760e620af27370f7dbf1a45750a5">ST_SDP::bloques</a></div><div class="ttdeci">unsigned long bloques</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00030">sdpTypes.h:30</a></div></div>
+<div class="ttc" id="cob2c_8h_html_a88feec3e2f6624a0184397c642fe24aa"><div class="ttname"><a href="cob2c_8h.html#a88feec3e2f6624a0184397c642fe24aa">COB_MODULE_LEN</a></div><div class="ttdeci">#define COB_MODULE_LEN</div><div class="ttdef"><b>Definition:</b> <a href="cob2c_8h_source.html#l00025">cob2c.h:25</a></div></div>
+<div class="ttc" id="cob2c_8h_html_a88e1886caff473b8b3186f64bd454cd4"><div class="ttname"><a href="cob2c_8h.html#a88e1886caff473b8b3186f64bd454cd4">COB_FIRMA_LEN</a></div><div class="ttdeci">#define COB_FIRMA_LEN</div><div class="ttdef"><b>Definition:</b> <a href="cob2c_8h_source.html#l00027">cob2c.h:27</a></div></div>
+<div class="ttc" id="cob2c_8h_html_ab271e7b9c5c70e78b5a7ea7cc57ddc34"><div class="ttname"><a href="cob2c_8h.html#ab271e7b9c5c70e78b5a7ea7cc57ddc34">COB_FIRMA</a></div><div class="ttdeci">#define COB_FIRMA</div><div class="ttdef"><b>Definition:</b> <a href="cob2c_8h_source.html#l00026">cob2c.h:26</a></div></div>
+<div class="ttc" id="jggsal_8h_html"><div class="ttname"><a href="jggsal_8h.html">jggsal.h</a></div><div class="ttdoc">Software Abstraction Layer. </div></div>
+<div class="ttc" id="struct_s_t___s_d_p_html_a88033942c6a9207d32af22c3f69cc31e"><div class="ttname"><a href="struct_s_t___s_d_p.html#a88033942c6a9207d32af22c3f69cc31e">ST_SDP::coverage</a></div><div class="ttdeci">char * coverage</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00028">sdpTypes.h:28</a></div></div>
+<div class="ttc" id="cob2c_8c_html_a52791a6fd5e0a12300b88aae37cab9dc"><div class="ttname"><a href="cob2c_8c.html#a52791a6fd5e0a12300b88aae37cab9dc">initSDP</a></div><div class="ttdeci">_EXT_ void initSDP(SDP *sdp)</div><div class="ttdef"><b>Definition:</b> <a href="cob2c_8c_source.html#l00067">cob2c.c:67</a></div></div>
+<div class="ttc" id="struct_s_t___s_d_p_html"><div class="ttname"><a href="struct_s_t___s_d_p.html">ST_SDP</a></div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00025">sdpTypes.h:25</a></div></div>
+<div class="ttc" id="cob2c_8c_html_a7b6a88dac211a2521b42d23d3080c09d"><div class="ttname"><a href="cob2c_8c.html#a7b6a88dac211a2521b42d23d3080c09d">copyCobolToCStruct</a></div><div class="ttdeci">_EXT_ void copyCobolToCStruct(SDP *sdp, char *data, char *modulo, int len)</div><div class="ttdef"><b>Definition:</b> <a href="cob2c_8c_source.html#l00043">cob2c.c:43</a></div></div>
+<div class="ttc" id="amqsdp_8h_html_adfbc1051df776564281ac4220ba53a9e"><div class="ttname"><a href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a></div><div class="ttdeci">#define _EXT_</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8h_source.html#l00022">amqsdp.h:22</a></div></div>
+<div class="ttc" id="struct_s_t___s_d_p_html_a59b9df3193b6f874922b75715fc1bc81"><div class="ttname"><a href="struct_s_t___s_d_p.html#a59b9df3193b6f874922b75715fc1bc81">ST_SDP::nombre</a></div><div class="ttdeci">char nombre[MAX_MODULE+1]</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00026">sdpTypes.h:26</a></div></div>
+<div class="ttc" id="cob2c_8h_html_afa323e34c9deb45e73e32b53576d0bb1"><div class="ttname"><a href="cob2c_8h.html#afa323e34c9deb45e73e32b53576d0bb1">COB_MODULE</a></div><div class="ttdeci">#define COB_MODULE</div><div class="ttdef"><b>Definition:</b> <a href="cob2c_8h_source.html#l00024">cob2c.h:24</a></div></div>
+<div class="ttc" id="cob2c_8c_html_a659faa5ba4c3abd0450afda8b4d222b4"><div class="ttname"><a href="cob2c_8c.html#a659faa5ba4c3abd0450afda8b4d222b4">setCoverage</a></div><div class="ttdeci">_EXT_ void setCoverage(SDP *sdp, char *name)</div><div class="ttdef"><b>Definition:</b> <a href="cob2c_8c_source.html#l00077">cob2c.c:77</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="cob2c_8c.html">cob2c.c</a></li>
+    <li class="footer">Generado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<tabset justified="true">
+    <tab heading="Fuente" ng-model="codigo">
+        <div ng-repeat="dato in codigo">
+             <pre class="codigo" ng-class="codeStyle(dato)">{{dato.linea | numberFixedLen:5 }} {{dato.code}}</pre>
+        </div>
+    </tab>
+    <tab heading="Identification">
+        <div ng-repeat="dato in codigo | filter: {bloque: 1}">
+            <pre class="codigo" ng-class="codeStyle(dato)">{{dato.code}}</pre>
+        </div>
+    </tab>
+    <tab heading="Environment">
+        <div ng-repeat="dato in codigo | filter: {bloque: 2}">
+            <pre class="codigo" ng-class="codeStyle(dato)">{{dato.code}}</pre>
+        </div>
+    </tab>
+    <tab heading="Data">
+        <div ng-repeat="dato in codigo | filter: {bloque: 3}">
+            <pre class="codigo" ng-class="codeStyle(dato)">{{dato.code}}</pre>
+        </div>
+    </tab>
+    <tab heading="Procedure">
+        <div ng-repeat="dato in codigo | filter: {bloque: 4}">
+            <pre class="codigo" ng-class="codeStyle(dato)">{{dato.code}}</pre>
+        </div>
+    </tab>
+</tabset>

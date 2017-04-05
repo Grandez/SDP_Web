@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Proyecto de Fin de Carrera: Fichero Fuente src/sha256.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Proyecto de Fin de Carrera
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Trapper SDPTRAPB</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Estructuras&#160;de&#160;Datos</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('sha256_8c_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">sha256.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="sha256_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;memory.h&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="sha256_8c.html#a9e83336c1906e13f86cf34b2f8c7c4f2">    6</a></span>&#160;<span class="preprocessor">#define _SHA256_SRC_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="sha256le_8h.html">sha256le.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="sha256be_8h.html">sha256be.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="sha256_8c.html#ac24451e0473fa57e1d33dcfe06107f4b">   12</a></span>&#160;<a class="code" href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">void</span> <a class="code" href="sha256_8c.html#ac24451e0473fa57e1d33dcfe06107f4b">SHA256</a>(<span class="keywordtype">char</span> *out, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *in) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="sha256le_8h.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a> res[33];</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="struct_s_h_a256___c_t_x.html">SHA256_CTX</a>    ctxLe;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="struct_s_h_a256_context.html">SHA256Context</a> ctxBe;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x = 0x76543210;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">char</span> *c = (<span class="keywordtype">char</span>*) &amp;x;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> len = strlen ((<span class="keyword">const</span> <span class="keywordtype">char</span> *)in);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">// Chequear arquitectura: Big Endian o Little Endian</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">if</span> (*c == 0x10)   {  <span class="comment">// Little Endian</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      <a class="code" href="sha256le_8h.html#a3dffdcd908e70dbe657a36ae13d0f3ad">sha256_init</a>(&amp;ctxLe);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      <a class="code" href="sha256le_8h.html#a440fb0f8f349c9188383f42e6aa448be">sha256_update</a>(&amp;ctxLe, in, len);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      <a class="code" href="sha256le_8h.html#ae6305e99ab3651abb7fa1df2d01ff7a8">sha256_final</a>(&amp;ctxLe, res);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordflow">else</span>   { <span class="comment">// Big Endian</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;     <a class="code" href="sha256be_8h.html#a4759856371c1423123eed1f383183499">SHA256Reset</a>(&amp;ctxBe);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;     <a class="code" href="sha256be_8h.html#a1db210617bf20e738d86ea9b8e2bbd4a">SHA256Input</a>(&amp;ctxBe, in, len);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;     <a class="code" href="sha256be_8h.html#a7f819a41a7046ec551d56f24fc88f00c">SHA256Result</a>(&amp;ctxBe, res);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">/* Evitar el bucle para optimizar el rendimiento */</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    sprintf(out, </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="stringliteral">&quot;%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X&quot;</span>,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        res[0],  res[1],  res[2],  res[3],  res[4],  res[5],  res[6],  res[7], </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        res[8],  res[9],  res[10], res[11], res[12], res[13], res[14], res[15],</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        res[16], res[17], res[18], res[19], res[20], res[21], res[22], res[23], </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        res[24], res[25], res[26], res[27], res[28], res[29], res[30], res[31]);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="ttc" id="struct_s_h_a256___c_t_x_html"><div class="ttname"><a href="struct_s_h_a256___c_t_x.html">SHA256_CTX</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256le_8h_source.html#l00022">sha256le.h:22</a></div></div>
+<div class="ttc" id="sha256le_8h_html_a3dffdcd908e70dbe657a36ae13d0f3ad"><div class="ttname"><a href="sha256le_8h.html#a3dffdcd908e70dbe657a36ae13d0f3ad">sha256_init</a></div><div class="ttdeci">_EXT_ void sha256_init(SHA256_CTX *ctx)</div><div class="ttdef"><b>Definition:</b> <a href="sha256le_8c_source.html#l00087">sha256le.c:87</a></div></div>
+<div class="ttc" id="sha256be_8h_html_a1db210617bf20e738d86ea9b8e2bbd4a"><div class="ttname"><a href="sha256be_8h.html#a1db210617bf20e738d86ea9b8e2bbd4a">SHA256Input</a></div><div class="ttdeci">_EXT_ int SHA256Input(SHA256Context *, const uint8_t *bytes, unsigned int bytecount)</div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8c_source.html#l00144">sha256be.c:144</a></div></div>
+<div class="ttc" id="sha256be_8h_html_a4759856371c1423123eed1f383183499"><div class="ttname"><a href="sha256be_8h.html#a4759856371c1423123eed1f383183499">SHA256Reset</a></div><div class="ttdeci">_EXT_ int SHA256Reset(SHA256Context *)</div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8c_source.html#l00103">sha256be.c:103</a></div></div>
+<div class="ttc" id="sha256be_8h_html_a7f819a41a7046ec551d56f24fc88f00c"><div class="ttname"><a href="sha256be_8h.html#a7f819a41a7046ec551d56f24fc88f00c">SHA256Result</a></div><div class="ttdeci">_EXT_ int SHA256Result(SHA256Context *, uint8_t Message_Digest[SHA256HashSize])</div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8c_source.html#l00231">sha256be.c:231</a></div></div>
+<div class="ttc" id="sha256be_8h_html"><div class="ttname"><a href="sha256be_8h.html">sha256be.h</a></div></div>
+<div class="ttc" id="sha256le_8h_html_a4ae1dab0fb4b072a66584546209e7d58"><div class="ttname"><a href="sha256le_8h.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a></div><div class="ttdeci">unsigned char BYTE</div><div class="ttdef"><b>Definition:</b> <a href="sha256le_8h_source.html#l00019">sha256le.h:19</a></div></div>
+<div class="ttc" id="sha256le_8h_html_ae6305e99ab3651abb7fa1df2d01ff7a8"><div class="ttname"><a href="sha256le_8h.html#ae6305e99ab3651abb7fa1df2d01ff7a8">sha256_final</a></div><div class="ttdeci">_EXT_ void sha256_final(SHA256_CTX *ctx, BYTE hash[])</div><div class="ttdef"><b>Definition:</b> <a href="sha256le_8c_source.html#l00116">sha256le.c:116</a></div></div>
+<div class="ttc" id="sha256_8c_html_ac24451e0473fa57e1d33dcfe06107f4b"><div class="ttname"><a href="sha256_8c.html#ac24451e0473fa57e1d33dcfe06107f4b">SHA256</a></div><div class="ttdeci">_EXT_ void SHA256(char *out, const unsigned char *in)</div><div class="ttdef"><b>Definition:</b> <a href="sha256_8c_source.html#l00012">sha256.c:12</a></div></div>
+<div class="ttc" id="sha256le_8h_html_a440fb0f8f349c9188383f42e6aa448be"><div class="ttname"><a href="sha256le_8h.html#a440fb0f8f349c9188383f42e6aa448be">sha256_update</a></div><div class="ttdeci">_EXT_ void sha256_update(SHA256_CTX *ctx, const BYTE data[], size_t len)</div><div class="ttdef"><b>Definition:</b> <a href="sha256le_8c_source.html#l00101">sha256le.c:101</a></div></div>
+<div class="ttc" id="sha256le_8h_html"><div class="ttname"><a href="sha256le_8h.html">sha256le.h</a></div></div>
+<div class="ttc" id="amqsdp_8h_html_adfbc1051df776564281ac4220ba53a9e"><div class="ttname"><a href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a></div><div class="ttdeci">#define _EXT_</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8h_source.html#l00022">amqsdp.h:22</a></div></div>
+<div class="ttc" id="struct_s_h_a256_context_html"><div class="ttname"><a href="struct_s_h_a256_context.html">SHA256Context</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256be_8h_source.html#l00129">sha256be.h:129</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="sha256_8c.html">sha256.c</a></li>
+    <li class="footer">Generado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

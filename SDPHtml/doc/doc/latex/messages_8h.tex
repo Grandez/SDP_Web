@@ -1,0 +1,179 @@
+\hypertarget{messages_8h}{}\section{Referencia del Archivo include/messages.h}
+\label{messages_8h}\index{include/messages.\+h@{include/messages.\+h}}
+
+
+Funciones de gestion del envio de mensajes al sistema de colas.  
+
+
+{\ttfamily \#include \char`\"{}sdp\+Types.\+h\char`\"{}}\\*
+Dependencia gráfica adjunta para messages.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{messages_8h__incl}
+\end{center}
+\end{figure}
+Gráfico de los archivos que directa o indirectamente incluyen a este archivo\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{messages_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\textquotesingle{}defines\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{messages_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+}~extern
+\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{messages_8h_ad9a5bcb8859dbde9b0a6029b344b68cd}{process\+Message} (int tipo, \hyperlink{sdp_types_8h_a94c0315eea22344f1e853cc7c90592bb}{T\+I\+M\+E\+R} $\ast$timer)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{messages_8h_a5e92dab3c2b325b433c5a2ef36289b01}{process\+End\+Module} (char $\ast$data)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{messages_8h_a758539cefbe1e6b284f5cee92b59f8bc}{send\+Begin\+Session} (\hyperlink{sdp_types_8h_a94c0315eea22344f1e853cc7c90592bb}{T\+I\+M\+E\+R} $\ast$\hyperlink{_s_d_p_t_r_a_p_b_8c_a7b1065499acf2797bfe8d85cd6048da6}{current})
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{messages_8h_a8074fb403729c61320ce49f469576e0c}{send\+End\+Session} (\hyperlink{sdp_types_8h_a94c0315eea22344f1e853cc7c90592bb}{T\+I\+M\+E\+R} $\ast$\hyperlink{_s_d_p_t_r_a_p_b_8c_a7b1065499acf2797bfe8d85cd6048da6}{current})
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{messages_8h_af7fe7da407d194ebb7f01bccff7414e1}{send\+Pending\+Data} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Funciones de gestion del envio de mensajes al sistema de colas. 
+
+\begin{DoxyAuthor}{Autor}
+\+: Javier Gonzalez 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+\+: 01/03/15 
+\end{DoxyDate}
+\begin{DoxyVersion}{Versión}
+\+: 2.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\hypertarget{messages_8h_adfbc1051df776564281ac4220ba53a9e}{}\index{messages.\+h@{messages.\+h}!\+\_\+\+E\+X\+T\+\_\+@{\+\_\+\+E\+X\+T\+\_\+}}
+\index{\+\_\+\+E\+X\+T\+\_\+@{\+\_\+\+E\+X\+T\+\_\+}!messages.\+h@{messages.\+h}}
+\subsubsection[{\+\_\+\+E\+X\+T\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+E\+X\+T\+\_\+~extern}\label{messages_8h_adfbc1051df776564281ac4220ba53a9e}
+
+
+Definición en la línea 20 del archivo messages.\+h.
+
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{messages_8h_a5e92dab3c2b325b433c5a2ef36289b01}{}\index{messages.\+h@{messages.\+h}!process\+End\+Module@{process\+End\+Module}}
+\index{process\+End\+Module@{process\+End\+Module}!messages.\+h@{messages.\+h}}
+\subsubsection[{process\+End\+Module(char $\ast$data)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void process\+End\+Module (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{sdp\+Data}
+\end{DoxyParamCaption}
+)}\label{messages_8h_a5e92dab3c2b325b433c5a2ef36289b01}
+Realiza el proceso asociado al final de la ejecucion de un modulo 
+\begin{DoxyParams}{Parámetros}
+{\em data} & Copy C\+O\+B\+O\+L del programa\\
+\hline
+\end{DoxyParams}
+Envia los mensajes asociados al final de un modulo en funcion del modo de proceso
+
+Contadores de uso de parrafos Contadores de las llamadas realizadas en ese modulo Contadores de los ficheros Informacion de la cobertura
+
+
+\begin{DoxyParams}{Parámetros}
+{\em sdp\+Data} & Direccion de la C\+O\+P\+Y C\+O\+B\+O\+L \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 193 del archivo messages.\+c.
+
+\hypertarget{messages_8h_ad9a5bcb8859dbde9b0a6029b344b68cd}{}\index{messages.\+h@{messages.\+h}!process\+Message@{process\+Message}}
+\index{process\+Message@{process\+Message}!messages.\+h@{messages.\+h}}
+\subsubsection[{process\+Message(int tipo, T\+I\+M\+E\+R $\ast$timer)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void process\+Message (
+\begin{DoxyParamCaption}
+\item[{int}]{tipo, }
+\item[{{\bf T\+I\+M\+E\+R} $\ast$}]{timer}
+\end{DoxyParamCaption}
+)}\label{messages_8h_ad9a5bcb8859dbde9b0a6029b344b68cd}
+Procesa un mensaje recibido del programa 
+\begin{DoxyParams}{Parámetros}
+{\em tipo} & tipo del mensaje \\
+\hline
+{\em timer} & Puntero al T\+I\+M\+E\+R obtenido al entrar en S\+D\+P\+T\+R\+A\+B\\
+\hline
+\end{DoxyParams}
+Prepara el mensaje a enviar Si es un mensaje de fin de llamada, ajusta la pila de modulos 
+\begin{DoxyParams}{Parámetros}
+{\em tipo} & tipo del mensaje segun codigos M\+S\+G\+\_\+xxx \\
+\hline
+{\em timer} & Puntero al T\+I\+M\+E\+R calculado an entrar en la libreria \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 76 del archivo messages.\+c.
+
+\hypertarget{messages_8h_a758539cefbe1e6b284f5cee92b59f8bc}{}\index{messages.\+h@{messages.\+h}!send\+Begin\+Session@{send\+Begin\+Session}}
+\index{send\+Begin\+Session@{send\+Begin\+Session}!messages.\+h@{messages.\+h}}
+\subsubsection[{send\+Begin\+Session(\+T\+I\+M\+E\+R $\ast$current)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void send\+Begin\+Session (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+E\+R} $\ast$}]{current}
+\end{DoxyParamCaption}
+)}\label{messages_8h_a758539cefbe1e6b284f5cee92b59f8bc}
+Realiza el proceso asociado al inicio de la sesion 
+\begin{DoxyParams}{Parámetros}
+{\em current} & Puntero al T\+I\+M\+E\+R obtenido al entrar en S\+D\+P\+T\+R\+A\+B\\
+\hline
+\end{DoxyParams}
+Envia el mensaje de inicio de sesion
+
+Este mensaje se envia siempre y de manera aislada
+
+
+\begin{DoxyParams}{Parámetros}
+{\em current} & Puntero al T\+I\+M\+E\+R obtenido al entrar en la libreria \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 370 del archivo messages.\+c.
+
+\hypertarget{messages_8h_a8074fb403729c61320ce49f469576e0c}{}\index{messages.\+h@{messages.\+h}!send\+End\+Session@{send\+End\+Session}}
+\index{send\+End\+Session@{send\+End\+Session}!messages.\+h@{messages.\+h}}
+\subsubsection[{send\+End\+Session(\+T\+I\+M\+E\+R $\ast$current)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void send\+End\+Session (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+E\+R} $\ast$}]{current}
+\end{DoxyParamCaption}
+)}\label{messages_8h_a8074fb403729c61320ce49f469576e0c}
+Realiza el proceso asociado al final de la sesion 
+\begin{DoxyParams}{Parámetros}
+{\em current} & Puntero al T\+I\+M\+E\+R obtenido al entrar en S\+D\+P\+T\+R\+A\+B\\
+\hline
+\end{DoxyParams}
+Envia el mensaje de fin de sesion
+
+
+\begin{DoxyParams}{Parámetros}
+{\em current} & Puntero al T\+I\+M\+E\+R obtenido al entrar en la libreria \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 379 del archivo messages.\+c.
+
+\hypertarget{messages_8h_af7fe7da407d194ebb7f01bccff7414e1}{}\index{messages.\+h@{messages.\+h}!send\+Pending\+Data@{send\+Pending\+Data}}
+\index{send\+Pending\+Data@{send\+Pending\+Data}!messages.\+h@{messages.\+h}}
+\subsubsection[{send\+Pending\+Data(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void send\+Pending\+Data (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{messages_8h_af7fe7da407d194ebb7f01bccff7414e1}
+Procesa la informacion pendiente
+
+En caso de trabajar en modo global envia todos los datos antes de enviar el mensaje de fin de sesion 
+
+Definición en la línea 406 del archivo messages.\+c.
+

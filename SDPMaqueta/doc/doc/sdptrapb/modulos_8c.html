@@ -1,0 +1,790 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Proyecto de Fin de Carrera: Referencia del Archivo src/modulos.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Proyecto de Fin de Carrera
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Trapper SDPTRAPB</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Estructuras&#160;de&#160;Datos</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('modulos_8c.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">'defines'</a> &#124;
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo modulos.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Mantiene la lista de modulos activos con sus ID.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_s_d_p_t_r_a_p_8h_source.html">SDPTRAP.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="modulos_8h_source.html">modulos.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="timer_8h_source.html">timer.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Dependencia gráfica adjunta para modulos.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="modulos_8c__incl.png" border="0" usemap="#src_2modulos_8c" alt=""/></div>
+<map name="src_2modulos_8c" id="src_2modulos_8c">
+<area shape="rect" id="node6" href="_s_d_p_t_r_a_p_8h.html" title="Fichero de cabecera con los ficheros de cabecera comunes. " alt="" coords="353,80,447,107"/>
+<area shape="rect" id="node12" href="modulos_8h.html" title="Funciones de gestion de los modulos activos en una sesion. " alt="" coords="472,80,555,107"/>
+<area shape="rect" id="node13" href="timer_8h.html" title="Fichero de cabecera para incluir los modulos de calculo de timers. " alt="" coords="579,80,642,107"/>
+<area shape="rect" id="node7" href="jggsal_8h.html" title="Software Abstraction Layer. " alt="" coords="213,155,280,181"/>
+<area shape="rect" id="node8" href="sdpconfig_8h.html" title="Fichero de cabecera de configuracion del sistema Define las constantes y los valores globales de comp..." alt="" coords="315,229,403,256"/>
+<area shape="rect" id="node9" href="sdp_types_8h.html" title="Define las estructrus y tipos de datos usados en la libreria. " alt="" coords="355,155,445,181"/>
+<area shape="rect" id="node10" href="pila_8h.html" title="Funciones de gestion de pilas abtracta. " alt="" coords="469,155,523,181"/>
+<area shape="rect" id="node11" href="trapcodes_8h.html" title="trapcodes.h" alt="" coords="547,155,637,181"/>
+</map>
+</div>
+</div>
+<p><a href="modulos_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+'defines'</h2></td></tr>
+<tr class="memitem:aa9507d1be135228cae50c6db9d1c3ac9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#aa9507d1be135228cae50c6db9d1c3ac9">_MODULOS_C_</a></td></tr>
+<tr class="separator:aa9507d1be135228cae50c6db9d1c3ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a657a11252bee2a30b2e2f4e355badb3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#a657a11252bee2a30b2e2f4e355badb3c">newModule</a> (<a class="el" href="sdp_types_8h.html#a8ba8f2a87560d14f1152da6646649dfd">SDP</a> *<a class="el" href="global_8h.html#a44585a47047393e8faf0eef343b3b39d">sdp</a>, char *name)</td></tr>
+<tr class="separator:a657a11252bee2a30b2e2f4e355badb3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0630639814484d4f148b8cb775499550"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#a0630639814484d4f148b8cb775499550">findModuleBySDP</a> (<a class="el" href="sdp_types_8h.html#a8ba8f2a87560d14f1152da6646649dfd">SDP</a> *<a class="el" href="global_8h.html#a44585a47047393e8faf0eef343b3b39d">sdp</a>)</td></tr>
+<tr class="separator:a0630639814484d4f148b8cb775499550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef1a885b24ebab07006ab20c1ad7eb00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#aef1a885b24ebab07006ab20c1ad7eb00">findModuleByName</a> (char *name)</td></tr>
+<tr class="separator:aef1a885b24ebab07006ab20c1ad7eb00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5529cc590957e9d813dbb71bc4db9dec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#a5529cc590957e9d813dbb71bc4db9dec">findModule</a> (<a class="el" href="sdp_types_8h.html#a8ba8f2a87560d14f1152da6646649dfd">SDP</a> *<a class="el" href="global_8h.html#a44585a47047393e8faf0eef343b3b39d">sdp</a>, char *name)</td></tr>
+<tr class="separator:a5529cc590957e9d813dbb71bc4db9dec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7747e73680c46384ec80d5969c9b9d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#af7747e73680c46384ec80d5969c9b9d1">findCall</a> (char *nombre)</td></tr>
+<tr class="separator:af7747e73680c46384ec80d5969c9b9d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af911b9d5146ac99210cffd9c91982b97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#af911b9d5146ac99210cffd9c91982b97">findParrafo</a> (char *nombre)</td></tr>
+<tr class="separator:af911b9d5146ac99210cffd9c91982b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab87d90ccd6dcf3bda267f4845b8363b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#ab87d90ccd6dcf3bda267f4845b8363b6">addCounter</a> (<a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *tgt, <a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *timer)</td></tr>
+<tr class="separator:ab87d90ccd6dcf3bda267f4845b8363b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06f42c249879a86b14e6434246269aac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#a06f42c249879a86b14e6434246269aac">resetCounters</a> (<a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *mod)</td></tr>
+<tr class="separator:a06f42c249879a86b14e6434246269aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c41756a9f3764252ada0d2442d1eac8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#a9c41756a9f3764252ada0d2442d1eac8">resetTimer</a> (<a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *timer)</td></tr>
+<tr class="separator:a9c41756a9f3764252ada0d2442d1eac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1d98130531c631f4d4be3c6befdc4c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#ae1d98130531c631f4d4be3c6befdc4c4">duplicateModule</a> (<a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *mod)</td></tr>
+<tr class="separator:ae1d98130531c631f4d4be3c6befdc4c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f474d9711cf3cb795b314712a2e3ac0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#a3f474d9711cf3cb795b314712a2e3ac0">addModule</a> (<a class="el" href="sdp_types_8h.html#a8ba8f2a87560d14f1152da6646649dfd">SDP</a> *<a class="el" href="global_8h.html#a44585a47047393e8faf0eef343b3b39d">sdp</a>, int mode)</td></tr>
+<tr class="separator:a3f474d9711cf3cb795b314712a2e3ac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99eadd22b499b79658bd8b0ae82dd7bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#a99eadd22b499b79658bd8b0ae82dd7bc">addCall</a> (<a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *timer)</td></tr>
+<tr class="separator:a99eadd22b499b79658bd8b0ae82dd7bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30a68f431bcf69251c926de4907ae96d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#a30a68f431bcf69251c926de4907ae96d">addParrafo</a> (<a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *timer)</td></tr>
+<tr class="separator:a30a68f431bcf69251c926de4907ae96d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af07af364ecc66b66d207e0b107c76200"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#af07af364ecc66b66d207e0b107c76200">addCoverage</a> (char *mask)</td></tr>
+<tr class="separator:af07af364ecc66b66d207e0b107c76200"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e7d1c20f4e8e68f9034be766dccf5b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#a9e7d1c20f4e8e68f9034be766dccf5b2">addUsoParrafos</a> (unsigned long *tbParrs, int largo)</td></tr>
+<tr class="separator:a9e7d1c20f4e8e68f9034be766dccf5b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ce834a5648027699b47d9e9403e051e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#a5ce834a5648027699b47d9e9403e051e">addFiles</a> (unsigned long *tbFiles, int largo)</td></tr>
+<tr class="separator:a5ce834a5648027699b47d9e9403e051e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac82522f58a2257abcfcdb8ed2ba8cfbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#ac82522f58a2257abcfcdb8ed2ba8cfbf">resetModule</a> ()</td></tr>
+<tr class="separator:ac82522f58a2257abcfcdb8ed2ba8cfbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1276112603f3ff77e47304a5f64de662"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#a1276112603f3ff77e47304a5f64de662">setCurrentModule</a> (<a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *mod)</td></tr>
+<tr class="separator:a1276112603f3ff77e47304a5f64de662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af653e19b55527e3f89161ec0c18c710a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#af653e19b55527e3f89161ec0c18c710a">getCurrentModule</a> ()</td></tr>
+<tr class="separator:af653e19b55527e3f89161ec0c18c710a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0085fb1e078dbb75094358fb3fa9e9cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#a0085fb1e078dbb75094358fb3fa9e9cc">getFirstModule</a> ()</td></tr>
+<tr class="separator:a0085fb1e078dbb75094358fb3fa9e9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19078a69464f53360640e46c1a6fe0a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#a19078a69464f53360640e46c1a6fe0a7">getNextModule</a> ()</td></tr>
+<tr class="separator:a19078a69464f53360640e46c1a6fe0a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adea9f669293aa4c6f827ff74d736fed0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#adea9f669293aa4c6f827ff74d736fed0">cleanModules</a> ()</td></tr>
+<tr class="separator:adea9f669293aa4c6f827ff74d736fed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ae7a04675517db9d1317a2a590da9c60f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#ae7a04675517db9d1317a2a590da9c60f">lstMods</a> = 0x0</td></tr>
+<tr class="separator:ae7a04675517db9d1317a2a590da9c60f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87e1b7d47f4264d9dd039365e8da3e9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#a87e1b7d47f4264d9dd039365e8da3e9a">currMod</a> = 0x0</td></tr>
+<tr class="separator:a87e1b7d47f4264d9dd039365e8da3e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f9e912074a29350e020b7a09f43ff32"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modulos_8c.html#a5f9e912074a29350e020b7a09f43ff32">traza</a></td></tr>
+<tr class="separator:a5f9e912074a29350e020b7a09f43ff32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Mantiene la lista de modulos activos con sus ID. </p>
+<dl class="section author"><dt>Autor</dt><dd>: Javier Gonzalez </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>: 01/04/2015 </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>: 1.0 </dd></dl>
+
+<p>Definición en el archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+</div><h2 class="groupheader">Documentación de los 'defines'</h2>
+<a class="anchor" id="aa9507d1be135228cae50c6db9d1c3ac9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _MODULOS_C_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="modulos_8c_source.html#l00011">11</a> del archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a class="anchor" id="a99eadd22b499b79658bd8b0ae82dd7bc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void addCall </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *&#160;</td>
+          <td class="paramname"><em>timer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Inserta una nueva llamada desde ese modulo a otro </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer</td><td>Puntero al TIMER obtenido al entrar en la rutina </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="modulos_8c_source.html#l00076">76</a> del archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab87d90ccd6dcf3bda267f4845b8363b6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addCounter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *&#160;</td>
+          <td class="paramname"><em>tgt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *&#160;</td>
+          <td class="paramname"><em>timer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="modulos_8c_source.html#l00210">210</a> del archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af07af364ecc66b66d207e0b107c76200"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void addCoverage </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>mask</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Inserta la informacion relativa a la cobertura de codigo </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mask</td><td>Datos de la cobertura </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="modulos_8c_source.html#l00094">94</a> del archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5ce834a5648027699b47d9e9403e051e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void addFiles </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long *&#160;</td>
+          <td class="paramname"><em>tbFiles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>largo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Inserta la informacion relativa al uso de los ficheros del modulo </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tbFiles</td><td>Tabla de contadores de uso de los ficheros </td></tr>
+    <tr><td class="paramname">largo</td><td>Numero de ficheros (Elementos en tbFiles) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="modulos_8c_source.html#l00121">121</a> del archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3f474d9711cf3cb795b314712a2e3ac0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a>* addModule </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a8ba8f2a87560d14f1152da6646649dfd">SDP</a> *&#160;</td>
+          <td class="paramname"><em>sdp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Inserta un modulo en la lista de modulos </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sdp</td><td>Puntero a la estructura SDP actual </td></tr>
+    <tr><td class="paramname">mode</td><td>Indicador de disponibilidad de la estructura SDP </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="modulos_8c_source.html#l00053">53</a> del archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a30a68f431bcf69251c926de4907ae96d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void addParrafo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *&#160;</td>
+          <td class="paramname"><em>timer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Inserta una nueva llamada a un parrafo en ese modulo </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer</td><td>Puntero al TIMER obtenido al entrar en la rutina </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="modulos_8c_source.html#l00086">86</a> del archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9e7d1c20f4e8e68f9034be766dccf5b2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void addUsoParrafos </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long *&#160;</td>
+          <td class="paramname"><em>tbParrs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>largo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Inserta la informacion relativa al uso global de los parraos del modulo </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tbParrs</td><td>Tabla de contadores de uso de parrafos </td></tr>
+    <tr><td class="paramname">largo</td><td>Longitud de la tabla </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="modulos_8c_source.html#l00106">106</a> del archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adea9f669293aa4c6f827ff74d736fed0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void cleanModules </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Realiza los procesos de limpieza de memoria </p>
+
+<p>Definición en la línea <a class="el" href="modulos_8c_source.html#l00189">189</a> del archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae1d98130531c631f4d4be3c6befdc4c4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> * duplicateModule </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *&#160;</td>
+          <td class="paramname"><em>mod</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="modulos_8c_source.html#l00280">280</a> del archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af7747e73680c46384ec80d5969c9b9d1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> * findCall </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>nombre</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="modulos_8c_source.html#l00259">259</a> del archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5529cc590957e9d813dbb71bc4db9dec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> * findModule </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a8ba8f2a87560d14f1152da6646649dfd">SDP</a> *&#160;</td>
+          <td class="paramname"><em>sdp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="modulos_8c_source.html#l00238">238</a> del archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aef1a885b24ebab07006ab20c1ad7eb00"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> * findModuleByName </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="modulos_8c_source.html#l00230">230</a> del archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0630639814484d4f148b8cb775499550"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> * findModuleBySDP </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a8ba8f2a87560d14f1152da6646649dfd">SDP</a> *&#160;</td>
+          <td class="paramname"><em>sdp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="modulos_8c_source.html#l00223">223</a> del archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af911b9d5146ac99210cffd9c91982b97"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> * findParrafo </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>nombre</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="modulos_8c_source.html#l00288">288</a> del archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af653e19b55527e3f89161ec0c18c710a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a>* getCurrentModule </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Devuelve el modulo activo </p><dl class="section return"><dt>Devuelve</dt><dd>Puntero al modulo activo </dd></dl>
+
+<p>Definición en la línea <a class="el" href="modulos_8c_source.html#l00164">164</a> del archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0085fb1e078dbb75094358fb3fa9e9cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a>* getFirstModule </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Devuelve el primer modulo de la lista de modulos ejecutados </p><dl class="section return"><dt>Devuelve</dt><dd>Puntero al primer modulo </dd></dl>
+
+<p>Definición en la línea <a class="el" href="modulos_8c_source.html#l00172">172</a> del archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a19078a69464f53360640e46c1a6fe0a7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a>* getNextModule </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Devuelve el siguiente modulo de la lista de modulos ejecutados </p><dl class="section return"><dt>Devuelve</dt><dd>Puntero al siguiente modulo </dd></dl>
+
+<p>Definición en la línea <a class="el" href="modulos_8c_source.html#l00181">181</a> del archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a657a11252bee2a30b2e2f4e355badb3c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> * newModule </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a8ba8f2a87560d14f1152da6646649dfd">SDP</a> *&#160;</td>
+          <td class="paramname"><em>sdp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="modulos_8c_source.html#l00333">333</a> del archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a06f42c249879a86b14e6434246269aac"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void resetCounters </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *&#160;</td>
+          <td class="paramname"><em>mod</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="modulos_8c_source.html#l00306">306</a> del archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac82522f58a2257abcfcdb8ed2ba8cfbf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void resetModule </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Inicializa el modulo Se utiliza cuando el modo de proceso es MODE_MODULE </p>
+
+<p>Definición en la línea <a class="el" href="modulos_8c_source.html#l00140">140</a> del archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9c41756a9f3764252ada0d2442d1eac8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void resetTimer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *&#160;</td>
+          <td class="paramname"><em>timer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="modulos_8c_source.html#l00321">321</a> del archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1276112603f3ff77e47304a5f64de662"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void setCurrentModule </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *&#160;</td>
+          <td class="paramname"><em>mod</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Establece el modulo pasado como parametro como modulo activo Se sabe que existe </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mod</td><td>puntero a MOD con el modulo activo </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="modulos_8c_source.html#l00156">156</a> del archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las variables</h2>
+<a class="anchor" id="a87e1b7d47f4264d9dd039365e8da3e9a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a>* currMod = 0x0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Modulo actual </p>
+
+<p>Definición en la línea <a class="el" href="modulos_8c_source.html#l00023">23</a> del archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae7a04675517db9d1317a2a590da9c60f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a>* lstMods = 0x0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Lista de modulos invocados durante la sesion </p>
+
+<p>Definición en la línea <a class="el" href="modulos_8c_source.html#l00022">22</a> del archivo <a class="el" href="modulos_8c_source.html">modulos.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5f9e912074a29350e020b7a09f43ff32"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE* traza</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="amqsdp_8c_source.html#l00059">59</a> del archivo <a class="el" href="amqsdp_8c_source.html">amqsdp.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="modulos_8c.html">modulos.c</a></li>
+    <li class="footer">Generado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

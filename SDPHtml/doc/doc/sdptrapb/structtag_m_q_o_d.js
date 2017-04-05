@@ -1,0 +1,25 @@
+var structtag_m_q_o_d =
+[
+    [ "AlternateSecurityId", "structtag_m_q_o_d.html#adc1f3b4aa3c6e3f3187e75291146cae7", null ],
+    [ "AlternateUserId", "structtag_m_q_o_d.html#aa4de0947b84fe1c303c8a5a419ef024a", null ],
+    [ "DynamicQName", "structtag_m_q_o_d.html#afc3f01c1aa256275bb086469bc1bae95", null ],
+    [ "InvalidDestCount", "structtag_m_q_o_d.html#af76c4c4a710793e086829eac1c995d36", null ],
+    [ "KnownDestCount", "structtag_m_q_o_d.html#ab63679527a2a808aa8c189eeca5d0712", null ],
+    [ "ObjectName", "structtag_m_q_o_d.html#a2106fb125a9f7fc606340ba23c006bc0", null ],
+    [ "ObjectQMgrName", "structtag_m_q_o_d.html#ac72719d0cdc669269aa503462d5c7536", null ],
+    [ "ObjectRecOffset", "structtag_m_q_o_d.html#a8ec0fdf14ab5b4d0f7caf7f333dfbeb4", null ],
+    [ "ObjectRecPtr", "structtag_m_q_o_d.html#aa46059ff8062713d03173a8847594a25", null ],
+    [ "ObjectString", "structtag_m_q_o_d.html#a564791473371222ceb856cfaf02d6f91", null ],
+    [ "ObjectType", "structtag_m_q_o_d.html#afe2238efcfc6d8a8de58f0622bb31caa", null ],
+    [ "RecsPresent", "structtag_m_q_o_d.html#a7592da03e0f1c9bc79c9dd4e641dcf73", null ],
+    [ "ResObjectString", "structtag_m_q_o_d.html#a8f35fe6f52369753de1259a9468437eb", null ],
+    [ "ResolvedQMgrName", "structtag_m_q_o_d.html#af36c1b6e6f3f92e0c733c43da9fada3f", null ],
+    [ "ResolvedQName", "structtag_m_q_o_d.html#aec4a06d696b4370f0c86b129d9f868ca", null ],
+    [ "ResolvedType", "structtag_m_q_o_d.html#ab1523b449e77139034581b4e5f7c4201", null ],
+    [ "ResponseRecOffset", "structtag_m_q_o_d.html#a944cab1325e5696fccf9202988c81066", null ],
+    [ "ResponseRecPtr", "structtag_m_q_o_d.html#a3f96e15a2299a7c139b78c4e1b8cb7cb", null ],
+    [ "SelectionString", "structtag_m_q_o_d.html#ab3a91014a229bd897c17cbd04563bca2", null ],
+    [ "StrucId", "structtag_m_q_o_d.html#a0530922ca944569b52601d74941f96e4", null ],
+    [ "UnknownDestCount", "structtag_m_q_o_d.html#a6443c93f9930aa26f661e00e631a32ea", null ],
+    [ "Version", "structtag_m_q_o_d.html#a0656ef8f766b3907d394d88a35d7b7e9", null ]
+];

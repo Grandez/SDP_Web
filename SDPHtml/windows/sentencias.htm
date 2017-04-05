@@ -1,0 +1,47 @@
+<div id="divSentencias" class="contenedor col-md-12">
+   <div class="panel panel-primary col-md-6" style="margin-left: 3px">
+       <div class="panel-heading">Resumen</div>
+       <div class="panel-body"> <!-- data-ng-controller="resumenCtrl"> -->
+          <table class="table table-hover">
+           <tr class="listado">
+               <td class="col-md-7" >Entrada/Salida</td>
+               <td class="col-md-5 text-right tbLinea">{{modulo.resumen.info.verbosIO}}</td>
+           </tr>
+   
+           <tr class="listado">
+               <td class="col-md-7" >Tratamiento datos</td>
+               <td class="col-md-5 text-right tbLinea">{{modulo.resumen.info.verbosData}}</td>
+           </tr>
+   
+           <tr class="listado">
+               <td class="col-md-7" >Control de flujo</td>
+               <td class="col-md-5 text-right tbLinea">{{modulo.resumen.info.verbosFlujo}}</td>
+           </tr>
+   
+           <tr class="listado">
+               <td class="col-md-7" >Control de modulo</td>
+               <td class="col-md-5 text-right tbLinea">{{modulo.resumen.info.verbosControl}}</td>
+           </tr>
+   
+           <tr class="listado">
+               <td class="col-md-7" >Operaciones aritmeticas</td>
+               <td class="col-md-5 text-right tbLinea">{{modulo.resumen.info.verbosArit}}</td>
+           </tr>
+   
+           <tr class="listado">
+               <td class="col-md-7" >Otras operaciones</td>
+               <td class="col-md-5 text-right tbLinea">{{modulo.resumen.info.verbosLang}}</td>
+           </tr>
+           <tr><td class="col-md-12"><br> </td></tr>
+           <tr class="listado">
+               <td class="col-md-7" >Total Sentencias</td>
+               <td class="col-md-5 text-right tbLinea">{{modulo.resumen.sentencias}}</td>
+           </tr>
+   
+       </table>
+       </div>
+   </div>
+
+   <div id="grfSentences" class="panel col-md-6 pull-right" style="width: 175px; height: 175px"></div>
+
+</div>

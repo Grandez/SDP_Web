@@ -1,0 +1,14 @@
+<map id="src/messages.c" name="src/messages.c">
+<area shape="rect" id="node6" href="$_s_d_p_t_r_a_p_8h.html" title="Fichero de cabecera con los ficheros de cabecera comunes. " alt="" coords="282,80,377,107"/>
+<area shape="rect" id="node12" href="$messages_8h.html" title="Funciones de gestion del envio de mensajes al sistema de colas. " alt="" coords="164,80,257,107"/>
+<area shape="rect" id="node13" href="$modulos_8h.html" title="Funciones de gestion de los modulos activos en una sesion. " alt="" coords="765,80,848,107"/>
+<area shape="rect" id="node14" href="$amqsdp_8h.html" title="Cliente Websphere MQSeries. " alt="" coords="401,80,479,107"/>
+<area shape="rect" id="node15" href="$cob2c_8h.html" title="Fichero de cabecera para convertir la copy COBOL en una estructura SDP. " alt="" coords="873,80,941,107"/>
+<area shape="rect" id="node16" href="$global_8h.html" title="Define las variables de uso global para todo el sistema. " alt="" coords="73,80,140,107"/>
+<area shape="rect" id="node17" href="$md5_8h.html" title="Fichero de cabecera para el calculo de la firma MD5 de un texto Modificado a partir del algoritmo des..." alt="" coords="965,80,1024,107"/>
+<area shape="rect" id="node7" href="$jggsal_8h.html" title="Software Abstraction Layer. " alt="" coords="499,155,565,181"/>
+<area shape="rect" id="node8" href="$sdpconfig_8h.html" title="Fichero de cabecera de configuracion del sistema Define las constantes y los valores globales de comp..." alt="" coords="143,229,231,256"/>
+<area shape="rect" id="node9" href="$sdp_types_8h.html" title="Define las estructrus y tipos de datos usados en la libreria. " alt="" coords="142,155,231,181"/>
+<area shape="rect" id="node10" href="$pila_8h.html" title="Funciones de gestion de pilas abtracta. " alt="" coords="307,155,360,181"/>
+<area shape="rect" id="node11" href="$trapcodes_8h.html" title="trapcodes.h" alt="" coords="384,155,475,181"/>
+</map>

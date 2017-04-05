@@ -1,0 +1,116 @@
+<html ng-app="sdpAdmin"
+      data-ng-controller="sdpAdm">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width
+                                  , initial-scale=1
+                                  , maximum-scale=1
+                                  , user-scalable=no">
+
+    <title>Proyecto Fin de Carrera - Javier González</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap-theme.css">
+
+    <link rel="stylesheet" href="../lib/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="../lib/jquery-ui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="../lib/jquery-ui/jquery-ui.theme.css">
+
+    <link rel="stylesheet" href="../lib/uilayout/ui-layout.css">
+    <link rel="stylesheet" href="../lib/modal/ngDialog.css">
+    <link rel="stylesheet" href="../modal/css/ngDialog-theme-default.css">
+    <link rel="stylesheet" href="../modal/css/ngDialog-theme-plain.css">
+    <link rel="stylesheet" href="../modal/css/ngDialog-custom-width.css">
+
+    <link rel="stylesheet" href="../css/sdpMain.css">
+    <link rel="stylesheet" href="../css/mnubar.css">
+
+    <link rel="stylesheet" href="../lib/jstree/themes/proton/style.css">
+
+    <!-- Usado por DOXYGEN -->
+
+    <!-- JQuery debe ir delante de Angular -->
+    <script src="../lib/jquery/jquery.js"></script>
+
+    <link href="css/tabs.css" rel="stylesheet" type="text/css"/>
+    <!--    <script type="text/javascript" src="jquery.js"></script> -->
+    <script type="text/javascript" src="js/doxygen/dynsections.js"></script>
+    <link href="css/navtree.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="js/doxygen/resize.js"></script>
+    <script type="text/javascript" src="js/doxygen/navtreedata.js"></script>
+    <script type="text/javascript" src="js/doxygen/navtree.js"></script>
+    <script type="text/javascript">
+        $(document).ready(initResizable);
+        $(window).load(resizeHeight);
+    </script>
+    <link href="css/search/search.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="js/doxygen/search/searchdata.js"></script>
+    <script type="text/javascript" src="js/doxygen/search/search.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() { init_search(); });
+    </script>
+    <link href="css/doxygen.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<div class="sdpHeader">
+    <div class="col-md-2"><a href="/index.html"><span class="marca">P.F.C.</span></a></div>
+    <div id='mnubar' class="col-md-10">
+        <ul>
+<!--            <li data-ng-click="ventana(1)" data-ng-class="{'active' : vista == 1}" ><a href='#'><span>Configuracion</span></a></li>-->
+            <li data-ng-click="ventana(2)" data-ng-class="{'active' : vista == 2}"><a href='#'><span>Javadoc</span></a></li>
+            <li data-ng-click="ventana(3)" data-ng-class="{'active' : vista == 3}"><a href='#'><span>SDPTRAPB</span></a></li>
+            <li data-ng-click="ventana(5)" data-ng-class="{'active' : vista == 5}"><a href='#'><span>Memoria</span></a></li>
+            <li data-ng-click="ventana(4)" data-ng-class="{'active' : vista == 4}" class='last pull-right' ><a href='#'><span>Contacto</span></a></li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="sdpContent">
+
+<!--    <div id="appView"      data-ng-show="vista == 1" data-ng-include="'partials/config.htm'"></div> -->
+    <div id="userView"     data-ng-show="vista == 2" data-ng-include="'partials/javadoc.htm'"></div>
+    <div id="configView"   data-ng-show="vista == 3" data-ng-include="'partials/sdptrapb.htm'"></div>
+    <div id="contactView"  data-ng-show="vista == 4" data-ng-include="'partials/contact.htm'"></div>
+    <div id="memoriaView"  data-ng-show="vista == 5" data-ng-include="'partials/memoria.htm'"></div>
+
+</div>
+
+<div class="sdpFooter">{{MSG.AUTOR}}</div>
+
+<!-- JQuery debe ir delante de Angular -->
+<script src="../lib/jquery/jquery.js"></script>
+
+<script src="../lib/jquery-ui/jquery-ui.js"></script>
+<script src="../lib/jspanel/mobile-detect.min.js"></script>
+<script src="../lib/jspanel/jquery.jspanel.js"></script>
+
+<script src="../lib/angular/angular.js"></script>
+<script src="../lib/angular/angular-sanitize.js"></script>
+<script src="../lib/angular/angular-locale_es.js"></script>
+
+<script src="../lib/uilayout/ui-layout.js"></script>
+
+<script src="../lib/ui-bootstrap/ui-bootstrap-0.13.0.js"></script>
+<script src="../lib/ui-bootstrap/ui-bootstrap-tpls-0.13.0.js"></script>
+
+<script src="../lib/jstree/jstree.js"></script>
+
+<script src="../lib/modal/ngDialog.js"></script>
+
+<script src="../js/factory/sdpModeloAdmin.js"></script>
+<script src="../js/factory/sdpFactoryAdmin.js"></script>
+<script src="../js/factory/interceptor.js"></script>
+
+<script src="../js/controllers/sdpAdm.js"></script>
+
+<script src="../js/common/sdpAjax.js"></script>
+<script src="../js/admFunctions.js"></script>
+<script src="../js/admin.js"></script>
+
+</body>
+<html>

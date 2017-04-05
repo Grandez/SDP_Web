@@ -1,0 +1,9 @@
+<map id="include/sdpTypes.h" name="include/sdpTypes.h">
+<area shape="rect" id="node2" href="$global_8h.html" title="Define las variables de uso global para todo el sistema. " alt="" coords="260,80,372,107"/>
+<area shape="rect" id="node6" href="$messages_8h.html" title="Funciones de gestion del envio de mensajes al sistema de colas. " alt="" coords="396,80,535,107"/>
+<area shape="rect" id="node7" href="$_s_d_p_t_r_a_p_8h.html" title="Fichero de cabecera con los ficheros de cabecera comunes. " alt="" coords="97,80,236,107"/>
+<area shape="rect" id="node3" href="$amqsdp_8c.html" title="Cliente Websphere MQSeries. " alt="" coords="133,155,235,181"/>
+<area shape="rect" id="node4" href="$messages_8c.html" title="Gestiona la generacion de los diferentes mensajes que se deben enviar. " alt="" coords="259,155,373,181"/>
+<area shape="rect" id="node5" href="$_s_d_p_t_r_a_p_b_8c.html" title="SDPTRAPB DLL de captura de datos de ejecucion del programa COBOL Utiliza un unico punto de entrada: S..." alt="" coords="397,155,523,181"/>
+<area shape="rect" id="node8" href="$modulos_8c.html" title="Mantiene la lista de modulos activos con sus ID. " alt="" coords="5,155,109,181"/>
+</map>

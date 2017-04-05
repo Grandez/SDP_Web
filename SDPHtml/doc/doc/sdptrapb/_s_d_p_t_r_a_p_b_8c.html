@@ -1,0 +1,510 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Proyecto de Fin de Carrera: Referencia del Archivo src/SDPTRAPB.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Proyecto de Fin de Carrera
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Trapper SDPTRAPB</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Estructuras&#160;de&#160;Datos</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_s_d_p_t_r_a_p_b_8c.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">'defines'</a> &#124;
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo SDPTRAPB.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>SDPTRAPB DLL de captura de datos de ejecucion del programa COBOL Utiliza un unico punto de entrada: SDPTRAP.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="jggsal_8h_source.html">jggsal.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_s_d_p_t_r_a_p_b_8h_source.html">SDPTRAPB.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_s_d_p_t_r_a_p_8h_source.html">SDPTRAP.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="cob2c_8h_source.html">cob2c.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="modulos_8h_source.html">modulos.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="timer_8h_source.html">timer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="messages_8h_source.html">messages.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="md5_8h_source.html">md5.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="amqsdp_8h_source.html">amqsdp.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="global_8h_source.html">global.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Dependencia gráfica adjunta para SDPTRAPB.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="_s_d_p_t_r_a_p_b_8c__incl.png" border="0" usemap="#src_2_s_d_p_t_r_a_p_b_8c" alt=""/></div>
+<map name="src_2_s_d_p_t_r_a_p_b_8c" id="src_2_s_d_p_t_r_a_p_b_8c">
+<area shape="rect" id="node6" href="jggsal_8h.html" title="Software Abstraction Layer. " alt="" coords="567,155,633,181"/>
+<area shape="rect" id="node7" href="_s_d_p_t_r_a_p_b_8h.html" title="Fichero de cabecera de la libreria SDPTRAPB Define las constantes y los valores globales de comportam..." alt="" coords="799,80,902,107"/>
+<area shape="rect" id="node8" href="_s_d_p_t_r_a_p_8h.html" title="Fichero de cabecera con los ficheros de cabecera comunes. " alt="" coords="353,80,447,107"/>
+<area shape="rect" id="node13" href="cob2c_8h.html" title="Fichero de cabecera para convertir la copy COBOL en una estructura SDP. " alt="" coords="926,80,994,107"/>
+<area shape="rect" id="node14" href="modulos_8h.html" title="Funciones de gestion de los modulos activos en una sesion. " alt="" coords="1019,80,1101,107"/>
+<area shape="rect" id="node15" href="timer_8h.html" title="Fichero de cabecera para incluir los modulos de calculo de timers. " alt="" coords="1126,80,1189,107"/>
+<area shape="rect" id="node16" href="messages_8h.html" title="Funciones de gestion del envio de mensajes al sistema de colas. " alt="" coords="235,80,328,107"/>
+<area shape="rect" id="node17" href="md5_8h.html" title="Fichero de cabecera para el calculo de la firma MD5 de un texto Modificado a partir del algoritmo des..." alt="" coords="1213,80,1272,107"/>
+<area shape="rect" id="node18" href="amqsdp_8h.html" title="Cliente Websphere MQSeries. " alt="" coords="523,80,602,107"/>
+<area shape="rect" id="node19" href="global_8h.html" title="Define las variables de uso global para todo el sistema. " alt="" coords="144,80,211,107"/>
+<area shape="rect" id="node9" href="sdpconfig_8h.html" title="Fichero de cabecera de configuracion del sistema Define las constantes y los valores globales de comp..." alt="" coords="211,229,299,256"/>
+<area shape="rect" id="node10" href="sdp_types_8h.html" title="Define las estructrus y tipos de datos usados en la libreria. " alt="" coords="210,155,299,181"/>
+<area shape="rect" id="node11" href="pila_8h.html" title="Funciones de gestion de pilas abtracta. " alt="" coords="375,155,428,181"/>
+<area shape="rect" id="node12" href="trapcodes_8h.html" title="trapcodes.h" alt="" coords="452,155,543,181"/>
+</map>
+</div>
+</div>
+<p><a href="_s_d_p_t_r_a_p_b_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+'defines'</h2></td></tr>
+<tr class="memitem:a078985ed6b26e9aa8ab5dc3db733ce0a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_p_t_r_a_p_b_8c.html#a078985ed6b26e9aa8ab5dc3db733ce0a">_MAIN_MODULE_</a></td></tr>
+<tr class="separator:a078985ed6b26e9aa8ab5dc3db733ce0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa34996ed15c54e509b65ea825013f094"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_p_t_r_a_p_b_8c.html#aa34996ed15c54e509b65ea825013f094">_SDPTRAPB_C_</a></td></tr>
+<tr class="separator:aa34996ed15c54e509b65ea825013f094"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0afe4cbd0a945e888ddbfd92070d8e57"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_p_t_r_a_p_b_8c.html#a0afe4cbd0a945e888ddbfd92070d8e57">NO_STDIO_REDIRECT</a></td></tr>
+<tr class="separator:a0afe4cbd0a945e888ddbfd92070d8e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:ad67bdaaddcfa1424dad31c0b8187f829"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_p_t_r_a_p_b_8c.html#ad67bdaaddcfa1424dad31c0b8187f829">startProcess</a> (int option)</td></tr>
+<tr class="separator:ad67bdaaddcfa1424dad31c0b8187f829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa42745580a553732a3f221db4d209801"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_p_t_r_a_p_b_8c.html#aa42745580a553732a3f221db4d209801">endProcess</a> (int option, char *sdpData)</td></tr>
+<tr class="separator:aa42745580a553732a3f221db4d209801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0704e6747f6e4e33d32b791e60c85953"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_p_t_r_a_p_b_8c.html#a0704e6747f6e4e33d32b791e60c85953">calculateTimers</a> (<a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *timer)</td></tr>
+<tr class="separator:a0704e6747f6e4e33d32b791e60c85953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad714df92d7ba0d4f11a8de881029449f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_p_t_r_a_p_b_8c.html#ad714df92d7ba0d4f11a8de881029449f">initSystem</a> (void)</td></tr>
+<tr class="separator:ad714df92d7ba0d4f11a8de881029449f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a791a48c81cdf8f968eb6e0282729ff14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_p_t_r_a_p_b_8c.html#a791a48c81cdf8f968eb6e0282729ff14">cleanSystem</a> (void)</td></tr>
+<tr class="separator:a791a48c81cdf8f968eb6e0282729ff14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a004616c530a9e96c121bf5aa81198eab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_p_t_r_a_p_b_8c.html#a004616c530a9e96c121bf5aa81198eab">nuevoModulo</a> (void)</td></tr>
+<tr class="separator:a004616c530a9e96c121bf5aa81198eab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe26885736f7df4b2157bb4dfe32ce20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_s_d_p_t_r_a_p_b_8h.html#aad8a241e13cd4731254878eed6271c8c">SDPTRAP_DLL</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_p_t_r_a_p_b_8c.html#afe26885736f7df4b2157bb4dfe32ce20">SDPTRAPB_setDebugLevel</a> (int level)</td></tr>
+<tr class="separator:afe26885736f7df4b2157bb4dfe32ce20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56bd96cf4c11628e4f0e301c5b8e5872"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_s_d_p_t_r_a_p_b_8h.html#aad8a241e13cd4731254878eed6271c8c">SDPTRAP_DLL</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_p_t_r_a_p_b_8c.html#a56bd96cf4c11628e4f0e301c5b8e5872">SDPTRAPB_setModo</a> (int mode)</td></tr>
+<tr class="separator:a56bd96cf4c11628e4f0e301c5b8e5872"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae94cd489111188c3ccda942c856494f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_s_d_p_t_r_a_p_b_8h.html#aad8a241e13cd4731254878eed6271c8c">SDPTRAP_DLL</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_p_t_r_a_p_b_8c.html#ae94cd489111188c3ccda942c856494f2">SDPTRAPB</a> (int *option, int *len, char *sdpData, char *modulo)</td></tr>
+<tr class="memdesc:ae94cd489111188c3ccda942c856494f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Punto de entrada a la libreria SDPTRAPB.  <a href="#ae94cd489111188c3ccda942c856494f2">Más...</a><br /></td></tr>
+<tr class="separator:ae94cd489111188c3ccda942c856494f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a7b1065499acf2797bfe8d85cd6048da6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_p_t_r_a_p_b_8c.html#a7b1065499acf2797bfe8d85cd6048da6">current</a></td></tr>
+<tr class="separator:a7b1065499acf2797bfe8d85cd6048da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3bb6926d5a7c2015951d6b80d9acd2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_p_t_r_a_p_b_8c.html#ab3bb6926d5a7c2015951d6b80d9acd2a">ultimo</a> = {0,&quot;&quot;,0,0,0,0,0,0x0}</td></tr>
+<tr class="separator:ab3bb6926d5a7c2015951d6b80d9acd2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f9e912074a29350e020b7a09f43ff32"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_p_t_r_a_p_b_8c.html#a5f9e912074a29350e020b7a09f43ff32">traza</a> = 0x0</td></tr>
+<tr class="separator:a5f9e912074a29350e020b7a09f43ff32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>SDPTRAPB DLL de captura de datos de ejecucion del programa COBOL Utiliza un unico punto de entrada: SDPTRAP. </p>
+<p>Modo 0: Acumula toda la informacion en memoria y la envia al final del proceso Modo 1: Acumula la informacion en memoria y la envia cada modulo Modo 2: Va enviando la informacion segun se va produciendo</p>
+<dl class="section author"><dt>Autor</dt><dd>: Javier Gonzalez </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>: 01/03/15 </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>: 1.0 </dd></dl>
+
+<p>Definición en el archivo <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html">SDPTRAPB.c</a>.</p>
+</div><h2 class="groupheader">Documentación de los 'defines'</h2>
+<a class="anchor" id="a078985ed6b26e9aa8ab5dc3db733ce0a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _MAIN_MODULE_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html#l00016">16</a> del archivo <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html">SDPTRAPB.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa34996ed15c54e509b65ea825013f094"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _SDPTRAPB_C_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html#l00017">17</a> del archivo <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html">SDPTRAPB.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0afe4cbd0a945e888ddbfd92070d8e57"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NO_STDIO_REDIRECT</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html#l00019">19</a> del archivo <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html">SDPTRAPB.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a class="anchor" id="a0704e6747f6e4e33d32b791e60c85953"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void calculateTimers </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *&#160;</td>
+          <td class="paramname"><em>timer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html#l00200">200</a> del archivo <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html">SDPTRAPB.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a791a48c81cdf8f968eb6e0282729ff14"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cleanSystem </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html#l00281">281</a> del archivo <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html">SDPTRAPB.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa42745580a553732a3f221db4d209801"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void endProcess </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>option</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>sdpData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html#l00151">151</a> del archivo <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html">SDPTRAPB.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad714df92d7ba0d4f11a8de881029449f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initSystem </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html#l00236">236</a> del archivo <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html">SDPTRAPB.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a004616c530a9e96c121bf5aa81198eab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nuevoModulo </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html#l00222">222</a> del archivo <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html">SDPTRAPB.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae94cd489111188c3ccda942c856494f2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_s_d_p_t_r_a_p_b_8h.html#aad8a241e13cd4731254878eed6271c8c">SDPTRAP_DLL</a> void SDPTRAPB </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>option</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>sdpData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>modulo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Punto de entrada a la libreria SDPTRAPB. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">option</td><td>Una combinacion de los valores definidos en MSG_xxx </td></tr>
+    <tr><td class="paramname">len</td><td>Longitud de la etiqueta, 0 si no es relevante </td></tr>
+    <tr><td class="paramname">sdpData</td><td>Puntero a la estructura SDP </td></tr>
+    <tr><td class="paramname">modulo</td><td>Etiqueta (parrafo, rutina, etc.) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html#l00083">83</a> del archivo <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html">SDPTRAPB.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afe26885736f7df4b2157bb4dfe32ce20"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_s_d_p_t_r_a_p_b_8h.html#aad8a241e13cd4731254878eed6271c8c">SDPTRAP_DLL</a> void SDPTRAPB_setDebugLevel </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Usado para pruebas unitarias y de integracion </p>
+
+<p>Definición en la línea <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html#l00064">64</a> del archivo <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html">SDPTRAPB.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a56bd96cf4c11628e4f0e301c5b8e5872"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_s_d_p_t_r_a_p_b_8h.html#aad8a241e13cd4731254878eed6271c8c">SDPTRAP_DLL</a> void SDPTRAPB_setModo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Usado para pruebas unitarias y de integracion </p>
+
+<p>Definición en la línea <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html#l00071">71</a> del archivo <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html">SDPTRAPB.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad67bdaaddcfa1424dad31c0b8187f829"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void startProcess </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>option</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html#l00125">125</a> del archivo <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html">SDPTRAPB.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las variables</h2>
+<a class="anchor" id="a7b1065499acf2797bfe8d85cd6048da6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> current</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html#l00040">40</a> del archivo <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html">SDPTRAPB.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5f9e912074a29350e020b7a09f43ff32"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE* traza = 0x0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html#l00042">42</a> del archivo <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html">SDPTRAPB.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab3bb6926d5a7c2015951d6b80d9acd2a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> ultimo = {0,&quot;&quot;,0,0,0,0,0,0x0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html#l00041">41</a> del archivo <a class="el" href="_s_d_p_t_r_a_p_b_8c_source.html">SDPTRAPB.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_s_d_p_t_r_a_p_b_8c.html">SDPTRAPB.c</a></li>
+    <li class="footer">Generado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

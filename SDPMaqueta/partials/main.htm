@@ -1,0 +1,53 @@
+<div class="sdpHeader">
+    <span class="marca" data-ng-click="pagina = 1">P.F.C.</span>
+
+    <!-- Usados para pasar los datos de JQuery a Angular -->
+
+    <div class="pull-right" style="border: none">
+        <select ng-model="rango" ng-change="cambiaRango(rango)" convert-to-number>
+            <option value="1">Dia</option>
+            <option value="2">Semana</option>
+            <option value="3">Mes</option>
+            <option value="4">Trimestre</option>
+            <option value="5">Todo</option>
+        </select>
+    </div>
+
+</div>
+
+<div class="sdpContent">
+    <div data-ng-show="global.mainErr ==  1" data-ng-include="'partials/serverError.htm'"></div>
+    <div ui-layout  >
+
+        <div ui-layout-container>
+            <div ui-layout="{flow : 'column'}" >
+                <div ui-layout-container size="15%" >
+
+                    <div class="left-inner-addon ">
+                        <i class="glyphicon glyphicon-search"></i>
+                        <input type="search"
+                               class="form-control"
+                               data-ng-model="mascara"
+                               data-ng-keyup="buscaArbol()"/>
+                    </div>
+
+                    <div id="arbol" data-ng-model="arbol"> </div>
+
+                </div>
+                <div ui-layout-container >
+
+                    <div id="areaView"   data-ng-show="vista ==  1" data-ng-include="'partials/appl/area.htm'"></div>
+                    <div id="applView"   data-ng-show="vista ==  2" data-ng-include="'partials/appl/aplicacion.htm'"></div>
+                    <div id="moduleView" data-ng-show="vista ==  3" data-ng-include="'partials/modulo/modulo.htm'"></div>
+                    <div id="noInfo"     data-ng-show="vista == -1" data-ng-include="'partials/noInfo.htm'"></div>
+                    <div id="pnlGrafico" data-ng-show="vista >  10" data-ng-include="'partials/grafico.htm'"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="sdpFooter">
+    Javier González Grández (2015)
+</div>

@@ -1,0 +1,207 @@
+\hypertarget{pila_8h}{}\section{Referencia del Archivo include/pila.h}
+\label{pila_8h}\index{include/pila.\+h@{include/pila.\+h}}
+
+
+Funciones de gestion de pilas abtracta.  
+
+
+Gráfico de los archivos que directa o indirectamente incluyen a este archivo\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pila_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\textquotesingle{}defines\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{pila_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+}~extern
+\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void $\ast$ \hyperlink{pila_8h_a76e64db083920898ed319afa103e9c9b}{create\+Stack} (int size, unsigned char pointer)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void $\ast$ \hyperlink{pila_8h_aa849c8d27b733322a37846b4dafd9711}{delete\+Stack} (void $\ast$stack)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{pila_8h_a2d5d0b13ff0627defd07ec3fbe614b58}{push} (void $\ast$stack, void $\ast$data)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void $\ast$ \hyperlink{pila_8h_ad9cf92c298635b8dad7b5a95d3f5dade}{pop} (void $\ast$stack)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void $\ast$ \hyperlink{pila_8h_a4cd5ead0eacae2da44d2e23a5cd2ff85}{peek} (void $\ast$stack)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void $\ast$ \hyperlink{pila_8h_a52d67d28c95733787926bc3f42bffb2a}{peek\+Previous} (void $\ast$stack, int deep)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} int \hyperlink{pila_8h_afd15d0a4ab9c26be333625ced34d00d9}{stack\+Depth} (void $\ast$stack)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{pila_8h_abfe71b23c5a319ae12879661e4dfa126}{clean\+Stacks} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Funciones de gestion de pilas abtracta. 
+
+\begin{DoxyAuthor}{Autor}
+\+: Javier Gonzalez 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+\+: 01/03/15 
+\end{DoxyDate}
+\begin{DoxyVersion}{Versión}
+\+: 2.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\hypertarget{pila_8h_adfbc1051df776564281ac4220ba53a9e}{}\index{pila.\+h@{pila.\+h}!\+\_\+\+E\+X\+T\+\_\+@{\+\_\+\+E\+X\+T\+\_\+}}
+\index{\+\_\+\+E\+X\+T\+\_\+@{\+\_\+\+E\+X\+T\+\_\+}!pila.\+h@{pila.\+h}}
+\subsubsection[{\+\_\+\+E\+X\+T\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+E\+X\+T\+\_\+~extern}\label{pila_8h_adfbc1051df776564281ac4220ba53a9e}
+
+
+Definición en la línea 20 del archivo pila.\+h.
+
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{pila_8h_abfe71b23c5a319ae12879661e4dfa126}{}\index{pila.\+h@{pila.\+h}!clean\+Stacks@{clean\+Stacks}}
+\index{clean\+Stacks@{clean\+Stacks}!pila.\+h@{pila.\+h}}
+\subsubsection[{clean\+Stacks(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void clean\+Stacks (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{pila_8h_abfe71b23c5a319ae12879661e4dfa126}
+Elimina todas las pilas activas en el sistema 
+
+Definición en la línea 86 del archivo pila.\+c.
+
+\hypertarget{pila_8h_a76e64db083920898ed319afa103e9c9b}{}\index{pila.\+h@{pila.\+h}!create\+Stack@{create\+Stack}}
+\index{create\+Stack@{create\+Stack}!pila.\+h@{pila.\+h}}
+\subsubsection[{create\+Stack(int size, unsigned char pointer)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void$\ast$ create\+Stack (
+\begin{DoxyParamCaption}
+\item[{int}]{size, }
+\item[{unsigned char}]{pointer}
+\end{DoxyParamCaption}
+)}\label{pila_8h_a76e64db083920898ed319afa103e9c9b}
+Crea una nueva instancia de pila con elementos de size bytes 
+\begin{DoxyParams}{Parámetros}
+{\em size} & Tama�o del objeto a almacenar en la pila \\
+\hline
+{\em pointer} & Flag para indicar si la pila es de copia o referencia T\+R\+U\+E es una pila de referencia, almacena el puntero al objeto F\+A\+L\+S\+E es una pila de copia, almacena una copia del objeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Manejador de la pila 
+\end{DoxyReturn}
+
+
+Definición en la línea 66 del archivo pila.\+c.
+
+\hypertarget{pila_8h_aa849c8d27b733322a37846b4dafd9711}{}\index{pila.\+h@{pila.\+h}!delete\+Stack@{delete\+Stack}}
+\index{delete\+Stack@{delete\+Stack}!pila.\+h@{pila.\+h}}
+\subsubsection[{delete\+Stack(void $\ast$stack)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void$\ast$ delete\+Stack (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{stack}
+\end{DoxyParamCaption}
+)}\label{pila_8h_aa849c8d27b733322a37846b4dafd9711}
+Elimina la instancia de pila pasada como parametro 
+\begin{DoxyParams}{Parámetros}
+{\em stack} & Handle de la pila a eliminar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Manejador de la pila 
+\end{DoxyReturn}
+
+
+Definición en la línea 77 del archivo pila.\+c.
+
+\hypertarget{pila_8h_a4cd5ead0eacae2da44d2e23a5cd2ff85}{}\index{pila.\+h@{pila.\+h}!peek@{peek}}
+\index{peek@{peek}!pila.\+h@{pila.\+h}}
+\subsubsection[{peek(void $\ast$stack)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void$\ast$ peek (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{stack}
+\end{DoxyParamCaption}
+)}\label{pila_8h_a4cd5ead0eacae2da44d2e23a5cd2ff85}
+Obtiene el elemento de la cima de la pila sin eliminarlo 
+\begin{DoxyParams}{Parámetros}
+{\em stack} & Handle de la pila \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Objeto en la cima de la pila 
+\end{DoxyReturn}
+
+
+Definición en la línea 126 del archivo pila.\+c.
+
+\hypertarget{pila_8h_a52d67d28c95733787926bc3f42bffb2a}{}\index{pila.\+h@{pila.\+h}!peek\+Previous@{peek\+Previous}}
+\index{peek\+Previous@{peek\+Previous}!pila.\+h@{pila.\+h}}
+\subsubsection[{peek\+Previous(void $\ast$stack, int deep)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void$\ast$ peek\+Previous (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{stack, }
+\item[{int}]{deep}
+\end{DoxyParamCaption}
+)}\label{pila_8h_a52d67d28c95733787926bc3f42bffb2a}
+Obtiene un elemento de la de la pila sin eliminarlo 
+\begin{DoxyParams}{Parámetros}
+{\em stack} & Handle de la pila \\
+\hline
+{\em deep} & Posicion del elemento en la pila (0 = cima de la pila) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Objeto en la cima de la pila 
+\end{DoxyReturn}
+
+
+Definición en la línea 136 del archivo pila.\+c.
+
+\hypertarget{pila_8h_ad9cf92c298635b8dad7b5a95d3f5dade}{}\index{pila.\+h@{pila.\+h}!pop@{pop}}
+\index{pop@{pop}!pila.\+h@{pila.\+h}}
+\subsubsection[{pop(void $\ast$stack)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void$\ast$ pop (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{stack}
+\end{DoxyParamCaption}
+)}\label{pila_8h_ad9cf92c298635b8dad7b5a95d3f5dade}
+Saca un elemento en la pila 
+\begin{DoxyParams}{Parámetros}
+{\em stack} & Handle de la pila \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Objeto en la cima de la pila 
+\end{DoxyReturn}
+\hypertarget{pila_8h_a2d5d0b13ff0627defd07ec3fbe614b58}{}\index{pila.\+h@{pila.\+h}!push@{push}}
+\index{push@{push}!pila.\+h@{pila.\+h}}
+\subsubsection[{push(void $\ast$stack, void $\ast$data)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void push (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{stack, }
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}\label{pila_8h_a2d5d0b13ff0627defd07ec3fbe614b58}
+Inserta un elemento en la pila 
+\begin{DoxyParams}{Parámetros}
+{\em stack} & Handle de la pila \\
+\hline
+{\em data} & Objeto a insertar en la pila \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 99 del archivo pila.\+c.
+
+\hypertarget{pila_8h_afd15d0a4ab9c26be333625ced34d00d9}{}\index{pila.\+h@{pila.\+h}!stack\+Depth@{stack\+Depth}}
+\index{stack\+Depth@{stack\+Depth}!pila.\+h@{pila.\+h}}
+\subsubsection[{stack\+Depth(void $\ast$stack)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} int stack\+Depth (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{stack}
+\end{DoxyParamCaption}
+)}\label{pila_8h_afd15d0a4ab9c26be333625ced34d00d9}
+Devuelve la profundidad actual de la pila 
+\begin{DoxyParams}{Parámetros}
+{\em stack} & Handle de la pila \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+profundidad de la pila 
+\end{DoxyReturn}

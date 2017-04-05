@@ -1,0 +1,25 @@
+<div ui-layout  >
+
+    <div ui-layout-container>
+        <div ui-layout="{flow : 'column'}" >
+            <div ui-layout-container size="15%" >
+
+                <div class="left-inner-addon ">
+                    <i class="glyphicon glyphicon-search"></i>
+                    <input type="search"
+                           class="form-control"
+                           data-ng-model="mascara"
+                           data-ng-keyup="buscaArbol()"/>
+                </div>
+
+<!--                <div id="arbol" data-ng-model="arbol"> </div> -->
+
+            </div>
+            <div ui-layout-container >
+                <div data-ng-include="'partials/applList.htm'"/>
+            </div>
+        </div>
+    </div>
+
+</div>
+

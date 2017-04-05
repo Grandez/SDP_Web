@@ -1,0 +1,27 @@
+var structtag_m_q_m_d1 =
+[
+    [ "AccountingToken", "structtag_m_q_m_d1.html#a1fe2835a002ec01b58d479509699dd2c", null ],
+    [ "ApplIdentityData", "structtag_m_q_m_d1.html#a1f16948c5ba6adfbb92776400030700e", null ],
+    [ "ApplOriginData", "structtag_m_q_m_d1.html#aaf3c543f992b06c609193929872b998a", null ],
+    [ "BackoutCount", "structtag_m_q_m_d1.html#afd269725e61f1620f8182ccd914d8dae", null ],
+    [ "CodedCharSetId", "structtag_m_q_m_d1.html#a4d8d1961a991850d1355cdf9b4680b8e", null ],
+    [ "CorrelId", "structtag_m_q_m_d1.html#acac8d73138c2c618b41a274eb92e5f2a", null ],
+    [ "Encoding", "structtag_m_q_m_d1.html#a30167bf454a49a60fd3fe4e9e586af34", null ],
+    [ "Expiry", "structtag_m_q_m_d1.html#a85cb54f2f2a97fe071fcad54d22a92a9", null ],
+    [ "Feedback", "structtag_m_q_m_d1.html#a9cb2f407eb097aa9cdc246dc18059987", null ],
+    [ "Format", "structtag_m_q_m_d1.html#a435a478822008713f8aaff89f369ed63", null ],
+    [ "MsgId", "structtag_m_q_m_d1.html#a075d401c83d67ca688e6165dda74a44c", null ],
+    [ "MsgType", "structtag_m_q_m_d1.html#a22732037d5385ab03eb3e9d9a5e60843", null ],
+    [ "Persistence", "structtag_m_q_m_d1.html#af0f253d60fa2dcbe2bda530c88661853", null ],
+    [ "Priority", "structtag_m_q_m_d1.html#a72c542b9e2952a489df0cb84755c1fa6", null ],
+    [ "PutApplName", "structtag_m_q_m_d1.html#a7195390be27f384ef0ab0d0f9053d462", null ],
+    [ "PutApplType", "structtag_m_q_m_d1.html#a6d9e0e0fe9075017c939213948c747dc", null ],
+    [ "PutDate", "structtag_m_q_m_d1.html#add3e7fe139edfa323295d6c7bc764cc5", null ],
+    [ "PutTime", "structtag_m_q_m_d1.html#aec51e7b9face9480a893ae5d47781ee7", null ],
+    [ "ReplyToQ", "structtag_m_q_m_d1.html#a7073875015f870e1d1a02e988ce698b3", null ],
+    [ "ReplyToQMgr", "structtag_m_q_m_d1.html#a9364487d587c0a06d95c25d1ae05a0be", null ],
+    [ "Report", "structtag_m_q_m_d1.html#a3e6ae3e2f087fe6fc26cc75004fbc790", null ],
+    [ "StrucId", "structtag_m_q_m_d1.html#a0530922ca944569b52601d74941f96e4", null ],
+    [ "UserIdentifier", "structtag_m_q_m_d1.html#a46cc458e507d74cea87ed00b97695f65", null ],
+    [ "Version", "structtag_m_q_m_d1.html#a0656ef8f766b3907d394d88a35d7b7e9", null ]
+];

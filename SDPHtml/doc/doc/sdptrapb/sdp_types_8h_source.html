@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Proyecto de Fin de Carrera: Fichero Fuente include/sdpTypes.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Proyecto de Fin de Carrera
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Trapper SDPTRAPB</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Estructuras&#160;de&#160;Datos</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('sdp_types_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">sdpTypes.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="sdp_types_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef _SDPTYPES_H_</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">   #define _SDPTYPES_H_</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">   #include &quot;<a class="code" href="sdpconfig_8h.html">sdpconfig.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="sdp_types_8h.html#af632da489ebc3708ec3ab6791ee53fa4">   16</a></span>&#160;   <span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="sdp_types_8h.html#af632da489ebc3708ec3ab6791ee53fa4">ULONG</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="struct_s_t___s_d_p.html">   25</a></span>&#160;   <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct_s_t___s_d_p.html">ST_SDP</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="struct_s_t___s_d_p.html#a59b9df3193b6f874922b75715fc1bc81">   26</a></span>&#160;       <span class="keywordtype">char</span>   <a class="code" href="struct_s_t___s_d_p.html#a59b9df3193b6f874922b75715fc1bc81">nombre</a>[<a class="code" href="sdpconfig_8h.html#a6611b3fba9de26203f14407743b750cc">MAX_MODULE</a> + 1];  </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="struct_s_t___s_d_p.html#a11de7bbb4add4ed0cf596ea7a05cb841">   27</a></span>&#160;       <span class="keywordtype">char</span>   <a class="code" href="struct_s_t___s_d_p.html#a11de7bbb4add4ed0cf596ea7a05cb841">firma</a>[<a class="code" href="sdpconfig_8h.html#ad6074dd11ab3c97c8135c43aab03ae95">HASH_SIZE</a> + 1];    </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="struct_s_t___s_d_p.html#a88033942c6a9207d32af22c3f69cc31e">   28</a></span>&#160;       <span class="keywordtype">char</span>  *<a class="code" href="struct_s_t___s_d_p.html#a88033942c6a9207d32af22c3f69cc31e">coverage</a>;                </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="struct_s_t___s_d_p.html#aa62a205ca9e35b3b88632d2ec557a5a0">   29</a></span>&#160;       <span class="keywordtype">char</span>   <a class="code" href="struct_s_t___s_d_p.html#aa62a205ca9e35b3b88632d2ec557a5a0">label</a>[<a class="code" href="sdpconfig_8h.html#ac084a897234f41c71f01eab1d39c3073">MAX_PARRAFO</a> + 1];  </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="struct_s_t___s_d_p.html#a2524760e620af27370f7dbf1a45750a5">   30</a></span>&#160;       <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="struct_s_t___s_d_p.html#a2524760e620af27370f7dbf1a45750a5">bloques</a>;          </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="struct_s_t___s_d_p.html#a00d906c1e1a889fb8b6f26c73b188936">   31</a></span>&#160;       <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="struct_s_t___s_d_p.html#a00d906c1e1a889fb8b6f26c73b188936">parrafos</a>;         </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="struct_s_t___s_d_p.html#a256f4cda4f61488d2d766c867e813014">   32</a></span>&#160;       <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="struct_s_t___s_d_p.html#a256f4cda4f61488d2d766c867e813014">persistencia</a>;     </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;   } <a class="code" href="sdp_types_8h.html#a8ba8f2a87560d14f1152da6646649dfd">SDP</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="struct_s_t___t_i_m_e_r.html">   43</a></span>&#160;   <span class="keyword">struct </span><a class="code" href="struct_s_t___t_i_m_e_r.html">ST_TIMER</a> {</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="struct_s_t___t_i_m_e_r.html#a913ffe6a1b92facf1adf87d5190445bc">   44</a></span>&#160;       <span class="keywordtype">int</span>   <a class="code" href="struct_s_t___t_i_m_e_r.html#a913ffe6a1b92facf1adf87d5190445bc">tipo</a>;                   </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="struct_s_t___t_i_m_e_r.html#aa62a205ca9e35b3b88632d2ec557a5a0">   45</a></span>&#160;       <span class="keywordtype">char</span>  <a class="code" href="struct_s_t___t_i_m_e_r.html#aa62a205ca9e35b3b88632d2ec557a5a0">label</a>[<a class="code" href="sdpconfig_8h.html#ac084a897234f41c71f01eab1d39c3073">MAX_PARRAFO</a> + 1]; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="struct_s_t___t_i_m_e_r.html#a23a3531ed93eb7f069a5f33ee77d7ca8">   46</a></span>&#160;       <a class="code" href="sdp_types_8h.html#af632da489ebc3708ec3ab6791ee53fa4">ULONG</a> <a class="code" href="struct_s_t___t_i_m_e_r.html#a23a3531ed93eb7f069a5f33ee77d7ca8">veces</a>;                  </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="struct_s_t___t_i_m_e_r.html#a9ff17a87e2d5c2c20efd3883fc5e8afd">   47</a></span>&#160;       <a class="code" href="sdp_types_8h.html#af632da489ebc3708ec3ab6791ee53fa4">ULONG</a> <a class="code" href="struct_s_t___t_i_m_e_r.html#a9ff17a87e2d5c2c20efd3883fc5e8afd">systemTime</a>;             </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="struct_s_t___t_i_m_e_r.html#ae4c31cb2b4477be7ae2f947073b3d770">   48</a></span>&#160;       <a class="code" href="sdp_types_8h.html#af632da489ebc3708ec3ab6791ee53fa4">ULONG</a> <a class="code" href="struct_s_t___t_i_m_e_r.html#ae4c31cb2b4477be7ae2f947073b3d770">cpuTime</a>;                </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="struct_s_t___t_i_m_e_r.html#a8c0fad2befd4574e6a7fae46124d5339">   49</a></span>&#160;       <a class="code" href="sdp_types_8h.html#af632da489ebc3708ec3ab6791ee53fa4">ULONG</a> <a class="code" href="struct_s_t___t_i_m_e_r.html#a8c0fad2befd4574e6a7fae46124d5339">intSystemTime</a>;          </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="struct_s_t___t_i_m_e_r.html#a61dff6fa53638f76ef2f5c004a58992b">   50</a></span>&#160;       <a class="code" href="sdp_types_8h.html#af632da489ebc3708ec3ab6791ee53fa4">ULONG</a> <a class="code" href="struct_s_t___t_i_m_e_r.html#a61dff6fa53638f76ef2f5c004a58992b">intCpuTime</a>;             </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="struct_s_t___t_i_m_e_r.html#ae1e8a4a6b208f964f72c50f97e978978">   51</a></span>&#160;       <span class="keyword">struct </span><a class="code" href="struct_s_t___t_i_m_e_r.html">ST_TIMER</a> *<a class="code" href="struct_s_t___t_i_m_e_r.html#ae1e8a4a6b208f964f72c50f97e978978">next</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;   };</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">   54</a></span>&#160;   <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct_s_t___t_i_m_e_r.html">ST_TIMER</a> <a class="code" href="struct_s_t___t_i_m_e_r.html">TIMER</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;   <span class="comment">/*</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">    * @typedef MOD</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">    * @brief Structura para mantener la informacion de los modulos llamados</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="struct_s_t___m_o_d.html">   61</a></span>&#160;   <span class="keyword">struct </span><a class="code" href="struct_s_t___m_o_d.html">ST_MOD</a> {</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="struct_s_t___m_o_d.html#a59b9df3193b6f874922b75715fc1bc81">   62</a></span>&#160;       <span class="keywordtype">char</span>   <a class="code" href="struct_s_t___m_o_d.html#a59b9df3193b6f874922b75715fc1bc81">nombre</a>[<a class="code" href="sdpconfig_8h.html#a6611b3fba9de26203f14407743b750cc">MAX_MODULE</a> + 1];  </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="struct_s_t___m_o_d.html#a11de7bbb4add4ed0cf596ea7a05cb841">   63</a></span>&#160;       <span class="keywordtype">char</span>   <a class="code" href="struct_s_t___m_o_d.html#a11de7bbb4add4ed0cf596ea7a05cb841">firma</a>[<a class="code" href="sdpconfig_8h.html#ad6074dd11ab3c97c8135c43aab03ae95">HASH_SIZE</a> + 1];    </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="struct_s_t___m_o_d.html#a512e0b2cea6bba7a1eaf1689e8000374">   64</a></span>&#160;       <span class="keywordtype">char</span>  *<a class="code" href="struct_s_t___m_o_d.html#a512e0b2cea6bba7a1eaf1689e8000374">cobertura</a>;               </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="struct_s_t___m_o_d.html#a41aafff34874651f2469d2d622a7d60d">   65</a></span>&#160;       <span class="keywordtype">char</span>   <a class="code" href="struct_s_t___m_o_d.html#a41aafff34874651f2469d2d622a7d60d">monitor</a>;                 </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="struct_s_t___m_o_d.html#ab769f67b1f859e497d6476cf44f4e02d">   66</a></span>&#160;       <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>   <a class="code" href="struct_s_t___m_o_d.html#ab769f67b1f859e497d6476cf44f4e02d">numParrs</a>;        </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="struct_s_t___m_o_d.html#abc198cd7e81f42b66805a17af197de12">   67</a></span>&#160;       <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> *<a class="code" href="struct_s_t___m_o_d.html#abc198cd7e81f42b66805a17af197de12">parrs</a>;           </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="struct_s_t___m_o_d.html#a9dbd5dd0bbfa51a355303896a2f70f76">   68</a></span>&#160;       <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>   <a class="code" href="struct_s_t___m_o_d.html#a9dbd5dd0bbfa51a355303896a2f70f76">numFiles</a>;        </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="struct_s_t___m_o_d.html#a70ab4319156766461ca994c2e7550d7d">   69</a></span>&#160;       <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> *<a class="code" href="struct_s_t___m_o_d.html#a70ab4319156766461ca994c2e7550d7d">files</a>;           </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="struct_s_t___m_o_d.html#a90cdafff165917e473b00614b8fb8c18">   70</a></span>&#160;       <a class="code" href="struct_s_t___t_i_m_e_r.html">TIMER</a>  <a class="code" href="struct_s_t___m_o_d.html#a90cdafff165917e473b00614b8fb8c18">timers</a>;                  </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="struct_s_t___m_o_d.html#abab69541867571865a674d938141fcf9">   71</a></span>&#160;       <a class="code" href="struct_s_t___t_i_m_e_r.html">TIMER</a> *<a class="code" href="struct_s_t___m_o_d.html#abab69541867571865a674d938141fcf9">lstParrs</a>;                </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="struct_s_t___m_o_d.html#a2f7d75b93f5c1884691f10a146c7bb43">   72</a></span>&#160;       <span class="keyword">struct </span><a class="code" href="struct_s_t___m_o_d.html">ST_MOD</a> *<a class="code" href="struct_s_t___m_o_d.html#a2f7d75b93f5c1884691f10a146c7bb43">lstMods</a>;         </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="struct_s_t___m_o_d.html#a45ca635407e332df9a3b7e72768eb926">   73</a></span>&#160;       <span class="keyword">struct </span><a class="code" href="struct_s_t___m_o_d.html">ST_MOD</a> *<a class="code" href="struct_s_t___m_o_d.html#a45ca635407e332df9a3b7e72768eb926">next</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;   };</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">   76</a></span>&#160;   <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct_s_t___m_o_d.html">ST_MOD</a> <a class="code" href="struct_s_t___m_o_d.html">MOD</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="struct_s_t___t_i_m_e_r_html_a8c0fad2befd4574e6a7fae46124d5339"><div class="ttname"><a href="struct_s_t___t_i_m_e_r.html#a8c0fad2befd4574e6a7fae46124d5339">ST_TIMER::intSystemTime</a></div><div class="ttdeci">ULONG intSystemTime</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00049">sdpTypes.h:49</a></div></div>
+<div class="ttc" id="struct_s_t___m_o_d_html_a512e0b2cea6bba7a1eaf1689e8000374"><div class="ttname"><a href="struct_s_t___m_o_d.html#a512e0b2cea6bba7a1eaf1689e8000374">ST_MOD::cobertura</a></div><div class="ttdeci">char * cobertura</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00064">sdpTypes.h:64</a></div></div>
+<div class="ttc" id="struct_s_t___s_d_p_html_a256f4cda4f61488d2d766c867e813014"><div class="ttname"><a href="struct_s_t___s_d_p.html#a256f4cda4f61488d2d766c867e813014">ST_SDP::persistencia</a></div><div class="ttdeci">unsigned long persistencia</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00032">sdpTypes.h:32</a></div></div>
+<div class="ttc" id="sdp_types_8h_html_af632da489ebc3708ec3ab6791ee53fa4"><div class="ttname"><a href="sdp_types_8h.html#af632da489ebc3708ec3ab6791ee53fa4">ULONG</a></div><div class="ttdeci">unsigned long ULONG</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00016">sdpTypes.h:16</a></div></div>
+<div class="ttc" id="struct_s_t___s_d_p_html_a00d906c1e1a889fb8b6f26c73b188936"><div class="ttname"><a href="struct_s_t___s_d_p.html#a00d906c1e1a889fb8b6f26c73b188936">ST_SDP::parrafos</a></div><div class="ttdeci">unsigned long parrafos</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00031">sdpTypes.h:31</a></div></div>
+<div class="ttc" id="struct_s_t___t_i_m_e_r_html_a23a3531ed93eb7f069a5f33ee77d7ca8"><div class="ttname"><a href="struct_s_t___t_i_m_e_r.html#a23a3531ed93eb7f069a5f33ee77d7ca8">ST_TIMER::veces</a></div><div class="ttdeci">ULONG veces</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00046">sdpTypes.h:46</a></div></div>
+<div class="ttc" id="struct_s_t___s_d_p_html_aa62a205ca9e35b3b88632d2ec557a5a0"><div class="ttname"><a href="struct_s_t___s_d_p.html#aa62a205ca9e35b3b88632d2ec557a5a0">ST_SDP::label</a></div><div class="ttdeci">char label[MAX_PARRAFO+1]</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00029">sdpTypes.h:29</a></div></div>
+<div class="ttc" id="sdp_types_8h_html_a8ba8f2a87560d14f1152da6646649dfd"><div class="ttname"><a href="sdp_types_8h.html#a8ba8f2a87560d14f1152da6646649dfd">SDP</a></div><div class="ttdeci">struct ST_SDP SDP</div><div class="ttdoc">Estructura C equivalente a la COPY COBOL. </div></div>
+<div class="ttc" id="struct_s_t___t_i_m_e_r_html"><div class="ttname"><a href="struct_s_t___t_i_m_e_r.html">ST_TIMER</a></div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00043">sdpTypes.h:43</a></div></div>
+<div class="ttc" id="struct_s_t___s_d_p_html_a11de7bbb4add4ed0cf596ea7a05cb841"><div class="ttname"><a href="struct_s_t___s_d_p.html#a11de7bbb4add4ed0cf596ea7a05cb841">ST_SDP::firma</a></div><div class="ttdeci">char firma[HASH_SIZE+1]</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00027">sdpTypes.h:27</a></div></div>
+<div class="ttc" id="struct_s_t___m_o_d_html_a90cdafff165917e473b00614b8fb8c18"><div class="ttname"><a href="struct_s_t___m_o_d.html#a90cdafff165917e473b00614b8fb8c18">ST_MOD::timers</a></div><div class="ttdeci">TIMER timers</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00070">sdpTypes.h:70</a></div></div>
+<div class="ttc" id="struct_s_t___t_i_m_e_r_html_a913ffe6a1b92facf1adf87d5190445bc"><div class="ttname"><a href="struct_s_t___t_i_m_e_r.html#a913ffe6a1b92facf1adf87d5190445bc">ST_TIMER::tipo</a></div><div class="ttdeci">int tipo</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00044">sdpTypes.h:44</a></div></div>
+<div class="ttc" id="struct_s_t___t_i_m_e_r_html_a61dff6fa53638f76ef2f5c004a58992b"><div class="ttname"><a href="struct_s_t___t_i_m_e_r.html#a61dff6fa53638f76ef2f5c004a58992b">ST_TIMER::intCpuTime</a></div><div class="ttdeci">ULONG intCpuTime</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00050">sdpTypes.h:50</a></div></div>
+<div class="ttc" id="struct_s_t___t_i_m_e_r_html_ae4c31cb2b4477be7ae2f947073b3d770"><div class="ttname"><a href="struct_s_t___t_i_m_e_r.html#ae4c31cb2b4477be7ae2f947073b3d770">ST_TIMER::cpuTime</a></div><div class="ttdeci">ULONG cpuTime</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00048">sdpTypes.h:48</a></div></div>
+<div class="ttc" id="struct_s_t___s_d_p_html_a2524760e620af27370f7dbf1a45750a5"><div class="ttname"><a href="struct_s_t___s_d_p.html#a2524760e620af27370f7dbf1a45750a5">ST_SDP::bloques</a></div><div class="ttdeci">unsigned long bloques</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00030">sdpTypes.h:30</a></div></div>
+<div class="ttc" id="struct_s_t___t_i_m_e_r_html_aa62a205ca9e35b3b88632d2ec557a5a0"><div class="ttname"><a href="struct_s_t___t_i_m_e_r.html#aa62a205ca9e35b3b88632d2ec557a5a0">ST_TIMER::label</a></div><div class="ttdeci">char label[MAX_PARRAFO+1]</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00045">sdpTypes.h:45</a></div></div>
+<div class="ttc" id="struct_s_t___m_o_d_html_a9dbd5dd0bbfa51a355303896a2f70f76"><div class="ttname"><a href="struct_s_t___m_o_d.html#a9dbd5dd0bbfa51a355303896a2f70f76">ST_MOD::numFiles</a></div><div class="ttdeci">unsigned int numFiles</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00068">sdpTypes.h:68</a></div></div>
+<div class="ttc" id="struct_s_t___m_o_d_html_a45ca635407e332df9a3b7e72768eb926"><div class="ttname"><a href="struct_s_t___m_o_d.html#a45ca635407e332df9a3b7e72768eb926">ST_MOD::next</a></div><div class="ttdeci">struct ST_MOD * next</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00073">sdpTypes.h:73</a></div></div>
+<div class="ttc" id="sdpconfig_8h_html_ac084a897234f41c71f01eab1d39c3073"><div class="ttname"><a href="sdpconfig_8h.html#ac084a897234f41c71f01eab1d39c3073">MAX_PARRAFO</a></div><div class="ttdeci">#define MAX_PARRAFO</div><div class="ttdef"><b>Definition:</b> <a href="sdpconfig_8h_source.html#l00026">sdpconfig.h:26</a></div></div>
+<div class="ttc" id="struct_s_t___m_o_d_html_ab769f67b1f859e497d6476cf44f4e02d"><div class="ttname"><a href="struct_s_t___m_o_d.html#ab769f67b1f859e497d6476cf44f4e02d">ST_MOD::numParrs</a></div><div class="ttdeci">unsigned int numParrs</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00066">sdpTypes.h:66</a></div></div>
+<div class="ttc" id="struct_s_t___m_o_d_html_a59b9df3193b6f874922b75715fc1bc81"><div class="ttname"><a href="struct_s_t___m_o_d.html#a59b9df3193b6f874922b75715fc1bc81">ST_MOD::nombre</a></div><div class="ttdeci">char nombre[MAX_MODULE+1]</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00062">sdpTypes.h:62</a></div></div>
+<div class="ttc" id="struct_s_t___t_i_m_e_r_html_a9ff17a87e2d5c2c20efd3883fc5e8afd"><div class="ttname"><a href="struct_s_t___t_i_m_e_r.html#a9ff17a87e2d5c2c20efd3883fc5e8afd">ST_TIMER::systemTime</a></div><div class="ttdeci">ULONG systemTime</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00047">sdpTypes.h:47</a></div></div>
+<div class="ttc" id="struct_s_t___m_o_d_html_a2f7d75b93f5c1884691f10a146c7bb43"><div class="ttname"><a href="struct_s_t___m_o_d.html#a2f7d75b93f5c1884691f10a146c7bb43">ST_MOD::lstMods</a></div><div class="ttdeci">struct ST_MOD * lstMods</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00072">sdpTypes.h:72</a></div></div>
+<div class="ttc" id="struct_s_t___m_o_d_html_a41aafff34874651f2469d2d622a7d60d"><div class="ttname"><a href="struct_s_t___m_o_d.html#a41aafff34874651f2469d2d622a7d60d">ST_MOD::monitor</a></div><div class="ttdeci">char monitor</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00065">sdpTypes.h:65</a></div></div>
+<div class="ttc" id="struct_s_t___m_o_d_html_a11de7bbb4add4ed0cf596ea7a05cb841"><div class="ttname"><a href="struct_s_t___m_o_d.html#a11de7bbb4add4ed0cf596ea7a05cb841">ST_MOD::firma</a></div><div class="ttdeci">char firma[HASH_SIZE+1]</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00063">sdpTypes.h:63</a></div></div>
+<div class="ttc" id="sdpconfig_8h_html"><div class="ttname"><a href="sdpconfig_8h.html">sdpconfig.h</a></div><div class="ttdoc">Fichero de cabecera de configuracion del sistema Define las constantes y los valores globales de comp...</div></div>
+<div class="ttc" id="struct_s_t___m_o_d_html_abab69541867571865a674d938141fcf9"><div class="ttname"><a href="struct_s_t___m_o_d.html#abab69541867571865a674d938141fcf9">ST_MOD::lstParrs</a></div><div class="ttdeci">TIMER * lstParrs</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00071">sdpTypes.h:71</a></div></div>
+<div class="ttc" id="struct_s_t___s_d_p_html_a88033942c6a9207d32af22c3f69cc31e"><div class="ttname"><a href="struct_s_t___s_d_p.html#a88033942c6a9207d32af22c3f69cc31e">ST_SDP::coverage</a></div><div class="ttdeci">char * coverage</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00028">sdpTypes.h:28</a></div></div>
+<div class="ttc" id="sdpconfig_8h_html_ad6074dd11ab3c97c8135c43aab03ae95"><div class="ttname"><a href="sdpconfig_8h.html#ad6074dd11ab3c97c8135c43aab03ae95">HASH_SIZE</a></div><div class="ttdeci">#define HASH_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="sdpconfig_8h_source.html#l00075">sdpconfig.h:75</a></div></div>
+<div class="ttc" id="struct_s_t___m_o_d_html"><div class="ttname"><a href="struct_s_t___m_o_d.html">ST_MOD</a></div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00061">sdpTypes.h:61</a></div></div>
+<div class="ttc" id="struct_s_t___t_i_m_e_r_html_ae1e8a4a6b208f964f72c50f97e978978"><div class="ttname"><a href="struct_s_t___t_i_m_e_r.html#ae1e8a4a6b208f964f72c50f97e978978">ST_TIMER::next</a></div><div class="ttdeci">struct ST_TIMER * next</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00051">sdpTypes.h:51</a></div></div>
+<div class="ttc" id="struct_s_t___s_d_p_html"><div class="ttname"><a href="struct_s_t___s_d_p.html">ST_SDP</a></div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00025">sdpTypes.h:25</a></div></div>
+<div class="ttc" id="struct_s_t___m_o_d_html_abc198cd7e81f42b66805a17af197de12"><div class="ttname"><a href="struct_s_t___m_o_d.html#abc198cd7e81f42b66805a17af197de12">ST_MOD::parrs</a></div><div class="ttdeci">unsigned long * parrs</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00067">sdpTypes.h:67</a></div></div>
+<div class="ttc" id="struct_s_t___m_o_d_html_a70ab4319156766461ca994c2e7550d7d"><div class="ttname"><a href="struct_s_t___m_o_d.html#a70ab4319156766461ca994c2e7550d7d">ST_MOD::files</a></div><div class="ttdeci">unsigned long * files</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00069">sdpTypes.h:69</a></div></div>
+<div class="ttc" id="struct_s_t___s_d_p_html_a59b9df3193b6f874922b75715fc1bc81"><div class="ttname"><a href="struct_s_t___s_d_p.html#a59b9df3193b6f874922b75715fc1bc81">ST_SDP::nombre</a></div><div class="ttdeci">char nombre[MAX_MODULE+1]</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00026">sdpTypes.h:26</a></div></div>
+<div class="ttc" id="sdpconfig_8h_html_a6611b3fba9de26203f14407743b750cc"><div class="ttname"><a href="sdpconfig_8h.html#a6611b3fba9de26203f14407743b750cc">MAX_MODULE</a></div><div class="ttdeci">#define MAX_MODULE</div><div class="ttdef"><b>Definition:</b> <a href="sdpconfig_8h_source.html#l00025">sdpconfig.h:25</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="sdp_types_8h.html">sdpTypes.h</a></li>
+    <li class="footer">Generado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

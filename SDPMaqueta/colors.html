@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html ng-app="mainModule">
+<head>
+    <script src="lib/angular/angular.js"></script>
+    <script>
+    angular.module("mainModule", [])
+    .controller("mainController", function ($scope)
+    {
+    // Initialization
+    $scope.onEditChangeResult = "";
+    $scope.onCheckBoxChangeResult = "";
+    $scope.onEditNoModelChangeResult = "";
+
+    $scope.fila01 = "#2b908f";
+    $scope.fila02 = "#2b908f";
+    $scope.fila03 = "#90ee7e";
+    $scope.fila04 = "#f45b5b";
+    $scope.fila05 = "#7798BF";
+    $scope.fila06 = "#aaeeee";
+    $scope.fila07 = "#ff0066";
+    $scope.fila08 = "#eeaaee";
+    $scope.fila09 = "#55BF3B";
+    $scope.fila10 = "#DF5353";
+    $scope.fila11 = "#7798BF";
+    $scope.fila12 = "#aaeeee";
+    $scope.fila13 = "#aaeeee";
+    $scope.fila14 = "#aaeeee";
+    $scope.fila15 = "#aaeeee";
+
+        $scope.fila101 = "#FFFACD";
+        $scope.fila102 = "#55BF3B";
+        $scope.fila103 = "#0000FF";
+        $scope.fila104 = "#ff8c00";
+        $scope.fila105 = "#7798BF";
+        $scope.fila106 = "#EE82EE";
+        $scope.fila107 = "#778899";
+        $scope.fila108 = "#1E90FF";
+        $scope.fila109 = "#DF5353";
+        $scope.fila110 = "#8B008B";
+        $scope.fila111 = "#808000";
+        $scope.fila112 = "#4B0082";
+        $scope.fila113 = "#006400";
+        $scope.fila114 = "#F0E68C";
+        $scope.fila115 = "#000080";
+        $scope.fila116 = "#A0522D";
+        $scope.fila117 = "#4B0082";
+        $scope.fila118 = "#8B4513";
+        $scope.fila119 = "#FF00FF";
+        $scope.fila120 = "#7B68EE";
+        $scope.fila121 = "#2F4F4F";
+        $scope.fila122 = "#6B8E23";
+        $scope.fila123 = "#6A5ACD";
+        $scope.fila124 = "#EE82EE";
+        $scope.fila125 = "#4682B4";
+
+//        $scope.style01="{'background-color': '$scope.fila01'}";
+    });
+    </script>
+</head>
+
+<body ng-controller="mainController">
+<div >
+    <table>
+        <tr>
+            <td><input type="text" ng-model="fila01" ng-change="style01={'background-color': '{{fila01}}'}"/></td>
+            <td ng-style="style01">{{fila01}}</td>
+            <td><input type="text" ng-model="fila101"/></td>
+            <td ng-style="{'background-color': '{{fila101}}'}">{{fila101}}</td>
+
+        </tr>
+
+        <tr>
+            <td><input type="text" ng-model="fila02"/></td>
+            <td ng-style="{'background-color': '{{fila02}}'}">{{fila02}}</td>
+            <td><input type="text" ng-model="fila102"/></td>
+            <td ng-style="{'background-color': '{{fila102}}'}">{{fila102}}</td>
+
+        </tr>
+        <tr>
+            <td><input type="text" ng-model="fila03"/></td>
+            <td ng-style="{'background-color': '{{fila03}}'}">{{fila03}}</td>
+            <td><input type="text" ng-model="fila103"/></td>
+            <td ng-style="{'background-color': '{{fila103}}'}">{{fila103}}</td>
+
+        </tr>
+        <tr>
+            <td><input type="text" ng-model="fila04"/></td>
+            <td ng-style="{'background-color': '{{fila04}}'}">{{fila04}}</td>
+            <td><input type="text" ng-model="fila104"/></td>
+            <td ng-style="{'background-color': '{{fila104}}'}">{{fila104}}</td>
+
+        </tr>
+        <tr>
+            <td><input type="text" ng-model="fila05"/></td>
+            <td ng-style="{'background-color': '{{fila05}}'}">{{fila05}}</td>
+            <td><input type="text" ng-model="fila105"/></td>
+            <td ng-style="{'background-color': '{{fila105}}'}">{{fila105}}</td>
+
+        </tr>
+        <tr>
+            <td><input type="text" ng-model="fila06"/></td>
+            <td ng-style="{'background-color': '{{fila06}}'}">{{fila06}}</td>
+            <td><input type="text" ng-model="fila106"/></td>
+            <td ng-style="{'background-color': '{{fila106}}'}">{{fila106}}</td>
+
+        </tr>
+        <tr>
+            <td><input type="text" ng-model="fila07"/></td>
+            <td ng-style="{'background-color': '{{fila07}}'}">{{fila07}}</td>
+            <td><input type="text" ng-model="fila107"/></td>
+            <td ng-style="{'background-color': '{{fila107}}'}">{{fila107}}</td>
+
+        </tr>
+        <tr>
+            <td><input type="text" ng-model="fila08"/></td>
+            <td ng-style="{'background-color': '{{fila08}}'}">{{fila08}}</td>
+            <td><input type="text" ng-model="fila108"/></td>
+            <td ng-style="{'background-color': '{{fila108}}'}">{{fila108}}</td>
+
+        </tr>
+        <tr>
+            <td><input type="text" ng-model="fila09"/></td>
+            <td ng-style="{'background-color': '{{fila09}}'}">{{fila09}}</td>
+            <td><input type="text" ng-model="fila109"/></td>
+            <td ng-style="{'background-color': '{{fila109}}'}">{{fila109}}</td>
+
+        </tr>
+        <tr>
+            <td><input type="text" ng-model="fila10"/></td>
+            <td ng-style="{'background-color': '{{fila10}}'}">{{fila10}}</td>
+            <td><input type="text" ng-model="fila110"/></td>
+            <td ng-style="{'background-color': '{{fila110}}'}">{{fila110}}</td>
+
+        </tr>
+        <tr>
+            <td><input type="text" ng-model="fila11"/></td>
+            <td ng-style="{'background-color': '{{fila11}}'}">{{fila11}}</td>
+            <td><input type="text" ng-model="fila111"/></td>
+            <td ng-style="{'background-color': '{{fila111}}'}">{{fila111}}</td>
+
+        </tr>
+        <tr>
+            <td><input type="text" ng-model="fila12"/></td>
+            <td ng-style="{'background-color': '{{fila12}}'}">{{fila12}}</td>
+            <td><input type="text" ng-model="fila112"/></td>
+            <td ng-style="{'background-color': '{{fila112}}'}">{{fila112}}</td>
+
+        </tr>
+        <tr>
+            <td><input type="text" ng-model="fila13"/></td>
+            <td ng-style="{'background-color': '{{fila13}}'}">{{fila13}}</td>
+            <td><input type="text" ng-model="fila113"/></td>
+            <td ng-style="{'background-color': '{{fila113}}'}">{{fila113}}</td>
+
+        </tr>
+        <tr>
+            <td><input type="text" ng-model="fila14"/></td>
+            <td ng-style="{'background-color': '{{fila14}}'}">{{fila14}}</td>
+            <td><input type="text" ng-model="fila10"/></td>
+            <td ng-style="{'background-color': '{{fila114}}'}">{{fila114}}</td>
+
+        </tr>
+        <tr>
+            <td><input type="text" ng-model="fila15"/></td>
+            <td ng-style="{'background-color': '{{fila15}}'}">{{fila15}}</td>
+            <td><input type="text" ng-model="fila115"/></td>
+            <td ng-style="{'background-color': '{{fila115}}'}">{{fila115}}</td>
+
+        </tr>
+        <tr>
+            <td><input type="text" ng-model="fila15"/></td>
+            <td ng-style="{'background-color': '{{fila15}}'}">{{fila15}}</td>
+            <td><input type="text" ng-model="fila116"/></td>
+            <td ng-style="{'background-color': '{{fila116}}'}">{{fila116}}</td>
+
+        </tr>
+        <tr>
+            <td><input type="text" ng-model="fila15"/></td>
+            <td ng-style="{'background-color': '{{fila15}}'}">{{fila15}}</td>
+            <td><input type="text" ng-model="fila117"/></td>
+            <td ng-style="{'background-color': '{{fila117}}'}">{{fila117}}</td>
+
+        </tr>
+        <tr>
+            <td><input type="text" ng-model="fila15"/></td>
+            <td ng-style="{'background-color': '{{fila15}}'}">{{fila15}}</td>
+            <td><input type="text" ng-model="fila118"/></td>
+            <td ng-style="{'background-color': '{{fila118}}'}">{{fila118}}</td>
+
+        </tr>
+        <tr>
+            <td><input type="text" ng-model="fila15"/></td>
+            <td ng-style="{'background-color': '{{fila15}}'}">{{fila15}}</td>
+            <td><input type="text" ng-model="fila119"/></td>
+            <td ng-style="{'background-color': '{{fila119}}'}">{{fila119}}</td>
+
+        </tr>
+        <tr>
+            <td><input type="text" ng-model="fila15"/></td>
+            <td ng-style="{'background-color': '{{fila15}}'}">{{fila15}}</td>
+            <td><input type="text" ng-model="fila120"/></td>
+            <td ng-style="{'background-color': '{{fila120}}'}">{{fila120}}</td>
+
+        </tr>
+        <tr>
+            <td><input type="text" ng-model="fila11"/></td>
+            <td ng-style="{'background-color': '{{fila11}}'}">{{fila11}}</td>
+            <td><input type="text" ng-model="fila121"/></td>
+            <td ng-style="{'background-color': '{{fila121}}'}">{{fila121}}</td>
+
+        </tr>
+        <tr>
+            <td><input type="text" ng-model="fila12"/></td>
+            <td ng-style="{'background-color': '{{fila12}}'}">{{fila12}}</td>
+            <td><input type="text" ng-model="fila122"/></td>
+            <td ng-style="{'background-color': '{{fila122}}'}">{{fila122}}</td>
+
+        </tr>
+        <tr>
+            <td><input type="text" ng-model="fila13"/></td>
+            <td ng-style="{'background-color': '{{fila13}}'}">{{fila13}}</td>
+            <td><input type="text" ng-model="fila123"/></td>
+            <td ng-style="{'background-color': '{{fila123}}'}">{{fila123}}</td>
+
+        </tr>
+        <tr>
+            <td><input type="text" ng-model="fila14"/></td>
+            <td ng-style="{'background-color': '{{fila14}}'}">{{fila14}}</td>
+            <td><input type="text" ng-model="fila124"/></td>
+            <td ng-style="{'background-color': '{{fila124}}'}">{{fila124}}</td>
+
+        </tr>
+        <tr>
+            <td><input type="text" ng-model="fila15"/></td>
+            <td ng-style="{'background-color': '{{fila15}}'}">{{fila15}}</td>
+            <td><input type="text" ng-model="fila125"/></td>
+            <td ng-style="{'background-color': '{{fila125}}'}">{{fila125}}</td>
+
+        </tr>
+
+    </table>
+
+</div>
+</body>
+</html>

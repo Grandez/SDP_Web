@@ -1,0 +1,118 @@
+\hypertarget{sha256le_8h}{}\section{Referencia del Archivo include/sha256le.h}
+\label{sha256le_8h}\index{include/sha256le.\+h@{include/sha256le.\+h}}
+{\ttfamily \#include $<$stddef.\+h$>$}\\*
+Dependencia gráfica adjunta para sha256le.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{sha256le_8h__incl}
+\end{center}
+\end{figure}
+Gráfico de los archivos que directa o indirectamente incluyen a este archivo\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{sha256le_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Estructuras de datos}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_s_h_a256___c_t_x}{S\+H\+A256\+\_\+\+C\+T\+X}
+\end{DoxyCompactItemize}
+\subsection*{\textquotesingle{}defines\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{sha256le_8h_a9c1fe69ad43d4ca74b84303a0ed64f2f}{S\+H\+A256\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E}~32
+\item 
+\#define \hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+}~extern
+\end{DoxyCompactItemize}
+\subsection*{\textquotesingle{}typedefs\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \hyperlink{sha256le_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E}
+\item 
+typedef unsigned int \hyperlink{sha256le_8h_ad2baa11c897721ff6f14b452b547f9bc}{W\+O\+R\+D}
+\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{sha256le_8h_a3dffdcd908e70dbe657a36ae13d0f3ad}{sha256\+\_\+init} (\hyperlink{struct_s_h_a256___c_t_x}{S\+H\+A256\+\_\+\+C\+T\+X} $\ast$ctx)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{sha256le_8h_a440fb0f8f349c9188383f42e6aa448be}{sha256\+\_\+update} (\hyperlink{struct_s_h_a256___c_t_x}{S\+H\+A256\+\_\+\+C\+T\+X} $\ast$ctx, const \hyperlink{sha256le_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} data\mbox{[}$\,$\mbox{]}, size\+\_\+t len)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{sha256le_8h_ae6305e99ab3651abb7fa1df2d01ff7a8}{sha256\+\_\+final} (\hyperlink{struct_s_h_a256___c_t_x}{S\+H\+A256\+\_\+\+C\+T\+X} $\ast$ctx, \hyperlink{sha256le_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} hash\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\hypertarget{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{}\index{sha256le.\+h@{sha256le.\+h}!\+\_\+\+E\+X\+T\+\_\+@{\+\_\+\+E\+X\+T\+\_\+}}
+\index{\+\_\+\+E\+X\+T\+\_\+@{\+\_\+\+E\+X\+T\+\_\+}!sha256le.\+h@{sha256le.\+h}}
+\subsubsection[{\+\_\+\+E\+X\+T\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+E\+X\+T\+\_\+~extern}\label{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}
+
+
+Definición en la línea 33 del archivo sha256le.\+h.
+
+\hypertarget{sha256le_8h_a9c1fe69ad43d4ca74b84303a0ed64f2f}{}\index{sha256le.\+h@{sha256le.\+h}!S\+H\+A256\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E@{S\+H\+A256\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E}}
+\index{S\+H\+A256\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E@{S\+H\+A256\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E}!sha256le.\+h@{sha256le.\+h}}
+\subsubsection[{S\+H\+A256\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+A256\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E~32}\label{sha256le_8h_a9c1fe69ad43d4ca74b84303a0ed64f2f}
+
+
+Definición en la línea 16 del archivo sha256le.\+h.
+
+
+
+\subsection{Documentación de los \textquotesingle{}typedefs\textquotesingle{}}
+\hypertarget{sha256le_8h_a4ae1dab0fb4b072a66584546209e7d58}{}\index{sha256le.\+h@{sha256le.\+h}!B\+Y\+T\+E@{B\+Y\+T\+E}}
+\index{B\+Y\+T\+E@{B\+Y\+T\+E}!sha256le.\+h@{sha256le.\+h}}
+\subsubsection[{B\+Y\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf B\+Y\+T\+E}}\label{sha256le_8h_a4ae1dab0fb4b072a66584546209e7d58}
+
+
+Definición en la línea 19 del archivo sha256le.\+h.
+
+\hypertarget{sha256le_8h_ad2baa11c897721ff6f14b452b547f9bc}{}\index{sha256le.\+h@{sha256le.\+h}!W\+O\+R\+D@{W\+O\+R\+D}}
+\index{W\+O\+R\+D@{W\+O\+R\+D}!sha256le.\+h@{sha256le.\+h}}
+\subsubsection[{W\+O\+R\+D}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf W\+O\+R\+D}}\label{sha256le_8h_ad2baa11c897721ff6f14b452b547f9bc}
+
+
+Definición en la línea 20 del archivo sha256le.\+h.
+
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{sha256le_8h_ae6305e99ab3651abb7fa1df2d01ff7a8}{}\index{sha256le.\+h@{sha256le.\+h}!sha256\+\_\+final@{sha256\+\_\+final}}
+\index{sha256\+\_\+final@{sha256\+\_\+final}!sha256le.\+h@{sha256le.\+h}}
+\subsubsection[{sha256\+\_\+final(\+S\+H\+A256\+\_\+\+C\+T\+X $\ast$ctx, B\+Y\+T\+E hash[])}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void sha256\+\_\+final (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+H\+A256\+\_\+\+C\+T\+X} $\ast$}]{ctx, }
+\item[{{\bf B\+Y\+T\+E}}]{hash\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{sha256le_8h_ae6305e99ab3651abb7fa1df2d01ff7a8}
+
+
+Definición en la línea 116 del archivo sha256le.\+c.
+
+\hypertarget{sha256le_8h_a3dffdcd908e70dbe657a36ae13d0f3ad}{}\index{sha256le.\+h@{sha256le.\+h}!sha256\+\_\+init@{sha256\+\_\+init}}
+\index{sha256\+\_\+init@{sha256\+\_\+init}!sha256le.\+h@{sha256le.\+h}}
+\subsubsection[{sha256\+\_\+init(\+S\+H\+A256\+\_\+\+C\+T\+X $\ast$ctx)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void sha256\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+H\+A256\+\_\+\+C\+T\+X} $\ast$}]{ctx}
+\end{DoxyParamCaption}
+)}\label{sha256le_8h_a3dffdcd908e70dbe657a36ae13d0f3ad}
+
+
+Definición en la línea 87 del archivo sha256le.\+c.
+
+\hypertarget{sha256le_8h_a440fb0f8f349c9188383f42e6aa448be}{}\index{sha256le.\+h@{sha256le.\+h}!sha256\+\_\+update@{sha256\+\_\+update}}
+\index{sha256\+\_\+update@{sha256\+\_\+update}!sha256le.\+h@{sha256le.\+h}}
+\subsubsection[{sha256\+\_\+update(\+S\+H\+A256\+\_\+\+C\+T\+X $\ast$ctx, const B\+Y\+T\+E data[], size\+\_\+t len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void sha256\+\_\+update (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+H\+A256\+\_\+\+C\+T\+X} $\ast$}]{ctx, }
+\item[{const {\bf B\+Y\+T\+E}}]{data\mbox{[}$\,$\mbox{]}, }
+\item[{size\+\_\+t}]{len}
+\end{DoxyParamCaption}
+)}\label{sha256le_8h_a440fb0f8f349c9188383f42e6aa448be}
+
+
+Definición en la línea 101 del archivo sha256le.\+c.
+

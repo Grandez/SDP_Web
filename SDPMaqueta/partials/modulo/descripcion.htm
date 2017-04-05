@@ -1,0 +1,9 @@
+<div class="panel-heading">
+    Descripcion
+    <a class="pull-right" href="" ng-click="isCollapsed = !isCollapsed">
+        <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-up': !isCollapsed, 'glyphicon-chevron-down': isCollapsed}"></i>
+    </a>
+</div>
+<div class="panel-body" collapse="isCollapsed" >
+    <div ng-bind-html="modulo.desc"></div>
+</div>

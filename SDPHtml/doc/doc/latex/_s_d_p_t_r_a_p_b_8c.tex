@@ -1,0 +1,252 @@
+\hypertarget{_s_d_p_t_r_a_p_b_8c}{}\section{Referencia del Archivo src/\+S\+D\+P\+T\+R\+A\+P\+B.c}
+\label{_s_d_p_t_r_a_p_b_8c}\index{src/\+S\+D\+P\+T\+R\+A\+P\+B.\+c@{src/\+S\+D\+P\+T\+R\+A\+P\+B.\+c}}
+
+
+S\+D\+P\+T\+R\+A\+P\+B D\+L\+L de captura de datos de ejecucion del programa C\+O\+B\+O\+L Utiliza un unico punto de entrada\+: S\+D\+P\+T\+R\+A\+P.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}jggsal.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+D\+P\+T\+R\+A\+P\+B.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+D\+P\+T\+R\+A\+P.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cob2c.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}modulos.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}timer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}messages.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}md5.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}amqsdp.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}global.\+h\char`\"{}}\\*
+Dependencia gráfica adjunta para S\+D\+P\+T\+R\+A\+P\+B.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_s_d_p_t_r_a_p_b_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{\textquotesingle{}defines\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_s_d_p_t_r_a_p_b_8c_a078985ed6b26e9aa8ab5dc3db733ce0a}{\+\_\+\+M\+A\+I\+N\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+}
+\item 
+\#define \hyperlink{_s_d_p_t_r_a_p_b_8c_aa34996ed15c54e509b65ea825013f094}{\+\_\+\+S\+D\+P\+T\+R\+A\+P\+B\+\_\+\+C\+\_\+}
+\item 
+\#define \hyperlink{_s_d_p_t_r_a_p_b_8c_a0afe4cbd0a945e888ddbfd92070d8e57}{N\+O\+\_\+\+S\+T\+D\+I\+O\+\_\+\+R\+E\+D\+I\+R\+E\+C\+T}
+\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_s_d_p_t_r_a_p_b_8c_ad67bdaaddcfa1424dad31c0b8187f829}{start\+Process} (int option)
+\item 
+void \hyperlink{_s_d_p_t_r_a_p_b_8c_aa42745580a553732a3f221db4d209801}{end\+Process} (int option, char $\ast$sdp\+Data)
+\item 
+void \hyperlink{_s_d_p_t_r_a_p_b_8c_a0704e6747f6e4e33d32b791e60c85953}{calculate\+Timers} (\hyperlink{sdp_types_8h_a94c0315eea22344f1e853cc7c90592bb}{T\+I\+M\+E\+R} $\ast$timer)
+\item 
+void \hyperlink{_s_d_p_t_r_a_p_b_8c_ad714df92d7ba0d4f11a8de881029449f}{init\+System} (void)
+\item 
+void \hyperlink{_s_d_p_t_r_a_p_b_8c_a791a48c81cdf8f968eb6e0282729ff14}{clean\+System} (void)
+\item 
+void \hyperlink{_s_d_p_t_r_a_p_b_8c_a004616c530a9e96c121bf5aa81198eab}{nuevo\+Modulo} (void)
+\item 
+\hyperlink{_s_d_p_t_r_a_p_b_8h_aad8a241e13cd4731254878eed6271c8c}{S\+D\+P\+T\+R\+A\+P\+\_\+\+D\+L\+L} void \hyperlink{_s_d_p_t_r_a_p_b_8c_afe26885736f7df4b2157bb4dfe32ce20}{S\+D\+P\+T\+R\+A\+P\+B\+\_\+set\+Debug\+Level} (int level)
+\item 
+\hyperlink{_s_d_p_t_r_a_p_b_8h_aad8a241e13cd4731254878eed6271c8c}{S\+D\+P\+T\+R\+A\+P\+\_\+\+D\+L\+L} void \hyperlink{_s_d_p_t_r_a_p_b_8c_a56bd96cf4c11628e4f0e301c5b8e5872}{S\+D\+P\+T\+R\+A\+P\+B\+\_\+set\+Modo} (int mode)
+\item 
+\hyperlink{_s_d_p_t_r_a_p_b_8h_aad8a241e13cd4731254878eed6271c8c}{S\+D\+P\+T\+R\+A\+P\+\_\+\+D\+L\+L} void \hyperlink{_s_d_p_t_r_a_p_b_8c_ae94cd489111188c3ccda942c856494f2}{S\+D\+P\+T\+R\+A\+P\+B} (int $\ast$option, int $\ast$len, char $\ast$sdp\+Data, char $\ast$modulo)
+\begin{DoxyCompactList}\small\item\em Punto de entrada a la libreria S\+D\+P\+T\+R\+A\+P\+B. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{sdp_types_8h_a94c0315eea22344f1e853cc7c90592bb}{T\+I\+M\+E\+R} \hyperlink{_s_d_p_t_r_a_p_b_8c_a7b1065499acf2797bfe8d85cd6048da6}{current}
+\item 
+\hyperlink{sdp_types_8h_a94c0315eea22344f1e853cc7c90592bb}{T\+I\+M\+E\+R} \hyperlink{_s_d_p_t_r_a_p_b_8c_ab3bb6926d5a7c2015951d6b80d9acd2a}{ultimo} = \{0,\char`\"{}\char`\"{},0,0,0,0,0,0x0\}
+\item 
+F\+I\+L\+E $\ast$ \hyperlink{_s_d_p_t_r_a_p_b_8c_a5f9e912074a29350e020b7a09f43ff32}{traza} = 0x0
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+S\+D\+P\+T\+R\+A\+P\+B D\+L\+L de captura de datos de ejecucion del programa C\+O\+B\+O\+L Utiliza un unico punto de entrada\+: S\+D\+P\+T\+R\+A\+P. 
+
+Modo 0\+: Acumula toda la informacion en memoria y la envia al final del proceso Modo 1\+: Acumula la informacion en memoria y la envia cada modulo Modo 2\+: Va enviando la informacion segun se va produciendo
+
+\begin{DoxyAuthor}{Autor}
+\+: Javier Gonzalez 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+\+: 01/03/15 
+\end{DoxyDate}
+\begin{DoxyVersion}{Versión}
+\+: 1.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\hypertarget{_s_d_p_t_r_a_p_b_8c_a078985ed6b26e9aa8ab5dc3db733ce0a}{}\index{S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}!\+\_\+\+M\+A\+I\+N\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+@{\+\_\+\+M\+A\+I\+N\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+}}
+\index{\+\_\+\+M\+A\+I\+N\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+@{\+\_\+\+M\+A\+I\+N\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+}!S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}}
+\subsubsection[{\+\_\+\+M\+A\+I\+N\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+M\+A\+I\+N\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+}\label{_s_d_p_t_r_a_p_b_8c_a078985ed6b26e9aa8ab5dc3db733ce0a}
+
+
+Definición en la línea 16 del archivo S\+D\+P\+T\+R\+A\+P\+B.\+c.
+
+\hypertarget{_s_d_p_t_r_a_p_b_8c_aa34996ed15c54e509b65ea825013f094}{}\index{S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}!\+\_\+\+S\+D\+P\+T\+R\+A\+P\+B\+\_\+\+C\+\_\+@{\+\_\+\+S\+D\+P\+T\+R\+A\+P\+B\+\_\+\+C\+\_\+}}
+\index{\+\_\+\+S\+D\+P\+T\+R\+A\+P\+B\+\_\+\+C\+\_\+@{\+\_\+\+S\+D\+P\+T\+R\+A\+P\+B\+\_\+\+C\+\_\+}!S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}}
+\subsubsection[{\+\_\+\+S\+D\+P\+T\+R\+A\+P\+B\+\_\+\+C\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+S\+D\+P\+T\+R\+A\+P\+B\+\_\+\+C\+\_\+}\label{_s_d_p_t_r_a_p_b_8c_aa34996ed15c54e509b65ea825013f094}
+
+
+Definición en la línea 17 del archivo S\+D\+P\+T\+R\+A\+P\+B.\+c.
+
+\hypertarget{_s_d_p_t_r_a_p_b_8c_a0afe4cbd0a945e888ddbfd92070d8e57}{}\index{S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}!N\+O\+\_\+\+S\+T\+D\+I\+O\+\_\+\+R\+E\+D\+I\+R\+E\+C\+T@{N\+O\+\_\+\+S\+T\+D\+I\+O\+\_\+\+R\+E\+D\+I\+R\+E\+C\+T}}
+\index{N\+O\+\_\+\+S\+T\+D\+I\+O\+\_\+\+R\+E\+D\+I\+R\+E\+C\+T@{N\+O\+\_\+\+S\+T\+D\+I\+O\+\_\+\+R\+E\+D\+I\+R\+E\+C\+T}!S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}}
+\subsubsection[{N\+O\+\_\+\+S\+T\+D\+I\+O\+\_\+\+R\+E\+D\+I\+R\+E\+C\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+O\+\_\+\+S\+T\+D\+I\+O\+\_\+\+R\+E\+D\+I\+R\+E\+C\+T}\label{_s_d_p_t_r_a_p_b_8c_a0afe4cbd0a945e888ddbfd92070d8e57}
+
+
+Definición en la línea 19 del archivo S\+D\+P\+T\+R\+A\+P\+B.\+c.
+
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{_s_d_p_t_r_a_p_b_8c_a0704e6747f6e4e33d32b791e60c85953}{}\index{S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}!calculate\+Timers@{calculate\+Timers}}
+\index{calculate\+Timers@{calculate\+Timers}!S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}}
+\subsubsection[{calculate\+Timers(\+T\+I\+M\+E\+R $\ast$timer)}]{\setlength{\rightskip}{0pt plus 5cm}void calculate\+Timers (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+E\+R} $\ast$}]{timer}
+\end{DoxyParamCaption}
+)}\label{_s_d_p_t_r_a_p_b_8c_a0704e6747f6e4e33d32b791e60c85953}
+
+
+Definición en la línea 200 del archivo S\+D\+P\+T\+R\+A\+P\+B.\+c.
+
+\hypertarget{_s_d_p_t_r_a_p_b_8c_a791a48c81cdf8f968eb6e0282729ff14}{}\index{S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}!clean\+System@{clean\+System}}
+\index{clean\+System@{clean\+System}!S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}}
+\subsubsection[{clean\+System(void)}]{\setlength{\rightskip}{0pt plus 5cm}void clean\+System (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_s_d_p_t_r_a_p_b_8c_a791a48c81cdf8f968eb6e0282729ff14}
+
+
+Definición en la línea 281 del archivo S\+D\+P\+T\+R\+A\+P\+B.\+c.
+
+\hypertarget{_s_d_p_t_r_a_p_b_8c_aa42745580a553732a3f221db4d209801}{}\index{S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}!end\+Process@{end\+Process}}
+\index{end\+Process@{end\+Process}!S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}}
+\subsubsection[{end\+Process(int option, char $\ast$sdp\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}void end\+Process (
+\begin{DoxyParamCaption}
+\item[{int}]{option, }
+\item[{char $\ast$}]{sdp\+Data}
+\end{DoxyParamCaption}
+)}\label{_s_d_p_t_r_a_p_b_8c_aa42745580a553732a3f221db4d209801}
+
+
+Definición en la línea 151 del archivo S\+D\+P\+T\+R\+A\+P\+B.\+c.
+
+\hypertarget{_s_d_p_t_r_a_p_b_8c_ad714df92d7ba0d4f11a8de881029449f}{}\index{S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}!init\+System@{init\+System}}
+\index{init\+System@{init\+System}!S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}}
+\subsubsection[{init\+System(void)}]{\setlength{\rightskip}{0pt plus 5cm}void init\+System (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_s_d_p_t_r_a_p_b_8c_ad714df92d7ba0d4f11a8de881029449f}
+
+
+Definición en la línea 236 del archivo S\+D\+P\+T\+R\+A\+P\+B.\+c.
+
+\hypertarget{_s_d_p_t_r_a_p_b_8c_a004616c530a9e96c121bf5aa81198eab}{}\index{S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}!nuevo\+Modulo@{nuevo\+Modulo}}
+\index{nuevo\+Modulo@{nuevo\+Modulo}!S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}}
+\subsubsection[{nuevo\+Modulo(void)}]{\setlength{\rightskip}{0pt plus 5cm}void nuevo\+Modulo (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_s_d_p_t_r_a_p_b_8c_a004616c530a9e96c121bf5aa81198eab}
+
+
+Definición en la línea 222 del archivo S\+D\+P\+T\+R\+A\+P\+B.\+c.
+
+\hypertarget{_s_d_p_t_r_a_p_b_8c_ae94cd489111188c3ccda942c856494f2}{}\index{S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}!S\+D\+P\+T\+R\+A\+P\+B@{S\+D\+P\+T\+R\+A\+P\+B}}
+\index{S\+D\+P\+T\+R\+A\+P\+B@{S\+D\+P\+T\+R\+A\+P\+B}!S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}}
+\subsubsection[{S\+D\+P\+T\+R\+A\+P\+B(int $\ast$option, int $\ast$len, char $\ast$sdp\+Data, char $\ast$modulo)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+P\+T\+R\+A\+P\+\_\+\+D\+L\+L} void S\+D\+P\+T\+R\+A\+P\+B (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{option, }
+\item[{int $\ast$}]{len, }
+\item[{char $\ast$}]{sdp\+Data, }
+\item[{char $\ast$}]{modulo}
+\end{DoxyParamCaption}
+)}\label{_s_d_p_t_r_a_p_b_8c_ae94cd489111188c3ccda942c856494f2}
+
+
+Punto de entrada a la libreria S\+D\+P\+T\+R\+A\+P\+B. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em option} & Una combinacion de los valores definidos en M\+S\+G\+\_\+xxx \\
+\hline
+{\em len} & Longitud de la etiqueta, 0 si no es relevante \\
+\hline
+{\em sdp\+Data} & Puntero a la estructura S\+D\+P \\
+\hline
+{\em modulo} & Etiqueta (parrafo, rutina, etc.) \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 83 del archivo S\+D\+P\+T\+R\+A\+P\+B.\+c.
+
+\hypertarget{_s_d_p_t_r_a_p_b_8c_afe26885736f7df4b2157bb4dfe32ce20}{}\index{S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}!S\+D\+P\+T\+R\+A\+P\+B\+\_\+set\+Debug\+Level@{S\+D\+P\+T\+R\+A\+P\+B\+\_\+set\+Debug\+Level}}
+\index{S\+D\+P\+T\+R\+A\+P\+B\+\_\+set\+Debug\+Level@{S\+D\+P\+T\+R\+A\+P\+B\+\_\+set\+Debug\+Level}!S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}}
+\subsubsection[{S\+D\+P\+T\+R\+A\+P\+B\+\_\+set\+Debug\+Level(int level)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+P\+T\+R\+A\+P\+\_\+\+D\+L\+L} void S\+D\+P\+T\+R\+A\+P\+B\+\_\+set\+Debug\+Level (
+\begin{DoxyParamCaption}
+\item[{int}]{level}
+\end{DoxyParamCaption}
+)}\label{_s_d_p_t_r_a_p_b_8c_afe26885736f7df4b2157bb4dfe32ce20}
+Usado para pruebas unitarias y de integracion 
+
+Definición en la línea 64 del archivo S\+D\+P\+T\+R\+A\+P\+B.\+c.
+
+\hypertarget{_s_d_p_t_r_a_p_b_8c_a56bd96cf4c11628e4f0e301c5b8e5872}{}\index{S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}!S\+D\+P\+T\+R\+A\+P\+B\+\_\+set\+Modo@{S\+D\+P\+T\+R\+A\+P\+B\+\_\+set\+Modo}}
+\index{S\+D\+P\+T\+R\+A\+P\+B\+\_\+set\+Modo@{S\+D\+P\+T\+R\+A\+P\+B\+\_\+set\+Modo}!S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}}
+\subsubsection[{S\+D\+P\+T\+R\+A\+P\+B\+\_\+set\+Modo(int mode)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+P\+T\+R\+A\+P\+\_\+\+D\+L\+L} void S\+D\+P\+T\+R\+A\+P\+B\+\_\+set\+Modo (
+\begin{DoxyParamCaption}
+\item[{int}]{mode}
+\end{DoxyParamCaption}
+)}\label{_s_d_p_t_r_a_p_b_8c_a56bd96cf4c11628e4f0e301c5b8e5872}
+Usado para pruebas unitarias y de integracion 
+
+Definición en la línea 71 del archivo S\+D\+P\+T\+R\+A\+P\+B.\+c.
+
+\hypertarget{_s_d_p_t_r_a_p_b_8c_ad67bdaaddcfa1424dad31c0b8187f829}{}\index{S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}!start\+Process@{start\+Process}}
+\index{start\+Process@{start\+Process}!S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}}
+\subsubsection[{start\+Process(int option)}]{\setlength{\rightskip}{0pt plus 5cm}void start\+Process (
+\begin{DoxyParamCaption}
+\item[{int}]{option}
+\end{DoxyParamCaption}
+)}\label{_s_d_p_t_r_a_p_b_8c_ad67bdaaddcfa1424dad31c0b8187f829}
+
+
+Definición en la línea 125 del archivo S\+D\+P\+T\+R\+A\+P\+B.\+c.
+
+
+
+\subsection{Documentación de las variables}
+\hypertarget{_s_d_p_t_r_a_p_b_8c_a7b1065499acf2797bfe8d85cd6048da6}{}\index{S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}!current@{current}}
+\index{current@{current}!S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}}
+\subsubsection[{current}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\+I\+M\+E\+R} current}\label{_s_d_p_t_r_a_p_b_8c_a7b1065499acf2797bfe8d85cd6048da6}
+
+
+Definición en la línea 40 del archivo S\+D\+P\+T\+R\+A\+P\+B.\+c.
+
+\hypertarget{_s_d_p_t_r_a_p_b_8c_a5f9e912074a29350e020b7a09f43ff32}{}\index{S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}!traza@{traza}}
+\index{traza@{traza}!S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}}
+\subsubsection[{traza}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+L\+E$\ast$ traza = 0x0}\label{_s_d_p_t_r_a_p_b_8c_a5f9e912074a29350e020b7a09f43ff32}
+
+
+Definición en la línea 42 del archivo S\+D\+P\+T\+R\+A\+P\+B.\+c.
+
+\hypertarget{_s_d_p_t_r_a_p_b_8c_ab3bb6926d5a7c2015951d6b80d9acd2a}{}\index{S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}!ultimo@{ultimo}}
+\index{ultimo@{ultimo}!S\+D\+P\+T\+R\+A\+P\+B.\+c@{S\+D\+P\+T\+R\+A\+P\+B.\+c}}
+\subsubsection[{ultimo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\+I\+M\+E\+R} ultimo = \{0,\char`\"{}\char`\"{},0,0,0,0,0,0x0\}}\label{_s_d_p_t_r_a_p_b_8c_ab3bb6926d5a7c2015951d6b80d9acd2a}
+
+
+Definición en la línea 41 del archivo S\+D\+P\+T\+R\+A\+P\+B.\+c.
+

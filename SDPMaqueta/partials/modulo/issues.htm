@@ -1,0 +1,58 @@
+<div class="panel-heading">Issues</div>
+<div class="panel-body" data-ng-controller="resumenCtrl">
+
+    <table class="table table-hover">
+        <tr class="listado clickable"
+            data-ng-click="cambiaPieModulo(2)"
+            title={{MSG.RES_SHOW_EXE}}
+            data-toggle="tooltip"
+            data-placement="top" tooltip>
+            <td class="col-md-7" >Bloqueantes</td>
+            <td class="col-md-5 text-right tbLinea">{{modulo.issues[5]}}</td>
+        </tr>
+        <tr class="listado clickable"
+            data-ng-click="cambiaPieModulo(2)"
+            title={{MSG.RES_SHOW_EXE}}
+            data-toggle="tooltip"
+            data-placement="top" tooltip>
+            <td class="col-md-7" >Severos</td>
+            <td class="col-md-5 text-right tbLinea">{{modulo.issues[4]}}</td>
+        </tr>
+        <tr class="listado clickable"
+            data-ng-click="cambiaPieModulo(2)"
+            title={{MSG.RES_SHOW_EXE}}
+            data-toggle="tooltip"
+            data-placement="top" tooltip>
+            <td class="col-md-7" >Altos</td>
+            <td class="col-md-5 text-right tbLinea">{{modulo.issues[3]}}</td>
+        </tr>
+        <tr class="listado clickable"
+            data-ng-click="cambiaPieModulo(2)"
+            title={{MSG.RES_SHOW_EXE}}
+            data-toggle="tooltip"
+            data-placement="top" tooltip>
+            <td class="col-md-7" >Bajos</td>
+            <td class="col-md-5 text-right tbLinea">{{modulo.issues[2]}}</td>
+        </tr>
+        <tr class="listado clickable"
+            data-ng-click="cambiaPieModulo(2)"
+            title={{MSG.RES_SHOW_EXE}}
+            data-toggle="tooltip"
+            data-placement="top" tooltip>
+            <td class="col-md-7" >Leves</td>
+            <td class="col-md-5 text-right tbLinea">{{modulo.issues[1]}}</td>
+        </tr>
+        <tr class="listado clickable"
+            data-ng-click="cambiaPieModulo(2)"
+            title={{MSG.RES_SHOW_EXE}}
+            data-toggle="tooltip"
+            data-placement="top" tooltip>
+            <td class="col-md-7 marcado" >Total</td>
+            <td class="col-md-5 marcado text-right tbLinea">{{modulo.issues[0]}}</td>
+        </tr>
+
+
+    </table>
+
+</div>
+</div>

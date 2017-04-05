@@ -1,0 +1,474 @@
+\hypertarget{messages_8c}{}\section{Referencia del Archivo src/messages.c}
+\label{messages_8c}\index{src/messages.\+c@{src/messages.\+c}}
+
+
+Gestiona la generacion de los diferentes mensajes que se deben enviar.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}S\+D\+P\+T\+R\+A\+P.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}messages.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}modulos.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}amqsdp.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cob2c.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}global.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}md5.\+h\char`\"{}}\\*
+Dependencia gráfica adjunta para messages.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{messages_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Estructuras de datos}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_s_t___c_n_t}{S\+T\+\_\+\+C\+N\+T}
+\end{DoxyCompactItemize}
+\subsection*{\textquotesingle{}defines\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{messages_8c_aabcb39e925be97c89aed6b993ca0ef52}{\+\_\+\+M\+E\+S\+S\+A\+G\+E\+S\+\_\+\+C\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{\textquotesingle{}typedefs\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct_s_t___c_n_t}{S\+T\+\_\+\+C\+N\+T} \hyperlink{messages_8c_adad3adcee1cdeaa517d9ad053fba482c}{C\+N\+T}
+\begin{DoxyCompactList}\small\item\em Mantiene la informacion de los timers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{messages_8c_a5c4b5bc4bbd5b78371891b44033225b2}{process\+Message\+Call} (\hyperlink{sdp_types_8h_a94c0315eea22344f1e853cc7c90592bb}{T\+I\+M\+E\+R} $\ast$timer)
+\item 
+void \hyperlink{messages_8c_a01dcea3425d9a1ac856ca40e46c11e06}{process\+Message\+Paragraph} (\hyperlink{sdp_types_8h_a94c0315eea22344f1e853cc7c90592bb}{T\+I\+M\+E\+R} $\ast$timer)
+\item 
+void \hyperlink{messages_8c_a38f5a7f119931cf2c5d80bf082d79396}{process\+Message\+Module} (\hyperlink{sdp_types_8h_a94c0315eea22344f1e853cc7c90592bb}{T\+I\+M\+E\+R} $\ast$timer)
+\item 
+void \hyperlink{messages_8c_a55fc859ca4230a2ec01f70112072a6c1}{send\+Coverage} (char $\ast$data, long size, \hyperlink{sdp_types_8h_a54a4473e20ff51d4dcb4158acf8a5979}{M\+O\+D} $\ast$mod)
+\item 
+void \hyperlink{messages_8c_a395163ce9ccd27fd0ad904ec2dfbde51}{send\+Uso\+Parrafos} (char $\ast$data, long size, \hyperlink{sdp_types_8h_a54a4473e20ff51d4dcb4158acf8a5979}{M\+O\+D} $\ast$mod)
+\item 
+void \hyperlink{messages_8c_acc51fc909744a1dba67838e37aaf8bf1}{send\+Files} (char $\ast$data, long size, \hyperlink{sdp_types_8h_a54a4473e20ff51d4dcb4158acf8a5979}{M\+O\+D} $\ast$mod)
+\item 
+void \hyperlink{messages_8c_a347af0003cb0b768fdba68788e9cde4a}{send\+Parrafos} (\hyperlink{sdp_types_8h_a54a4473e20ff51d4dcb4158acf8a5979}{M\+O\+D} $\ast$mod)
+\item 
+void \hyperlink{messages_8c_a508bbb821e7ca1f2df8497d011d0f51a}{send\+Calls} (\hyperlink{sdp_types_8h_a54a4473e20ff51d4dcb4158acf8a5979}{M\+O\+D} $\ast$mod)
+\item 
+void \hyperlink{messages_8c_a5df4323dd9c81e9569ef158babd0c59f}{send\+Session\+Control} (int type, \hyperlink{sdp_types_8h_a94c0315eea22344f1e853cc7c90592bb}{T\+I\+M\+E\+R} $\ast$\hyperlink{_s_d_p_t_r_a_p_b_8c_a7b1065499acf2797bfe8d85cd6048da6}{current})
+\item 
+void \hyperlink{messages_8c_a8ad4fbfaa11c353451aa4b4694e993e4}{process\+Parrafos} (\hyperlink{sdp_types_8h_a54a4473e20ff51d4dcb4158acf8a5979}{M\+O\+D} $\ast$mod)
+\item 
+void \hyperlink{messages_8c_ad572a023ad1a3376615edc33d723af52}{update\+Modulo} (\hyperlink{sdp_types_8h_a54a4473e20ff51d4dcb4158acf8a5979}{M\+O\+D} $\ast$mod, \hyperlink{sdp_types_8h_a94c0315eea22344f1e853cc7c90592bb}{T\+I\+M\+E\+R} $\ast$timer)
+\item 
+void \hyperlink{messages_8c_ade4488bea47f13725077ee3a3e0bac34}{ajusta\+Timers} (\hyperlink{sdp_types_8h_a94c0315eea22344f1e853cc7c90592bb}{T\+I\+M\+E\+R} $\ast$timer)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{messages_8c_ad9a5bcb8859dbde9b0a6029b344b68cd}{process\+Message} (int tipo, \hyperlink{sdp_types_8h_a94c0315eea22344f1e853cc7c90592bb}{T\+I\+M\+E\+R} $\ast$timer)
+\item 
+void \hyperlink{messages_8c_ae4bd6b37abd013f42f2ac297cc683573}{process\+End\+Module} (char $\ast$sdp\+Data)
+\item 
+void \hyperlink{messages_8c_a63282a78d8b8929683dd046c35f09fd8}{send\+Begin\+Session} (\hyperlink{sdp_types_8h_a94c0315eea22344f1e853cc7c90592bb}{T\+I\+M\+E\+R} $\ast$\hyperlink{_s_d_p_t_r_a_p_b_8c_a7b1065499acf2797bfe8d85cd6048da6}{current})
+\item 
+void \hyperlink{messages_8c_a69751ad443f5cbed4e252627ee7421d2}{send\+End\+Session} (\hyperlink{sdp_types_8h_a94c0315eea22344f1e853cc7c90592bb}{T\+I\+M\+E\+R} $\ast$\hyperlink{_s_d_p_t_r_a_p_b_8c_a7b1065499acf2797bfe8d85cd6048da6}{current})
+\item 
+void \hyperlink{messages_8c_ad2e875f26a55b957c63137be3e719471}{send\+Pending\+Data} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{messages_8c_ad4f688c87d1792d6783f34c874b5fefd}{firma}
+\item 
+char \hyperlink{messages_8c_a1c07f3735e9c63f3130a615745887a20}{sz\+Msg} \mbox{[}4095\mbox{]}
+\item 
+unsigned long \hyperlink{messages_8c_a8d32de993c5598bc5bc446cae103dc0e}{sequence} = 0\+L
+\item 
+\hyperlink{sdp_types_8h_a54a4473e20ff51d4dcb4158acf8a5979}{M\+O\+D} $\ast$ \hyperlink{messages_8c_a8b68daebd015cea05a9ede10ef241138}{last\+Mod} = \hyperlink{sdpconfig_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+L\+L}
+\item 
+\hyperlink{sdp_types_8h_a54a4473e20ff51d4dcb4158acf8a5979}{M\+O\+D} $\ast$ \hyperlink{messages_8c_a2e3dc653edbb8f642485dc7be6f8da55}{mod\+Actual} = \hyperlink{sdpconfig_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+L\+L}
+\item 
+\hyperlink{messages_8c_adad3adcee1cdeaa517d9ad053fba482c}{C\+N\+T} \hyperlink{messages_8c_aeef39c334c6268a29c7cb28beb31015e}{cnt}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Gestiona la generacion de los diferentes mensajes que se deben enviar. 
+
+Los acumula o los envia en funcion del tipo de proceso y del estado
+
+\begin{DoxyAuthor}{Autor}
+\+: Javier Gonzalez 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+\+: 01/04/2015 
+\end{DoxyDate}
+\begin{DoxyVersion}{Versión}
+\+: 1.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\hypertarget{messages_8c_aabcb39e925be97c89aed6b993ca0ef52}{}\index{messages.\+c@{messages.\+c}!\+\_\+\+M\+E\+S\+S\+A\+G\+E\+S\+\_\+\+C\+\_\+@{\+\_\+\+M\+E\+S\+S\+A\+G\+E\+S\+\_\+\+C\+\_\+}}
+\index{\+\_\+\+M\+E\+S\+S\+A\+G\+E\+S\+\_\+\+C\+\_\+@{\+\_\+\+M\+E\+S\+S\+A\+G\+E\+S\+\_\+\+C\+\_\+}!messages.\+c@{messages.\+c}}
+\subsubsection[{\+\_\+\+M\+E\+S\+S\+A\+G\+E\+S\+\_\+\+C\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+M\+E\+S\+S\+A\+G\+E\+S\+\_\+\+C\+\_\+}\label{messages_8c_aabcb39e925be97c89aed6b993ca0ef52}
+
+
+Definición en la línea 14 del archivo messages.\+c.
+
+
+
+\subsection{Documentación de los \textquotesingle{}typedefs\textquotesingle{}}
+\hypertarget{messages_8c_adad3adcee1cdeaa517d9ad053fba482c}{}\index{messages.\+c@{messages.\+c}!C\+N\+T@{C\+N\+T}}
+\index{C\+N\+T@{C\+N\+T}!messages.\+c@{messages.\+c}}
+\subsubsection[{C\+N\+T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+N\+T}}\label{messages_8c_adad3adcee1cdeaa517d9ad053fba482c}
+
+
+Mantiene la informacion de los timers. 
+
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{messages_8c_ade4488bea47f13725077ee3a3e0bac34}{}\index{messages.\+c@{messages.\+c}!ajusta\+Timers@{ajusta\+Timers}}
+\index{ajusta\+Timers@{ajusta\+Timers}!messages.\+c@{messages.\+c}}
+\subsubsection[{ajusta\+Timers(\+T\+I\+M\+E\+R $\ast$timer)}]{\setlength{\rightskip}{0pt plus 5cm}void ajusta\+Timers (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+E\+R} $\ast$}]{timer}
+\end{DoxyParamCaption}
+)}\label{messages_8c_ade4488bea47f13725077ee3a3e0bac34}
+Caso especial para entornos Windows En Windows los tiempos se dan en decenas de nanosegundos por lo que hay que pasarlos a microsegundos redondeando 
+
+Definición en la línea 458 del archivo messages.\+c.
+
+\hypertarget{messages_8c_ae4bd6b37abd013f42f2ac297cc683573}{}\index{messages.\+c@{messages.\+c}!process\+End\+Module@{process\+End\+Module}}
+\index{process\+End\+Module@{process\+End\+Module}!messages.\+c@{messages.\+c}}
+\subsubsection[{process\+End\+Module(char $\ast$sdp\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}void process\+End\+Module (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{sdp\+Data}
+\end{DoxyParamCaption}
+)}\label{messages_8c_ae4bd6b37abd013f42f2ac297cc683573}
+Envia los mensajes asociados al final de un modulo en funcion del modo de proceso
+
+Contadores de uso de parrafos Contadores de las llamadas realizadas en ese modulo Contadores de los ficheros Informacion de la cobertura
+
+
+\begin{DoxyParams}{Parámetros}
+{\em sdp\+Data} & Direccion de la C\+O\+P\+Y C\+O\+B\+O\+L \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 193 del archivo messages.\+c.
+
+\hypertarget{messages_8c_ad9a5bcb8859dbde9b0a6029b344b68cd}{}\index{messages.\+c@{messages.\+c}!process\+Message@{process\+Message}}
+\index{process\+Message@{process\+Message}!messages.\+c@{messages.\+c}}
+\subsubsection[{process\+Message(int tipo, T\+I\+M\+E\+R $\ast$timer)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void process\+Message (
+\begin{DoxyParamCaption}
+\item[{int}]{tipo, }
+\item[{{\bf T\+I\+M\+E\+R} $\ast$}]{timer}
+\end{DoxyParamCaption}
+)}\label{messages_8c_ad9a5bcb8859dbde9b0a6029b344b68cd}
+Prepara el mensaje a enviar Si es un mensaje de fin de llamada, ajusta la pila de modulos 
+\begin{DoxyParams}{Parámetros}
+{\em tipo} & tipo del mensaje segun codigos M\+S\+G\+\_\+xxx \\
+\hline
+{\em timer} & Puntero al T\+I\+M\+E\+R calculado an entrar en la libreria \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 76 del archivo messages.\+c.
+
+\hypertarget{messages_8c_a5c4b5bc4bbd5b78371891b44033225b2}{}\index{messages.\+c@{messages.\+c}!process\+Message\+Call@{process\+Message\+Call}}
+\index{process\+Message\+Call@{process\+Message\+Call}!messages.\+c@{messages.\+c}}
+\subsubsection[{process\+Message\+Call(\+T\+I\+M\+E\+R $\ast$timer)}]{\setlength{\rightskip}{0pt plus 5cm}void process\+Message\+Call (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+E\+R} $\ast$}]{timer}
+\end{DoxyParamCaption}
+)}\label{messages_8c_a5c4b5bc4bbd5b78371891b44033225b2}
+Procesa el mensaje de fin de llamada Si el modulo estaba monitorizado, se ha quitado de la pila al hacer E\+N\+D\+\_\+\+M\+O\+D\+U\+L\+E
+
+Puede ser que el modulo llamado no este monitorizado En ese caso se envia una firma vacia Hay que verificar que no es una llamada recursiva; es decir Si el modulo en la cima de la pila es el mismo que el actual el anterior puede ser el mismo y seria recursivo
+
+
+\begin{DoxyParams}{Parámetros}
+{\em timer} & Puntero al T\+I\+M\+E\+R calculado an entrar en la libreria \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 99 del archivo messages.\+c.
+
+\hypertarget{messages_8c_a38f5a7f119931cf2c5d80bf082d79396}{}\index{messages.\+c@{messages.\+c}!process\+Message\+Module@{process\+Message\+Module}}
+\index{process\+Message\+Module@{process\+Message\+Module}!messages.\+c@{messages.\+c}}
+\subsubsection[{process\+Message\+Module(\+T\+I\+M\+E\+R $\ast$timer)}]{\setlength{\rightskip}{0pt plus 5cm}void process\+Message\+Module (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+E\+R} $\ast$}]{timer}
+\end{DoxyParamCaption}
+)}\label{messages_8c_a38f5a7f119931cf2c5d80bf082d79396}
+Procesa un mensaje de inicio de modulo
+
+
+\begin{DoxyParams}{Parámetros}
+{\em timer} & Puntero al T\+I\+M\+E\+R calculado an entrar en la libreria \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 153 del archivo messages.\+c.
+
+\hypertarget{messages_8c_a01dcea3425d9a1ac856ca40e46c11e06}{}\index{messages.\+c@{messages.\+c}!process\+Message\+Paragraph@{process\+Message\+Paragraph}}
+\index{process\+Message\+Paragraph@{process\+Message\+Paragraph}!messages.\+c@{messages.\+c}}
+\subsubsection[{process\+Message\+Paragraph(\+T\+I\+M\+E\+R $\ast$timer)}]{\setlength{\rightskip}{0pt plus 5cm}void process\+Message\+Paragraph (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+E\+R} $\ast$}]{timer}
+\end{DoxyParamCaption}
+)}\label{messages_8c_a01dcea3425d9a1ac856ca40e46c11e06}
+Procesa un mensaje de tipo parrafo
+
+
+\begin{DoxyParams}{Parámetros}
+{\em timer} & Puntero al T\+I\+M\+E\+R calculado an entrar en la libreria \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 132 del archivo messages.\+c.
+
+\hypertarget{messages_8c_a8ad4fbfaa11c353451aa4b4694e993e4}{}\index{messages.\+c@{messages.\+c}!process\+Parrafos@{process\+Parrafos}}
+\index{process\+Parrafos@{process\+Parrafos}!messages.\+c@{messages.\+c}}
+\subsubsection[{process\+Parrafos(\+M\+O\+D $\ast$mod)}]{\setlength{\rightskip}{0pt plus 5cm}void process\+Parrafos (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+O\+D} $\ast$}]{mod}
+\end{DoxyParamCaption}
+)}\label{messages_8c_a8ad4fbfaa11c353451aa4b4694e993e4}
+
+
+Definición en la línea 435 del archivo messages.\+c.
+
+\hypertarget{messages_8c_a63282a78d8b8929683dd046c35f09fd8}{}\index{messages.\+c@{messages.\+c}!send\+Begin\+Session@{send\+Begin\+Session}}
+\index{send\+Begin\+Session@{send\+Begin\+Session}!messages.\+c@{messages.\+c}}
+\subsubsection[{send\+Begin\+Session(\+T\+I\+M\+E\+R $\ast$current)}]{\setlength{\rightskip}{0pt plus 5cm}void send\+Begin\+Session (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+E\+R} $\ast$}]{current}
+\end{DoxyParamCaption}
+)}\label{messages_8c_a63282a78d8b8929683dd046c35f09fd8}
+Envia el mensaje de inicio de sesion
+
+Este mensaje se envia siempre y de manera aislada
+
+
+\begin{DoxyParams}{Parámetros}
+{\em current} & Puntero al T\+I\+M\+E\+R obtenido al entrar en la libreria \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 370 del archivo messages.\+c.
+
+\hypertarget{messages_8c_a508bbb821e7ca1f2df8497d011d0f51a}{}\index{messages.\+c@{messages.\+c}!send\+Calls@{send\+Calls}}
+\index{send\+Calls@{send\+Calls}!messages.\+c@{messages.\+c}}
+\subsubsection[{send\+Calls(\+M\+O\+D $\ast$mod)}]{\setlength{\rightskip}{0pt plus 5cm}void send\+Calls (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+O\+D} $\ast$}]{mod}
+\end{DoxyParamCaption}
+)}\label{messages_8c_a508bbb821e7ca1f2df8497d011d0f51a}
+Envia losmensajes asociados a las sentencias C\+A\+L\+L
+
+
+\begin{DoxyParams}{Parámetros}
+{\em mod} & Puntero al M\+O\+D actual \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 266 del archivo messages.\+c.
+
+\hypertarget{messages_8c_a55fc859ca4230a2ec01f70112072a6c1}{}\index{messages.\+c@{messages.\+c}!send\+Coverage@{send\+Coverage}}
+\index{send\+Coverage@{send\+Coverage}!messages.\+c@{messages.\+c}}
+\subsubsection[{send\+Coverage(char $\ast$data, long size, M\+O\+D $\ast$mod)}]{\setlength{\rightskip}{0pt plus 5cm}void send\+Coverage (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{data, }
+\item[{long}]{size, }
+\item[{{\bf M\+O\+D} $\ast$}]{mod}
+\end{DoxyParamCaption}
+)}\label{messages_8c_a55fc859ca4230a2ec01f70112072a6c1}
+Envia el mensaje con la cobertura de ese modulo
+
+
+\begin{DoxyParams}{Parámetros}
+{\em data} & Puntero a los datos de cobertura \\
+\hline
+{\em size} & Longitud de los datos de cobertura \\
+\hline
+{\em mod} & Puntero al M\+O\+D actual \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 221 del archivo messages.\+c.
+
+\hypertarget{messages_8c_a69751ad443f5cbed4e252627ee7421d2}{}\index{messages.\+c@{messages.\+c}!send\+End\+Session@{send\+End\+Session}}
+\index{send\+End\+Session@{send\+End\+Session}!messages.\+c@{messages.\+c}}
+\subsubsection[{send\+End\+Session(\+T\+I\+M\+E\+R $\ast$current)}]{\setlength{\rightskip}{0pt plus 5cm}void send\+End\+Session (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+E\+R} $\ast$}]{current}
+\end{DoxyParamCaption}
+)}\label{messages_8c_a69751ad443f5cbed4e252627ee7421d2}
+Envia el mensaje de fin de sesion
+
+
+\begin{DoxyParams}{Parámetros}
+{\em current} & Puntero al T\+I\+M\+E\+R obtenido al entrar en la libreria \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 379 del archivo messages.\+c.
+
+\hypertarget{messages_8c_acc51fc909744a1dba67838e37aaf8bf1}{}\index{messages.\+c@{messages.\+c}!send\+Files@{send\+Files}}
+\index{send\+Files@{send\+Files}!messages.\+c@{messages.\+c}}
+\subsubsection[{send\+Files(char $\ast$data, long size, M\+O\+D $\ast$mod)}]{\setlength{\rightskip}{0pt plus 5cm}void send\+Files (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{sdp\+Data, }
+\item[{long}]{size, }
+\item[{{\bf M\+O\+D} $\ast$}]{mod}
+\end{DoxyParamCaption}
+)}\label{messages_8c_acc51fc909744a1dba67838e37aaf8bf1}
+Envia el mensaje con los accesos a los ficheros y tablas Cada fichero tiene 8 tipos de acceso
+
+
+\begin{DoxyParams}{Parámetros}
+{\em sdp\+Data} & Puntero a los datos de uso de parrafos \\
+\hline
+{\em size} & Longitud de los datos \\
+\hline
+{\em mod} & Puntero al M\+O\+D actual \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 330 del archivo messages.\+c.
+
+\hypertarget{messages_8c_a347af0003cb0b768fdba68788e9cde4a}{}\index{messages.\+c@{messages.\+c}!send\+Parrafos@{send\+Parrafos}}
+\index{send\+Parrafos@{send\+Parrafos}!messages.\+c@{messages.\+c}}
+\subsubsection[{send\+Parrafos(\+M\+O\+D $\ast$mod)}]{\setlength{\rightskip}{0pt plus 5cm}void send\+Parrafos (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+O\+D} $\ast$}]{mod}
+\end{DoxyParamCaption}
+)}\label{messages_8c_a347af0003cb0b768fdba68788e9cde4a}
+Envia el mensaje con los contadores de parrafos
+
+
+\begin{DoxyParams}{Parámetros}
+{\em mod} & Puntero al M\+O\+D actual \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 244 del archivo messages.\+c.
+
+\hypertarget{messages_8c_ad2e875f26a55b957c63137be3e719471}{}\index{messages.\+c@{messages.\+c}!send\+Pending\+Data@{send\+Pending\+Data}}
+\index{send\+Pending\+Data@{send\+Pending\+Data}!messages.\+c@{messages.\+c}}
+\subsubsection[{send\+Pending\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}void send\+Pending\+Data (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{messages_8c_ad2e875f26a55b957c63137be3e719471}
+En caso de trabajar en modo global envia todos los datos antes de enviar el mensaje de fin de sesion 
+
+Definición en la línea 406 del archivo messages.\+c.
+
+\hypertarget{messages_8c_a5df4323dd9c81e9569ef158babd0c59f}{}\index{messages.\+c@{messages.\+c}!send\+Session\+Control@{send\+Session\+Control}}
+\index{send\+Session\+Control@{send\+Session\+Control}!messages.\+c@{messages.\+c}}
+\subsubsection[{send\+Session\+Control(int type, T\+I\+M\+E\+R $\ast$current)}]{\setlength{\rightskip}{0pt plus 5cm}void send\+Session\+Control (
+\begin{DoxyParamCaption}
+\item[{int}]{type, }
+\item[{{\bf T\+I\+M\+E\+R} $\ast$}]{current}
+\end{DoxyParamCaption}
+)}\label{messages_8c_a5df4323dd9c81e9569ef158babd0c59f}
+
+
+Definición en la línea 383 del archivo messages.\+c.
+
+\hypertarget{messages_8c_a395163ce9ccd27fd0ad904ec2dfbde51}{}\index{messages.\+c@{messages.\+c}!send\+Uso\+Parrafos@{send\+Uso\+Parrafos}}
+\index{send\+Uso\+Parrafos@{send\+Uso\+Parrafos}!messages.\+c@{messages.\+c}}
+\subsubsection[{send\+Uso\+Parrafos(char $\ast$data, long size, M\+O\+D $\ast$mod)}]{\setlength{\rightskip}{0pt plus 5cm}void send\+Uso\+Parrafos (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{sdp\+Data, }
+\item[{long}]{size, }
+\item[{{\bf M\+O\+D} $\ast$}]{mod}
+\end{DoxyParamCaption}
+)}\label{messages_8c_a395163ce9ccd27fd0ad904ec2dfbde51}
+Enviar el mensaje con el contador de uso de cada parrafo
+
+
+\begin{DoxyParams}{Parámetros}
+{\em sdp\+Data} & Puntero a los datos de uso de parrafos \\
+\hline
+{\em size} & Longitud de los datos \\
+\hline
+{\em mod} & Puntero al M\+O\+D actual \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 293 del archivo messages.\+c.
+
+\hypertarget{messages_8c_ad572a023ad1a3376615edc33d723af52}{}\index{messages.\+c@{messages.\+c}!update\+Modulo@{update\+Modulo}}
+\index{update\+Modulo@{update\+Modulo}!messages.\+c@{messages.\+c}}
+\subsubsection[{update\+Modulo(\+M\+O\+D $\ast$mod, T\+I\+M\+E\+R $\ast$timer)}]{\setlength{\rightskip}{0pt plus 5cm}void update\+Modulo (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+O\+D} $\ast$}]{mod, }
+\item[{{\bf T\+I\+M\+E\+R} $\ast$}]{timer}
+\end{DoxyParamCaption}
+)}\label{messages_8c_ad572a023ad1a3376615edc33d723af52}
+
+
+Definición en la línea 445 del archivo messages.\+c.
+
+
+
+\subsection{Documentación de las variables}
+\hypertarget{messages_8c_aeef39c334c6268a29c7cb28beb31015e}{}\index{messages.\+c@{messages.\+c}!cnt@{cnt}}
+\index{cnt@{cnt}!messages.\+c@{messages.\+c}}
+\subsubsection[{cnt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+N\+T} cnt}\label{messages_8c_aeef39c334c6268a29c7cb28beb31015e}
+
+
+Definición en la línea 47 del archivo messages.\+c.
+
+\hypertarget{messages_8c_ad4f688c87d1792d6783f34c874b5fefd}{}\index{messages.\+c@{messages.\+c}!firma@{firma}}
+\index{firma@{firma}!messages.\+c@{messages.\+c}}
+\subsubsection[{firma}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ firma}\label{messages_8c_ad4f688c87d1792d6783f34c874b5fefd}
+
+
+Definición en la línea 40 del archivo messages.\+c.
+
+\hypertarget{messages_8c_a8b68daebd015cea05a9ede10ef241138}{}\index{messages.\+c@{messages.\+c}!last\+Mod@{last\+Mod}}
+\index{last\+Mod@{last\+Mod}!messages.\+c@{messages.\+c}}
+\subsubsection[{last\+Mod}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+O\+D}$\ast$ last\+Mod = {\bf N\+U\+L\+L}}\label{messages_8c_a8b68daebd015cea05a9ede10ef241138}
+Ultimo modulo ejecutado 
+
+Definición en la línea 45 del archivo messages.\+c.
+
+\hypertarget{messages_8c_a2e3dc653edbb8f642485dc7be6f8da55}{}\index{messages.\+c@{messages.\+c}!mod\+Actual@{mod\+Actual}}
+\index{mod\+Actual@{mod\+Actual}!messages.\+c@{messages.\+c}}
+\subsubsection[{mod\+Actual}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+O\+D}$\ast$ mod\+Actual = {\bf N\+U\+L\+L}}\label{messages_8c_a2e3dc653edbb8f642485dc7be6f8da55}
+Modulo actual 
+
+Definición en la línea 46 del archivo messages.\+c.
+
+\hypertarget{messages_8c_a8d32de993c5598bc5bc446cae103dc0e}{}\index{messages.\+c@{messages.\+c}!sequence@{sequence}}
+\index{sequence@{sequence}!messages.\+c@{messages.\+c}}
+\subsubsection[{sequence}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long sequence = 0\+L}\label{messages_8c_a8d32de993c5598bc5bc446cae103dc0e}
+
+
+Definición en la línea 43 del archivo messages.\+c.
+
+\hypertarget{messages_8c_a1c07f3735e9c63f3130a615745887a20}{}\index{messages.\+c@{messages.\+c}!sz\+Msg@{sz\+Msg}}
+\index{sz\+Msg@{sz\+Msg}!messages.\+c@{messages.\+c}}
+\subsubsection[{sz\+Msg}]{\setlength{\rightskip}{0pt plus 5cm}char sz\+Msg\mbox{[}4095\mbox{]}}\label{messages_8c_a1c07f3735e9c63f3130a615745887a20}
+Buffer para un unico mensaje 
+
+Definición en la línea 41 del archivo messages.\+c.
+

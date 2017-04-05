@@ -1,0 +1,28 @@
+var sdpconfig_8h =
+[
+    [ "DBG_ALL", "sdpconfig_8h.html#a14d858941e566e4f9e07b183236f10e6", null ],
+    [ "DBG_CALL", "sdpconfig_8h.html#a44f6930298af62aaaa4af242749e286d", null ],
+    [ "DBG_MOD", "sdpconfig_8h.html#a34617f3ac0249ca877bddc57f6982401", null ],
+    [ "DBG_MSG", "sdpconfig_8h.html#a50ee6784b4c763d1d1353f34e1f314af", null ],
+    [ "DBG_NONE", "sdpconfig_8h.html#af0fde0e5ef66a5bb448ff8b6ffedcd69", null ],
+    [ "DBG_POP", "sdpconfig_8h.html#ac85c3723adc8b9ef82670d5ecd43c328", null ],
+    [ "DBG_PUSH", "sdpconfig_8h.html#a4487f9d50b1daa14e880dc3cc740a39e", null ],
+    [ "DBG_SEND", "sdpconfig_8h.html#acb4aca184f447d249a7ebebf2da7b5ad", null ],
+    [ "DBG_SESION", "sdpconfig_8h.html#ae39a9c80905518ddfdc1e04d6bd45fbe", null ],
+    [ "DBG_TIMER", "sdpconfig_8h.html#ae94dc26fa7b9b56988e51bd5d00391b5", null ],
+    [ "DEBUG_LEVEL", "sdpconfig_8h.html#ac2d33ccaf63f5d5b66552b95426c0137", null ],
+    [ "FALSE", "sdpconfig_8h.html#aa93f0eb578d23995850d61f7d61c55c1", null ],
+    [ "FIRMA", "sdpconfig_8h.html#a37f0a3c295994e30902acb1b76bd094a", null ],
+    [ "HASH_SIZE", "sdpconfig_8h.html#ad6074dd11ab3c97c8135c43aab03ae95", null ],
+    [ "ITEMS_BY_MSG", "sdpconfig_8h.html#aeefcc7b6f118beefd2cec532afced5df", null ],
+    [ "MAX_MODULE", "sdpconfig_8h.html#a6611b3fba9de26203f14407743b750cc", null ],
+    [ "MAX_PARRAFO", "sdpconfig_8h.html#ac084a897234f41c71f01eab1d39c3073", null ],
+    [ "MODE_DETAILED", "sdpconfig_8h.html#a92938508adb379739d16e3fd065cb913", null ],
+    [ "MODE_GLOBAL", "sdpconfig_8h.html#a8425a5128fca6d19686c6ae5bc724c88", null ],
+    [ "MODE_MODULE", "sdpconfig_8h.html#a8eeb3454261633c1bb268da7c057a26a", null ],
+    [ "MODE_NONE", "sdpconfig_8h.html#a711fffeb11b40c66d48792fcd6664aa7", null ],
+    [ "MODE_UNLOAD", "sdpconfig_8h.html#aa362b9b04115cdcafb53c62ea0b7e44c", null ],
+    [ "NULL", "sdpconfig_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4", null ],
+    [ "PROCESS_MODE", "sdpconfig_8h.html#a361ecdff3dc6ffd72441ac2657d9fa89", null ],
+    [ "TRUE", "sdpconfig_8h.html#aa8cecfc5c5c054d2875c03e77b7be15d", null ]
+];

@@ -1,0 +1,361 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Proyecto de Fin de Carrera: Referencia del Archivo src/cob2c.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Proyecto de Fin de Carrera
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Trapper SDPTRAPB</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Estructuras&#160;de&#160;Datos</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('cob2c_8c.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">'defines'</a> &#124;
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo cob2c.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Utilidad para pasar los datos de la Copy COBOL a la estructura C.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="jggsal_8h_source.html">jggsal.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="cob2c_8h_source.html">cob2c.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Dependencia gráfica adjunta para cob2c.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="cob2c_8c__incl.png" border="0" usemap="#src_2cob2c_8c" alt=""/></div>
+<map name="src_2cob2c_8c" id="src_2cob2c_8c">
+<area shape="rect" id="node5" href="jggsal_8h.html" title="Software Abstraction Layer. " alt="" coords="269,80,336,107"/>
+<area shape="rect" id="node6" href="cob2c_8h.html" title="Fichero de cabecera para convertir la copy COBOL en una estructura SDP. " alt="" coords="361,80,429,107"/>
+</map>
+</div>
+</div>
+<p><a href="cob2c_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+'defines'</h2></td></tr>
+<tr class="memitem:a9962ebca68275c4d6d133d05d60582b9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cob2c_8c.html#a9962ebca68275c4d6d133d05d60582b9">_COB2C_SRC_</a></td></tr>
+<tr class="separator:a9962ebca68275c4d6d133d05d60582b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a856e2f15c2efc7ab8b303f6493b661cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cob2c_8c.html#a856e2f15c2efc7ab8b303f6493b661cd">removeSpaces</a> (char *data, int left)</td></tr>
+<tr class="separator:a856e2f15c2efc7ab8b303f6493b661cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b6a88dac211a2521b42d23d3080c09d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cob2c_8c.html#a7b6a88dac211a2521b42d23d3080c09d">copyCobolToCStruct</a> (<a class="el" href="sdp_types_8h.html#a8ba8f2a87560d14f1152da6646649dfd">SDP</a> *<a class="el" href="global_8h.html#a44585a47047393e8faf0eef343b3b39d">sdp</a>, char *data, char *modulo, int len)</td></tr>
+<tr class="separator:a7b6a88dac211a2521b42d23d3080c09d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52791a6fd5e0a12300b88aae37cab9dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cob2c_8c.html#a52791a6fd5e0a12300b88aae37cab9dc">initSDP</a> (<a class="el" href="sdp_types_8h.html#a8ba8f2a87560d14f1152da6646649dfd">SDP</a> *<a class="el" href="global_8h.html#a44585a47047393e8faf0eef343b3b39d">sdp</a>)</td></tr>
+<tr class="separator:a52791a6fd5e0a12300b88aae37cab9dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21fbbb691be0601c25b2c0bd3489d7e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cob2c_8c.html#a21fbbb691be0601c25b2c0bd3489d7e8">setModuleName</a> (<a class="el" href="sdp_types_8h.html#a8ba8f2a87560d14f1152da6646649dfd">SDP</a> *<a class="el" href="global_8h.html#a44585a47047393e8faf0eef343b3b39d">sdp</a>, char *name)</td></tr>
+<tr class="separator:a21fbbb691be0601c25b2c0bd3489d7e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a659faa5ba4c3abd0450afda8b4d222b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cob2c_8c.html#a659faa5ba4c3abd0450afda8b4d222b4">setCoverage</a> (<a class="el" href="sdp_types_8h.html#a8ba8f2a87560d14f1152da6646649dfd">SDP</a> *<a class="el" href="global_8h.html#a44585a47047393e8faf0eef343b3b39d">sdp</a>, char *name)</td></tr>
+<tr class="separator:a659faa5ba4c3abd0450afda8b4d222b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a0f66a67a6eaa67847b0d9aa277050763"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cob2c_8c.html#a0f66a67a6eaa67847b0d9aa277050763">traza</a></td></tr>
+<tr class="separator:a0f66a67a6eaa67847b0d9aa277050763"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Utilidad para pasar los datos de la Copy COBOL a la estructura C. </p>
+<p>copyCobolToCStruct se utiliza en el flujo normal CStructToCopyCobol Solo tiene sentido para pruebas</p>
+<dl class="section author"><dt>Autor</dt><dd>: Javier Gonzalez </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>: 01/03/15 </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>: 1.0 </dd></dl>
+
+<p>Definición en el archivo <a class="el" href="cob2c_8c_source.html">cob2c.c</a>.</p>
+</div><h2 class="groupheader">Documentación de los 'defines'</h2>
+<a class="anchor" id="a9962ebca68275c4d6d133d05d60582b9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _COB2C_SRC_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="cob2c_8c_source.html#l00017">17</a> del archivo <a class="el" href="cob2c_8c_source.html">cob2c.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a class="anchor" id="a7b6a88dac211a2521b42d23d3080c09d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void copyCobolToCStruct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a8ba8f2a87560d14f1152da6646649dfd">SDP</a> *&#160;</td>
+          <td class="paramname"><em>sdp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>modulo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Copia los datos de la COPY a una estructura C para agilizar el proceso</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sdp</td><td>Puntero a la estructura SDP </td></tr>
+    <tr><td class="paramname">data</td><td>Puntero a la COPY COBOL </td></tr>
+    <tr><td class="paramname">modulo</td><td>Parametro recibido con una etiqueta </td></tr>
+    <tr><td class="paramname">len</td><td>Longitud de la etiqueta </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="cob2c_8c_source.html#l00043">43</a> del archivo <a class="el" href="cob2c_8c_source.html">cob2c.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a52791a6fd5e0a12300b88aae37cab9dc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void initSDP </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a8ba8f2a87560d14f1152da6646649dfd">SDP</a> *&#160;</td>
+          <td class="paramname"><em>sdp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="cob2c_8c_source.html#l00067">67</a> del archivo <a class="el" href="cob2c_8c_source.html">cob2c.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a856e2f15c2efc7ab8b303f6493b661cd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void removeSpaces </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>left</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="cob2c_8c_source.html#l00085">85</a> del archivo <a class="el" href="cob2c_8c_source.html">cob2c.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a659faa5ba4c3abd0450afda8b4d222b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void setCoverage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a8ba8f2a87560d14f1152da6646649dfd">SDP</a> *&#160;</td>
+          <td class="paramname"><em>sdp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="cob2c_8c_source.html#l00077">77</a> del archivo <a class="el" href="cob2c_8c_source.html">cob2c.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a21fbbb691be0601c25b2c0bd3489d7e8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void setModuleName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a8ba8f2a87560d14f1152da6646649dfd">SDP</a> *&#160;</td>
+          <td class="paramname"><em>sdp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="cob2c_8c_source.html#l00073">73</a> del archivo <a class="el" href="cob2c_8c_source.html">cob2c.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las variables</h2>
+<a class="anchor" id="a0f66a67a6eaa67847b0d9aa277050763"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> FILE* traza</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="cob2c_8c_source.html#l00032">32</a> del archivo <a class="el" href="cob2c_8c_source.html">cob2c.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="cob2c_8c.html">cob2c.c</a></li>
+    <li class="footer">Generado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

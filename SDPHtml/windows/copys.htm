@@ -1,0 +1,20 @@
+<div id="divCopys" class="contenedor col-md-12">
+    <table class="table table-hover table-striped">
+          <thead class="panel-heading">
+               <tr>
+                   <th class="panel-heading">Nombre</th>
+                   <th class="panel-heading">Tipo</th>
+                   <th class="panel-heading">Estado</th>
+               </tr>
+          </thead>
+
+          <tr class="listado" data-ng-repeat="fila in modulo.copys">
+              <td class="col-md-5">{{fila.nombre}}</td>
+              <td class="col-md-5">{{fila.desc}}</td>
+              <td class="col-md-1 sdpCheckGreen"  data-ng-show="fila.estado == 1">&#10004;</td>
+              <td class="col-md-1 sdpCheckYellow" data-ng-show="fila.estado == 2">&#x3F;</td>
+              <td class="col-md-1 sdpCheckRed"    data-ng-show="fila.estado == 3">&#10008;</td>
+          </tr>
+
+    </table>
+</div>

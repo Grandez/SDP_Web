@@ -1,0 +1,16 @@
+<map id="src/SDPTRAPB.c" name="src/SDPTRAPB.c">
+<area shape="rect" id="node6" href="$jggsal_8h.html" title="Software Abstraction Layer. " alt="" coords="567,155,633,181"/>
+<area shape="rect" id="node7" href="$_s_d_p_t_r_a_p_b_8h.html" title="Fichero de cabecera de la libreria SDPTRAPB Define las constantes y los valores globales de comportam..." alt="" coords="799,80,902,107"/>
+<area shape="rect" id="node8" href="$_s_d_p_t_r_a_p_8h.html" title="Fichero de cabecera con los ficheros de cabecera comunes. " alt="" coords="353,80,447,107"/>
+<area shape="rect" id="node13" href="$cob2c_8h.html" title="Fichero de cabecera para convertir la copy COBOL en una estructura SDP. " alt="" coords="926,80,994,107"/>
+<area shape="rect" id="node14" href="$modulos_8h.html" title="Funciones de gestion de los modulos activos en una sesion. " alt="" coords="1019,80,1101,107"/>
+<area shape="rect" id="node15" href="$timer_8h.html" title="Fichero de cabecera para incluir los modulos de calculo de timers. " alt="" coords="1126,80,1189,107"/>
+<area shape="rect" id="node16" href="$messages_8h.html" title="Funciones de gestion del envio de mensajes al sistema de colas. " alt="" coords="235,80,328,107"/>
+<area shape="rect" id="node17" href="$md5_8h.html" title="Fichero de cabecera para el calculo de la firma MD5 de un texto Modificado a partir del algoritmo des..." alt="" coords="1213,80,1272,107"/>
+<area shape="rect" id="node18" href="$amqsdp_8h.html" title="Cliente Websphere MQSeries. " alt="" coords="523,80,602,107"/>
+<area shape="rect" id="node19" href="$global_8h.html" title="Define las variables de uso global para todo el sistema. " alt="" coords="144,80,211,107"/>
+<area shape="rect" id="node9" href="$sdpconfig_8h.html" title="Fichero de cabecera de configuracion del sistema Define las constantes y los valores globales de comp..." alt="" coords="211,229,299,256"/>
+<area shape="rect" id="node10" href="$sdp_types_8h.html" title="Define las estructrus y tipos de datos usados en la libreria. " alt="" coords="210,155,299,181"/>
+<area shape="rect" id="node11" href="$pila_8h.html" title="Funciones de gestion de pilas abtracta. " alt="" coords="375,155,428,181"/>
+<area shape="rect" id="node12" href="$trapcodes_8h.html" title="trapcodes.h" alt="" coords="452,155,543,181"/>
+</map>

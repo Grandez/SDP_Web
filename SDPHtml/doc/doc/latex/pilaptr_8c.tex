@@ -1,0 +1,209 @@
+\hypertarget{pilaptr_8c}{}\section{src/pilaptr.c File Reference}
+\label{pilaptr_8c}\index{src/pilaptr.\+c@{src/pilaptr.\+c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$memory.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}pilaptr.\+h\char`\"{}}\\*
+Include dependency graph for pilaptr.\+c\+:
+% FIG 0
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_s_t___p_i_l_a___p_t_r}{S\+T\+\_\+\+P\+I\+L\+A\+\_\+\+P\+T\+R}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct_s_t___p_i_l_a___p_t_r}{S\+T\+\_\+\+P\+I\+L\+A\+\_\+\+P\+T\+R} \hyperlink{pilaptr_8c_a3e3423d0a26fbf739b13f4dec2b76e8d}{P\+I\+L\+A\+\_\+\+P\+T\+R}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{pilaptr_8c_afb652b8d20272ccec458e986834effa0}{alocar\+Memoria} ()
+\item 
+\hyperlink{pilaptr_8c_a3e3423d0a26fbf739b13f4dec2b76e8d}{P\+I\+L\+A\+\_\+\+P\+T\+R} $\ast$ \hyperlink{pilaptr_8c_ac24f0cc00d4bdf63ddc4ee5504fa71ac}{nueva\+Pila\+Ptr} ()
+\item 
+void \hyperlink{pilaptr_8c_a6cd479ead7f7e1928617ca539bb35d18}{increase\+Stack\+Ptr} ()
+\item 
+\+\_\+\+E\+X\+T\+\_\+ void $\ast$ \hyperlink{pilaptr_8c_aab9903402cbbae8446266a1672a84dcc}{create\+Stack\+Ptr} ()
+\item 
+\+\_\+\+E\+X\+T\+\_\+ void \hyperlink{pilaptr_8c_a9da32ef9e6ee6b4fd53eaff04a5ab9b2}{push\+Ptr} (\hyperlink{pilaptr_8c_a3e3423d0a26fbf739b13f4dec2b76e8d}{P\+I\+L\+A\+\_\+\+P\+T\+R} $\ast$stack, void $\ast$data)
+\item 
+\+\_\+\+E\+X\+T\+\_\+ void $\ast$ \hyperlink{pilaptr_8c_a95280d2a374f1cb9eb81333da57a21d6}{pop\+Ptr} (\hyperlink{pilaptr_8c_a3e3423d0a26fbf739b13f4dec2b76e8d}{P\+I\+L\+A\+\_\+\+P\+T\+R} $\ast$stack)
+\item 
+\+\_\+\+E\+X\+T\+\_\+ void $\ast$ \hyperlink{pilaptr_8c_ac43ea48078688b7a89ce4aee0098e3a5}{peek\+Ptr} (\hyperlink{pilaptr_8c_a3e3423d0a26fbf739b13f4dec2b76e8d}{P\+I\+L\+A\+\_\+\+P\+T\+R} $\ast$stack)
+\item 
+\+\_\+\+E\+X\+T\+\_\+ void $\ast$ \hyperlink{pilaptr_8c_a1c4930e2041960b5ee6e353464ed5059}{peek\+Ptr\+Previous} (\hyperlink{pilaptr_8c_a3e3423d0a26fbf739b13f4dec2b76e8d}{P\+I\+L\+A\+\_\+\+P\+T\+R} $\ast$stack, int deep)
+\item 
+\+\_\+\+E\+X\+T\+\_\+ int \hyperlink{pilaptr_8c_a2da654baef1b4dfa40301ea653a6909a}{stack\+Depth\+Ptr} (\hyperlink{pilaptr_8c_a3e3423d0a26fbf739b13f4dec2b76e8d}{P\+I\+L\+A\+\_\+\+P\+T\+R} $\ast$stack)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{pilaptr_8c_a3e3423d0a26fbf739b13f4dec2b76e8d}{P\+I\+L\+A\+\_\+\+P\+T\+R} $\ast$ \hyperlink{pilaptr_8c_a9704a279492e781ed94a363b67783769}{pila\+\_\+ptr} = 0x0
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{pilaptr_8c_a3e3423d0a26fbf739b13f4dec2b76e8d}{}\index{pilaptr.\+c@{pilaptr.\+c}!P\+I\+L\+A\+\_\+\+P\+T\+R@{P\+I\+L\+A\+\_\+\+P\+T\+R}}
+\index{P\+I\+L\+A\+\_\+\+P\+T\+R@{P\+I\+L\+A\+\_\+\+P\+T\+R}!pilaptr.\+c@{pilaptr.\+c}}
+\subsubsection[{P\+I\+L\+A\+\_\+\+P\+T\+R}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf S\+T\+\_\+\+P\+I\+L\+A\+\_\+\+P\+T\+R} {\bf P\+I\+L\+A\+\_\+\+P\+T\+R}}\label{pilaptr_8c_a3e3423d0a26fbf739b13f4dec2b76e8d}
+
+
+Definition at line 26 of file pilaptr.\+c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{pilaptr_8c_afb652b8d20272ccec458e986834effa0}{}\index{pilaptr.\+c@{pilaptr.\+c}!alocar\+Memoria@{alocar\+Memoria}}
+\index{alocar\+Memoria@{alocar\+Memoria}!pilaptr.\+c@{pilaptr.\+c}}
+\subsubsection[{alocar\+Memoria()}]{\setlength{\rightskip}{0pt plus 5cm}int alocar\+Memoria (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{pilaptr_8c_afb652b8d20272ccec458e986834effa0}
+
+
+Definition at line 126 of file pila.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\hypertarget{pilaptr_8c_aab9903402cbbae8446266a1672a84dcc}{}\index{pilaptr.\+c@{pilaptr.\+c}!create\+Stack\+Ptr@{create\+Stack\+Ptr}}
+\index{create\+Stack\+Ptr@{create\+Stack\+Ptr}!pilaptr.\+c@{pilaptr.\+c}}
+\subsubsection[{create\+Stack\+Ptr()}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+E\+X\+T\+\_\+ void$\ast$ create\+Stack\+Ptr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{pilaptr_8c_aab9903402cbbae8446266a1672a84dcc}
+
+
+Definition at line 43 of file pilaptr.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+\hypertarget{pilaptr_8c_a6cd479ead7f7e1928617ca539bb35d18}{}\index{pilaptr.\+c@{pilaptr.\+c}!increase\+Stack\+Ptr@{increase\+Stack\+Ptr}}
+\index{increase\+Stack\+Ptr@{increase\+Stack\+Ptr}!pilaptr.\+c@{pilaptr.\+c}}
+\subsubsection[{increase\+Stack\+Ptr()}]{\setlength{\rightskip}{0pt plus 5cm}void increase\+Stack\+Ptr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{pilaptr_8c_a6cd479ead7f7e1928617ca539bb35d18}
+
+
+Definition at line 81 of file pilaptr.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{pilaptr_8c_ac24f0cc00d4bdf63ddc4ee5504fa71ac}{}\index{pilaptr.\+c@{pilaptr.\+c}!nueva\+Pila\+Ptr@{nueva\+Pila\+Ptr}}
+\index{nueva\+Pila\+Ptr@{nueva\+Pila\+Ptr}!pilaptr.\+c@{pilaptr.\+c}}
+\subsubsection[{nueva\+Pila\+Ptr()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+I\+L\+A\+\_\+\+P\+T\+R} $\ast$ nueva\+Pila\+Ptr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{pilaptr_8c_ac24f0cc00d4bdf63ddc4ee5504fa71ac}
+
+
+Definition at line 73 of file pilaptr.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\hypertarget{pilaptr_8c_ac43ea48078688b7a89ce4aee0098e3a5}{}\index{pilaptr.\+c@{pilaptr.\+c}!peek\+Ptr@{peek\+Ptr}}
+\index{peek\+Ptr@{peek\+Ptr}!pilaptr.\+c@{pilaptr.\+c}}
+\subsubsection[{peek\+Ptr(\+P\+I\+L\+A\+\_\+\+P\+T\+R $\ast$stack)}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+E\+X\+T\+\_\+ void$\ast$ peek\+Ptr (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+I\+L\+A\+\_\+\+P\+T\+R} $\ast$}]{stack}
+\end{DoxyParamCaption}
+)}\label{pilaptr_8c_ac43ea48078688b7a89ce4aee0098e3a5}
+
+
+Definition at line 56 of file pilaptr.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+\hypertarget{pilaptr_8c_a1c4930e2041960b5ee6e353464ed5059}{}\index{pilaptr.\+c@{pilaptr.\+c}!peek\+Ptr\+Previous@{peek\+Ptr\+Previous}}
+\index{peek\+Ptr\+Previous@{peek\+Ptr\+Previous}!pilaptr.\+c@{pilaptr.\+c}}
+\subsubsection[{peek\+Ptr\+Previous(\+P\+I\+L\+A\+\_\+\+P\+T\+R $\ast$stack, int deep)}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+E\+X\+T\+\_\+ void$\ast$ peek\+Ptr\+Previous (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+I\+L\+A\+\_\+\+P\+T\+R} $\ast$}]{stack, }
+\item[{int}]{deep}
+\end{DoxyParamCaption}
+)}\label{pilaptr_8c_a1c4930e2041960b5ee6e353464ed5059}
+
+
+Definition at line 60 of file pilaptr.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\hypertarget{pilaptr_8c_a95280d2a374f1cb9eb81333da57a21d6}{}\index{pilaptr.\+c@{pilaptr.\+c}!pop\+Ptr@{pop\+Ptr}}
+\index{pop\+Ptr@{pop\+Ptr}!pilaptr.\+c@{pilaptr.\+c}}
+\subsubsection[{pop\+Ptr(\+P\+I\+L\+A\+\_\+\+P\+T\+R $\ast$stack)}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+E\+X\+T\+\_\+ void$\ast$ pop\+Ptr (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+I\+L\+A\+\_\+\+P\+T\+R} $\ast$}]{stack}
+\end{DoxyParamCaption}
+)}\label{pilaptr_8c_a95280d2a374f1cb9eb81333da57a21d6}
+
+
+Definition at line 52 of file pilaptr.\+c.
+
+\hypertarget{pilaptr_8c_a9da32ef9e6ee6b4fd53eaff04a5ab9b2}{}\index{pilaptr.\+c@{pilaptr.\+c}!push\+Ptr@{push\+Ptr}}
+\index{push\+Ptr@{push\+Ptr}!pilaptr.\+c@{pilaptr.\+c}}
+\subsubsection[{push\+Ptr(\+P\+I\+L\+A\+\_\+\+P\+T\+R $\ast$stack, void $\ast$data)}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+E\+X\+T\+\_\+ void push\+Ptr (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+I\+L\+A\+\_\+\+P\+T\+R} $\ast$}]{stack, }
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}\label{pilaptr_8c_a9da32ef9e6ee6b4fd53eaff04a5ab9b2}
+
+
+Definition at line 47 of file pilaptr.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 7
+
+
+\hypertarget{pilaptr_8c_a2da654baef1b4dfa40301ea653a6909a}{}\index{pilaptr.\+c@{pilaptr.\+c}!stack\+Depth\+Ptr@{stack\+Depth\+Ptr}}
+\index{stack\+Depth\+Ptr@{stack\+Depth\+Ptr}!pilaptr.\+c@{pilaptr.\+c}}
+\subsubsection[{stack\+Depth\+Ptr(\+P\+I\+L\+A\+\_\+\+P\+T\+R $\ast$stack)}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+E\+X\+T\+\_\+ int stack\+Depth\+Ptr (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+I\+L\+A\+\_\+\+P\+T\+R} $\ast$}]{stack}
+\end{DoxyParamCaption}
+)}\label{pilaptr_8c_a2da654baef1b4dfa40301ea653a6909a}
+
+
+Definition at line 64 of file pilaptr.\+c.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{pilaptr_8c_a9704a279492e781ed94a363b67783769}{}\index{pilaptr.\+c@{pilaptr.\+c}!pila\+\_\+ptr@{pila\+\_\+ptr}}
+\index{pila\+\_\+ptr@{pila\+\_\+ptr}!pilaptr.\+c@{pilaptr.\+c}}
+\subsubsection[{pila\+\_\+ptr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+I\+L\+A\+\_\+\+P\+T\+R}$\ast$ pila\+\_\+ptr = 0x0}\label{pilaptr_8c_a9704a279492e781ed94a363b67783769}
+
+
+Definition at line 29 of file pilaptr.\+c.
+

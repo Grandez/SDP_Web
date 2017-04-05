@@ -1,0 +1,221 @@
+\hypertarget{cob2c_8h}{}\section{Referencia del Archivo include/cob2c.h}
+\label{cob2c_8h}\index{include/cob2c.\+h@{include/cob2c.\+h}}
+
+
+Fichero de cabecera para convertir la copy C\+O\+B\+O\+L en una estructura S\+D\+P.  
+
+
+Gráfico de los archivos que directa o indirectamente incluyen a este archivo\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cob2c_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\textquotesingle{}defines\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{cob2c_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+}~extern
+\item 
+\#define \hyperlink{cob2c_8h_a59695fb6fb53fc110491390d0308486c}{C\+O\+B\+\_\+\+T\+R\+A\+P}~0
+\item 
+\#define \hyperlink{cob2c_8h_afa323e34c9deb45e73e32b53576d0bb1}{C\+O\+B\+\_\+\+M\+O\+D\+U\+L\+E}~8
+\item 
+\#define \hyperlink{cob2c_8h_a88feec3e2f6624a0184397c642fe24aa}{C\+O\+B\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+L\+E\+N}~\hyperlink{sdpconfig_8h_a6611b3fba9de26203f14407743b750cc}{M\+A\+X\+\_\+\+M\+O\+D\+U\+L\+E}
+\item 
+\#define \hyperlink{cob2c_8h_ab271e7b9c5c70e78b5a7ea7cc57ddc34}{C\+O\+B\+\_\+\+F\+I\+R\+M\+A}~\hyperlink{cob2c_8h_afa323e34c9deb45e73e32b53576d0bb1}{C\+O\+B\+\_\+\+M\+O\+D\+U\+L\+E} + \hyperlink{cob2c_8h_a88feec3e2f6624a0184397c642fe24aa}{C\+O\+B\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+L\+E\+N}
+\item 
+\#define \hyperlink{cob2c_8h_a88e1886caff473b8b3186f64bd454cd4}{C\+O\+B\+\_\+\+F\+I\+R\+M\+A\+\_\+\+L\+E\+N}~\hyperlink{sdpconfig_8h_ad6074dd11ab3c97c8135c43aab03ae95}{H\+A\+S\+H\+\_\+\+S\+I\+Z\+E}
+\item 
+\#define \hyperlink{cob2c_8h_a766a2c4b0a1e9717482033befc922102}{C\+O\+B\+\_\+\+B\+L\+K}~\hyperlink{cob2c_8h_ab271e7b9c5c70e78b5a7ea7cc57ddc34}{C\+O\+B\+\_\+\+F\+I\+R\+M\+A} + \hyperlink{cob2c_8h_a88e1886caff473b8b3186f64bd454cd4}{C\+O\+B\+\_\+\+F\+I\+R\+M\+A\+\_\+\+L\+E\+N}
+\item 
+\#define \hyperlink{cob2c_8h_a288de413fc4a8fccd262f6b5b3e22ead}{C\+O\+B\+\_\+\+B\+L\+K\+\_\+\+L\+E\+N}~(3 $\ast$ sizeof(long))
+\item 
+\#define \hyperlink{cob2c_8h_a4afae4c59d4f88c3ab273a0568805ea0}{C\+O\+B\+\_\+\+C\+O\+V\+E\+R}~\hyperlink{cob2c_8h_a766a2c4b0a1e9717482033befc922102}{C\+O\+B\+\_\+\+B\+L\+K} + \hyperlink{cob2c_8h_a288de413fc4a8fccd262f6b5b3e22ead}{C\+O\+B\+\_\+\+B\+L\+K\+\_\+\+L\+E\+N}
+\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{cob2c_8h_a7b6a88dac211a2521b42d23d3080c09d}{copy\+Cobol\+To\+C\+Struct} (\hyperlink{sdp_types_8h_a8ba8f2a87560d14f1152da6646649dfd}{S\+D\+P} $\ast$\hyperlink{global_8h_a44585a47047393e8faf0eef343b3b39d}{sdp}, char $\ast$data, char $\ast$modulo, int len)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} char $\ast$ \hyperlink{cob2c_8h_a59214c84573b767b116afe89801fe03b}{C\+Struct\+To\+Copy\+Cobol} (\hyperlink{sdp_types_8h_a8ba8f2a87560d14f1152da6646649dfd}{S\+D\+P} $\ast$\hyperlink{global_8h_a44585a47047393e8faf0eef343b3b39d}{sdp})
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{cob2c_8h_a52791a6fd5e0a12300b88aae37cab9dc}{init\+S\+D\+P} (\hyperlink{sdp_types_8h_a8ba8f2a87560d14f1152da6646649dfd}{S\+D\+P} $\ast$\hyperlink{global_8h_a44585a47047393e8faf0eef343b3b39d}{sdp})
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{cob2c_8h_a21fbbb691be0601c25b2c0bd3489d7e8}{set\+Module\+Name} (\hyperlink{sdp_types_8h_a8ba8f2a87560d14f1152da6646649dfd}{S\+D\+P} $\ast$\hyperlink{global_8h_a44585a47047393e8faf0eef343b3b39d}{sdp}, char $\ast$name)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{cob2c_8h_a5a760f10e228fa5d6a37e735984330e1}{set\+Paragraph} (\hyperlink{sdp_types_8h_a8ba8f2a87560d14f1152da6646649dfd}{S\+D\+P} $\ast$\hyperlink{global_8h_a44585a47047393e8faf0eef343b3b39d}{sdp}, char $\ast$name)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{cob2c_8h_a659faa5ba4c3abd0450afda8b4d222b4}{set\+Coverage} (\hyperlink{sdp_types_8h_a8ba8f2a87560d14f1152da6646649dfd}{S\+D\+P} $\ast$\hyperlink{global_8h_a44585a47047393e8faf0eef343b3b39d}{sdp}, char $\ast$name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Fichero de cabecera para convertir la copy C\+O\+B\+O\+L en una estructura S\+D\+P. 
+
+\begin{DoxyAuthor}{Autor}
+\+: Javier Gonzalez 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+\+: 01/03/15 
+\end{DoxyDate}
+\begin{DoxyVersion}{Versión}
+\+: 2.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\hypertarget{cob2c_8h_adfbc1051df776564281ac4220ba53a9e}{}\index{cob2c.\+h@{cob2c.\+h}!\+\_\+\+E\+X\+T\+\_\+@{\+\_\+\+E\+X\+T\+\_\+}}
+\index{\+\_\+\+E\+X\+T\+\_\+@{\+\_\+\+E\+X\+T\+\_\+}!cob2c.\+h@{cob2c.\+h}}
+\subsubsection[{\+\_\+\+E\+X\+T\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+E\+X\+T\+\_\+~extern}\label{cob2c_8h_adfbc1051df776564281ac4220ba53a9e}
+
+
+Definición en la línea 18 del archivo cob2c.\+h.
+
+\hypertarget{cob2c_8h_a766a2c4b0a1e9717482033befc922102}{}\index{cob2c.\+h@{cob2c.\+h}!C\+O\+B\+\_\+\+B\+L\+K@{C\+O\+B\+\_\+\+B\+L\+K}}
+\index{C\+O\+B\+\_\+\+B\+L\+K@{C\+O\+B\+\_\+\+B\+L\+K}!cob2c.\+h@{cob2c.\+h}}
+\subsubsection[{C\+O\+B\+\_\+\+B\+L\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+B\+\_\+\+B\+L\+K~{\bf C\+O\+B\+\_\+\+F\+I\+R\+M\+A} + {\bf C\+O\+B\+\_\+\+F\+I\+R\+M\+A\+\_\+\+L\+E\+N}}\label{cob2c_8h_a766a2c4b0a1e9717482033befc922102}
+
+
+Definición en la línea 28 del archivo cob2c.\+h.
+
+\hypertarget{cob2c_8h_a288de413fc4a8fccd262f6b5b3e22ead}{}\index{cob2c.\+h@{cob2c.\+h}!C\+O\+B\+\_\+\+B\+L\+K\+\_\+\+L\+E\+N@{C\+O\+B\+\_\+\+B\+L\+K\+\_\+\+L\+E\+N}}
+\index{C\+O\+B\+\_\+\+B\+L\+K\+\_\+\+L\+E\+N@{C\+O\+B\+\_\+\+B\+L\+K\+\_\+\+L\+E\+N}!cob2c.\+h@{cob2c.\+h}}
+\subsubsection[{C\+O\+B\+\_\+\+B\+L\+K\+\_\+\+L\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+B\+\_\+\+B\+L\+K\+\_\+\+L\+E\+N~(3 $\ast$ sizeof(long))}\label{cob2c_8h_a288de413fc4a8fccd262f6b5b3e22ead}
+
+
+Definición en la línea 29 del archivo cob2c.\+h.
+
+\hypertarget{cob2c_8h_a4afae4c59d4f88c3ab273a0568805ea0}{}\index{cob2c.\+h@{cob2c.\+h}!C\+O\+B\+\_\+\+C\+O\+V\+E\+R@{C\+O\+B\+\_\+\+C\+O\+V\+E\+R}}
+\index{C\+O\+B\+\_\+\+C\+O\+V\+E\+R@{C\+O\+B\+\_\+\+C\+O\+V\+E\+R}!cob2c.\+h@{cob2c.\+h}}
+\subsubsection[{C\+O\+B\+\_\+\+C\+O\+V\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+B\+\_\+\+C\+O\+V\+E\+R~{\bf C\+O\+B\+\_\+\+B\+L\+K} + {\bf C\+O\+B\+\_\+\+B\+L\+K\+\_\+\+L\+E\+N}}\label{cob2c_8h_a4afae4c59d4f88c3ab273a0568805ea0}
+
+
+Definición en la línea 30 del archivo cob2c.\+h.
+
+\hypertarget{cob2c_8h_ab271e7b9c5c70e78b5a7ea7cc57ddc34}{}\index{cob2c.\+h@{cob2c.\+h}!C\+O\+B\+\_\+\+F\+I\+R\+M\+A@{C\+O\+B\+\_\+\+F\+I\+R\+M\+A}}
+\index{C\+O\+B\+\_\+\+F\+I\+R\+M\+A@{C\+O\+B\+\_\+\+F\+I\+R\+M\+A}!cob2c.\+h@{cob2c.\+h}}
+\subsubsection[{C\+O\+B\+\_\+\+F\+I\+R\+M\+A}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+B\+\_\+\+F\+I\+R\+M\+A~{\bf C\+O\+B\+\_\+\+M\+O\+D\+U\+L\+E} + {\bf C\+O\+B\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+L\+E\+N}}\label{cob2c_8h_ab271e7b9c5c70e78b5a7ea7cc57ddc34}
+
+
+Definición en la línea 26 del archivo cob2c.\+h.
+
+\hypertarget{cob2c_8h_a88e1886caff473b8b3186f64bd454cd4}{}\index{cob2c.\+h@{cob2c.\+h}!C\+O\+B\+\_\+\+F\+I\+R\+M\+A\+\_\+\+L\+E\+N@{C\+O\+B\+\_\+\+F\+I\+R\+M\+A\+\_\+\+L\+E\+N}}
+\index{C\+O\+B\+\_\+\+F\+I\+R\+M\+A\+\_\+\+L\+E\+N@{C\+O\+B\+\_\+\+F\+I\+R\+M\+A\+\_\+\+L\+E\+N}!cob2c.\+h@{cob2c.\+h}}
+\subsubsection[{C\+O\+B\+\_\+\+F\+I\+R\+M\+A\+\_\+\+L\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+B\+\_\+\+F\+I\+R\+M\+A\+\_\+\+L\+E\+N~{\bf H\+A\+S\+H\+\_\+\+S\+I\+Z\+E}}\label{cob2c_8h_a88e1886caff473b8b3186f64bd454cd4}
+
+
+Definición en la línea 27 del archivo cob2c.\+h.
+
+\hypertarget{cob2c_8h_afa323e34c9deb45e73e32b53576d0bb1}{}\index{cob2c.\+h@{cob2c.\+h}!C\+O\+B\+\_\+\+M\+O\+D\+U\+L\+E@{C\+O\+B\+\_\+\+M\+O\+D\+U\+L\+E}}
+\index{C\+O\+B\+\_\+\+M\+O\+D\+U\+L\+E@{C\+O\+B\+\_\+\+M\+O\+D\+U\+L\+E}!cob2c.\+h@{cob2c.\+h}}
+\subsubsection[{C\+O\+B\+\_\+\+M\+O\+D\+U\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+B\+\_\+\+M\+O\+D\+U\+L\+E~8}\label{cob2c_8h_afa323e34c9deb45e73e32b53576d0bb1}
+
+
+Definición en la línea 24 del archivo cob2c.\+h.
+
+\hypertarget{cob2c_8h_a88feec3e2f6624a0184397c642fe24aa}{}\index{cob2c.\+h@{cob2c.\+h}!C\+O\+B\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+L\+E\+N@{C\+O\+B\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+L\+E\+N}}
+\index{C\+O\+B\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+L\+E\+N@{C\+O\+B\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+L\+E\+N}!cob2c.\+h@{cob2c.\+h}}
+\subsubsection[{C\+O\+B\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+L\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+B\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+L\+E\+N~{\bf M\+A\+X\+\_\+\+M\+O\+D\+U\+L\+E}}\label{cob2c_8h_a88feec3e2f6624a0184397c642fe24aa}
+
+
+Definición en la línea 25 del archivo cob2c.\+h.
+
+\hypertarget{cob2c_8h_a59695fb6fb53fc110491390d0308486c}{}\index{cob2c.\+h@{cob2c.\+h}!C\+O\+B\+\_\+\+T\+R\+A\+P@{C\+O\+B\+\_\+\+T\+R\+A\+P}}
+\index{C\+O\+B\+\_\+\+T\+R\+A\+P@{C\+O\+B\+\_\+\+T\+R\+A\+P}!cob2c.\+h@{cob2c.\+h}}
+\subsubsection[{C\+O\+B\+\_\+\+T\+R\+A\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+B\+\_\+\+T\+R\+A\+P~0}\label{cob2c_8h_a59695fb6fb53fc110491390d0308486c}
+
+
+Definición en la línea 23 del archivo cob2c.\+h.
+
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{cob2c_8h_a7b6a88dac211a2521b42d23d3080c09d}{}\index{cob2c.\+h@{cob2c.\+h}!copy\+Cobol\+To\+C\+Struct@{copy\+Cobol\+To\+C\+Struct}}
+\index{copy\+Cobol\+To\+C\+Struct@{copy\+Cobol\+To\+C\+Struct}!cob2c.\+h@{cob2c.\+h}}
+\subsubsection[{copy\+Cobol\+To\+C\+Struct(\+S\+D\+P $\ast$sdp, char $\ast$data, char $\ast$modulo, int len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void copy\+Cobol\+To\+C\+Struct (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+P} $\ast$}]{sdp, }
+\item[{char $\ast$}]{data, }
+\item[{char $\ast$}]{modulo, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}\label{cob2c_8h_a7b6a88dac211a2521b42d23d3080c09d}
+Convierte la copy C\+O\+B\+O\+L en una estructura S\+D\+P 
+\begin{DoxyParams}{Parámetros}
+{\em sdp} & Puntero a la estructura S\+D\+P \\
+\hline
+{\em data} & Puntero a la copy C\+O\+B\+O\+L \\
+\hline
+{\em modulo} & Segundo parametro de invocacion (nombre del modulo o parrafo) \\
+\hline
+{\em len} & Longitud del campo modulo\\
+\hline
+\end{DoxyParams}
+Copia los datos de la C\+O\+P\+Y a una estructura C para agilizar el proceso
+
+
+\begin{DoxyParams}{Parámetros}
+{\em sdp} & Puntero a la estructura S\+D\+P \\
+\hline
+{\em data} & Puntero a la C\+O\+P\+Y C\+O\+B\+O\+L \\
+\hline
+{\em modulo} & Parametro recibido con una etiqueta \\
+\hline
+{\em len} & Longitud de la etiqueta \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 43 del archivo cob2c.\+c.
+
+\hypertarget{cob2c_8h_a59214c84573b767b116afe89801fe03b}{}\index{cob2c.\+h@{cob2c.\+h}!C\+Struct\+To\+Copy\+Cobol@{C\+Struct\+To\+Copy\+Cobol}}
+\index{C\+Struct\+To\+Copy\+Cobol@{C\+Struct\+To\+Copy\+Cobol}!cob2c.\+h@{cob2c.\+h}}
+\subsubsection[{C\+Struct\+To\+Copy\+Cobol(\+S\+D\+P $\ast$sdp)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} char$\ast$ C\+Struct\+To\+Copy\+Cobol (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+P} $\ast$}]{sdp}
+\end{DoxyParamCaption}
+)}\label{cob2c_8h_a59214c84573b767b116afe89801fe03b}
+\hypertarget{cob2c_8h_a52791a6fd5e0a12300b88aae37cab9dc}{}\index{cob2c.\+h@{cob2c.\+h}!init\+S\+D\+P@{init\+S\+D\+P}}
+\index{init\+S\+D\+P@{init\+S\+D\+P}!cob2c.\+h@{cob2c.\+h}}
+\subsubsection[{init\+S\+D\+P(\+S\+D\+P $\ast$sdp)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void init\+S\+D\+P (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+P} $\ast$}]{sdp}
+\end{DoxyParamCaption}
+)}\label{cob2c_8h_a52791a6fd5e0a12300b88aae37cab9dc}
+
+
+Definición en la línea 67 del archivo cob2c.\+c.
+
+\hypertarget{cob2c_8h_a659faa5ba4c3abd0450afda8b4d222b4}{}\index{cob2c.\+h@{cob2c.\+h}!set\+Coverage@{set\+Coverage}}
+\index{set\+Coverage@{set\+Coverage}!cob2c.\+h@{cob2c.\+h}}
+\subsubsection[{set\+Coverage(\+S\+D\+P $\ast$sdp, char $\ast$name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void set\+Coverage (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+P} $\ast$}]{sdp, }
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\label{cob2c_8h_a659faa5ba4c3abd0450afda8b4d222b4}
+
+
+Definición en la línea 77 del archivo cob2c.\+c.
+
+\hypertarget{cob2c_8h_a21fbbb691be0601c25b2c0bd3489d7e8}{}\index{cob2c.\+h@{cob2c.\+h}!set\+Module\+Name@{set\+Module\+Name}}
+\index{set\+Module\+Name@{set\+Module\+Name}!cob2c.\+h@{cob2c.\+h}}
+\subsubsection[{set\+Module\+Name(\+S\+D\+P $\ast$sdp, char $\ast$name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void set\+Module\+Name (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+P} $\ast$}]{sdp, }
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\label{cob2c_8h_a21fbbb691be0601c25b2c0bd3489d7e8}
+
+
+Definición en la línea 73 del archivo cob2c.\+c.
+
+\hypertarget{cob2c_8h_a5a760f10e228fa5d6a37e735984330e1}{}\index{cob2c.\+h@{cob2c.\+h}!set\+Paragraph@{set\+Paragraph}}
+\index{set\+Paragraph@{set\+Paragraph}!cob2c.\+h@{cob2c.\+h}}
+\subsubsection[{set\+Paragraph(\+S\+D\+P $\ast$sdp, char $\ast$name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void set\+Paragraph (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+P} $\ast$}]{sdp, }
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\label{cob2c_8h_a5a760f10e228fa5d6a37e735984330e1}

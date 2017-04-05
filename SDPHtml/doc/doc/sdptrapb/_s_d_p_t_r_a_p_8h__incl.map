@@ -1,0 +1,7 @@
+<map id="include/SDPTRAP.h" name="include/SDPTRAP.h">
+<area shape="rect" id="node2" href="$jggsal_8h.html" title="Software Abstraction Layer. " alt="" coords="5,80,72,107"/>
+<area shape="rect" id="node3" href="$sdpconfig_8h.html" title="Fichero de cabecera de configuracion del sistema Define las constantes y los valores globales de comp..." alt="" coords="107,155,195,181"/>
+<area shape="rect" id="node4" href="$sdp_types_8h.html" title="Define las estructrus y tipos de datos usados en la libreria. " alt="" coords="147,80,237,107"/>
+<area shape="rect" id="node5" href="$pila_8h.html" title="Funciones de gestion de pilas abtracta. " alt="" coords="261,80,315,107"/>
+<area shape="rect" id="node6" href="$trapcodes_8h.html" title="trapcodes.h" alt="" coords="339,80,429,107"/>
+</map>

@@ -1,0 +1,210 @@
+\hypertarget{amqsdp_8h}{}\section{Referencia del Archivo include/amqsdp.h}
+\label{amqsdp_8h}\index{include/amqsdp.\+h@{include/amqsdp.\+h}}
+
+
+Cliente Websphere M\+Q\+Series.  
+
+
+{\ttfamily \#include \char`\"{}jggsal.\+h\char`\"{}}\\*
+Dependencia gráfica adjunta para amqsdp.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{amqsdp_8h__incl}
+\end{center}
+\end{figure}
+Gráfico de los archivos que directa o indirectamente incluyen a este archivo\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{amqsdp_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\textquotesingle{}defines\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{amqsdp_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+}~extern
+\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{amqsdp_8h_a5b1c0890d82a1e4fd8201da9ece0c6ae}{init\+A\+M\+Q} (int dbg, F\+I\+L\+E $\ast$f)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{amqsdp_8h_a3c337f7b77e495f85489f862d4df359c}{set\+Buffer\+Size} ()
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{amqsdp_8h_adba192fbf1af062214021fcb06229295}{unset\+Buffer\+Size} ()
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{amqsdp_8h_ac2122a579c04414c93370c338601c492}{set\+Max\+Group} (int group)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} int \hyperlink{amqsdp_8h_ab05385469ff40b1b77e3c41846d1421f}{enviar} (char $\ast$\hyperlink{messages_8c_a1c07f3735e9c63f3130a615745887a20}{sz\+Msg}, unsigned char force)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} int \hyperlink{amqsdp_8h_acb3870940341d48437b3a835098fc53e}{M\+Q\+Connect} (void)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{amqsdp_8h_a49ea4971cfd64e5b120d9dd38050426e}{M\+Q\+Disconnect} (void)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} int \hyperlink{amqsdp_8h_a147a0974e48f9171a63535159f34585d}{M\+Q\+Open\+Output} (void)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} int \hyperlink{amqsdp_8h_abe88b1c5c1d0e93d6152f0b7bbc5eb44}{M\+Q\+Open\+Input} (void)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} long \hyperlink{amqsdp_8h_a9531d8185ec00f217beb2bcb561099d6}{M\+Q\+Put} (char $\ast$msg, long len)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} long \hyperlink{amqsdp_8h_a5b76a97fbc96b9cb87eb64ffe49630aa}{M\+Q\+Get} (char $\ast$msg, long len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Cliente Websphere M\+Q\+Series. 
+
+La informacion relativa a Q\+Manager, Nombre de cola, etc se obtiene del entorno
+
+\begin{DoxyAuthor}{Autor}
+\+: Javier Gonzalez 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+\+: 01/03/15 
+\end{DoxyDate}
+\begin{DoxyVersion}{Versión}
+\+: 2.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\hypertarget{amqsdp_8h_adfbc1051df776564281ac4220ba53a9e}{}\index{amqsdp.\+h@{amqsdp.\+h}!\+\_\+\+E\+X\+T\+\_\+@{\+\_\+\+E\+X\+T\+\_\+}}
+\index{\+\_\+\+E\+X\+T\+\_\+@{\+\_\+\+E\+X\+T\+\_\+}!amqsdp.\+h@{amqsdp.\+h}}
+\subsubsection[{\+\_\+\+E\+X\+T\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+E\+X\+T\+\_\+~extern}\label{amqsdp_8h_adfbc1051df776564281ac4220ba53a9e}
+
+
+Definición en la línea 22 del archivo amqsdp.\+h.
+
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{amqsdp_8h_ab05385469ff40b1b77e3c41846d1421f}{}\index{amqsdp.\+h@{amqsdp.\+h}!enviar@{enviar}}
+\index{enviar@{enviar}!amqsdp.\+h@{amqsdp.\+h}}
+\subsubsection[{enviar(char $\ast$sz\+Msg, unsigned char force)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} int enviar (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{sz\+Msg, }
+\item[{unsigned char}]{force}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8h_ab05385469ff40b1b77e3c41846d1421f}
+Escribe el mensaje en la cola
+
+Envia el mensaje si force = true o se han alcanzado el el numero de mensajes a agrupar
+
+Si no lo almacena en el buffer para evitar envios masivos mensajes Se verifica si el mensaje cabe en el buffer alocado antes de alamacenarlo, seria el caso en el que el numero mensajes a agrupar es excesivo 
+
+Definición en la línea 108 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8h_a5b1c0890d82a1e4fd8201da9ece0c6ae}{}\index{amqsdp.\+h@{amqsdp.\+h}!init\+A\+M\+Q@{init\+A\+M\+Q}}
+\index{init\+A\+M\+Q@{init\+A\+M\+Q}!amqsdp.\+h@{amqsdp.\+h}}
+\subsubsection[{init\+A\+M\+Q(int dbg, F\+I\+L\+E $\ast$f)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void init\+A\+M\+Q (
+\begin{DoxyParamCaption}
+\item[{int}]{dbg, }
+\item[{F\+I\+L\+E $\ast$}]{f}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8h_a5b1c0890d82a1e4fd8201da9ece0c6ae}
+Inicia el entorno M\+Q Para depuracion es necesario pasarlo el nivel de debug y el fichero a utilizar 
+
+Definición en la línea 77 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8h_acb3870940341d48437b3a835098fc53e}{}\index{amqsdp.\+h@{amqsdp.\+h}!M\+Q\+Connect@{M\+Q\+Connect}}
+\index{M\+Q\+Connect@{M\+Q\+Connect}!amqsdp.\+h@{amqsdp.\+h}}
+\subsubsection[{M\+Q\+Connect(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} int M\+Q\+Connect (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8h_acb3870940341d48437b3a835098fc53e}
+Establece la conexion con el gestor de colas 
+
+Definición en la línea 134 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8h_a49ea4971cfd64e5b120d9dd38050426e}{}\index{amqsdp.\+h@{amqsdp.\+h}!M\+Q\+Disconnect@{M\+Q\+Disconnect}}
+\index{M\+Q\+Disconnect@{M\+Q\+Disconnect}!amqsdp.\+h@{amqsdp.\+h}}
+\subsubsection[{M\+Q\+Disconnect(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void M\+Q\+Disconnect (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8h_a49ea4971cfd64e5b120d9dd38050426e}
+Libera la conexion con el gestor de colas 
+
+Definición en la línea 146 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8h_a5b76a97fbc96b9cb87eb64ffe49630aa}{}\index{amqsdp.\+h@{amqsdp.\+h}!M\+Q\+Get@{M\+Q\+Get}}
+\index{M\+Q\+Get@{M\+Q\+Get}!amqsdp.\+h@{amqsdp.\+h}}
+\subsubsection[{M\+Q\+Get(char $\ast$msg, long len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} long M\+Q\+Get (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{msg, }
+\item[{long}]{len}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8h_a5b76a97fbc96b9cb87eb64ffe49630aa}
+Lee un mensaje de la cola 
+
+Definición en la línea 175 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8h_abe88b1c5c1d0e93d6152f0b7bbc5eb44}{}\index{amqsdp.\+h@{amqsdp.\+h}!M\+Q\+Open\+Input@{M\+Q\+Open\+Input}}
+\index{M\+Q\+Open\+Input@{M\+Q\+Open\+Input}!amqsdp.\+h@{amqsdp.\+h}}
+\subsubsection[{M\+Q\+Open\+Input(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} int M\+Q\+Open\+Input (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8h_abe88b1c5c1d0e93d6152f0b7bbc5eb44}
+Abre la cola de lectura 
+
+Definición en la línea 231 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8h_a147a0974e48f9171a63535159f34585d}{}\index{amqsdp.\+h@{amqsdp.\+h}!M\+Q\+Open\+Output@{M\+Q\+Open\+Output}}
+\index{M\+Q\+Open\+Output@{M\+Q\+Open\+Output}!amqsdp.\+h@{amqsdp.\+h}}
+\subsubsection[{M\+Q\+Open\+Output(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} int M\+Q\+Open\+Output (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8h_a147a0974e48f9171a63535159f34585d}
+Abre la cola de escritura 
+
+Definición en la línea 223 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8h_a9531d8185ec00f217beb2bcb561099d6}{}\index{amqsdp.\+h@{amqsdp.\+h}!M\+Q\+Put@{M\+Q\+Put}}
+\index{M\+Q\+Put@{M\+Q\+Put}!amqsdp.\+h@{amqsdp.\+h}}
+\subsubsection[{M\+Q\+Put(char $\ast$msg, long len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} long M\+Q\+Put (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{msg, }
+\item[{long}]{len}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8h_a9531d8185ec00f217beb2bcb561099d6}
+Escribe el mensaje en la cola 
+
+Definición en la línea 152 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8h_a3c337f7b77e495f85489f862d4df359c}{}\index{amqsdp.\+h@{amqsdp.\+h}!set\+Buffer\+Size@{set\+Buffer\+Size}}
+\index{set\+Buffer\+Size@{set\+Buffer\+Size}!amqsdp.\+h@{amqsdp.\+h}}
+\subsubsection[{set\+Buffer\+Size()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void set\+Buffer\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8h_a3c337f7b77e495f85489f862d4df359c}
+Crea el buffer de mensajes 
+
+Definición en la línea 82 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8h_ac2122a579c04414c93370c338601c492}{}\index{amqsdp.\+h@{amqsdp.\+h}!set\+Max\+Group@{set\+Max\+Group}}
+\index{set\+Max\+Group@{set\+Max\+Group}!amqsdp.\+h@{amqsdp.\+h}}
+\subsubsection[{set\+Max\+Group(int group)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void set\+Max\+Group (
+\begin{DoxyParamCaption}
+\item[{int}]{group}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8h_ac2122a579c04414c93370c338601c492}
+Establece el numero de mensajes que se enviaran en un unico mensaje de la cola 
+
+Definición en la línea 93 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8h_adba192fbf1af062214021fcb06229295}{}\index{amqsdp.\+h@{amqsdp.\+h}!unset\+Buffer\+Size@{unset\+Buffer\+Size}}
+\index{unset\+Buffer\+Size@{unset\+Buffer\+Size}!amqsdp.\+h@{amqsdp.\+h}}
+\subsubsection[{unset\+Buffer\+Size()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void unset\+Buffer\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8h_adba192fbf1af062214021fcb06229295}
+Libera el buffer de mensajes 
+
+Definición en la línea 89 del archivo amqsdp.\+c.
+

@@ -1,0 +1,98 @@
+<div class="panel-heading">Indicadores</div>
+<div class="panel-body" data-ng-controller="resumenCtrl">
+
+    <table class="table table-hover">
+        <tr class="listado clickable"
+            data-ng-click="cambiaPieModulo(2)"
+            title={{MSG.RES_SHOW_EXE}}
+            data-toggle="tooltip"
+            data-placement="top" tooltip>
+            <td class="col-md-7" >Reusabilidad</td>
+            <td class="col-md-5 text-right tbLinea">{{modulo.resumen.nombre}}</td>
+        </tr>
+        <tr class="listado">
+            <td class="col-md-7 tbLinea clickable"
+                data-ng-click="cambiaPieModulo(1)"
+                title={{MSG.RES_SHOW_SRC}}
+                data-toggle="tooltip"
+                data-placement="top"
+                tooltip>
+                Mantenibilidad
+            </td>
+            <td class="col-md-5 tbLinea text-right clickable"
+                data-ng-click="ventana(3)"
+                title={{MSG.CLICK_DETAIL}}
+                data-toggle="tooltip"
+                data-placement="top"
+                tooltip>
+                {{modulo.resumen.lineas}}
+            </td>
+        </tr>
+
+        <tr class="listado">
+            <td class="col-md-7 tbLinea clickable"
+                data-ng-click="cambiaPieModulo(1)"
+                title={{MSG.RES_SHOW_SRC}}
+                data-toggle="tooltip"
+                data-placement="top"
+                tooltip>
+                Eficiencia
+            </td>
+
+            <td class="col-md-5 tbLinea text-right clickable"
+                data-ng-click="ventana(3)"
+                title={{MSG.CLICK_DETAIL}}
+                data-toggle="tooltip"
+                data-placement="top"
+                tooltip>
+                {{modulo.resumen.sentencias}}
+            </td>
+        </tr>
+
+        <tr class="listado">
+            <td class="col-md-7 tbLinea clickable"
+                data-ng-click="cambiaPieModulo(1)"
+                title={{MSG.RES_SHOW_SRC}}
+                data-toggle="tooltip"
+                data-placement="top"
+                tooltip>
+                Mantenibilidad
+            </td>
+
+            <td class="col-md-5 tbLinea text-right clickable"
+                data-ng-click="ventana(3)"
+                title={{MSG.CLICK_DETAIL}}
+                data-toggle="tooltip"
+                data-placement="top"
+                tooltip>
+                {{modulo.resumen.badStmts}}
+            </td>
+        </tr>
+
+
+        <tr class="listado clickable"
+            data-ng-click="cambiaPieModulo(1)"
+            title={{MSG.RES_SHOW_SRC}}
+            data-toggle="tooltip"
+            data-placement="top" tooltip>
+            <td class="col-md-7 tbLinea ">Fiabilidad</td>
+            <td class="col-md-5 tbLinea text-right ">{{modulo.resumen.parrafos}}</td>
+        </tr>
+
+        <tr class="listado clickable"
+            data-ng-click="ventana(1)"
+            title={{MSG.CLICK_DETAIL}}
+            data-toggle="tooltip"
+            data-placement="top" tooltip>
+            <td class="col-md-7 tbLinea clickable">{{MSG.RES_DEP_DATA}}</td>
+            <td class="col-md-5 tbLinea text-right clickable"
+                data-ng-click="ventana(1)">
+                {{modulo.resumen.depCopy}}
+            </td>
+        </tr>
+
+
+    </table>
+
+</div>
+</div>

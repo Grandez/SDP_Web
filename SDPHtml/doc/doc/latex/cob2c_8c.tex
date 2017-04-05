@@ -1,0 +1,155 @@
+\hypertarget{cob2c_8c}{}\section{Referencia del Archivo src/cob2c.c}
+\label{cob2c_8c}\index{src/cob2c.\+c@{src/cob2c.\+c}}
+
+
+Utilidad para pasar los datos de la Copy C\+O\+B\+O\+L a la estructura C.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}jggsal.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cob2c.\+h\char`\"{}}\\*
+Dependencia gráfica adjunta para cob2c.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cob2c_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{\textquotesingle{}defines\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{cob2c_8c_a9962ebca68275c4d6d133d05d60582b9}{\+\_\+\+C\+O\+B2\+C\+\_\+\+S\+R\+C\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{cob2c_8c_a856e2f15c2efc7ab8b303f6493b661cd}{remove\+Spaces} (char $\ast$data, int left)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{cob2c_8c_a7b6a88dac211a2521b42d23d3080c09d}{copy\+Cobol\+To\+C\+Struct} (\hyperlink{sdp_types_8h_a8ba8f2a87560d14f1152da6646649dfd}{S\+D\+P} $\ast$\hyperlink{global_8h_a44585a47047393e8faf0eef343b3b39d}{sdp}, char $\ast$data, char $\ast$modulo, int len)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{cob2c_8c_a52791a6fd5e0a12300b88aae37cab9dc}{init\+S\+D\+P} (\hyperlink{sdp_types_8h_a8ba8f2a87560d14f1152da6646649dfd}{S\+D\+P} $\ast$\hyperlink{global_8h_a44585a47047393e8faf0eef343b3b39d}{sdp})
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{cob2c_8c_a21fbbb691be0601c25b2c0bd3489d7e8}{set\+Module\+Name} (\hyperlink{sdp_types_8h_a8ba8f2a87560d14f1152da6646649dfd}{S\+D\+P} $\ast$\hyperlink{global_8h_a44585a47047393e8faf0eef343b3b39d}{sdp}, char $\ast$name)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{cob2c_8c_a659faa5ba4c3abd0450afda8b4d222b4}{set\+Coverage} (\hyperlink{sdp_types_8h_a8ba8f2a87560d14f1152da6646649dfd}{S\+D\+P} $\ast$\hyperlink{global_8h_a44585a47047393e8faf0eef343b3b39d}{sdp}, char $\ast$name)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} F\+I\+L\+E $\ast$ \hyperlink{cob2c_8c_a0f66a67a6eaa67847b0d9aa277050763}{traza}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Utilidad para pasar los datos de la Copy C\+O\+B\+O\+L a la estructura C. 
+
+copy\+Cobol\+To\+C\+Struct se utiliza en el flujo normal C\+Struct\+To\+Copy\+Cobol Solo tiene sentido para pruebas
+
+\begin{DoxyAuthor}{Autor}
+\+: Javier Gonzalez 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+\+: 01/03/15 
+\end{DoxyDate}
+\begin{DoxyVersion}{Versión}
+\+: 1.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\hypertarget{cob2c_8c_a9962ebca68275c4d6d133d05d60582b9}{}\index{cob2c.\+c@{cob2c.\+c}!\+\_\+\+C\+O\+B2\+C\+\_\+\+S\+R\+C\+\_\+@{\+\_\+\+C\+O\+B2\+C\+\_\+\+S\+R\+C\+\_\+}}
+\index{\+\_\+\+C\+O\+B2\+C\+\_\+\+S\+R\+C\+\_\+@{\+\_\+\+C\+O\+B2\+C\+\_\+\+S\+R\+C\+\_\+}!cob2c.\+c@{cob2c.\+c}}
+\subsubsection[{\+\_\+\+C\+O\+B2\+C\+\_\+\+S\+R\+C\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+C\+O\+B2\+C\+\_\+\+S\+R\+C\+\_\+}\label{cob2c_8c_a9962ebca68275c4d6d133d05d60582b9}
+
+
+Definición en la línea 17 del archivo cob2c.\+c.
+
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{cob2c_8c_a7b6a88dac211a2521b42d23d3080c09d}{}\index{cob2c.\+c@{cob2c.\+c}!copy\+Cobol\+To\+C\+Struct@{copy\+Cobol\+To\+C\+Struct}}
+\index{copy\+Cobol\+To\+C\+Struct@{copy\+Cobol\+To\+C\+Struct}!cob2c.\+c@{cob2c.\+c}}
+\subsubsection[{copy\+Cobol\+To\+C\+Struct(\+S\+D\+P $\ast$sdp, char $\ast$data, char $\ast$modulo, int len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void copy\+Cobol\+To\+C\+Struct (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+P} $\ast$}]{sdp, }
+\item[{char $\ast$}]{data, }
+\item[{char $\ast$}]{modulo, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}\label{cob2c_8c_a7b6a88dac211a2521b42d23d3080c09d}
+Copia los datos de la C\+O\+P\+Y a una estructura C para agilizar el proceso
+
+
+\begin{DoxyParams}{Parámetros}
+{\em sdp} & Puntero a la estructura S\+D\+P \\
+\hline
+{\em data} & Puntero a la C\+O\+P\+Y C\+O\+B\+O\+L \\
+\hline
+{\em modulo} & Parametro recibido con una etiqueta \\
+\hline
+{\em len} & Longitud de la etiqueta \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 43 del archivo cob2c.\+c.
+
+\hypertarget{cob2c_8c_a52791a6fd5e0a12300b88aae37cab9dc}{}\index{cob2c.\+c@{cob2c.\+c}!init\+S\+D\+P@{init\+S\+D\+P}}
+\index{init\+S\+D\+P@{init\+S\+D\+P}!cob2c.\+c@{cob2c.\+c}}
+\subsubsection[{init\+S\+D\+P(\+S\+D\+P $\ast$sdp)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void init\+S\+D\+P (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+P} $\ast$}]{sdp}
+\end{DoxyParamCaption}
+)}\label{cob2c_8c_a52791a6fd5e0a12300b88aae37cab9dc}
+
+
+Definición en la línea 67 del archivo cob2c.\+c.
+
+\hypertarget{cob2c_8c_a856e2f15c2efc7ab8b303f6493b661cd}{}\index{cob2c.\+c@{cob2c.\+c}!remove\+Spaces@{remove\+Spaces}}
+\index{remove\+Spaces@{remove\+Spaces}!cob2c.\+c@{cob2c.\+c}}
+\subsubsection[{remove\+Spaces(char $\ast$data, int left)}]{\setlength{\rightskip}{0pt plus 5cm}void remove\+Spaces (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{data, }
+\item[{int}]{left}
+\end{DoxyParamCaption}
+)}\label{cob2c_8c_a856e2f15c2efc7ab8b303f6493b661cd}
+
+
+Definición en la línea 85 del archivo cob2c.\+c.
+
+\hypertarget{cob2c_8c_a659faa5ba4c3abd0450afda8b4d222b4}{}\index{cob2c.\+c@{cob2c.\+c}!set\+Coverage@{set\+Coverage}}
+\index{set\+Coverage@{set\+Coverage}!cob2c.\+c@{cob2c.\+c}}
+\subsubsection[{set\+Coverage(\+S\+D\+P $\ast$sdp, char $\ast$name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void set\+Coverage (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+P} $\ast$}]{sdp, }
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\label{cob2c_8c_a659faa5ba4c3abd0450afda8b4d222b4}
+
+
+Definición en la línea 77 del archivo cob2c.\+c.
+
+\hypertarget{cob2c_8c_a21fbbb691be0601c25b2c0bd3489d7e8}{}\index{cob2c.\+c@{cob2c.\+c}!set\+Module\+Name@{set\+Module\+Name}}
+\index{set\+Module\+Name@{set\+Module\+Name}!cob2c.\+c@{cob2c.\+c}}
+\subsubsection[{set\+Module\+Name(\+S\+D\+P $\ast$sdp, char $\ast$name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void set\+Module\+Name (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+P} $\ast$}]{sdp, }
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\label{cob2c_8c_a21fbbb691be0601c25b2c0bd3489d7e8}
+
+
+Definición en la línea 73 del archivo cob2c.\+c.
+
+
+
+\subsection{Documentación de las variables}
+\hypertarget{cob2c_8c_a0f66a67a6eaa67847b0d9aa277050763}{}\index{cob2c.\+c@{cob2c.\+c}!traza@{traza}}
+\index{traza@{traza}!cob2c.\+c@{cob2c.\+c}}
+\subsubsection[{traza}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} F\+I\+L\+E$\ast$ traza}\label{cob2c_8c_a0f66a67a6eaa67847b0d9aa277050763}
+
+
+Definición en la línea 32 del archivo cob2c.\+c.
+

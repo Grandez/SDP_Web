@@ -1,0 +1,839 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Proyecto de Fin de Carrera: Referencia del Archivo src/messages.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Proyecto de Fin de Carrera
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Trapper SDPTRAPB</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Estructuras&#160;de&#160;Datos</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('messages_8c.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Estructuras de datos</a> &#124;
+<a href="#define-members">'defines'</a> &#124;
+<a href="#typedef-members">'typedefs'</a> &#124;
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo messages.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Gestiona la generacion de los diferentes mensajes que se deben enviar.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_s_d_p_t_r_a_p_8h_source.html">SDPTRAP.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="messages_8h_source.html">messages.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="modulos_8h_source.html">modulos.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="amqsdp_8h_source.html">amqsdp.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="cob2c_8h_source.html">cob2c.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="global_8h_source.html">global.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="md5_8h_source.html">md5.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Dependencia gráfica adjunta para messages.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="messages_8c__incl.png" border="0" usemap="#src_2messages_8c" alt=""/></div>
+<map name="src_2messages_8c" id="src_2messages_8c">
+<area shape="rect" id="node6" href="_s_d_p_t_r_a_p_8h.html" title="Fichero de cabecera con los ficheros de cabecera comunes. " alt="" coords="282,80,377,107"/>
+<area shape="rect" id="node12" href="messages_8h.html" title="Funciones de gestion del envio de mensajes al sistema de colas. " alt="" coords="164,80,257,107"/>
+<area shape="rect" id="node13" href="modulos_8h.html" title="Funciones de gestion de los modulos activos en una sesion. " alt="" coords="765,80,848,107"/>
+<area shape="rect" id="node14" href="amqsdp_8h.html" title="Cliente Websphere MQSeries. " alt="" coords="401,80,479,107"/>
+<area shape="rect" id="node15" href="cob2c_8h.html" title="Fichero de cabecera para convertir la copy COBOL en una estructura SDP. " alt="" coords="873,80,941,107"/>
+<area shape="rect" id="node16" href="global_8h.html" title="Define las variables de uso global para todo el sistema. " alt="" coords="73,80,140,107"/>
+<area shape="rect" id="node17" href="md5_8h.html" title="Fichero de cabecera para el calculo de la firma MD5 de un texto Modificado a partir del algoritmo des..." alt="" coords="965,80,1024,107"/>
+<area shape="rect" id="node7" href="jggsal_8h.html" title="Software Abstraction Layer. " alt="" coords="499,155,565,181"/>
+<area shape="rect" id="node8" href="sdpconfig_8h.html" title="Fichero de cabecera de configuracion del sistema Define las constantes y los valores globales de comp..." alt="" coords="143,229,231,256"/>
+<area shape="rect" id="node9" href="sdp_types_8h.html" title="Define las estructrus y tipos de datos usados en la libreria. " alt="" coords="142,155,231,181"/>
+<area shape="rect" id="node10" href="pila_8h.html" title="Funciones de gestion de pilas abtracta. " alt="" coords="307,155,360,181"/>
+<area shape="rect" id="node11" href="trapcodes_8h.html" title="trapcodes.h" alt="" coords="384,155,475,181"/>
+</map>
+</div>
+</div>
+<p><a href="messages_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Estructuras de datos</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_t___c_n_t.html">ST_CNT</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+'defines'</h2></td></tr>
+<tr class="memitem:aabcb39e925be97c89aed6b993ca0ef52"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messages_8c.html#aabcb39e925be97c89aed6b993ca0ef52">_MESSAGES_C_</a></td></tr>
+<tr class="separator:aabcb39e925be97c89aed6b993ca0ef52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+'typedefs'</h2></td></tr>
+<tr class="memitem:adad3adcee1cdeaa517d9ad053fba482c"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_s_t___c_n_t.html">ST_CNT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messages_8c.html#adad3adcee1cdeaa517d9ad053fba482c">CNT</a></td></tr>
+<tr class="memdesc:adad3adcee1cdeaa517d9ad053fba482c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mantiene la informacion de los timers.  <a href="#adad3adcee1cdeaa517d9ad053fba482c">Más...</a><br /></td></tr>
+<tr class="separator:adad3adcee1cdeaa517d9ad053fba482c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a5c4b5bc4bbd5b78371891b44033225b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messages_8c.html#a5c4b5bc4bbd5b78371891b44033225b2">processMessageCall</a> (<a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *timer)</td></tr>
+<tr class="separator:a5c4b5bc4bbd5b78371891b44033225b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01dcea3425d9a1ac856ca40e46c11e06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messages_8c.html#a01dcea3425d9a1ac856ca40e46c11e06">processMessageParagraph</a> (<a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *timer)</td></tr>
+<tr class="separator:a01dcea3425d9a1ac856ca40e46c11e06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38f5a7f119931cf2c5d80bf082d79396"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messages_8c.html#a38f5a7f119931cf2c5d80bf082d79396">processMessageModule</a> (<a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *timer)</td></tr>
+<tr class="separator:a38f5a7f119931cf2c5d80bf082d79396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55fc859ca4230a2ec01f70112072a6c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messages_8c.html#a55fc859ca4230a2ec01f70112072a6c1">sendCoverage</a> (char *data, long size, <a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *mod)</td></tr>
+<tr class="separator:a55fc859ca4230a2ec01f70112072a6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a395163ce9ccd27fd0ad904ec2dfbde51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messages_8c.html#a395163ce9ccd27fd0ad904ec2dfbde51">sendUsoParrafos</a> (char *data, long size, <a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *mod)</td></tr>
+<tr class="separator:a395163ce9ccd27fd0ad904ec2dfbde51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc51fc909744a1dba67838e37aaf8bf1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messages_8c.html#acc51fc909744a1dba67838e37aaf8bf1">sendFiles</a> (char *data, long size, <a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *mod)</td></tr>
+<tr class="separator:acc51fc909744a1dba67838e37aaf8bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a347af0003cb0b768fdba68788e9cde4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messages_8c.html#a347af0003cb0b768fdba68788e9cde4a">sendParrafos</a> (<a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *mod)</td></tr>
+<tr class="separator:a347af0003cb0b768fdba68788e9cde4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a508bbb821e7ca1f2df8497d011d0f51a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messages_8c.html#a508bbb821e7ca1f2df8497d011d0f51a">sendCalls</a> (<a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *mod)</td></tr>
+<tr class="separator:a508bbb821e7ca1f2df8497d011d0f51a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5df4323dd9c81e9569ef158babd0c59f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messages_8c.html#a5df4323dd9c81e9569ef158babd0c59f">sendSessionControl</a> (int type, <a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *<a class="el" href="_s_d_p_t_r_a_p_b_8c.html#a7b1065499acf2797bfe8d85cd6048da6">current</a>)</td></tr>
+<tr class="separator:a5df4323dd9c81e9569ef158babd0c59f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ad4fbfaa11c353451aa4b4694e993e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messages_8c.html#a8ad4fbfaa11c353451aa4b4694e993e4">processParrafos</a> (<a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *mod)</td></tr>
+<tr class="separator:a8ad4fbfaa11c353451aa4b4694e993e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad572a023ad1a3376615edc33d723af52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messages_8c.html#ad572a023ad1a3376615edc33d723af52">updateModulo</a> (<a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *mod, <a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *timer)</td></tr>
+<tr class="separator:ad572a023ad1a3376615edc33d723af52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade4488bea47f13725077ee3a3e0bac34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messages_8c.html#ade4488bea47f13725077ee3a3e0bac34">ajustaTimers</a> (<a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *timer)</td></tr>
+<tr class="separator:ade4488bea47f13725077ee3a3e0bac34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9a5bcb8859dbde9b0a6029b344b68cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messages_8c.html#ad9a5bcb8859dbde9b0a6029b344b68cd">processMessage</a> (int tipo, <a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *timer)</td></tr>
+<tr class="separator:ad9a5bcb8859dbde9b0a6029b344b68cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4bd6b37abd013f42f2ac297cc683573"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messages_8c.html#ae4bd6b37abd013f42f2ac297cc683573">processEndModule</a> (char *sdpData)</td></tr>
+<tr class="separator:ae4bd6b37abd013f42f2ac297cc683573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63282a78d8b8929683dd046c35f09fd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messages_8c.html#a63282a78d8b8929683dd046c35f09fd8">sendBeginSession</a> (<a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *<a class="el" href="_s_d_p_t_r_a_p_b_8c.html#a7b1065499acf2797bfe8d85cd6048da6">current</a>)</td></tr>
+<tr class="separator:a63282a78d8b8929683dd046c35f09fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69751ad443f5cbed4e252627ee7421d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messages_8c.html#a69751ad443f5cbed4e252627ee7421d2">sendEndSession</a> (<a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *<a class="el" href="_s_d_p_t_r_a_p_b_8c.html#a7b1065499acf2797bfe8d85cd6048da6">current</a>)</td></tr>
+<tr class="separator:a69751ad443f5cbed4e252627ee7421d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2e875f26a55b957c63137be3e719471"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messages_8c.html#ad2e875f26a55b957c63137be3e719471">sendPendingData</a> ()</td></tr>
+<tr class="separator:ad2e875f26a55b957c63137be3e719471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ad4f688c87d1792d6783f34c874b5fefd"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messages_8c.html#ad4f688c87d1792d6783f34c874b5fefd">firma</a></td></tr>
+<tr class="separator:ad4f688c87d1792d6783f34c874b5fefd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c07f3735e9c63f3130a615745887a20"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messages_8c.html#a1c07f3735e9c63f3130a615745887a20">szMsg</a> [4095]</td></tr>
+<tr class="separator:a1c07f3735e9c63f3130a615745887a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d32de993c5598bc5bc446cae103dc0e"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messages_8c.html#a8d32de993c5598bc5bc446cae103dc0e">sequence</a> = 0L</td></tr>
+<tr class="separator:a8d32de993c5598bc5bc446cae103dc0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b68daebd015cea05a9ede10ef241138"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messages_8c.html#a8b68daebd015cea05a9ede10ef241138">lastMod</a> = <a class="el" href="sdpconfig_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="separator:a8b68daebd015cea05a9ede10ef241138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e3dc653edbb8f642485dc7be6f8da55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messages_8c.html#a2e3dc653edbb8f642485dc7be6f8da55">modActual</a> = <a class="el" href="sdpconfig_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="separator:a2e3dc653edbb8f642485dc7be6f8da55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeef39c334c6268a29c7cb28beb31015e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="messages_8c.html#adad3adcee1cdeaa517d9ad053fba482c">CNT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messages_8c.html#aeef39c334c6268a29c7cb28beb31015e">cnt</a></td></tr>
+<tr class="separator:aeef39c334c6268a29c7cb28beb31015e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Gestiona la generacion de los diferentes mensajes que se deben enviar. </p>
+<p>Los acumula o los envia en funcion del tipo de proceso y del estado</p>
+<dl class="section author"><dt>Autor</dt><dd>: Javier Gonzalez </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>: 01/04/2015 </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>: 1.0 </dd></dl>
+
+<p>Definición en el archivo <a class="el" href="messages_8c_source.html">messages.c</a>.</p>
+</div><h2 class="groupheader">Documentación de los 'defines'</h2>
+<a class="anchor" id="aabcb39e925be97c89aed6b993ca0ef52"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _MESSAGES_C_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="messages_8c_source.html#l00014">14</a> del archivo <a class="el" href="messages_8c_source.html">messages.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de los 'typedefs'</h2>
+<a class="anchor" id="adad3adcee1cdeaa517d9ad053fba482c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="messages_8c.html#adad3adcee1cdeaa517d9ad053fba482c">CNT</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mantiene la informacion de los timers. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a class="anchor" id="ade4488bea47f13725077ee3a3e0bac34"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ajustaTimers </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *&#160;</td>
+          <td class="paramname"><em>timer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Caso especial para entornos Windows En Windows los tiempos se dan en decenas de nanosegundos por lo que hay que pasarlos a microsegundos redondeando </p>
+
+<p>Definición en la línea <a class="el" href="messages_8c_source.html#l00458">458</a> del archivo <a class="el" href="messages_8c_source.html">messages.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae4bd6b37abd013f42f2ac297cc683573"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void processEndModule </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>sdpData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Envia los mensajes asociados al final de un modulo en funcion del modo de proceso</p>
+<p>Contadores de uso de parrafos Contadores de las llamadas realizadas en ese modulo Contadores de los ficheros Informacion de la cobertura</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sdpData</td><td>Direccion de la COPY COBOL </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="messages_8c_source.html#l00193">193</a> del archivo <a class="el" href="messages_8c_source.html">messages.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad9a5bcb8859dbde9b0a6029b344b68cd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sha256le_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> void processMessage </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tipo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *&#160;</td>
+          <td class="paramname"><em>timer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Prepara el mensaje a enviar Si es un mensaje de fin de llamada, ajusta la pila de modulos </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tipo</td><td>tipo del mensaje segun codigos MSG_xxx </td></tr>
+    <tr><td class="paramname">timer</td><td>Puntero al TIMER calculado an entrar en la libreria </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="messages_8c_source.html#l00076">76</a> del archivo <a class="el" href="messages_8c_source.html">messages.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5c4b5bc4bbd5b78371891b44033225b2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void processMessageCall </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *&#160;</td>
+          <td class="paramname"><em>timer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Procesa el mensaje de fin de llamada Si el modulo estaba monitorizado, se ha quitado de la pila al hacer END_MODULE</p>
+<p>Puede ser que el modulo llamado no este monitorizado En ese caso se envia una firma vacia Hay que verificar que no es una llamada recursiva; es decir Si el modulo en la cima de la pila es el mismo que el actual el anterior puede ser el mismo y seria recursivo</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer</td><td>Puntero al TIMER calculado an entrar en la libreria </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="messages_8c_source.html#l00099">99</a> del archivo <a class="el" href="messages_8c_source.html">messages.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a38f5a7f119931cf2c5d80bf082d79396"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void processMessageModule </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *&#160;</td>
+          <td class="paramname"><em>timer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Procesa un mensaje de inicio de modulo</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer</td><td>Puntero al TIMER calculado an entrar en la libreria </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="messages_8c_source.html#l00153">153</a> del archivo <a class="el" href="messages_8c_source.html">messages.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a01dcea3425d9a1ac856ca40e46c11e06"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void processMessageParagraph </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *&#160;</td>
+          <td class="paramname"><em>timer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Procesa un mensaje de tipo parrafo</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer</td><td>Puntero al TIMER calculado an entrar en la libreria </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="messages_8c_source.html#l00132">132</a> del archivo <a class="el" href="messages_8c_source.html">messages.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8ad4fbfaa11c353451aa4b4694e993e4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void processParrafos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *&#160;</td>
+          <td class="paramname"><em>mod</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="messages_8c_source.html#l00435">435</a> del archivo <a class="el" href="messages_8c_source.html">messages.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a63282a78d8b8929683dd046c35f09fd8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendBeginSession </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *&#160;</td>
+          <td class="paramname"><em>current</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Envia el mensaje de inicio de sesion</p>
+<p>Este mensaje se envia siempre y de manera aislada</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">current</td><td>Puntero al TIMER obtenido al entrar en la libreria </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="messages_8c_source.html#l00370">370</a> del archivo <a class="el" href="messages_8c_source.html">messages.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a508bbb821e7ca1f2df8497d011d0f51a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendCalls </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *&#160;</td>
+          <td class="paramname"><em>mod</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Envia losmensajes asociados a las sentencias CALL</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mod</td><td>Puntero al MOD actual </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="messages_8c_source.html#l00266">266</a> del archivo <a class="el" href="messages_8c_source.html">messages.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a55fc859ca4230a2ec01f70112072a6c1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendCoverage </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *&#160;</td>
+          <td class="paramname"><em>mod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Envia el mensaje con la cobertura de ese modulo</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Puntero a los datos de cobertura </td></tr>
+    <tr><td class="paramname">size</td><td>Longitud de los datos de cobertura </td></tr>
+    <tr><td class="paramname">mod</td><td>Puntero al MOD actual </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="messages_8c_source.html#l00221">221</a> del archivo <a class="el" href="messages_8c_source.html">messages.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a69751ad443f5cbed4e252627ee7421d2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendEndSession </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *&#160;</td>
+          <td class="paramname"><em>current</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Envia el mensaje de fin de sesion</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">current</td><td>Puntero al TIMER obtenido al entrar en la libreria </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="messages_8c_source.html#l00379">379</a> del archivo <a class="el" href="messages_8c_source.html">messages.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acc51fc909744a1dba67838e37aaf8bf1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendFiles </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>sdpData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *&#160;</td>
+          <td class="paramname"><em>mod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Envia el mensaje con los accesos a los ficheros y tablas Cada fichero tiene 8 tipos de acceso</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sdpData</td><td>Puntero a los datos de uso de parrafos </td></tr>
+    <tr><td class="paramname">size</td><td>Longitud de los datos </td></tr>
+    <tr><td class="paramname">mod</td><td>Puntero al MOD actual </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="messages_8c_source.html#l00330">330</a> del archivo <a class="el" href="messages_8c_source.html">messages.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a347af0003cb0b768fdba68788e9cde4a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendParrafos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *&#160;</td>
+          <td class="paramname"><em>mod</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Envia el mensaje con los contadores de parrafos</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mod</td><td>Puntero al MOD actual </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="messages_8c_source.html#l00244">244</a> del archivo <a class="el" href="messages_8c_source.html">messages.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad2e875f26a55b957c63137be3e719471"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendPendingData </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>En caso de trabajar en modo global envia todos los datos antes de enviar el mensaje de fin de sesion </p>
+
+<p>Definición en la línea <a class="el" href="messages_8c_source.html#l00406">406</a> del archivo <a class="el" href="messages_8c_source.html">messages.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5df4323dd9c81e9569ef158babd0c59f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendSessionControl </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *&#160;</td>
+          <td class="paramname"><em>current</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="messages_8c_source.html#l00383">383</a> del archivo <a class="el" href="messages_8c_source.html">messages.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a395163ce9ccd27fd0ad904ec2dfbde51"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendUsoParrafos </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>sdpData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *&#160;</td>
+          <td class="paramname"><em>mod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Enviar el mensaje con el contador de uso de cada parrafo</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sdpData</td><td>Puntero a los datos de uso de parrafos </td></tr>
+    <tr><td class="paramname">size</td><td>Longitud de los datos </td></tr>
+    <tr><td class="paramname">mod</td><td>Puntero al MOD actual </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="messages_8c_source.html#l00293">293</a> del archivo <a class="el" href="messages_8c_source.html">messages.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad572a023ad1a3376615edc33d723af52"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void updateModulo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a> *&#160;</td>
+          <td class="paramname"><em>mod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="sdp_types_8h.html#a94c0315eea22344f1e853cc7c90592bb">TIMER</a> *&#160;</td>
+          <td class="paramname"><em>timer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="messages_8c_source.html#l00445">445</a> del archivo <a class="el" href="messages_8c_source.html">messages.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las variables</h2>
+<a class="anchor" id="aeef39c334c6268a29c7cb28beb31015e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="messages_8c.html#adad3adcee1cdeaa517d9ad053fba482c">CNT</a> cnt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="messages_8c_source.html#l00047">47</a> del archivo <a class="el" href="messages_8c_source.html">messages.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad4f688c87d1792d6783f34c874b5fefd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* firma</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="messages_8c_source.html#l00040">40</a> del archivo <a class="el" href="messages_8c_source.html">messages.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8b68daebd015cea05a9ede10ef241138"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a>* lastMod = <a class="el" href="sdpconfig_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ultimo modulo ejecutado </p>
+
+<p>Definición en la línea <a class="el" href="messages_8c_source.html#l00045">45</a> del archivo <a class="el" href="messages_8c_source.html">messages.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2e3dc653edbb8f642485dc7be6f8da55"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sdp_types_8h.html#a54a4473e20ff51d4dcb4158acf8a5979">MOD</a>* modActual = <a class="el" href="sdpconfig_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Modulo actual </p>
+
+<p>Definición en la línea <a class="el" href="messages_8c_source.html#l00046">46</a> del archivo <a class="el" href="messages_8c_source.html">messages.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8d32de993c5598bc5bc446cae103dc0e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long sequence = 0L</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="messages_8c_source.html#l00043">43</a> del archivo <a class="el" href="messages_8c_source.html">messages.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1c07f3735e9c63f3130a615745887a20"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char szMsg[4095]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Buffer para un unico mensaje </p>
+
+<p>Definición en la línea <a class="el" href="messages_8c_source.html#l00041">41</a> del archivo <a class="el" href="messages_8c_source.html">messages.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="messages_8c.html">messages.c</a></li>
+    <li class="footer">Generado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,291 @@
+\hypertarget{sha256be_8c}{}\section{Referencia del Archivo src/sha256be.c}
+\label{sha256be_8c}\index{src/sha256be.\+c@{src/sha256be.\+c}}
+{\ttfamily \#include \char`\"{}sha256be.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sha-\/private.\+h\char`\"{}}\\*
+Dependencia gráfica adjunta para sha256be.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{sha256be_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{\textquotesingle{}defines\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{sha256be_8c_a83af1c822f9350b0c09682a9f5cd3f9b}{\+\_\+\+S\+H\+A256\+B\+E\+\_\+\+C\+\_\+}
+\item 
+\#define \hyperlink{sha256be_8c_a7c5bd399f60b66409f9cabeaded10eb2}{S\+H\+A256\+\_\+\+S\+H\+R}(bits,  word)        ~((word) $>$$>$ (bits))
+\item 
+\#define \hyperlink{sha256be_8c_a813ffe2cac3b640c00cc2363264d726b}{S\+H\+A256\+\_\+\+R\+O\+T\+L}(bits,  word)                                              ~(((word) $<$$<$ (bits)) $\vert$ ((word) $>$$>$ (32-\/(bits))))
+\item 
+\#define \hyperlink{sha256be_8c_a3ae3372b8754a0fa3dc951032f7b19dc}{S\+H\+A256\+\_\+\+R\+O\+T\+R}(bits,  word)                                              ~(((word) $>$$>$ (bits)) $\vert$ ((word) $<$$<$ (32-\/(bits))))
+\item 
+\#define \hyperlink{sha256be_8c_add4ab629ce338840b29bd437b54d0976}{S\+H\+A256\+\_\+\+S\+I\+G\+M\+A0}(word)  ~(\hyperlink{sha256be_8c_a3ae3372b8754a0fa3dc951032f7b19dc}{S\+H\+A256\+\_\+\+R\+O\+T\+R}( 2,word) $^\wedge$ \hyperlink{sha256be_8c_a3ae3372b8754a0fa3dc951032f7b19dc}{S\+H\+A256\+\_\+\+R\+O\+T\+R}(13,word) $^\wedge$ \hyperlink{sha256be_8c_a3ae3372b8754a0fa3dc951032f7b19dc}{S\+H\+A256\+\_\+\+R\+O\+T\+R}(22,word))
+\item 
+\#define \hyperlink{sha256be_8c_a7c5154d65b9a040e8623a66ee74135e2}{S\+H\+A256\+\_\+\+S\+I\+G\+M\+A1}(word)  ~(\hyperlink{sha256be_8c_a3ae3372b8754a0fa3dc951032f7b19dc}{S\+H\+A256\+\_\+\+R\+O\+T\+R}( 6,word) $^\wedge$ \hyperlink{sha256be_8c_a3ae3372b8754a0fa3dc951032f7b19dc}{S\+H\+A256\+\_\+\+R\+O\+T\+R}(11,word) $^\wedge$ \hyperlink{sha256be_8c_a3ae3372b8754a0fa3dc951032f7b19dc}{S\+H\+A256\+\_\+\+R\+O\+T\+R}(25,word))
+\item 
+\#define \hyperlink{sha256be_8c_a9ddd7f7b8310990bda91153ba4315a9f}{S\+H\+A256\+\_\+sigma0}(word)  ~(\hyperlink{sha256be_8c_a3ae3372b8754a0fa3dc951032f7b19dc}{S\+H\+A256\+\_\+\+R\+O\+T\+R}( 7,word) $^\wedge$ \hyperlink{sha256be_8c_a3ae3372b8754a0fa3dc951032f7b19dc}{S\+H\+A256\+\_\+\+R\+O\+T\+R}(18,word) $^\wedge$ \hyperlink{sha256be_8c_a7c5bd399f60b66409f9cabeaded10eb2}{S\+H\+A256\+\_\+\+S\+H\+R}( 3,word))
+\item 
+\#define \hyperlink{sha256be_8c_a48e2e638f2d1a591b775d6b5c8470a21}{S\+H\+A256\+\_\+sigma1}(word)  ~(\hyperlink{sha256be_8c_a3ae3372b8754a0fa3dc951032f7b19dc}{S\+H\+A256\+\_\+\+R\+O\+T\+R}(17,word) $^\wedge$ \hyperlink{sha256be_8c_a3ae3372b8754a0fa3dc951032f7b19dc}{S\+H\+A256\+\_\+\+R\+O\+T\+R}(19,word) $^\wedge$ \hyperlink{sha256be_8c_a7c5bd399f60b66409f9cabeaded10eb2}{S\+H\+A256\+\_\+\+S\+H\+R}(10,word))
+\item 
+\#define \hyperlink{sha256be_8c_af03565eea20a237a44f143f6f4211f06}{S\+H\+A256\+Add\+Length}(context,  length)                          
+\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{sha256be_8c_adcccc5bca866da10d5a3a74b32590395}{S\+H\+A256\+Final\+Bits} (\hyperlink{struct_s_h_a256_context}{S\+H\+A256\+Context} $\ast$context, uint8\+\_\+t message\+\_\+bits, unsigned int length)
+\item 
+void \hyperlink{sha256be_8c_a04368bde7be9494d8feb261a1d65c43e}{S\+H\+A256\+Process\+Message\+Block} (\hyperlink{struct_s_h_a256_context}{S\+H\+A256\+Context} $\ast$context)
+\item 
+void \hyperlink{sha256be_8c_a47451913b37947ceea1a50e94158c022}{S\+H\+A256\+Finalize} (\hyperlink{struct_s_h_a256_context}{S\+H\+A256\+Context} $\ast$context, uint8\+\_\+t Pad\+\_\+\+Byte)
+\item 
+void \hyperlink{sha256be_8c_a1519f8ec109ba56c187c3975a572f3c7}{S\+H\+A256\+Pad\+Message} (\hyperlink{struct_s_h_a256_context}{S\+H\+A256\+Context} $\ast$context, uint8\+\_\+t Pad\+\_\+\+Byte)
+\item 
+int \hyperlink{sha256be_8c_a384c68c1cc80593f443ce6fae8850b10}{S\+H\+A256\+Result\+N} (\hyperlink{struct_s_h_a256_context}{S\+H\+A256\+Context} $\ast$context, uint8\+\_\+t Message\+\_\+\+Digest\mbox{[}$\,$\mbox{]}, int Hash\+Size)
+\item 
+int \hyperlink{sha256be_8c_a6bd16b0db349e449bdd6eefd4c6c10da}{S\+H\+A256\+Reset} (\hyperlink{struct_s_h_a256_context}{S\+H\+A256\+Context} $\ast$context)
+\item 
+int \hyperlink{sha256be_8c_a41f000a7143c6e8bb1f3fd4c6c55b21c}{S\+H\+A256\+Input} (\hyperlink{struct_s_h_a256_context}{S\+H\+A256\+Context} $\ast$context, const uint8\+\_\+t $\ast$message\+\_\+array, unsigned int length)
+\item 
+int \hyperlink{sha256be_8c_a193c76c2d0a234a3ea5ca9bf94e60fb2}{S\+H\+A256\+Result} (\hyperlink{struct_s_h_a256_context}{S\+H\+A256\+Context} $\ast$context, uint8\+\_\+t Message\+\_\+\+Digest\mbox{[}\hyperlink{sha256be_8h_adf764cbdea00d65edcd07bb9953ad2b7a3a8b66cf5d0bd8cc0e375a86a754ab28}{S\+H\+A256\+Hash\+Size}\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{sha256be_8c_aa21a4fea0abf9fdab225facc9d1c8d81}{add\+Temp}
+\item 
+uint32\+\_\+t \hyperlink{sha256be_8c_a03be90aaae72116118b9fb6f5732efaa}{S\+H\+A256\+\_\+\+H0} \mbox{[}\hyperlink{sha256be_8h_adf764cbdea00d65edcd07bb9953ad2b7a3a8b66cf5d0bd8cc0e375a86a754ab28}{S\+H\+A256\+Hash\+Size}/4\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\hypertarget{sha256be_8c_a83af1c822f9350b0c09682a9f5cd3f9b}{}\index{sha256be.\+c@{sha256be.\+c}!\+\_\+\+S\+H\+A256\+B\+E\+\_\+\+C\+\_\+@{\+\_\+\+S\+H\+A256\+B\+E\+\_\+\+C\+\_\+}}
+\index{\+\_\+\+S\+H\+A256\+B\+E\+\_\+\+C\+\_\+@{\+\_\+\+S\+H\+A256\+B\+E\+\_\+\+C\+\_\+}!sha256be.\+c@{sha256be.\+c}}
+\subsubsection[{\+\_\+\+S\+H\+A256\+B\+E\+\_\+\+C\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+S\+H\+A256\+B\+E\+\_\+\+C\+\_\+}\label{sha256be_8c_a83af1c822f9350b0c09682a9f5cd3f9b}
+
+
+Definición en la línea 43 del archivo sha256be.\+c.
+
+\hypertarget{sha256be_8c_a813ffe2cac3b640c00cc2363264d726b}{}\index{sha256be.\+c@{sha256be.\+c}!S\+H\+A256\+\_\+\+R\+O\+T\+L@{S\+H\+A256\+\_\+\+R\+O\+T\+L}}
+\index{S\+H\+A256\+\_\+\+R\+O\+T\+L@{S\+H\+A256\+\_\+\+R\+O\+T\+L}!sha256be.\+c@{sha256be.\+c}}
+\subsubsection[{S\+H\+A256\+\_\+\+R\+O\+T\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+A256\+\_\+\+R\+O\+T\+L(
+\begin{DoxyParamCaption}
+\item[{}]{bits, }
+\item[{}]{word}
+\end{DoxyParamCaption}
+)~(((word) $<$$<$ (bits)) $\vert$ ((word) $>$$>$ (32-\/(bits))))}\label{sha256be_8c_a813ffe2cac3b640c00cc2363264d726b}
+
+
+Definición en la línea 50 del archivo sha256be.\+c.
+
+\hypertarget{sha256be_8c_a3ae3372b8754a0fa3dc951032f7b19dc}{}\index{sha256be.\+c@{sha256be.\+c}!S\+H\+A256\+\_\+\+R\+O\+T\+R@{S\+H\+A256\+\_\+\+R\+O\+T\+R}}
+\index{S\+H\+A256\+\_\+\+R\+O\+T\+R@{S\+H\+A256\+\_\+\+R\+O\+T\+R}!sha256be.\+c@{sha256be.\+c}}
+\subsubsection[{S\+H\+A256\+\_\+\+R\+O\+T\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+A256\+\_\+\+R\+O\+T\+R(
+\begin{DoxyParamCaption}
+\item[{}]{bits, }
+\item[{}]{word}
+\end{DoxyParamCaption}
+)~(((word) $>$$>$ (bits)) $\vert$ ((word) $<$$<$ (32-\/(bits))))}\label{sha256be_8c_a3ae3372b8754a0fa3dc951032f7b19dc}
+
+
+Definición en la línea 52 del archivo sha256be.\+c.
+
+\hypertarget{sha256be_8c_a7c5bd399f60b66409f9cabeaded10eb2}{}\index{sha256be.\+c@{sha256be.\+c}!S\+H\+A256\+\_\+\+S\+H\+R@{S\+H\+A256\+\_\+\+S\+H\+R}}
+\index{S\+H\+A256\+\_\+\+S\+H\+R@{S\+H\+A256\+\_\+\+S\+H\+R}!sha256be.\+c@{sha256be.\+c}}
+\subsubsection[{S\+H\+A256\+\_\+\+S\+H\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+A256\+\_\+\+S\+H\+R(
+\begin{DoxyParamCaption}
+\item[{}]{bits, }
+\item[{}]{word}
+\end{DoxyParamCaption}
+)~((word) $>$$>$ (bits))}\label{sha256be_8c_a7c5bd399f60b66409f9cabeaded10eb2}
+
+
+Definición en la línea 49 del archivo sha256be.\+c.
+
+\hypertarget{sha256be_8c_add4ab629ce338840b29bd437b54d0976}{}\index{sha256be.\+c@{sha256be.\+c}!S\+H\+A256\+\_\+\+S\+I\+G\+M\+A0@{S\+H\+A256\+\_\+\+S\+I\+G\+M\+A0}}
+\index{S\+H\+A256\+\_\+\+S\+I\+G\+M\+A0@{S\+H\+A256\+\_\+\+S\+I\+G\+M\+A0}!sha256be.\+c@{sha256be.\+c}}
+\subsubsection[{S\+H\+A256\+\_\+\+S\+I\+G\+M\+A0}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+A256\+\_\+\+S\+I\+G\+M\+A0(
+\begin{DoxyParamCaption}
+\item[{}]{word}
+\end{DoxyParamCaption}
+)~({\bf S\+H\+A256\+\_\+\+R\+O\+T\+R}( 2,word) $^\wedge$ {\bf S\+H\+A256\+\_\+\+R\+O\+T\+R}(13,word) $^\wedge$ {\bf S\+H\+A256\+\_\+\+R\+O\+T\+R}(22,word))}\label{sha256be_8c_add4ab629ce338840b29bd437b54d0976}
+
+
+Definición en la línea 56 del archivo sha256be.\+c.
+
+\hypertarget{sha256be_8c_a9ddd7f7b8310990bda91153ba4315a9f}{}\index{sha256be.\+c@{sha256be.\+c}!S\+H\+A256\+\_\+sigma0@{S\+H\+A256\+\_\+sigma0}}
+\index{S\+H\+A256\+\_\+sigma0@{S\+H\+A256\+\_\+sigma0}!sha256be.\+c@{sha256be.\+c}}
+\subsubsection[{S\+H\+A256\+\_\+sigma0}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+A256\+\_\+sigma0(
+\begin{DoxyParamCaption}
+\item[{}]{word}
+\end{DoxyParamCaption}
+)~({\bf S\+H\+A256\+\_\+\+R\+O\+T\+R}( 7,word) $^\wedge$ {\bf S\+H\+A256\+\_\+\+R\+O\+T\+R}(18,word) $^\wedge$ {\bf S\+H\+A256\+\_\+\+S\+H\+R}( 3,word))}\label{sha256be_8c_a9ddd7f7b8310990bda91153ba4315a9f}
+
+
+Definición en la línea 60 del archivo sha256be.\+c.
+
+\hypertarget{sha256be_8c_a7c5154d65b9a040e8623a66ee74135e2}{}\index{sha256be.\+c@{sha256be.\+c}!S\+H\+A256\+\_\+\+S\+I\+G\+M\+A1@{S\+H\+A256\+\_\+\+S\+I\+G\+M\+A1}}
+\index{S\+H\+A256\+\_\+\+S\+I\+G\+M\+A1@{S\+H\+A256\+\_\+\+S\+I\+G\+M\+A1}!sha256be.\+c@{sha256be.\+c}}
+\subsubsection[{S\+H\+A256\+\_\+\+S\+I\+G\+M\+A1}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+A256\+\_\+\+S\+I\+G\+M\+A1(
+\begin{DoxyParamCaption}
+\item[{}]{word}
+\end{DoxyParamCaption}
+)~({\bf S\+H\+A256\+\_\+\+R\+O\+T\+R}( 6,word) $^\wedge$ {\bf S\+H\+A256\+\_\+\+R\+O\+T\+R}(11,word) $^\wedge$ {\bf S\+H\+A256\+\_\+\+R\+O\+T\+R}(25,word))}\label{sha256be_8c_a7c5154d65b9a040e8623a66ee74135e2}
+
+
+Definición en la línea 58 del archivo sha256be.\+c.
+
+\hypertarget{sha256be_8c_a48e2e638f2d1a591b775d6b5c8470a21}{}\index{sha256be.\+c@{sha256be.\+c}!S\+H\+A256\+\_\+sigma1@{S\+H\+A256\+\_\+sigma1}}
+\index{S\+H\+A256\+\_\+sigma1@{S\+H\+A256\+\_\+sigma1}!sha256be.\+c@{sha256be.\+c}}
+\subsubsection[{S\+H\+A256\+\_\+sigma1}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+A256\+\_\+sigma1(
+\begin{DoxyParamCaption}
+\item[{}]{word}
+\end{DoxyParamCaption}
+)~({\bf S\+H\+A256\+\_\+\+R\+O\+T\+R}(17,word) $^\wedge$ {\bf S\+H\+A256\+\_\+\+R\+O\+T\+R}(19,word) $^\wedge$ {\bf S\+H\+A256\+\_\+\+S\+H\+R}(10,word))}\label{sha256be_8c_a48e2e638f2d1a591b775d6b5c8470a21}
+
+
+Definición en la línea 62 del archivo sha256be.\+c.
+
+\hypertarget{sha256be_8c_af03565eea20a237a44f143f6f4211f06}{}\index{sha256be.\+c@{sha256be.\+c}!S\+H\+A256\+Add\+Length@{S\+H\+A256\+Add\+Length}}
+\index{S\+H\+A256\+Add\+Length@{S\+H\+A256\+Add\+Length}!sha256be.\+c@{sha256be.\+c}}
+\subsubsection[{S\+H\+A256\+Add\+Length}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+A256\+Add\+Length(
+\begin{DoxyParamCaption}
+\item[{}]{context, }
+\item[{}]{length}
+\end{DoxyParamCaption}
+)}\label{sha256be_8c_af03565eea20a237a44f143f6f4211f06}
+{\bfseries Valor\+:}
+\begin{DoxyCode}
+(\hyperlink{sha256be_8c_aa21a4fea0abf9fdab225facc9d1c8d81}{addTemp} = (context)->Length\_Low, (context)->Corrupted = \(\backslash\)
+    (((context)->Length\_Low += (length)) < \hyperlink{sha256be_8c_aa21a4fea0abf9fdab225facc9d1c8d81}{addTemp}) &&     \(\backslash\)
+    (++(context)->Length\_High == 0) ? \hyperlink{sha256be_8h_a06fc87d81c62e9abb8790b6e5713c55ba383493bb8927060f349e11f915cbb636}{shaInputTooLong} :    \(\backslash\)
+                                      (context)->Corrupted )
+\end{DoxyCode}
+
+
+Definición en la línea 70 del archivo sha256be.\+c.
+
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{sha256be_8c_adcccc5bca866da10d5a3a74b32590395}{}\index{sha256be.\+c@{sha256be.\+c}!S\+H\+A256\+Final\+Bits@{S\+H\+A256\+Final\+Bits}}
+\index{S\+H\+A256\+Final\+Bits@{S\+H\+A256\+Final\+Bits}!sha256be.\+c@{sha256be.\+c}}
+\subsubsection[{S\+H\+A256\+Final\+Bits(\+S\+H\+A256\+Context $\ast$context, uint8\+\_\+t message\+\_\+bits, unsigned int length)}]{\setlength{\rightskip}{0pt plus 5cm}int S\+H\+A256\+Final\+Bits (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+H\+A256\+Context} $\ast$}]{context, }
+\item[{uint8\+\_\+t}]{message\+\_\+bits, }
+\item[{unsigned int}]{length}
+\end{DoxyParamCaption}
+)}\label{sha256be_8c_adcccc5bca866da10d5a3a74b32590395}
+
+
+Definición en la línea 185 del archivo sha256be.\+c.
+
+\hypertarget{sha256be_8c_a47451913b37947ceea1a50e94158c022}{}\index{sha256be.\+c@{sha256be.\+c}!S\+H\+A256\+Finalize@{S\+H\+A256\+Finalize}}
+\index{S\+H\+A256\+Finalize@{S\+H\+A256\+Finalize}!sha256be.\+c@{sha256be.\+c}}
+\subsubsection[{S\+H\+A256\+Finalize(\+S\+H\+A256\+Context $\ast$context, uint8\+\_\+t Pad\+\_\+\+Byte)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+H\+A256\+Finalize (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+H\+A256\+Context} $\ast$}]{context, }
+\item[{uint8\+\_\+t}]{Pad\+\_\+\+Byte}
+\end{DoxyParamCaption}
+)}\label{sha256be_8c_a47451913b37947ceea1a50e94158c022}
+
+
+Definición en la línea 341 del archivo sha256be.\+c.
+
+\hypertarget{sha256be_8c_a41f000a7143c6e8bb1f3fd4c6c55b21c}{}\index{sha256be.\+c@{sha256be.\+c}!S\+H\+A256\+Input@{S\+H\+A256\+Input}}
+\index{S\+H\+A256\+Input@{S\+H\+A256\+Input}!sha256be.\+c@{sha256be.\+c}}
+\subsubsection[{S\+H\+A256\+Input(\+S\+H\+A256\+Context $\ast$context, const uint8\+\_\+t $\ast$message\+\_\+array, unsigned int length)}]{\setlength{\rightskip}{0pt plus 5cm}int S\+H\+A256\+Input (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+H\+A256\+Context} $\ast$}]{context, }
+\item[{const uint8\+\_\+t $\ast$}]{message\+\_\+array, }
+\item[{unsigned int}]{length}
+\end{DoxyParamCaption}
+)}\label{sha256be_8c_a41f000a7143c6e8bb1f3fd4c6c55b21c}
+
+
+Definición en la línea 144 del archivo sha256be.\+c.
+
+\hypertarget{sha256be_8c_a1519f8ec109ba56c187c3975a572f3c7}{}\index{sha256be.\+c@{sha256be.\+c}!S\+H\+A256\+Pad\+Message@{S\+H\+A256\+Pad\+Message}}
+\index{S\+H\+A256\+Pad\+Message@{S\+H\+A256\+Pad\+Message}!sha256be.\+c@{sha256be.\+c}}
+\subsubsection[{S\+H\+A256\+Pad\+Message(\+S\+H\+A256\+Context $\ast$context, uint8\+\_\+t Pad\+\_\+\+Byte)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+H\+A256\+Pad\+Message (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+H\+A256\+Context} $\ast$}]{context, }
+\item[{uint8\+\_\+t}]{Pad\+\_\+\+Byte}
+\end{DoxyParamCaption}
+)}\label{sha256be_8c_a1519f8ec109ba56c187c3975a572f3c7}
+
+
+Definición en la línea 376 del archivo sha256be.\+c.
+
+\hypertarget{sha256be_8c_a04368bde7be9494d8feb261a1d65c43e}{}\index{sha256be.\+c@{sha256be.\+c}!S\+H\+A256\+Process\+Message\+Block@{S\+H\+A256\+Process\+Message\+Block}}
+\index{S\+H\+A256\+Process\+Message\+Block@{S\+H\+A256\+Process\+Message\+Block}!sha256be.\+c@{sha256be.\+c}}
+\subsubsection[{S\+H\+A256\+Process\+Message\+Block(\+S\+H\+A256\+Context $\ast$context)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+H\+A256\+Process\+Message\+Block (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+H\+A256\+Context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)}\label{sha256be_8c_a04368bde7be9494d8feb261a1d65c43e}
+
+
+Definición en la línea 254 del archivo sha256be.\+c.
+
+\hypertarget{sha256be_8c_a6bd16b0db349e449bdd6eefd4c6c10da}{}\index{sha256be.\+c@{sha256be.\+c}!S\+H\+A256\+Reset@{S\+H\+A256\+Reset}}
+\index{S\+H\+A256\+Reset@{S\+H\+A256\+Reset}!sha256be.\+c@{sha256be.\+c}}
+\subsubsection[{S\+H\+A256\+Reset(\+S\+H\+A256\+Context $\ast$context)}]{\setlength{\rightskip}{0pt plus 5cm}int S\+H\+A256\+Reset (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+H\+A256\+Context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)}\label{sha256be_8c_a6bd16b0db349e449bdd6eefd4c6c10da}
+
+
+Definición en la línea 103 del archivo sha256be.\+c.
+
+\hypertarget{sha256be_8c_a193c76c2d0a234a3ea5ca9bf94e60fb2}{}\index{sha256be.\+c@{sha256be.\+c}!S\+H\+A256\+Result@{S\+H\+A256\+Result}}
+\index{S\+H\+A256\+Result@{S\+H\+A256\+Result}!sha256be.\+c@{sha256be.\+c}}
+\subsubsection[{S\+H\+A256\+Result(\+S\+H\+A256\+Context $\ast$context, uint8\+\_\+t Message\+\_\+\+Digest[S\+H\+A256\+Hash\+Size])}]{\setlength{\rightskip}{0pt plus 5cm}int S\+H\+A256\+Result (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+H\+A256\+Context} $\ast$}]{context, }
+\item[{uint8\+\_\+t}]{Message\+\_\+\+Digest\mbox{[}\+S\+H\+A256\+Hash\+Size\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{sha256be_8c_a193c76c2d0a234a3ea5ca9bf94e60fb2}
+
+
+Definición en la línea 231 del archivo sha256be.\+c.
+
+\hypertarget{sha256be_8c_a384c68c1cc80593f443ce6fae8850b10}{}\index{sha256be.\+c@{sha256be.\+c}!S\+H\+A256\+Result\+N@{S\+H\+A256\+Result\+N}}
+\index{S\+H\+A256\+Result\+N@{S\+H\+A256\+Result\+N}!sha256be.\+c@{sha256be.\+c}}
+\subsubsection[{S\+H\+A256\+Result\+N(\+S\+H\+A256\+Context $\ast$context, uint8\+\_\+t Message\+\_\+\+Digest[], int Hash\+Size)}]{\setlength{\rightskip}{0pt plus 5cm}int S\+H\+A256\+Result\+N (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+H\+A256\+Context} $\ast$}]{context, }
+\item[{uint8\+\_\+t}]{Message\+\_\+\+Digest\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{Hash\+Size}
+\end{DoxyParamCaption}
+)}\label{sha256be_8c_a384c68c1cc80593f443ce6fae8850b10}
+
+
+Definición en la línea 431 del archivo sha256be.\+c.
+
+
+
+\subsection{Documentación de las variables}
+\hypertarget{sha256be_8c_aa21a4fea0abf9fdab225facc9d1c8d81}{}\index{sha256be.\+c@{sha256be.\+c}!add\+Temp@{add\+Temp}}
+\index{add\+Temp@{add\+Temp}!sha256be.\+c@{sha256be.\+c}}
+\subsubsection[{add\+Temp}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t add\+Temp}\label{sha256be_8c_aa21a4fea0abf9fdab225facc9d1c8d81}
+
+
+Definición en la línea 69 del archivo sha256be.\+c.
+
+\hypertarget{sha256be_8c_a03be90aaae72116118b9fb6f5732efaa}{}\index{sha256be.\+c@{sha256be.\+c}!S\+H\+A256\+\_\+\+H0@{S\+H\+A256\+\_\+\+H0}}
+\index{S\+H\+A256\+\_\+\+H0@{S\+H\+A256\+\_\+\+H0}!sha256be.\+c@{sha256be.\+c}}
+\subsubsection[{S\+H\+A256\+\_\+\+H0}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t S\+H\+A256\+\_\+\+H0\mbox{[}{\bf S\+H\+A256\+Hash\+Size}/4\mbox{]}}\label{sha256be_8c_a03be90aaae72116118b9fb6f5732efaa}
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}
+= \{
+  0x6A09E667, 0xBB67AE85, 0x3C6EF372, 0xA54FF53A,
+  0x510E527F, 0x9B05688C, 0x1F83D9AB, 0x5BE0CD19
+\}
+\end{DoxyCode}
+
+
+Definición en la línea 77 del archivo sha256be.\+c.
+

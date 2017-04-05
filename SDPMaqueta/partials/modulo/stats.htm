@@ -1,0 +1,112 @@
+<div class="panel-heading">{{MSG.TITLE_EJECUCION}}</div>
+<div class="panel-body">
+
+    <table class="table table-hover">
+        <tr class="listado">
+            <td colspan="2" class="col-md-7" >{{MSG.STAT_EXECS}}</td>
+            <td class="col-md-5 text-right tbLinea">{{stats.ejecuciones | number}}</td>
+        </tr>
+        
+        <tr class="listado">
+            <td colspan="2" class="col-md-7 tbLinea ">{{MSG.STAT_ABEND}}</td>
+            <td class="col-md-5 tbLinea text-right">{{stats.fallidas.length | number}}</td>
+        </tr>
+
+        <tr class="listado">
+            <td colspan="3" class="col-md-12 tbLinea sdpSeccion">{{MSG.STAT_USER}}</td>
+        </tr>
+
+        <tr class="listado">
+            <td class="col-md-1 tbLinea "></td>
+            <td class="col-md-7 tbLinea ">{{MSG.STAT_MIN}}</td>
+            <td class="col-md-4 tbLinea text-right ">{{stats.elapsedMin / 1000 | number: 0}}</td>
+        </tr>
+
+        <tr class="listado">
+            <td class="col-md-1 tbLinea "></td>
+            <td class="col-md-7 tbLinea ">{{MSG.STAT_AVG}}</td>
+            <td class="col-md-4 tbLinea text-right ">{{stats.elapsedTime / 1000 | number: 0 }}</td>
+        </tr>
+
+        <tr class="listado">
+            <td class="col-md-1 tbLinea "></td>
+            <td class="col-md-7 tbLinea ">{{MSG.STAT_MAX}}</td>
+            <td class="col-md-4 tbLinea text-right ">{{stats.elapsedMax / 1000 | number: 0}}</td>
+        </tr>
+
+        <tr class="listado">
+            <td colspan="3" class="col-md-12 tbLinea sdpSeccion">{{MSG.STAT_CPU}}</td>
+        </tr>
+
+        <tr class="listado">
+            <td class="col-md-1 tbLinea "></td>
+            <td class="col-md-7 tbLinea ">{{MSG.STAT_MIN}}</td>
+            <td class="col-md-4 tbLinea text-right ">{{stats.cpuMin / 1000 | number: 0 }}</td>
+        </tr>
+
+        <tr class="listado">
+            <td class="col-md-1 tbLinea "></td>
+            <td class="col-md-7 tbLinea ">{{MSG.STAT_AVG}}</td>
+            <td class="col-md-4 tbLinea text-right ">{{stats.cpuTime / 1000 | number: 0 }}</td>
+        </tr>
+
+        <tr class="listado">
+            <td class="col-md-1 tbLinea "></td>
+            <td class="col-md-7 tbLinea ">{{MSG.STAT_MAX}}</td>
+            <td class="col-md-4 tbLinea text-right ">{{stats.cpuMax / 1000 | number: 0}}</td>
+        </tr>
+
+        <tr class="listado">
+            <td colspan="3" class="col-md-12 tbLinea sdpSeccion">{{MSG.STAT_IO}}</td>
+        </tr>
+
+        <tr class="listado">
+            <td class="col-md-1 tbLinea "></td>
+            <td class="col-md-7 tbLinea ">{{MSG.STAT_READ}}</td>
+            <td class="col-md-4 tbLinea text-right ">{{stats.input | number: 0}}</td>
+        </tr>
+
+        <tr class="listado">
+            <td class="col-md-1 tbLinea "></td>
+            <td class="col-md-7 tbLinea ">{{MSG.STAT_WRITE}}</td>
+            <td class="col-md-4 tbLinea text-right ">{{stats.output | number: 0}}</td>
+        </tr>
+
+        <tr class="listado">
+            <td class="col-md-1 tbLinea "></td>
+            <td class="col-md-7 tbLinea ">{{MSG.STAT_AVG_IO}}</td>
+            <td class="col-md-4 tbLinea text-right ">{{stats.ioTotal | number: 0}}</td>
+        </tr>
+
+        <tr class="listado clickable"
+            title={{MSG.CLICK_ARBOL}}
+            data-toggle="tooltip"
+            data-placement="top" tooltip
+            data-ng-click="showArbolModulo()">
+            <td colspan="3" class="col-md-12 tbLinea sdpSeccion">{{MSG.STAT_MOD}}</td>
+        </tr>
+
+        <tr class="listado clickable"
+            title={{MSG.CLICK_ARBOL}}
+            data-toggle="tooltip"
+            data-placement="top" tooltip
+            data-ng-click="showArbolModulo()">
+            <td class="col-md-1 tbLinea "></td>
+            <td class="col-md-7 tbLinea ">{{MSG.STAT_MOD_DIRECT}}</td>
+            <td class="col-md-4 tbLinea text-right ">{{stats.arbolModulos | number: 0}}</td>
+        </tr>
+
+        <tr class="listado clickable"
+            title={{MSG.CLICK_ARBOL}}
+            data-toggle="tooltip"
+            data-placement="top" tooltip
+            data-ng-click="showArbolModulo()">
+            <td class="col-md-1 tbLinea "></td>
+            <td class="col-md-7 tbLinea ">{{MSG.STAT_MOD_SESION}}</td>
+            <td class="col-md-4 tbLinea text-right ">{{stats.arbolRutinas / 10 | number: 1}}</td>
+        </tr>
+
+    </table>
+
+</div>
+</div>

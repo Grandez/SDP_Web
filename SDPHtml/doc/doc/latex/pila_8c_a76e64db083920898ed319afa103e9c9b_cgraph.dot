@@ -1,0 +1,11 @@
+digraph "createStack"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="createStack",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="alocarMemoria",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pila_8c.html#afb652b8d20272ccec458e986834effa0"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="nuevaPila",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pila_8c.html#a23f19882dbda4487c2f9bd166948832c"];
+}

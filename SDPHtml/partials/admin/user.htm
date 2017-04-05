@@ -1,0 +1,59 @@
+<div class="pull-left" style="margin: 1em;">
+    <button data-ng-click="winUser('')"
+            class="btn btn-default btn-md btn-primary" type="button">Nuevo usuario</button>
+</div>
+<div class="pull-right" style="margin: 1em;">
+    <button data-ng-click="winUser('')"
+            class="btn btn-default btn-md btn-primary" type="button">Nuevo usuario</button>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="container" >
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <table class="table table-hover table-striped">
+                <thead>
+                <tr>
+                    <th class="col-md-1 panel-heading clickable" data-ng-click="cambiaOrden(0)">
+                        <span class="glyphicon glyphicon-triangle-top"    data-ng-show="adm.orden[0] ==  1"></span>
+                        <span class="glyphicon glyphicon-triangle-bottom" data-ng-show="adm.orden[0] == -1"></span>
+                        UID
+                    </th>
+                    <th class="col-md-2 panel-heading clickable" data-ng-click="cambiaOrden(1)">
+                        <span class="glyphicon glyphicon-triangle-top"    data-ng-show="adm.orden[1] ==  1"></span>
+                        <span class="glyphicon glyphicon-triangle-bottom" data-ng-show="adm.orden[1] == -1"></span>
+                        Nombre
+                    </th>
+                    <th class="col-md-2 panel-heading clickable" data-ng-click="cambiaOrden(2)">
+                        <span class="glyphicon glyphicon-triangle-top"    data-ng-show="adm.orden[2] ==  1"></span>
+                        <span class="glyphicon glyphicon-triangle-bottom" data-ng-show="adm.orden[2] == -1"></span>
+                        Correo
+                    </th>
+                    <th class="col-md-1 panel-heading clickable" data-ng-click="cambiaOrden(3)">
+                        <span class="glyphicon glyphicon-triangle-top"    data-ng-show="adm.orden[3] ==  1"></span>
+                        <span class="glyphicon glyphicon-triangle-bottom" data-ng-show="adm.orden[3] == -1"></span>
+                        Rol
+                    </th>
+                    <th class="col-md-1 panel-heading clickable" data-ng-click="cambiaOrden(4)">
+                        <span class="glyphicon glyphicon-triangle-top"    data-ng-show="adm.orden[4] ==  1"></span>
+                        <span class="glyphicon glyphicon-triangle-bottom" data-ng-show="adm.orden[4] == -1"></span>
+                        Desde</th>
+                </tr>
+
+                </thead>
+                <tbody>
+                <tr class="listado" data-ng-repeat="fila in users">
+                    <td class="clickable" data-ng-click="winUser(fila.uid)">{{fila.uid}}</td>
+                    <td class="clickable" data-ng-click="winUser(fila.uid)">{{fila.apellido}}, {{fila.nombre}}</td>
+                    <td class="clickable" data-ng-click="winUser(fila.uid)">{{fila.correo}}</td>
+                    <td class="clickable" data-ng-click="winUser(fila.uid)">{{fila.rolName}}</td>
+                    <td class="clickable" data-ng-click="winUser(fila.uid)">{{fila.desde | date : 'shortDate' : timezone}}</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+

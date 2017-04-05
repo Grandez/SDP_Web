@@ -1,0 +1,161 @@
+<html ng-app="sdp"
+      data-ng-controller="sdpCtrl as SDP">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width
+                                  , initial-scale=1
+                                  , maximum-scale=1
+                                  , user-scalable=no">
+
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <title>Serendipity</title>
+
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap-theme.css">
+
+    <link rel="stylesheet" href="lib/uilayout/ui-layout.css">
+
+    <link rel="stylesheet" href="lib/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="lib/jquery-ui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="lib/jquery-ui/jquery-ui.theme.css">
+
+    <link rel="stylesheet" href="lib/jspanel/jquery.jspanel.css">
+
+    <link rel="stylesheet" href="css/sdpMain.css">
+    <link rel="stylesheet" href="css/sdpCode.css">
+    <link rel="stylesheet" href="css/highcharts.css">
+
+    <link rel="stylesheet" href="lib/jstree/themes/proton/style.css">
+
+    <link rel="stylesheet" href="lib/primitives/primitives.css" media="screen"/>
+
+    <link rel="stylesheet" href="lib/tooltip/angular-tooltips.css">
+
+</head>
+
+<body>
+   <div>
+       <!-- Usados para pasar los datos de JQuery a Angular -->
+      <input type="text" id="txtModulo" data-ng-model="txtModulo" style="visibility: hidden" />
+      <input type="text" id="txtVista" data-ng-model="vista" style="visibility: hidden" />
+    </div>
+
+   <div class="sdpHeader">
+       <a href="doc"><span class="marca">SDP</span></a>
+
+       <div class="pull-right" style="border: none">
+           <select ng-model="rango" ng-change="cambiaRango(rango)" convert-to-number>
+               <option value="1">{{MSG.CBO_DIA}}</option>
+               <option value="2">{{MSG.CBO_SEMANA}}</option>
+               <option value="3">{{MSG.CBO_MES}}</option>
+               <option value="4">{{MSG.CBO_TRIMESTRE}}</option>
+               <option value="5">{{MSG.CBO_TODOS}}</option>
+           </select>
+       </div>
+
+   </div>
+
+   <div class="sdpContent">
+       <div data-ng-show="global.mainErr ==  1" data-ng-include="'partials/serverError.htm'"></div>
+       <div ui-layout  >
+
+           <div ui-layout-container>
+               <div ui-layout="{flow : 'column'}" >
+                   <div ui-layout-container size="15%" >
+
+                       <div class="left-inner-addon ">
+                           <i class="glyphicon glyphicon-search"></i>
+                           <input type="search"
+                                  class="form-control"
+                                  data-ng-model="mascara"
+                                  data-ng-keyup="buscaArbol()"/>
+                       </div>
+
+                       <div id="arbol0" data-ng-model="arbol" data-ng-show="showArbol ==  1"> </div>
+                       <div id="arbol1"                       data-ng-show="showArbol == -1"> </div>
+
+                   </div>
+                   <div ui-layout-container >
+
+                       <div id="areaView"   data-ng-show="vista ==  1" data-ng-include="'partials/appl/area.htm'"></div>
+                       <div id="applView"   data-ng-show="vista ==  2" data-ng-include="'partials/appl/aplicacion.htm'"></div>
+                       <div id="moduleView" data-ng-show="vista ==  3" data-ng-include="'partials/modulo/modulo.htm'"></div>
+                       <div id="noInfo"     data-ng-show="vista == -1" data-ng-include="'partials/noInfo.htm'"></div>
+                       <div id="pnlGrafico" data-ng-show="vista >  10" data-ng-include="'partials/grafico.htm'"></div>
+                   </div>
+               </div>
+           </div>
+
+       </div>
+   </div>
+
+   <div class="sdpFooter">{{MSG.AUTOR}}</div>
+
+
+   <script src="js/common/serverError.js"></script>
+   <script src="js/common/sdpAjax.js"></script>
+
+   <script src="js/graficos/grfAppl.js"></script>
+   <script src="js/graficos/grfModulo.js"></script>
+
+   <script src="js/sdp/sdpGeneral.js"></script>
+   <script src="js/sdp/sdpModulo.js"></script>
+   <script src="js/sdp/sdpAppl.js"></script>
+
+   <!-- JQuery debe ir delante de Angular -->
+   <script src="lib/jquery/jquery.js"></script>
+
+   <script src="lib/jquery-ui/jquery-ui.js"></script>
+   <script src="lib/jspanel/mobile-detect.min.js"></script>
+   <script src="lib/jspanel/jquery.jspanel.js"></script>
+
+   <script src="lib/primitives/jquery-ui.custom.js"></script>
+   <script src="lib/primitives/primitives.js"></script>
+
+   <script src="lib/angular/angular.js"></script>
+   <script src="lib/angular/angular-route.js"></script>
+   <script src="lib/angular/angular-sanitize.js"></script>
+   <script src="lib/angular/angular-locale_es.js"></script>
+
+   <script src="lib/uilayout/ui-layout.js"></script>
+
+   <script src="lib/ui-bootstrap/ui-bootstrap-0.13.0.js"></script>
+   <script src="lib/ui-bootstrap/ui-bootstrap-tpls-0.13.0.js"></script>
+
+   <script src="lib/jstree/jstree.js"></script>
+
+   <script src="lib/highcharts/highcharts.src.js"></script>
+   <script src="lib/highcharts/highcharts-3d.src.js"></script>
+   <script src="lib/highcharts/highcharts-more.src.js"></script>
+   <script src="lib/highcharts/solid-gauge.src.js"></script>
+
+   <!-- Tema para Highcharts. Debe ir despues de Highcharts -->
+   <!-- <script src="lib/highcharts/themes/grid-light.js"></script> -->
+   <script src="lib/highcharts/themes/skies.js"></script>
+
+
+   <!-- <script src="lib/highcharts/themes/gray.js"></script> -->
+   <!-- Este da como un reborde -->
+   <!-- <script src="lib/highcharts/themes/sand-signika.js"></script> -->
+   <!--<script src="lib/highcharts/themes/dark-unica.js"></script>-->
+
+   <script src="lib/tooltip/angular-tooltips.js"></script>
+
+   <script src="js/factory/sdpModelo.js"></script>
+   <script src="js/factory/sdpFactory.js"></script>
+   <script src="js/factory/interceptor.js"></script>
+
+   <script src="js/controllers/controllers.js"></script>
+   <script src="js/controllers/sdpCtrl.js"></script>
+   <script src="js/controllers/modulo/resumenFunc.js"></script>
+   <script src="js/controllers/modulo/resumenCtrl.js"></script>
+
+   <script src="js/sdp/sdpModuloWindows.js"></script>
+   <script src="js/sdp.js"></script>
+
+
+</body>
+
+</html>

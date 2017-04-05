@@ -1,0 +1,448 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Proyecto de Fin de Carrera: Fichero Fuente src/amqsdp.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Proyecto de Fin de Carrera
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Trapper SDPTRAPB</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Estructuras&#160;de&#160;Datos</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('amqsdp_8c_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">amqsdp.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="amqsdp_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#a2c1538d99cb1b248411c15badb3c0842">   14</a></span>&#160;<span class="preprocessor">#define _AMQSDP_SRC_</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="cmqc_8h.html">cmqc.h</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_s_d_p_t_r_a_p_8h.html">SDPTRAP.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="amqsdp_8h.html">amqsdp.h</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="global_8h.html">global.h</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#a3fb375f4ee6971a0a7241c1b9fe0250d">   26</a></span>&#160;<a class="code" href="structtag_m_q_o_d.html">MQOD</a>     <a class="code" href="amqsdp_8c.html#a3fb375f4ee6971a0a7241c1b9fe0250d">od</a> = {<a class="code" href="cmqc_8h.html#aaca8efdc3c3886d6f06d841e99b3824b">MQOD_DEFAULT</a>};    <span class="comment">/* Object Descriptor             */</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#ae87fabdedbfb0255167d3f0a7705ec2e">   27</a></span>&#160;<a class="code" href="structtag_m_q_m_d.html">MQMD</a>     <a class="code" href="amqsdp_8c.html#ae87fabdedbfb0255167d3f0a7705ec2e">md</a> = {<a class="code" href="cmqc_8h.html#a8886d85ef78d739f38beb8a302a0b3c0">MQMD_DEFAULT</a>};    <span class="comment">/* Message Descriptor            */</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#a017b205b3e8f746565c6358ba97f80cd">   28</a></span>&#160;<a class="code" href="structtag_m_q_p_m_o.html">MQPMO</a>   <a class="code" href="amqsdp_8c.html#a017b205b3e8f746565c6358ba97f80cd">pmo</a> = {<a class="code" href="cmqc_8h.html#a7b568f0009a2c3c452407a4f803fa87a">MQPMO_DEFAULT</a>};   <span class="comment">/* put message options           */</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#a684758dad6f1bcbcf33011bad12a3687">   29</a></span>&#160;<a class="code" href="structtag_m_q_c_n_o.html">MQCNO</a>   <a class="code" href="amqsdp_8c.html#a684758dad6f1bcbcf33011bad12a3687">cno</a> = {<a class="code" href="cmqc_8h.html#af9f6084a129db0fe30bbd58db99540e9">MQCNO_DEFAULT</a>};   <span class="comment">/* connection options            */</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#a000eb961f9033ec28a6d0319adfc0cc4">   30</a></span>&#160;<a class="code" href="structtag_m_q_c_s_p.html">MQCSP</a>   <a class="code" href="amqsdp_8c.html#a000eb961f9033ec28a6d0319adfc0cc4">csp</a> = {<a class="code" href="cmqc_8h.html#a087ea7addc51ee1b57b13d89b0852cc7">MQCSP_DEFAULT</a>};   <span class="comment">/* security parameters           */</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#a9c88e25f067c51de112e0eacc559f462">   32</a></span>&#160;<a class="code" href="cmqc_8h.html#a00170ac137e1beb55a3c34f07a39fcc4">MQHCONN</a>  <a class="code" href="amqsdp_8c.html#a9c88e25f067c51de112e0eacc559f462">Hcon</a>   = 0x0;           <span class="comment">/* connection handle             */</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#a01edfcfbde290ed1c9a7a03b8c2f4500">   33</a></span>&#160;<a class="code" href="cmqc_8h.html#ac093f559f81163292e6016c68c947164">MQHOBJ</a>   <a class="code" href="amqsdp_8c.html#a01edfcfbde290ed1c9a7a03b8c2f4500">HQueue</a> = 0x0;           <span class="comment">/* object handle                 */</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#ac43cc6b9c68558cea8e4a5b632df0363">   34</a></span>&#160;<a class="code" href="cmqc_8h.html#a1fb8d28cbda3fa8766a9821230cdb6d5">MQLONG</a>   <a class="code" href="amqsdp_8c.html#ac43cc6b9c68558cea8e4a5b632df0363">O_options</a>;              <span class="comment">/* MQOPEN options                */</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#a0cfbea0c21c76cde9732ffc87c9ed260">   35</a></span>&#160;<a class="code" href="cmqc_8h.html#a1fb8d28cbda3fa8766a9821230cdb6d5">MQLONG</a>   <a class="code" href="amqsdp_8c.html#a0cfbea0c21c76cde9732ffc87c9ed260">C_options</a>;              <span class="comment">/* MQCLOSE options               */</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#a84be6334ddf78b650dfed2b632293455">   36</a></span>&#160;<a class="code" href="cmqc_8h.html#a1fb8d28cbda3fa8766a9821230cdb6d5">MQLONG</a>   <a class="code" href="amqsdp_8c.html#a84be6334ddf78b650dfed2b632293455">mqcc</a>;                   <span class="comment">/* completion code               */</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#a3537d2a2450ea0e24a3a56001020ec5f">   37</a></span>&#160;<a class="code" href="cmqc_8h.html#a1fb8d28cbda3fa8766a9821230cdb6d5">MQLONG</a>   <a class="code" href="amqsdp_8c.html#a3537d2a2450ea0e24a3a56001020ec5f">mqrc</a>;                   <span class="comment">/* reason code                   */</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#a52b0abed1d4b7d10c3a8e42e40f8f80a">   39</a></span>&#160;<span class="keywordtype">char</span>     <a class="code" href="amqsdp_8c.html#a52b0abed1d4b7d10c3a8e42e40f8f80a">QMName</a>[50];             <span class="comment">/* queue manager name            */</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#a30bbda1ba59bb12c2895c4006804a55d">   41</a></span>&#160;<span class="keywordtype">char</span> *<a class="code" href="amqsdp_8c.html#a30bbda1ba59bb12c2895c4006804a55d">qmgr</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#a5a317b1553299b3cbe3ef6d6d2edcffc">   42</a></span>&#160;<span class="keywordtype">char</span> *<a class="code" href="amqsdp_8c.html#a5a317b1553299b3cbe3ef6d6d2edcffc">qname</a> = <span class="stringliteral">&quot;SDP.TRAPPER&quot;</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#ifdef SDP_BUFF_SIZE</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;   <span class="keywordtype">long</span> <a class="code" href="amqsdp_8c.html#a3ab85df1f9111b4eaaa988eff903f2b4">buffSize</a> = SDP_BUFF_SIZE;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor"> #else</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#a3ab85df1f9111b4eaaa988eff903f2b4">   47</a></span>&#160;   <span class="keywordtype">long</span> <a class="code" href="amqsdp_8c.html#a3ab85df1f9111b4eaaa988eff903f2b4">buffSize</a> = 4095;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#a21dcb4f76464d796d158cc3333ab18d8">   50</a></span>&#160;<span class="keywordtype">int</span>   <a class="code" href="amqsdp_8c.html#a21dcb4f76464d796d158cc3333ab18d8">msgs</a>     = 0;             <span class="comment">/* Numero actual de mensajes        */</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#a35708eb4d2bb797b73ab54979f5b991f">   51</a></span>&#160;<span class="keywordtype">int</span>   <a class="code" href="amqsdp_8c.html#a35708eb4d2bb797b73ab54979f5b991f">maxGroup</a> = <a class="code" href="sdpconfig_8h.html#aeefcc7b6f118beefd2cec532afced5df">ITEMS_BY_MSG</a>;  <span class="comment">/* Numero de mensajes agrupados     */</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#aed7ea92f45bd273dde380a45ddced592">   52</a></span>&#160;<span class="keywordtype">int</span>   <a class="code" href="amqsdp_8c.html#aed7ea92f45bd273dde380a45ddced592">offset</a>   = 0;             <span class="comment">/* Puntero a la cola del buffer     */</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#aff2566f4c366b48d73479bef43ee4d2e">   53</a></span>&#160;<span class="keywordtype">char</span> *<a class="code" href="amqsdp_8c.html#aff2566f4c366b48d73479bef43ee4d2e">buffer</a>   = 0x0;           <span class="comment">/* Buffer de envio de mensajes      */</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">/* No se por que, no los coge en este modulo */</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#a4fb693c3cca874aca4a9d2109cc561e5">   57</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="amqsdp_8c.html#a4fb693c3cca874aca4a9d2109cc561e5">inErr</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#ad247c905cf5ce68a5eec344bcba86cc7">   58</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="amqsdp_8c.html#ad247c905cf5ce68a5eec344bcba86cc7">dbgLevel</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="modulos_8c.html#a5f9e912074a29350e020b7a09f43ff32">   59</a></span>&#160;FILE *<a class="code" href="amqsdp_8c.html#a5f9e912074a29350e020b7a09f43ff32">traza</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">/********************************************************************/</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">/*                    PROTOTYPES                                    */</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">/********************************************************************/</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">void</span> <a class="code" href="amqsdp_8c.html#a094c19a9716364046b2779fff6efa664">MQFree</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">int</span>  <a class="code" href="amqsdp_8c.html#ab689e2ba6771a5113551222f6189c137">MQConn</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">void</span> <a class="code" href="amqsdp_8c.html#acc12f0f1458385b0f5c5a6234f817205">MQDisconn</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keywordtype">int</span>  <a class="code" href="amqsdp_8c.html#a196cb274ac9c69cbe5daf9371668025c">MQOpen</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keywordtype">void</span> <a class="code" href="amqsdp_8c.html#ae93fe1e642e758fbbe9c892ab8033aa4">MQClose</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">/********************************************************************/</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">/*                    PUBLIC FUNCTIONS                              */</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">/********************************************************************/</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">/* No se porque no reconoce los extern */</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#a12766b7a05c27f09555f40c88e08610b">   77</a></span>&#160;<a class="code" href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">void</span> <a class="code" href="amqsdp_8c.html#a12766b7a05c27f09555f40c88e08610b">initAMQ</a>(<span class="keywordtype">int</span> d, FILE *f) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="amqsdp_8c.html#ad247c905cf5ce68a5eec344bcba86cc7">dbgLevel</a> = d;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="amqsdp_8c.html#a5f9e912074a29350e020b7a09f43ff32">traza</a> = f;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#a3c337f7b77e495f85489f862d4df359c">   82</a></span>&#160;<a class="code" href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">void</span> <a class="code" href="amqsdp_8c.html#a3c337f7b77e495f85489f862d4df359c">setBufferSize</a>() {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;   <span class="keywordflow">if</span> (<a class="code" href="amqsdp_8c.html#a3ab85df1f9111b4eaaa988eff903f2b4">buffSize</a> &lt; 4095) <a class="code" href="amqsdp_8c.html#a3ab85df1f9111b4eaaa988eff903f2b4">buffSize</a> = 4095;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;   <a class="code" href="amqsdp_8c.html#aff2566f4c366b48d73479bef43ee4d2e">buffer</a> = (<span class="keywordtype">char</span> *) malloc(<a class="code" href="amqsdp_8c.html#a3ab85df1f9111b4eaaa988eff903f2b4">buffSize</a>); </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;   <a class="code" href="amqsdp_8c.html#aed7ea92f45bd273dde380a45ddced592">offset</a> = 0;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;   <a class="code" href="amqsdp_8c.html#aff2566f4c366b48d73479bef43ee4d2e">buffer</a>[0] = 0x0;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#adba192fbf1af062214021fcb06229295">   89</a></span>&#160;<a class="code" href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">void</span> <a class="code" href="amqsdp_8c.html#adba192fbf1af062214021fcb06229295">unsetBufferSize</a>() {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;   <span class="keywordflow">if</span> (<a class="code" href="amqsdp_8c.html#aff2566f4c366b48d73479bef43ee4d2e">buffer</a> != 0x0) free(<a class="code" href="amqsdp_8c.html#aff2566f4c366b48d73479bef43ee4d2e">buffer</a>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#ac2122a579c04414c93370c338601c492">   93</a></span>&#160;<a class="code" href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">void</span> <a class="code" href="amqsdp_8c.html#ac2122a579c04414c93370c338601c492">setMaxGroup</a>(<span class="keywordtype">int</span> group) {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="amqsdp_8c.html#a35708eb4d2bb797b73ab54979f5b991f">maxGroup</a> = group;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#ab05385469ff40b1b77e3c41846d1421f">  108</a></span>&#160;<a class="code" href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">int</span> <a class="code" href="amqsdp_8c.html#ab05385469ff40b1b77e3c41846d1421f">enviar</a>(<span class="keywordtype">char</span> *<a class="code" href="messages_8c.html#a1c07f3735e9c63f3130a615745887a20">szMsg</a>, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> force) {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="amqsdp_8c.html#ad247c905cf5ce68a5eec344bcba86cc7">dbgLevel</a> &amp; <a class="code" href="sdpconfig_8h.html#a50ee6784b4c763d1d1353f34e1f314af">DBG_MSG</a>) fprintf(<a class="code" href="amqsdp_8c.html#a5f9e912074a29350e020b7a09f43ff32">traza</a>, <span class="stringliteral">&quot;MESAGE: %s\n&quot;</span>, szMsg);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">//    if (testMode) return;</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">if</span> (strlen(<a class="code" href="amqsdp_8c.html#aff2566f4c366b48d73479bef43ee4d2e">buffer</a>) + strlen(szMsg) &gt;= <a class="code" href="amqsdp_8c.html#a3ab85df1f9111b4eaaa988eff903f2b4">buffSize</a>) {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="amqsdp_8c.html#ad247c905cf5ce68a5eec344bcba86cc7">dbgLevel</a> &amp; <a class="code" href="sdpconfig_8h.html#acb4aca184f447d249a7ebebf2da7b5ad">DBG_SEND</a>) fprintf(<a class="code" href="amqsdp_8c.html#a5f9e912074a29350e020b7a09f43ff32">traza</a>, <span class="stringliteral">&quot;SEND  : %s\n&quot;</span>, <a class="code" href="amqsdp_8c.html#aff2566f4c366b48d73479bef43ee4d2e">buffer</a>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <a class="code" href="amqsdp_8c.html#a4fb693c3cca874aca4a9d2109cc561e5">inErr</a> = <a class="code" href="amqsdp_8c.html#a9531d8185ec00f217beb2bcb561099d6">MQPut</a>(<a class="code" href="amqsdp_8c.html#aff2566f4c366b48d73479bef43ee4d2e">buffer</a>, strlen(<a class="code" href="amqsdp_8c.html#aff2566f4c366b48d73479bef43ee4d2e">buffer</a>));</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <a class="code" href="amqsdp_8c.html#a21dcb4f76464d796d158cc3333ab18d8">msgs</a> = 0;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <a class="code" href="amqsdp_8c.html#aff2566f4c366b48d73479bef43ee4d2e">buffer</a>[0] = 0x00;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="amqsdp_8c.html#a21dcb4f76464d796d158cc3333ab18d8">msgs</a> &gt; 0) strcat(<a class="code" href="amqsdp_8c.html#aff2566f4c366b48d73479bef43ee4d2e">buffer</a>, <span class="stringliteral">&quot;:&quot;</span>);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    strcat(<a class="code" href="amqsdp_8c.html#aff2566f4c366b48d73479bef43ee4d2e">buffer</a>, szMsg);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <a class="code" href="amqsdp_8c.html#a21dcb4f76464d796d158cc3333ab18d8">msgs</a>++;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">if</span> (force || <a class="code" href="amqsdp_8c.html#a21dcb4f76464d796d158cc3333ab18d8">msgs</a> == <a class="code" href="amqsdp_8c.html#a35708eb4d2bb797b73ab54979f5b991f">maxGroup</a>) {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="amqsdp_8c.html#ad247c905cf5ce68a5eec344bcba86cc7">dbgLevel</a> &amp; <a class="code" href="sdpconfig_8h.html#acb4aca184f447d249a7ebebf2da7b5ad">DBG_SEND</a>) fprintf(<a class="code" href="amqsdp_8c.html#a5f9e912074a29350e020b7a09f43ff32">traza</a>, <span class="stringliteral">&quot;SEND  : %s\n&quot;</span>, <a class="code" href="amqsdp_8c.html#aff2566f4c366b48d73479bef43ee4d2e">buffer</a>);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <a class="code" href="amqsdp_8c.html#a4fb693c3cca874aca4a9d2109cc561e5">inErr</a> = <a class="code" href="amqsdp_8c.html#a9531d8185ec00f217beb2bcb561099d6">MQPut</a>(<a class="code" href="amqsdp_8c.html#aff2566f4c366b48d73479bef43ee4d2e">buffer</a>, strlen(<a class="code" href="amqsdp_8c.html#aff2566f4c366b48d73479bef43ee4d2e">buffer</a>));</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <a class="code" href="amqsdp_8c.html#a21dcb4f76464d796d158cc3333ab18d8">msgs</a> = 0;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <a class="code" href="amqsdp_8c.html#aff2566f4c366b48d73479bef43ee4d2e">buffer</a>[0] = 0x0;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="amqsdp_8c.html#a4fb693c3cca874aca4a9d2109cc561e5">inErr</a>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#a6a6249b42450b376958cc3f668c44fdb">  134</a></span>&#160;<a class="code" href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">int</span> <a class="code" href="amqsdp_8c.html#a6a6249b42450b376958cc3f668c44fdb">MQConnect</a>() {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">int</span> res;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordtype">char</span> *var = getenv(<span class="stringliteral">&quot;SDP_QMGR&quot;</span>);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">if</span> (var != 0x0) <a class="code" href="amqsdp_8c.html#a30bbda1ba59bb12c2895c4006804a55d">qmgr</a> = strdup(var);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    var = getenv(<span class="stringliteral">&quot;SDP_QUEUE&quot;</span>);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordflow">if</span> (var != 0x0) <a class="code" href="amqsdp_8c.html#a5a317b1553299b3cbe3ef6d6d2edcffc">qname</a> = strdup(var);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;     res = <a class="code" href="amqsdp_8c.html#ab689e2ba6771a5113551222f6189c137">MQConn</a>();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;     <span class="keywordflow">if</span> (<a class="code" href="amqsdp_8c.html#a9c88e25f067c51de112e0eacc559f462">Hcon</a> == 0x0) <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;     <span class="keywordflow">return</span> <a class="code" href="amqsdp_8c.html#a3fea393a72c9440cf4210ec0634d91b2">MQOpenOutput</a>();</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;}</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#a4cf1ee13ff615962a3d86fcb8cfa57f5">  146</a></span>&#160;<a class="code" href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">void</span> <a class="code" href="amqsdp_8c.html#a4cf1ee13ff615962a3d86fcb8cfa57f5">MQDisconnect</a>() {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;     <a class="code" href="amqsdp_8c.html#ae93fe1e642e758fbbe9c892ab8033aa4">MQClose</a>();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;     <a class="code" href="amqsdp_8c.html#acc12f0f1458385b0f5c5a6234f817205">MQDisconn</a>();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#a9531d8185ec00f217beb2bcb561099d6">  152</a></span>&#160;<a class="code" href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">long</span> <a class="code" href="amqsdp_8c.html#a9531d8185ec00f217beb2bcb561099d6">MQPut</a>(<span class="keywordtype">char</span> *msg, <span class="keywordtype">long</span> len) {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;   <span class="keywordflow">if</span> (<a class="code" href="amqsdp_8c.html#a01edfcfbde290ed1c9a7a03b8c2f4500">HQueue</a> == 0x0) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;   memcpy(md.<a class="code" href="structtag_m_q_m_d.html#a435a478822008713f8aaff89f369ed63">Format</a>, <a class="code" href="cmqc_8h.html#a972557a35dcad852e6666eae58efb3de">MQFMT_STRING</a>, (<span class="keywordtype">size_t</span>)<a class="code" href="cmqc_8h.html#ae45053fb3915ca881dd6b96296868974">MQ_FORMAT_LENGTH</a>);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;   </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;   pmo.<a class="code" href="structtag_m_q_p_m_o.html#ad7aff2d6c6044809464380998d24ec5c">Options</a> = <a class="code" href="cmqc_8h.html#a25a540d656a492f85dad54b6a3f19a80">MQPMO_NO_SYNCPOINT</a></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;               | <a class="code" href="cmqc_8h.html#a48adae06f8fcd988f8a74017c0f31718">MQPMO_FAIL_IF_QUIESCING</a></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;               | <a class="code" href="cmqc_8h.html#aac297e99c12cccb3b66804353150d21e">MQPMO_NEW_MSG_ID</a>   </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;               | <a class="code" href="cmqc_8h.html#a92793868075238eeac60e3dfc3bb2908">MQPMO_NEW_CORREL_ID</a>;      </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;   memcpy(md.<a class="code" href="structtag_m_q_m_d.html#a075d401c83d67ca688e6165dda74a44c">MsgId</a>, <a class="code" href="cmqc_8h.html#acfb32acee4ace511e30e4304cc5c94f1">MQMI_NONE</a>, <span class="keyword">sizeof</span>(md.<a class="code" href="structtag_m_q_m_d.html#a075d401c83d67ca688e6165dda74a44c">MsgId</a>) );</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;   <a class="code" href="cmqc_8h.html#a3d3805a5804e898aeabd6aca18c9fe71">MQPUT</a>(<a class="code" href="amqsdp_8c.html#a9c88e25f067c51de112e0eacc559f462">Hcon</a>, <a class="code" href="amqsdp_8c.html#a01edfcfbde290ed1c9a7a03b8c2f4500">HQueue</a>, &amp;md, &amp;pmo, len, msg, &amp;<a class="code" href="amqsdp_8c.html#a84be6334ddf78b650dfed2b632293455">mqcc</a>, &amp;<a class="code" href="amqsdp_8c.html#a3537d2a2450ea0e24a3a56001020ec5f">mqrc</a>);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;   <span class="keywordflow">if</span> (<a class="code" href="amqsdp_8c.html#a84be6334ddf78b650dfed2b632293455">mqcc</a> == <a class="code" href="cmqc_8h.html#a8752703e23e27ab346748a974a555763">MQCC_FAILED</a>) {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;     fprintf(stderr, <span class="stringliteral">&quot;SDP%05d Error enviando mensaje\n&quot;</span>, <a class="code" href="amqsdp_8c.html#a3537d2a2450ea0e24a3a56001020ec5f">mqrc</a>);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;     <span class="keywordflow">return</span> <a class="code" href="amqsdp_8c.html#a3537d2a2450ea0e24a3a56001020ec5f">mqrc</a>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;   }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;   <span class="comment">// printf(&quot;MENSAJE ENVIADO\n&quot;);</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;   <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;}</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#a5be1500f1c7b8b6afef1605c438017ef">  175</a></span>&#160;<a class="code" href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">long</span> <a class="code" href="amqsdp_8c.html#a5be1500f1c7b8b6afef1605c438017ef">MQGet</a>(<span class="keywordtype">char</span> *buff, <span class="keywordtype">long</span> len) {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;   <a class="code" href="structtag_m_q_g_m_o.html">MQGMO</a>   gmo = {<a class="code" href="cmqc_8h.html#a8ef83adde1ed136d889fecb5d9c0325a">MQGMO_DEFAULT</a>};  </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;   <a class="code" href="cmqc_8h.html#a1fb8d28cbda3fa8766a9821230cdb6d5">MQLONG</a>  messlen;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;   <span class="keywordflow">if</span> (<a class="code" href="amqsdp_8c.html#a01edfcfbde290ed1c9a7a03b8c2f4500">HQueue</a> == 0x0) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;   </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;   memcpy(md.<a class="code" href="structtag_m_q_m_d.html#a075d401c83d67ca688e6165dda74a44c">MsgId</a>, <a class="code" href="cmqc_8h.html#acfb32acee4ace511e30e4304cc5c94f1">MQMI_NONE</a>, <span class="keyword">sizeof</span>(md.<a class="code" href="structtag_m_q_m_d.html#a075d401c83d67ca688e6165dda74a44c">MsgId</a>));</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;   memcpy(md.<a class="code" href="structtag_m_q_m_d.html#acac8d73138c2c618b41a274eb92e5f2a">CorrelId</a>, <a class="code" href="cmqc_8h.html#a66070cd63c2cee8d3240da4155c8a22d">MQCI_NONE</a>, <span class="keyword">sizeof</span>(md.<a class="code" href="structtag_m_q_m_d.html#acac8d73138c2c618b41a274eb92e5f2a">CorrelId</a>));</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;   md.<a class="code" href="structtag_m_q_m_d.html#a30167bf454a49a60fd3fe4e9e586af34">Encoding</a>       = <a class="code" href="cmqc_8h.html#aa3be8a0fc464fc4226b741aa6aa591a2">MQENC_NATIVE</a>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;   md.<a class="code" href="structtag_m_q_m_d.html#a4d8d1961a991850d1355cdf9b4680b8e">CodedCharSetId</a> = <a class="code" href="cmqc_8h.html#a8eb85029674c000bb7b6a4ac0eef8223">MQCCSI_Q_MGR</a>;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;   gmo.<a class="code" href="structtag_m_q_g_m_o.html#ad7aff2d6c6044809464380998d24ec5c">Options</a> = <a class="code" href="cmqc_8h.html#a6027a472bca212e1b954402c49181df1">MQGMO_WAIT</a>           <span class="comment">/* wait for new messages       */</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;               | <a class="code" href="cmqc_8h.html#a3c364888555afefd40c8632b289f5a48">MQGMO_NO_SYNCPOINT</a>   <span class="comment">/* no transaction              */</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;               | <a class="code" href="cmqc_8h.html#a136b1082d6fea3ee917336b735fc0f0d">MQGMO_CONVERT</a>;       <span class="comment">/* convert if necessary        */</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;   gmo.<a class="code" href="structtag_m_q_g_m_o.html#a6f3538bd01d237755fd6ab7dad5584d0">WaitInterval</a> = 1000;          <span class="comment">/* 1 second limit for waiting */</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;   <a class="code" href="cmqc_8h.html#acc062839a7eec1e5c00fc1a9dd25b4b9">MQGET</a>(<a class="code" href="amqsdp_8c.html#a9c88e25f067c51de112e0eacc559f462">Hcon</a>, <a class="code" href="amqsdp_8c.html#a01edfcfbde290ed1c9a7a03b8c2f4500">HQueue</a>, &amp;md, &amp;gmo, len, buff, &amp;messlen, &amp;<a class="code" href="amqsdp_8c.html#a84be6334ddf78b650dfed2b632293455">mqcc</a>, &amp;<a class="code" href="amqsdp_8c.html#a3537d2a2450ea0e24a3a56001020ec5f">mqrc</a>);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;   <span class="keywordflow">if</span> (<a class="code" href="amqsdp_8c.html#a84be6334ddf78b650dfed2b632293455">mqcc</a> == 0) buff[messlen] = 0x0;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;   <span class="keywordflow">return</span> <a class="code" href="amqsdp_8c.html#a3537d2a2450ea0e24a3a56001020ec5f">mqrc</a>; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;}</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="comment">/********************************************************************/</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment">/*                    PRIVATE FUNCTIONS                             */</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment">/********************************************************************/</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#ab689e2ba6771a5113551222f6189c137">  205</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="amqsdp_8c.html#ab689e2ba6771a5113551222f6189c137">MQConn</a>() {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="comment">//   strncpy(QMName, qmgr, (size_t)MQ_Q_MGR_NAME_LENGTH);</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;   <a class="code" href="amqsdp_8c.html#a52b0abed1d4b7d10c3a8e42e40f8f80a">QMName</a>[0] = 0;    <span class="comment">/* default */</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;   <a class="code" href="cmqc_8h.html#a434a89bc6ea80d5436350fe499549bdf">MQCONNX</a>(<a class="code" href="amqsdp_8c.html#a52b0abed1d4b7d10c3a8e42e40f8f80a">QMName</a>, &amp;cno,  &amp;<a class="code" href="amqsdp_8c.html#a9c88e25f067c51de112e0eacc559f462">Hcon</a>, &amp;<a class="code" href="amqsdp_8c.html#a84be6334ddf78b650dfed2b632293455">mqcc</a>,  &amp;<a class="code" href="amqsdp_8c.html#a3537d2a2450ea0e24a3a56001020ec5f">mqrc</a>);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;   <span class="keywordflow">if</span> (<a class="code" href="amqsdp_8c.html#a84be6334ddf78b650dfed2b632293455">mqcc</a> == <a class="code" href="cmqc_8h.html#a8752703e23e27ab346748a974a555763">MQCC_FAILED</a>) {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;     fprintf(stderr, <span class="stringliteral">&quot;SDP%05d Error conectando al servidor de colas\n&quot;</span>, <a class="code" href="amqsdp_8c.html#a3537d2a2450ea0e24a3a56001020ec5f">mqrc</a>);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;     <span class="keywordflow">return</span> <a class="code" href="amqsdp_8c.html#a3537d2a2450ea0e24a3a56001020ec5f">mqrc</a>;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;   }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;   <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;}</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#acc12f0f1458385b0f5c5a6234f817205">  219</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="amqsdp_8c.html#acc12f0f1458385b0f5c5a6234f817205">MQDisconn</a>() {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;     <a class="code" href="cmqc_8h.html#a483b3c7417d9718e1d2bb6aa4fdb3427">MQDISC</a>(&amp;<a class="code" href="amqsdp_8c.html#a9c88e25f067c51de112e0eacc559f462">Hcon</a>, &amp;<a class="code" href="amqsdp_8c.html#a84be6334ddf78b650dfed2b632293455">mqcc</a>, &amp;<a class="code" href="amqsdp_8c.html#a3537d2a2450ea0e24a3a56001020ec5f">mqrc</a>);  </div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;}</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#a3fea393a72c9440cf4210ec0634d91b2">  223</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="amqsdp_8c.html#a3fea393a72c9440cf4210ec0634d91b2">MQOpenOutput</a>() {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;     <a class="code" href="amqsdp_8c.html#ac43cc6b9c68558cea8e4a5b632df0363">O_options</a> = <a class="code" href="cmqc_8h.html#ae0afea6a6919c47fbcca81d648a363ca">MQOO_OUTPUT</a>            <span class="comment">/* open queue for output     */</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;               | <a class="code" href="cmqc_8h.html#af4d45982f16fe489b3878d05c4cf1374">MQOO_FAIL_IF_QUIESCING</a> <span class="comment">/* but not if MQM stopping   */</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;               ;                   </div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;     <span class="keywordflow">return</span> <a class="code" href="amqsdp_8c.html#a196cb274ac9c69cbe5daf9371668025c">MQOpen</a>();</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;}</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00231"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#ace216d31cea6ba0b0e5336b2517ed2a5">  231</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="amqsdp_8c.html#ace216d31cea6ba0b0e5336b2517ed2a5">MQOpenInput</a>() {</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;     <a class="code" href="amqsdp_8c.html#ac43cc6b9c68558cea8e4a5b632df0363">O_options</a> = <a class="code" href="cmqc_8h.html#a51f355ab9b2e3d7fe3ae9a4965cd6f48">MQOO_INPUT_AS_Q_DEF</a>    <span class="comment">/* open queue for input      */</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;               | <a class="code" href="cmqc_8h.html#af4d45982f16fe489b3878d05c4cf1374">MQOO_FAIL_IF_QUIESCING</a> <span class="comment">/* but not if MQM stopping   */</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;               ;                        <span class="comment">/* = 0x2001 = 8193 decimal   */</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="amqsdp_8c.html#a196cb274ac9c69cbe5daf9371668025c">MQOpen</a>();</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;}</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
+<div class="line"><a name="l00238"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#a196cb274ac9c69cbe5daf9371668025c">  238</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="amqsdp_8c.html#a196cb274ac9c69cbe5daf9371668025c">MQOpen</a>() {</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    strncpy(od.<a class="code" href="structtag_m_q_o_d.html#a2106fb125a9f7fc606340ba23c006bc0">ObjectName</a>, <a class="code" href="amqsdp_8c.html#a5a317b1553299b3cbe3ef6d6d2edcffc">qname</a>, (<span class="keywordtype">size_t</span>)<a class="code" href="cmqc_8h.html#a8310150847a2007d10e2e2004448661f">MQ_Q_NAME_LENGTH</a>);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <a class="code" href="cmqc_8h.html#aedb09fd69f4258761b5414397e568424">MQOPEN</a>(<a class="code" href="amqsdp_8c.html#a9c88e25f067c51de112e0eacc559f462">Hcon</a>, &amp;od, <a class="code" href="amqsdp_8c.html#ac43cc6b9c68558cea8e4a5b632df0363">O_options</a>, &amp;<a class="code" href="amqsdp_8c.html#a01edfcfbde290ed1c9a7a03b8c2f4500">HQueue</a>, &amp;<a class="code" href="amqsdp_8c.html#a84be6334ddf78b650dfed2b632293455">mqcc</a>, &amp;<a class="code" href="amqsdp_8c.html#a3537d2a2450ea0e24a3a56001020ec5f">mqrc</a>); </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;   <span class="keywordflow">if</span> (<a class="code" href="amqsdp_8c.html#a84be6334ddf78b650dfed2b632293455">mqcc</a> == <a class="code" href="cmqc_8h.html#a8752703e23e27ab346748a974a555763">MQCC_FAILED</a>)    {</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;     fprintf(stderr, <span class="stringliteral">&quot;SDP%05d Error abriendo la cola %s\n&quot;</span>, <a class="code" href="amqsdp_8c.html#a3537d2a2450ea0e24a3a56001020ec5f">mqrc</a>, <a class="code" href="amqsdp_8c.html#a5a317b1553299b3cbe3ef6d6d2edcffc">qname</a>);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;     <span class="keywordflow">return</span> <a class="code" href="amqsdp_8c.html#a3537d2a2450ea0e24a3a56001020ec5f">mqrc</a>;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;   }</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;   <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;}</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00251"></a><span class="lineno"><a class="line" href="amqsdp_8c.html#ae93fe1e642e758fbbe9c892ab8033aa4">  251</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="amqsdp_8c.html#ae93fe1e642e758fbbe9c892ab8033aa4">MQClose</a>() {</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;     <a class="code" href="cmqc_8h.html#a7f40e0e9b0e6436eae63d0630177eef0">MQCLOSE</a>(<a class="code" href="amqsdp_8c.html#a9c88e25f067c51de112e0eacc559f462">Hcon</a>, &amp;<a class="code" href="amqsdp_8c.html#a01edfcfbde290ed1c9a7a03b8c2f4500">HQueue</a>, <a class="code" href="amqsdp_8c.html#a0cfbea0c21c76cde9732ffc87c9ed260">C_options</a>, &amp;<a class="code" href="amqsdp_8c.html#a84be6334ddf78b650dfed2b632293455">mqcc</a>, &amp;<a class="code" href="amqsdp_8c.html#a3537d2a2450ea0e24a3a56001020ec5f">mqrc</a>);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;}</div>
+<div class="ttc" id="structtag_m_q_m_d_html_a435a478822008713f8aaff89f369ed63"><div class="ttname"><a href="structtag_m_q_m_d.html#a435a478822008713f8aaff89f369ed63">tagMQMD::Format</a></div><div class="ttdeci">MQCHAR8 Format</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l04429">cmqc.h:4429</a></div></div>
+<div class="ttc" id="structtag_m_q_p_m_o_html_ad7aff2d6c6044809464380998d24ec5c"><div class="ttname"><a href="structtag_m_q_p_m_o.html#ad7aff2d6c6044809464380998d24ec5c">tagMQPMO::Options</a></div><div class="ttdeci">MQLONG Options</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l04815">cmqc.h:4815</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_a5f9e912074a29350e020b7a09f43ff32"><div class="ttname"><a href="amqsdp_8c.html#a5f9e912074a29350e020b7a09f43ff32">traza</a></div><div class="ttdeci">FILE * traza</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00059">amqsdp.c:59</a></div></div>
+<div class="ttc" id="cmqc_8h_html_a00170ac137e1beb55a3c34f07a39fcc4"><div class="ttname"><a href="cmqc_8h.html#a00170ac137e1beb55a3c34f07a39fcc4">MQHCONN</a></div><div class="ttdeci">MQLONG MQHCONN</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l03686">cmqc.h:3686</a></div></div>
+<div class="ttc" id="cmqc_8h_html_a972557a35dcad852e6666eae58efb3de"><div class="ttname"><a href="cmqc_8h.html#a972557a35dcad852e6666eae58efb3de">MQFMT_STRING</a></div><div class="ttdeci">#define MQFMT_STRING</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l01093">cmqc.h:1093</a></div></div>
+<div class="ttc" id="cmqc_8h_html_a25a540d656a492f85dad54b6a3f19a80"><div class="ttname"><a href="cmqc_8h.html#a25a540d656a492f85dad54b6a3f19a80">MQPMO_NO_SYNCPOINT</a></div><div class="ttdeci">#define MQPMO_NO_SYNCPOINT</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l01479">cmqc.h:1479</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_a84be6334ddf78b650dfed2b632293455"><div class="ttname"><a href="amqsdp_8c.html#a84be6334ddf78b650dfed2b632293455">mqcc</a></div><div class="ttdeci">MQLONG mqcc</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00036">amqsdp.c:36</a></div></div>
+<div class="ttc" id="structtag_m_q_g_m_o_html_ad7aff2d6c6044809464380998d24ec5c"><div class="ttname"><a href="structtag_m_q_g_m_o.html#ad7aff2d6c6044809464380998d24ec5c">tagMQGMO::Options</a></div><div class="ttdeci">MQLONG Options</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l04284">cmqc.h:4284</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_a01edfcfbde290ed1c9a7a03b8c2f4500"><div class="ttname"><a href="amqsdp_8c.html#a01edfcfbde290ed1c9a7a03b8c2f4500">HQueue</a></div><div class="ttdeci">MQHOBJ HQueue</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00033">amqsdp.c:33</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_ae93fe1e642e758fbbe9c892ab8033aa4"><div class="ttname"><a href="amqsdp_8c.html#ae93fe1e642e758fbbe9c892ab8033aa4">MQClose</a></div><div class="ttdeci">void MQClose()</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00251">amqsdp.c:251</a></div></div>
+<div class="ttc" id="cmqc_8h_html_acc062839a7eec1e5c00fc1a9dd25b4b9"><div class="ttname"><a href="cmqc_8h.html#acc062839a7eec1e5c00fc1a9dd25b4b9">MQGET</a></div><div class="ttdeci">void MQENTRY MQGET(MQHCONN Hconn, MQHOBJ Hobj, PMQVOID pMsgDesc, PMQVOID pGetMsgOpts,   MQLONG BufferLength, PMQVOID pBuffer, PMQLONG pDataLength, PMQLONG pCompCode, PMQLONG pReason)</div></div>
+<div class="ttc" id="cmqc_8h_html_a8886d85ef78d739f38beb8a302a0b3c0"><div class="ttname"><a href="cmqc_8h.html#a8886d85ef78d739f38beb8a302a0b3c0">MQMD_DEFAULT</a></div><div class="ttdeci">#define MQMD_DEFAULT</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l04460">cmqc.h:4460</a></div></div>
+<div class="ttc" id="cmqc_8h_html_ac093f559f81163292e6016c68c947164"><div class="ttname"><a href="cmqc_8h.html#ac093f559f81163292e6016c68c947164">MQHOBJ</a></div><div class="ttdeci">MQLONG MQHOBJ</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l03689">cmqc.h:3689</a></div></div>
+<div class="ttc" id="cmqc_8h_html_a8eb85029674c000bb7b6a4ac0eef8223"><div class="ttname"><a href="cmqc_8h.html#a8eb85029674c000bb7b6a4ac0eef8223">MQCCSI_Q_MGR</a></div><div class="ttdeci">#define MQCCSI_Q_MGR</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l01065">cmqc.h:1065</a></div></div>
+<div class="ttc" id="cmqc_8h_html_a51f355ab9b2e3d7fe3ae9a4965cd6f48"><div class="ttname"><a href="cmqc_8h.html#a51f355ab9b2e3d7fe3ae9a4965cd6f48">MQOO_INPUT_AS_Q_DEF</a></div><div class="ttdeci">#define MQOO_INPUT_AS_Q_DEF</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l03491">cmqc.h:3491</a></div></div>
+<div class="ttc" id="_s_d_p_t_r_a_p_8h_html"><div class="ttname"><a href="_s_d_p_t_r_a_p_8h.html">SDPTRAP.h</a></div><div class="ttdoc">Fichero de cabecera con los ficheros de cabecera comunes. </div></div>
+<div class="ttc" id="amqsdp_8c_html_a684758dad6f1bcbcf33011bad12a3687"><div class="ttname"><a href="amqsdp_8c.html#a684758dad6f1bcbcf33011bad12a3687">cno</a></div><div class="ttdeci">MQCNO cno</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00029">amqsdp.c:29</a></div></div>
+<div class="ttc" id="cmqc_8h_html_af9f6084a129db0fe30bbd58db99540e9"><div class="ttname"><a href="cmqc_8h.html#af9f6084a129db0fe30bbd58db99540e9">MQCNO_DEFAULT</a></div><div class="ttdeci">#define MQCNO_DEFAULT</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l04130">cmqc.h:4130</a></div></div>
+<div class="ttc" id="structtag_m_q_m_d_html_a4d8d1961a991850d1355cdf9b4680b8e"><div class="ttname"><a href="structtag_m_q_m_d.html#a4d8d1961a991850d1355cdf9b4680b8e">tagMQMD::CodedCharSetId</a></div><div class="ttdeci">MQLONG CodedCharSetId</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l04427">cmqc.h:4427</a></div></div>
+<div class="ttc" id="cmqc_8h_html_acfb32acee4ace511e30e4304cc5c94f1"><div class="ttname"><a href="cmqc_8h.html#acfb32acee4ace511e30e4304cc5c94f1">MQMI_NONE</a></div><div class="ttdeci">#define MQMI_NONE</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l01142">cmqc.h:1142</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_adba192fbf1af062214021fcb06229295"><div class="ttname"><a href="amqsdp_8c.html#adba192fbf1af062214021fcb06229295">unsetBufferSize</a></div><div class="ttdeci">_EXT_ void unsetBufferSize()</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00089">amqsdp.c:89</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_ac43cc6b9c68558cea8e4a5b632df0363"><div class="ttname"><a href="amqsdp_8c.html#ac43cc6b9c68558cea8e4a5b632df0363">O_options</a></div><div class="ttdeci">MQLONG O_options</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00034">amqsdp.c:34</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_aed7ea92f45bd273dde380a45ddced592"><div class="ttname"><a href="amqsdp_8c.html#aed7ea92f45bd273dde380a45ddced592">offset</a></div><div class="ttdeci">int offset</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00052">amqsdp.c:52</a></div></div>
+<div class="ttc" id="structtag_m_q_o_d_html_a2106fb125a9f7fc606340ba23c006bc0"><div class="ttname"><a href="structtag_m_q_o_d.html#a2106fb125a9f7fc606340ba23c006bc0">tagMQOD::ObjectName</a></div><div class="ttdeci">MQCHAR48 ObjectName</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l04707">cmqc.h:4707</a></div></div>
+<div class="ttc" id="cmqc_8h_html_aac297e99c12cccb3b66804353150d21e"><div class="ttname"><a href="cmqc_8h.html#aac297e99c12cccb3b66804353150d21e">MQPMO_NEW_MSG_ID</a></div><div class="ttdeci">#define MQPMO_NEW_MSG_ID</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l01481">cmqc.h:1481</a></div></div>
+<div class="ttc" id="cmqc_8h_html_a8752703e23e27ab346748a974a555763"><div class="ttname"><a href="cmqc_8h.html#a8752703e23e27ab346748a974a555763">MQCC_FAILED</a></div><div class="ttdeci">#define MQCC_FAILED</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l01969">cmqc.h:1969</a></div></div>
+<div class="ttc" id="global_8h_html"><div class="ttname"><a href="global_8h.html">global.h</a></div><div class="ttdoc">Define las variables de uso global para todo el sistema. </div></div>
+<div class="ttc" id="sdpconfig_8h_html_a50ee6784b4c763d1d1353f34e1f314af"><div class="ttname"><a href="sdpconfig_8h.html#a50ee6784b4c763d1d1353f34e1f314af">DBG_MSG</a></div><div class="ttdeci">#define DBG_MSG</div><div class="ttdef"><b>Definition:</b> <a href="sdpconfig_8h_source.html#l00047">sdpconfig.h:47</a></div></div>
+<div class="ttc" id="cmqc_8h_html_a6027a472bca212e1b954402c49181df1"><div class="ttname"><a href="cmqc_8h.html#a6027a472bca212e1b954402c49181df1">MQGMO_WAIT</a></div><div class="ttdeci">#define MQGMO_WAIT</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l00727">cmqc.h:727</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_ad247c905cf5ce68a5eec344bcba86cc7"><div class="ttname"><a href="amqsdp_8c.html#ad247c905cf5ce68a5eec344bcba86cc7">dbgLevel</a></div><div class="ttdeci">int dbgLevel</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00058">amqsdp.c:58</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_a3ab85df1f9111b4eaaa988eff903f2b4"><div class="ttname"><a href="amqsdp_8c.html#a3ab85df1f9111b4eaaa988eff903f2b4">buffSize</a></div><div class="ttdeci">long buffSize</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00047">amqsdp.c:47</a></div></div>
+<div class="ttc" id="cmqc_8h_html_a483b3c7417d9718e1d2bb6aa4fdb3427"><div class="ttname"><a href="cmqc_8h.html#a483b3c7417d9718e1d2bb6aa4fdb3427">MQDISC</a></div><div class="ttdeci">void MQENTRY MQDISC(PMQHCONN pHconn, PMQLONG pCompCode, PMQLONG pReason)</div></div>
+<div class="ttc" id="amqsdp_8c_html_a5a317b1553299b3cbe3ef6d6d2edcffc"><div class="ttname"><a href="amqsdp_8c.html#a5a317b1553299b3cbe3ef6d6d2edcffc">qname</a></div><div class="ttdeci">char * qname</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00042">amqsdp.c:42</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_a3537d2a2450ea0e24a3a56001020ec5f"><div class="ttname"><a href="amqsdp_8c.html#a3537d2a2450ea0e24a3a56001020ec5f">mqrc</a></div><div class="ttdeci">MQLONG mqrc</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00037">amqsdp.c:37</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_a21dcb4f76464d796d158cc3333ab18d8"><div class="ttname"><a href="amqsdp_8c.html#a21dcb4f76464d796d158cc3333ab18d8">msgs</a></div><div class="ttdeci">int msgs</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00050">amqsdp.c:50</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_a6a6249b42450b376958cc3f668c44fdb"><div class="ttname"><a href="amqsdp_8c.html#a6a6249b42450b376958cc3f668c44fdb">MQConnect</a></div><div class="ttdeci">_EXT_ int MQConnect()</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00134">amqsdp.c:134</a></div></div>
+<div class="ttc" id="structtag_m_q_m_d_html_acac8d73138c2c618b41a274eb92e5f2a"><div class="ttname"><a href="structtag_m_q_m_d.html#acac8d73138c2c618b41a274eb92e5f2a">tagMQMD::CorrelId</a></div><div class="ttdeci">MQBYTE24 CorrelId</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l04433">cmqc.h:4433</a></div></div>
+<div class="ttc" id="structtag_m_q_g_m_o_html"><div class="ttname"><a href="structtag_m_q_g_m_o.html">tagMQGMO</a></div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l04281">cmqc.h:4281</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_acc12f0f1458385b0f5c5a6234f817205"><div class="ttname"><a href="amqsdp_8c.html#acc12f0f1458385b0f5c5a6234f817205">MQDisconn</a></div><div class="ttdeci">void MQDisconn()</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00219">amqsdp.c:219</a></div></div>
+<div class="ttc" id="cmqc_8h_html_a8ef83adde1ed136d889fecb5d9c0325a"><div class="ttname"><a href="cmqc_8h.html#a8ef83adde1ed136d889fecb5d9c0325a">MQGMO_DEFAULT</a></div><div class="ttdeci">#define MQGMO_DEFAULT</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l04312">cmqc.h:4312</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_ae87fabdedbfb0255167d3f0a7705ec2e"><div class="ttname"><a href="amqsdp_8c.html#ae87fabdedbfb0255167d3f0a7705ec2e">md</a></div><div class="ttdeci">MQMD md</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00027">amqsdp.c:27</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_a9531d8185ec00f217beb2bcb561099d6"><div class="ttname"><a href="amqsdp_8c.html#a9531d8185ec00f217beb2bcb561099d6">MQPut</a></div><div class="ttdeci">_EXT_ long MQPut(char *msg, long len)</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00152">amqsdp.c:152</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_a30bbda1ba59bb12c2895c4006804a55d"><div class="ttname"><a href="amqsdp_8c.html#a30bbda1ba59bb12c2895c4006804a55d">qmgr</a></div><div class="ttdeci">char * qmgr</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00041">amqsdp.c:41</a></div></div>
+<div class="ttc" id="cmqc_8h_html_a8310150847a2007d10e2e2004448661f"><div class="ttname"><a href="cmqc_8h.html#a8310150847a2007d10e2e2004448661f">MQ_Q_NAME_LENGTH</a></div><div class="ttdeci">#define MQ_Q_NAME_LENGTH</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l01914">cmqc.h:1914</a></div></div>
+<div class="ttc" id="cmqc_8h_html_a48adae06f8fcd988f8a74017c0f31718"><div class="ttname"><a href="cmqc_8h.html#a48adae06f8fcd988f8a74017c0f31718">MQPMO_FAIL_IF_QUIESCING</a></div><div class="ttdeci">#define MQPMO_FAIL_IF_QUIESCING</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l01488">cmqc.h:1488</a></div></div>
+<div class="ttc" id="structtag_m_q_m_d_html_a075d401c83d67ca688e6165dda74a44c"><div class="ttname"><a href="structtag_m_q_m_d.html#a075d401c83d67ca688e6165dda74a44c">tagMQMD::MsgId</a></div><div class="ttdeci">MQBYTE24 MsgId</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l04432">cmqc.h:4432</a></div></div>
+<div class="ttc" id="cmqc_8h_html"><div class="ttname"><a href="cmqc_8h.html">cmqc.h</a></div></div>
+<div class="ttc" id="cmqc_8h_html_aaca8efdc3c3886d6f06d841e99b3824b"><div class="ttname"><a href="cmqc_8h.html#aaca8efdc3c3886d6f06d841e99b3824b">MQOD_DEFAULT</a></div><div class="ttdeci">#define MQOD_DEFAULT</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l04739">cmqc.h:4739</a></div></div>
+<div class="ttc" id="cmqc_8h_html_ae0afea6a6919c47fbcca81d648a363ca"><div class="ttname"><a href="cmqc_8h.html#ae0afea6a6919c47fbcca81d648a363ca">MQOO_OUTPUT</a></div><div class="ttdeci">#define MQOO_OUTPUT</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l03495">cmqc.h:3495</a></div></div>
+<div class="ttc" id="structtag_m_q_c_s_p_html"><div class="ttname"><a href="structtag_m_q_c_s_p.html">tagMQCSP</a></div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l04071">cmqc.h:4071</a></div></div>
+<div class="ttc" id="cmqc_8h_html_a7f40e0e9b0e6436eae63d0630177eef0"><div class="ttname"><a href="cmqc_8h.html#a7f40e0e9b0e6436eae63d0630177eef0">MQCLOSE</a></div><div class="ttdeci">void MQENTRY MQCLOSE(MQHCONN Hconn, PMQHOBJ pHobj, MQLONG Options,   PMQLONG pCompCode, PMQLONG pReason)</div></div>
+<div class="ttc" id="structtag_m_q_m_d_html_a30167bf454a49a60fd3fe4e9e586af34"><div class="ttname"><a href="structtag_m_q_m_d.html#a30167bf454a49a60fd3fe4e9e586af34">tagMQMD::Encoding</a></div><div class="ttdeci">MQLONG Encoding</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l04426">cmqc.h:4426</a></div></div>
+<div class="ttc" id="sdpconfig_8h_html_aeefcc7b6f118beefd2cec532afced5df"><div class="ttname"><a href="sdpconfig_8h.html#aeefcc7b6f118beefd2cec532afced5df">ITEMS_BY_MSG</a></div><div class="ttdeci">#define ITEMS_BY_MSG</div><div class="ttdef"><b>Definition:</b> <a href="sdpconfig_8h_source.html#l00029">sdpconfig.h:29</a></div></div>
+<div class="ttc" id="cmqc_8h_html_aedb09fd69f4258761b5414397e568424"><div class="ttname"><a href="cmqc_8h.html#aedb09fd69f4258761b5414397e568424">MQOPEN</a></div><div class="ttdeci">void MQENTRY MQOPEN(MQHCONN Hconn, PMQVOID pObjDesc, MQLONG Options,   PMQHOBJ pHobj, PMQLONG pCompCode, PMQLONG pReason)</div></div>
+<div class="ttc" id="amqsdp_8c_html_a52b0abed1d4b7d10c3a8e42e40f8f80a"><div class="ttname"><a href="amqsdp_8c.html#a52b0abed1d4b7d10c3a8e42e40f8f80a">QMName</a></div><div class="ttdeci">char QMName[50]</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00039">amqsdp.c:39</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_ab689e2ba6771a5113551222f6189c137"><div class="ttname"><a href="amqsdp_8c.html#ab689e2ba6771a5113551222f6189c137">MQConn</a></div><div class="ttdeci">int MQConn()</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00205">amqsdp.c:205</a></div></div>
+<div class="ttc" id="sdpconfig_8h_html_acb4aca184f447d249a7ebebf2da7b5ad"><div class="ttname"><a href="sdpconfig_8h.html#acb4aca184f447d249a7ebebf2da7b5ad">DBG_SEND</a></div><div class="ttdeci">#define DBG_SEND</div><div class="ttdef"><b>Definition:</b> <a href="sdpconfig_8h_source.html#l00048">sdpconfig.h:48</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_a3fb375f4ee6971a0a7241c1b9fe0250d"><div class="ttname"><a href="amqsdp_8c.html#a3fb375f4ee6971a0a7241c1b9fe0250d">od</a></div><div class="ttdeci">MQOD od</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00026">amqsdp.c:26</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_a5be1500f1c7b8b6afef1605c438017ef"><div class="ttname"><a href="amqsdp_8c.html#a5be1500f1c7b8b6afef1605c438017ef">MQGet</a></div><div class="ttdeci">_EXT_ long MQGet(char *buff, long len)</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00175">amqsdp.c:175</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_a35708eb4d2bb797b73ab54979f5b991f"><div class="ttname"><a href="amqsdp_8c.html#a35708eb4d2bb797b73ab54979f5b991f">maxGroup</a></div><div class="ttdeci">int maxGroup</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00051">amqsdp.c:51</a></div></div>
+<div class="ttc" id="messages_8c_html_a1c07f3735e9c63f3130a615745887a20"><div class="ttname"><a href="messages_8c.html#a1c07f3735e9c63f3130a615745887a20">szMsg</a></div><div class="ttdeci">char szMsg[4095]</div><div class="ttdef"><b>Definition:</b> <a href="messages_8c_source.html#l00041">messages.c:41</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_ab05385469ff40b1b77e3c41846d1421f"><div class="ttname"><a href="amqsdp_8c.html#ab05385469ff40b1b77e3c41846d1421f">enviar</a></div><div class="ttdeci">_EXT_ int enviar(char *szMsg, unsigned char force)</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00108">amqsdp.c:108</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_a3c337f7b77e495f85489f862d4df359c"><div class="ttname"><a href="amqsdp_8c.html#a3c337f7b77e495f85489f862d4df359c">setBufferSize</a></div><div class="ttdeci">_EXT_ void setBufferSize()</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00082">amqsdp.c:82</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_a4cf1ee13ff615962a3d86fcb8cfa57f5"><div class="ttname"><a href="amqsdp_8c.html#a4cf1ee13ff615962a3d86fcb8cfa57f5">MQDisconnect</a></div><div class="ttdeci">_EXT_ void MQDisconnect()</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00146">amqsdp.c:146</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_aff2566f4c366b48d73479bef43ee4d2e"><div class="ttname"><a href="amqsdp_8c.html#aff2566f4c366b48d73479bef43ee4d2e">buffer</a></div><div class="ttdeci">char * buffer</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00053">amqsdp.c:53</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_a12766b7a05c27f09555f40c88e08610b"><div class="ttname"><a href="amqsdp_8c.html#a12766b7a05c27f09555f40c88e08610b">initAMQ</a></div><div class="ttdeci">_EXT_ void initAMQ(int d, FILE *f)</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00077">amqsdp.c:77</a></div></div>
+<div class="ttc" id="cmqc_8h_html_a1fb8d28cbda3fa8766a9821230cdb6d5"><div class="ttname"><a href="cmqc_8h.html#a1fb8d28cbda3fa8766a9821230cdb6d5">MQLONG</a></div><div class="ttdeci">long MQLONG</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l03640">cmqc.h:3640</a></div></div>
+<div class="ttc" id="cmqc_8h_html_a434a89bc6ea80d5436350fe499549bdf"><div class="ttname"><a href="cmqc_8h.html#a434a89bc6ea80d5436350fe499549bdf">MQCONNX</a></div><div class="ttdeci">void MQENTRY MQCONNX(PMQCHAR pQMgrName, PMQCNO pConnectOpts,   PMQHCONN pHconn, PMQLONG pCompCode, PMQLONG pReason)</div></div>
+<div class="ttc" id="cmqc_8h_html_ae45053fb3915ca881dd6b96296868974"><div class="ttname"><a href="cmqc_8h.html#ae45053fb3915ca881dd6b96296868974">MQ_FORMAT_LENGTH</a></div><div class="ttdeci">#define MQ_FORMAT_LENGTH</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l01862">cmqc.h:1862</a></div></div>
+<div class="ttc" id="cmqc_8h_html_af4d45982f16fe489b3878d05c4cf1374"><div class="ttname"><a href="cmqc_8h.html#af4d45982f16fe489b3878d05c4cf1374">MQOO_FAIL_IF_QUIESCING</a></div><div class="ttdeci">#define MQOO_FAIL_IF_QUIESCING</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l03504">cmqc.h:3504</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_a3fea393a72c9440cf4210ec0634d91b2"><div class="ttname"><a href="amqsdp_8c.html#a3fea393a72c9440cf4210ec0634d91b2">MQOpenOutput</a></div><div class="ttdeci">int MQOpenOutput()</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00223">amqsdp.c:223</a></div></div>
+<div class="ttc" id="cmqc_8h_html_a7b568f0009a2c3c452407a4f803fa87a"><div class="ttname"><a href="cmqc_8h.html#a7b568f0009a2c3c452407a4f803fa87a">MQPMO_DEFAULT</a></div><div class="ttdeci">#define MQPMO_DEFAULT</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l04849">cmqc.h:4849</a></div></div>
+<div class="ttc" id="structtag_m_q_o_d_html"><div class="ttname"><a href="structtag_m_q_o_d.html">tagMQOD</a></div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l04703">cmqc.h:4703</a></div></div>
+<div class="ttc" id="structtag_m_q_c_n_o_html"><div class="ttname"><a href="structtag_m_q_c_n_o.html">tagMQCNO</a></div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l04106">cmqc.h:4106</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_a094c19a9716364046b2779fff6efa664"><div class="ttname"><a href="amqsdp_8c.html#a094c19a9716364046b2779fff6efa664">MQFree</a></div><div class="ttdeci">void MQFree(void)</div></div>
+<div class="ttc" id="amqsdp_8c_html_a017b205b3e8f746565c6358ba97f80cd"><div class="ttname"><a href="amqsdp_8c.html#a017b205b3e8f746565c6358ba97f80cd">pmo</a></div><div class="ttdeci">MQPMO pmo</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00028">amqsdp.c:28</a></div></div>
+<div class="ttc" id="amqsdp_8h_html"><div class="ttname"><a href="amqsdp_8h.html">amqsdp.h</a></div><div class="ttdoc">Cliente Websphere MQSeries. </div></div>
+<div class="ttc" id="structtag_m_q_m_d_html"><div class="ttname"><a href="structtag_m_q_m_d.html">tagMQMD</a></div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l04419">cmqc.h:4419</a></div></div>
+<div class="ttc" id="cmqc_8h_html_a087ea7addc51ee1b57b13d89b0852cc7"><div class="ttname"><a href="cmqc_8h.html#a087ea7addc51ee1b57b13d89b0852cc7">MQCSP_DEFAULT</a></div><div class="ttdeci">#define MQCSP_DEFAULT</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l04085">cmqc.h:4085</a></div></div>
+<div class="ttc" id="cmqc_8h_html_aa3be8a0fc464fc4226b741aa6aa591a2"><div class="ttname"><a href="cmqc_8h.html#aa3be8a0fc464fc4226b741aa6aa591a2">MQENC_NATIVE</a></div><div class="ttdeci">#define MQENC_NATIVE</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l01022">cmqc.h:1022</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_a4fb693c3cca874aca4a9d2109cc561e5"><div class="ttname"><a href="amqsdp_8c.html#a4fb693c3cca874aca4a9d2109cc561e5">inErr</a></div><div class="ttdeci">int inErr</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00057">amqsdp.c:57</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_ac2122a579c04414c93370c338601c492"><div class="ttname"><a href="amqsdp_8c.html#ac2122a579c04414c93370c338601c492">setMaxGroup</a></div><div class="ttdeci">_EXT_ void setMaxGroup(int group)</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00093">amqsdp.c:93</a></div></div>
+<div class="ttc" id="cmqc_8h_html_a3c364888555afefd40c8632b289f5a48"><div class="ttname"><a href="cmqc_8h.html#a3c364888555afefd40c8632b289f5a48">MQGMO_NO_SYNCPOINT</a></div><div class="ttdeci">#define MQGMO_NO_SYNCPOINT</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l00733">cmqc.h:733</a></div></div>
+<div class="ttc" id="cmqc_8h_html_a136b1082d6fea3ee917336b735fc0f0d"><div class="ttname"><a href="cmqc_8h.html#a136b1082d6fea3ee917336b735fc0f0d">MQGMO_CONVERT</a></div><div class="ttdeci">#define MQGMO_CONVERT</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l00742">cmqc.h:742</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_a196cb274ac9c69cbe5daf9371668025c"><div class="ttname"><a href="amqsdp_8c.html#a196cb274ac9c69cbe5daf9371668025c">MQOpen</a></div><div class="ttdeci">int MQOpen()</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00238">amqsdp.c:238</a></div></div>
+<div class="ttc" id="cmqc_8h_html_a3d3805a5804e898aeabd6aca18c9fe71"><div class="ttname"><a href="cmqc_8h.html#a3d3805a5804e898aeabd6aca18c9fe71">MQPUT</a></div><div class="ttdeci">void MQENTRY MQPUT(MQHCONN Hconn, MQHOBJ Hobj, PMQVOID pMsgDesc, PMQVOID pPutMsgOpts,   MQLONG BufferLength, PMQVOID pBuffer, PMQLONG pCompCode, PMQLONG pReason)</div></div>
+<div class="ttc" id="amqsdp_8c_html_ace216d31cea6ba0b0e5336b2517ed2a5"><div class="ttname"><a href="amqsdp_8c.html#ace216d31cea6ba0b0e5336b2517ed2a5">MQOpenInput</a></div><div class="ttdeci">int MQOpenInput()</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00231">amqsdp.c:231</a></div></div>
+<div class="ttc" id="amqsdp_8h_html_adfbc1051df776564281ac4220ba53a9e"><div class="ttname"><a href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a></div><div class="ttdeci">#define _EXT_</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8h_source.html#l00022">amqsdp.h:22</a></div></div>
+<div class="ttc" id="cmqc_8h_html_a92793868075238eeac60e3dfc3bb2908"><div class="ttname"><a href="cmqc_8h.html#a92793868075238eeac60e3dfc3bb2908">MQPMO_NEW_CORREL_ID</a></div><div class="ttdeci">#define MQPMO_NEW_CORREL_ID</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l01482">cmqc.h:1482</a></div></div>
+<div class="ttc" id="cmqc_8h_html_a66070cd63c2cee8d3240da4155c8a22d"><div class="ttname"><a href="cmqc_8h.html#a66070cd63c2cee8d3240da4155c8a22d">MQCI_NONE</a></div><div class="ttdeci">#define MQCI_NONE</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l01150">cmqc.h:1150</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_a9c88e25f067c51de112e0eacc559f462"><div class="ttname"><a href="amqsdp_8c.html#a9c88e25f067c51de112e0eacc559f462">Hcon</a></div><div class="ttdeci">MQHCONN Hcon</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00032">amqsdp.c:32</a></div></div>
+<div class="ttc" id="structtag_m_q_p_m_o_html"><div class="ttname"><a href="structtag_m_q_p_m_o.html">tagMQPMO</a></div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l04812">cmqc.h:4812</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_a000eb961f9033ec28a6d0319adfc0cc4"><div class="ttname"><a href="amqsdp_8c.html#a000eb961f9033ec28a6d0319adfc0cc4">csp</a></div><div class="ttdeci">MQCSP csp</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00030">amqsdp.c:30</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_a0cfbea0c21c76cde9732ffc87c9ed260"><div class="ttname"><a href="amqsdp_8c.html#a0cfbea0c21c76cde9732ffc87c9ed260">C_options</a></div><div class="ttdeci">MQLONG C_options</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00035">amqsdp.c:35</a></div></div>
+<div class="ttc" id="structtag_m_q_g_m_o_html_a6f3538bd01d237755fd6ab7dad5584d0"><div class="ttname"><a href="structtag_m_q_g_m_o.html#a6f3538bd01d237755fd6ab7dad5584d0">tagMQGMO::WaitInterval</a></div><div class="ttdeci">MQLONG WaitInterval</div><div class="ttdef"><b>Definition:</b> <a href="cmqc_8h_source.html#l04286">cmqc.h:4286</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="amqsdp_8c.html">amqsdp.c</a></li>
+    <li class="footer">Generado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

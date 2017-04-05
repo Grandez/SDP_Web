@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Proyecto de Fin de Carrera: Fichero Fuente src/pila.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Proyecto de Fin de Carrera
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Trapper SDPTRAPB</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Estructuras&#160;de&#160;Datos</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('pila_8c_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">pila.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="pila_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;memory.h&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pila_8h.html">pila.h</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="struct_s_t___p_i_l_a.html">   31</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_s_t___p_i_l_a.html">ST_PILA</a> {</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="struct_s_t___p_i_l_a.html#a439227feff9d7f55384e8780cfc2eb82">   32</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_s_t___p_i_l_a.html#a439227feff9d7f55384e8780cfc2eb82">size</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="struct_s_t___p_i_l_a.html#ab0785544ba66016a8ee8f818ea08b1c2">   33</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="struct_s_t___p_i_l_a.html#ab0785544ba66016a8ee8f818ea08b1c2">pointer</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="struct_s_t___p_i_l_a.html#a1411ea3b26a34297217f0225315d9758">   34</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_s_t___p_i_l_a.html#a1411ea3b26a34297217f0225315d9758">numItems</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="struct_s_t___p_i_l_a.html#ab042caa09e8430028d87252ad6646a52">   35</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_s_t___p_i_l_a.html#ab042caa09e8430028d87252ad6646a52">maxItems</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="struct_s_t___p_i_l_a.html#a94977134c19c2c536550e6b13d69218d">   36</a></span>&#160;    <span class="keywordtype">void</span> **<a class="code" href="struct_s_t___p_i_l_a.html#a94977134c19c2c536550e6b13d69218d">items</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="pila_8c.html#afbdd94221c6490c6f1277dae838b1c9d">   39</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct_s_t___p_i_l_a.html">ST_PILA</a> <a class="code" href="struct_s_t___p_i_l_a.html">PILA</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="pila_8c.html#a0b9952c70682c1412bdb47a70933b0c8">   42</a></span>&#160;<a class="code" href="struct_s_t___p_i_l_a.html">PILA</a> **<a class="code" href="pila_8c.html#a0b9952c70682c1412bdb47a70933b0c8">pilas</a> = 0x0;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="pila_8c.html#ab6502b3f91c7bb37d52a088c55e5e8c7">   43</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="pila_8c.html#ab6502b3f91c7bb37d52a088c55e5e8c7">numPilas</a> = 0;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="pila_8c.html#aeb5ee0fa1adfbec2c6c4ad6064d9327e">   44</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="pila_8c.html#aeb5ee0fa1adfbec2c6c4ad6064d9327e">maxPilas</a> = 0;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">/************************************************/</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">/***           PROTOTYPES                     ***/</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">/************************************************/</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">int</span> <a class="code" href="pila_8c.html#afb652b8d20272ccec458e986834effa0">alocarMemoria</a>() ;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<a class="code" href="struct_s_t___p_i_l_a.html">PILA</a> *<a class="code" href="pila_8c.html#a23f19882dbda4487c2f9bd166948832c">nuevaPila</a>(<span class="keywordtype">int</span> <a class="code" href="struct_s_t___p_i_l_a.html#a439227feff9d7f55384e8780cfc2eb82">size</a>, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="struct_s_t___p_i_l_a.html#ab0785544ba66016a8ee8f818ea08b1c2">pointer</a>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">void</span> <a class="code" href="pila_8c.html#a3f5f6f2f0a083cb22ed02eadcf585c2f">increaseStack</a>(<a class="code" href="struct_s_t___p_i_l_a.html">PILA</a> *stack);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">/************************************************/</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">/***  PUBLIC FUNCTIONS                        ***/</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">/************************************************/</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="pila_8c.html#a76e64db083920898ed319afa103e9c9b">   66</a></span>&#160;<a class="code" href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">void</span> * <a class="code" href="pila_8c.html#a76e64db083920898ed319afa103e9c9b">createStack</a>(<span class="keywordtype">int</span> <a class="code" href="struct_s_t___p_i_l_a.html#a439227feff9d7f55384e8780cfc2eb82">size</a>, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="struct_s_t___p_i_l_a.html#ab0785544ba66016a8ee8f818ea08b1c2">pointer</a>) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">int</span> pos = <a class="code" href="pila_8c.html#afb652b8d20272ccec458e986834effa0">alocarMemoria</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    pilas[pos] = <a class="code" href="pila_8c.html#a23f19882dbda4487c2f9bd166948832c">nuevaPila</a>(size, pointer);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> pilas[pos];</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="pila_8c.html#aa849c8d27b733322a37846b4dafd9711">   77</a></span>&#160;<a class="code" href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">void</span> *<a class="code" href="pila_8c.html#aa849c8d27b733322a37846b4dafd9711">deleteStack</a>(<span class="keywordtype">void</span> *stack) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    free(stack);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> 0x0;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="pila_8c.html#af178218c456015849c1a499412fbfbd1">   86</a></span>&#160;<a class="code" href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">void</span> <a class="code" href="pila_8c.html#af178218c456015849c1a499412fbfbd1">cleanStacks</a>() {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">int</span> idx = 0;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    free(pilas);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    pilas = 0x0;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="pila_8c.html#ab6502b3f91c7bb37d52a088c55e5e8c7">numPilas</a> = 0;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="pila_8c.html#aeb5ee0fa1adfbec2c6c4ad6064d9327e">maxPilas</a> = 0;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="pila_8c.html#a2d5d0b13ff0627defd07ec3fbe614b58">   99</a></span>&#160;<a class="code" href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">void</span> <a class="code" href="pila_8c.html#a2d5d0b13ff0627defd07ec3fbe614b58">push</a>(<span class="keywordtype">void</span> *stack, <span class="keywordtype">void</span> *data) {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="struct_s_t___p_i_l_a.html">PILA</a> *wrk = (<a class="code" href="struct_s_t___p_i_l_a.html">PILA</a> *) stack;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">if</span> (wrk-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#ab042caa09e8430028d87252ad6646a52">maxItems</a> == wrk-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a1411ea3b26a34297217f0225315d9758">numItems</a>) <a class="code" href="pila_8c.html#a3f5f6f2f0a083cb22ed02eadcf585c2f">increaseStack</a>(wrk);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">if</span> (wrk-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#ab0785544ba66016a8ee8f818ea08b1c2">pointer</a> == 0x0) {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        memcpy(wrk-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a94977134c19c2c536550e6b13d69218d">items</a>[wrk-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a1411ea3b26a34297217f0225315d9758">numItems</a>++], data, wrk-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a439227feff9d7f55384e8780cfc2eb82">size</a>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        wrk-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a94977134c19c2c536550e6b13d69218d">items</a>[wrk-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a1411ea3b26a34297217f0225315d9758">numItems</a>++] = data;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="pila_8c.html#a1db44ba0ac493c74045249cbc9da35ce">  116</a></span>&#160;<a class="code" href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">void</span> * <a class="code" href="pila_8c.html#a1db44ba0ac493c74045249cbc9da35ce">pop</a>(<a class="code" href="struct_s_t___p_i_l_a.html">PILA</a> *stack) {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      <a class="code" href="struct_s_t___p_i_l_a.html">PILA</a> *wrk = (<a class="code" href="struct_s_t___p_i_l_a.html">PILA</a> *) stack;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      <span class="keywordflow">return</span> (wrk-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a1411ea3b26a34297217f0225315d9758">numItems</a> &gt; 0) ? wrk-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a94977134c19c2c536550e6b13d69218d">items</a>[--wrk-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a1411ea3b26a34297217f0225315d9758">numItems</a>] : <a class="code" href="sdpconfig_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="pila_8c.html#a4cd5ead0eacae2da44d2e23a5cd2ff85">  126</a></span>&#160;<a class="code" href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">void</span> *<a class="code" href="pila_8c.html#a4cd5ead0eacae2da44d2e23a5cd2ff85">peek</a>(<span class="keywordtype">void</span> *stack) {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="pila_8c.html#a52d67d28c95733787926bc3f42bffb2a">peekPrevious</a>(stack, 0);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="pila_8c.html#a52d67d28c95733787926bc3f42bffb2a">  136</a></span>&#160;<a class="code" href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">void</span> *<a class="code" href="pila_8c.html#a52d67d28c95733787926bc3f42bffb2a">peekPrevious</a>(<span class="keywordtype">void</span> *stack, <span class="keywordtype">int</span> deep) {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;      <a class="code" href="struct_s_t___p_i_l_a.html">PILA</a> *wrk = (<a class="code" href="struct_s_t___p_i_l_a.html">PILA</a> *) stack;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;      <span class="keywordflow">return</span> (wrk-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a1411ea3b26a34297217f0225315d9758">numItems</a> &gt; deep) ? wrk-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a94977134c19c2c536550e6b13d69218d">items</a>[wrk-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a1411ea3b26a34297217f0225315d9758">numItems</a> - deep - 1] : <a class="code" href="sdpconfig_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="pila_8c.html#a9d607171cdd1590437295e378923f0e1">  147</a></span>&#160;<a class="code" href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">void</span> * <a class="code" href="pila_8c.html#a9d607171cdd1590437295e378923f0e1">seek</a>(<a class="code" href="struct_s_t___p_i_l_a.html">PILA</a> *stack, <span class="keywordtype">int</span> <a class="code" href="amqsdp_8c.html#aed7ea92f45bd273dde380a45ddced592">offset</a>, <span class="keywordtype">int</span> from) {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="struct_s_t___p_i_l_a.html">PILA</a> *wrk = (<a class="code" href="struct_s_t___p_i_l_a.html">PILA</a> *) stack;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">int</span> idx = (from == 1) ? wrk-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a1411ea3b26a34297217f0225315d9758">numItems</a>  - 1: 0;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    idx += offset;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    if (idx &lt; 0) <span class="keywordflow">return</span> 0x0;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">if</span> (idx &gt;= wrk-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a1411ea3b26a34297217f0225315d9758">numItems</a>) <span class="keywordflow">return</span> 0x0;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">return</span> wrk-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a94977134c19c2c536550e6b13d69218d">items</a>[idx];</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="pila_8c.html#a413fbb234d19804d9041033a716e0d75">  161</a></span>&#160;<a class="code" href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a> <span class="keywordtype">int</span> <a class="code" href="pila_8c.html#a413fbb234d19804d9041033a716e0d75">stackDepth</a>(<a class="code" href="struct_s_t___p_i_l_a.html">PILA</a> *stack) {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <a class="code" href="struct_s_t___p_i_l_a.html">PILA</a> *wrk = (<a class="code" href="struct_s_t___p_i_l_a.html">PILA</a> *) stack;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">return</span> wrk-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a1411ea3b26a34297217f0225315d9758">numItems</a>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;}</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="comment">/************************************************/</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="comment">/***  PRIVATE FUNCTIONS                       ***/</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="comment">/************************************************/</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="pila_8c.html#afb652b8d20272ccec458e986834effa0">  170</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="pila_8c.html#afb652b8d20272ccec458e986834effa0">alocarMemoria</a>() {</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="comment">// Crear la pila maestra inicial</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordflow">if</span> (pilas == 0x0) {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        pilas = (<a class="code" href="struct_s_t___p_i_l_a.html">PILA</a> **) malloc(<span class="keyword">sizeof</span>(<a class="code" href="struct_s_t___p_i_l_a.html">PILA</a> *) * 5);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <a class="code" href="pila_8c.html#aeb5ee0fa1adfbec2c6c4ad6064d9327e">maxPilas</a> = 5;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    }</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="comment">// No hay espacio para una nueva pila</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="pila_8c.html#ab6502b3f91c7bb37d52a088c55e5e8c7">numPilas</a> == <a class="code" href="pila_8c.html#aeb5ee0fa1adfbec2c6c4ad6064d9327e">maxPilas</a>) {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <a class="code" href="pila_8c.html#aeb5ee0fa1adfbec2c6c4ad6064d9327e">maxPilas</a> += 5;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        pilas = (<a class="code" href="struct_s_t___p_i_l_a.html">PILA</a> **) realloc(pilas, <span class="keyword">sizeof</span>(<a class="code" href="struct_s_t___p_i_l_a.html">PILA</a> *) * <a class="code" href="pila_8c.html#aeb5ee0fa1adfbec2c6c4ad6064d9327e">maxPilas</a>);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="pila_8c.html#ab6502b3f91c7bb37d52a088c55e5e8c7">numPilas</a>;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;}</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="pila_8c.html#a23f19882dbda4487c2f9bd166948832c">  185</a></span>&#160;<a class="code" href="struct_s_t___p_i_l_a.html">PILA</a> *<a class="code" href="pila_8c.html#a23f19882dbda4487c2f9bd166948832c">nuevaPila</a>(<span class="keywordtype">int</span> <a class="code" href="struct_s_t___p_i_l_a.html#a439227feff9d7f55384e8780cfc2eb82">size</a>, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="struct_s_t___p_i_l_a.html#ab0785544ba66016a8ee8f818ea08b1c2">pointer</a>) {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <a class="code" href="struct_s_t___p_i_l_a.html">PILA</a> *pila = (<a class="code" href="struct_s_t___p_i_l_a.html">PILA</a> *) malloc(<span class="keyword">sizeof</span>(<a class="code" href="struct_s_t___p_i_l_a.html">PILA</a>));</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    pila-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a439227feff9d7f55384e8780cfc2eb82">size</a>     = <a class="code" href="struct_s_t___p_i_l_a.html#a439227feff9d7f55384e8780cfc2eb82">size</a>;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    pila-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#ab0785544ba66016a8ee8f818ea08b1c2">pointer</a>  = <a class="code" href="struct_s_t___p_i_l_a.html#ab0785544ba66016a8ee8f818ea08b1c2">pointer</a>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    pila-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a1411ea3b26a34297217f0225315d9758">numItems</a> = 0;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    pila-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#ab042caa09e8430028d87252ad6646a52">maxItems</a> = 0;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    pila-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a94977134c19c2c536550e6b13d69218d">items</a>    = 0x0;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordflow">return</span> pila;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;}</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="pila_8c.html#a3f5f6f2f0a083cb22ed02eadcf585c2f">  195</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="pila_8c.html#a3f5f6f2f0a083cb22ed02eadcf585c2f">increaseStack</a>(<a class="code" href="struct_s_t___p_i_l_a.html">PILA</a> *stack) {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordtype">int</span> idx = stack-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a1411ea3b26a34297217f0225315d9758">numItems</a>;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    stack-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#ab042caa09e8430028d87252ad6646a52">maxItems</a> += 10;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    stack-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a94977134c19c2c536550e6b13d69218d">items</a> = (<span class="keywordtype">void</span> **) realloc(stack-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a94977134c19c2c536550e6b13d69218d">items</a>, stack-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#ab042caa09e8430028d87252ad6646a52">maxItems</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">void</span> **));</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordflow">for</span> (idx = stack-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a1411ea3b26a34297217f0225315d9758">numItems</a>; idx &lt; stack-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#ab042caa09e8430028d87252ad6646a52">maxItems</a>; idx++) {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        stack-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a94977134c19c2c536550e6b13d69218d">items</a>[idx] = malloc(stack-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a439227feff9d7f55384e8780cfc2eb82">size</a>);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        memset(stack-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a94977134c19c2c536550e6b13d69218d">items</a>[idx], 0x0, stack-&gt;<a class="code" href="struct_s_t___p_i_l_a.html#a439227feff9d7f55384e8780cfc2eb82">size</a>);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;}</div>
+<div class="ttc" id="pila_8c_html_a3f5f6f2f0a083cb22ed02eadcf585c2f"><div class="ttname"><a href="pila_8c.html#a3f5f6f2f0a083cb22ed02eadcf585c2f">increaseStack</a></div><div class="ttdeci">void increaseStack(PILA *stack)</div><div class="ttdef"><b>Definition:</b> <a href="pila_8c_source.html#l00195">pila.c:195</a></div></div>
+<div class="ttc" id="pila_8c_html_a9d607171cdd1590437295e378923f0e1"><div class="ttname"><a href="pila_8c.html#a9d607171cdd1590437295e378923f0e1">seek</a></div><div class="ttdeci">_EXT_ void * seek(PILA *stack, int offset, int from)</div><div class="ttdef"><b>Definition:</b> <a href="pila_8c_source.html#l00147">pila.c:147</a></div></div>
+<div class="ttc" id="sdpconfig_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="sdpconfig_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="sdpconfig_8h_source.html#l00039">sdpconfig.h:39</a></div></div>
+<div class="ttc" id="struct_s_t___p_i_l_a_html_ab0785544ba66016a8ee8f818ea08b1c2"><div class="ttname"><a href="struct_s_t___p_i_l_a.html#ab0785544ba66016a8ee8f818ea08b1c2">ST_PILA::pointer</a></div><div class="ttdeci">unsigned char pointer</div><div class="ttdef"><b>Definition:</b> <a href="pila_8c_source.html#l00033">pila.c:33</a></div></div>
+<div class="ttc" id="pila_8c_html_afb652b8d20272ccec458e986834effa0"><div class="ttname"><a href="pila_8c.html#afb652b8d20272ccec458e986834effa0">alocarMemoria</a></div><div class="ttdeci">int alocarMemoria()</div><div class="ttdef"><b>Definition:</b> <a href="pila_8c_source.html#l00170">pila.c:170</a></div></div>
+<div class="ttc" id="pila_8c_html_a4cd5ead0eacae2da44d2e23a5cd2ff85"><div class="ttname"><a href="pila_8c.html#a4cd5ead0eacae2da44d2e23a5cd2ff85">peek</a></div><div class="ttdeci">_EXT_ void * peek(void *stack)</div><div class="ttdef"><b>Definition:</b> <a href="pila_8c_source.html#l00126">pila.c:126</a></div></div>
+<div class="ttc" id="struct_s_t___p_i_l_a_html_a1411ea3b26a34297217f0225315d9758"><div class="ttname"><a href="struct_s_t___p_i_l_a.html#a1411ea3b26a34297217f0225315d9758">ST_PILA::numItems</a></div><div class="ttdeci">int numItems</div><div class="ttdef"><b>Definition:</b> <a href="pila_8c_source.html#l00034">pila.c:34</a></div></div>
+<div class="ttc" id="amqsdp_8c_html_aed7ea92f45bd273dde380a45ddced592"><div class="ttname"><a href="amqsdp_8c.html#aed7ea92f45bd273dde380a45ddced592">offset</a></div><div class="ttdeci">int offset</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00052">amqsdp.c:52</a></div></div>
+<div class="ttc" id="pila_8c_html_a413fbb234d19804d9041033a716e0d75"><div class="ttname"><a href="pila_8c.html#a413fbb234d19804d9041033a716e0d75">stackDepth</a></div><div class="ttdeci">_EXT_ int stackDepth(PILA *stack)</div><div class="ttdef"><b>Definition:</b> <a href="pila_8c_source.html#l00161">pila.c:161</a></div></div>
+<div class="ttc" id="pila_8c_html_a1db44ba0ac493c74045249cbc9da35ce"><div class="ttname"><a href="pila_8c.html#a1db44ba0ac493c74045249cbc9da35ce">pop</a></div><div class="ttdeci">_EXT_ void * pop(PILA *stack)</div><div class="ttdef"><b>Definition:</b> <a href="pila_8c_source.html#l00116">pila.c:116</a></div></div>
+<div class="ttc" id="struct_s_t___p_i_l_a_html_a94977134c19c2c536550e6b13d69218d"><div class="ttname"><a href="struct_s_t___p_i_l_a.html#a94977134c19c2c536550e6b13d69218d">ST_PILA::items</a></div><div class="ttdeci">void ** items</div><div class="ttdef"><b>Definition:</b> <a href="pila_8c_source.html#l00036">pila.c:36</a></div></div>
+<div class="ttc" id="pila_8c_html_a52d67d28c95733787926bc3f42bffb2a"><div class="ttname"><a href="pila_8c.html#a52d67d28c95733787926bc3f42bffb2a">peekPrevious</a></div><div class="ttdeci">_EXT_ void * peekPrevious(void *stack, int deep)</div><div class="ttdef"><b>Definition:</b> <a href="pila_8c_source.html#l00136">pila.c:136</a></div></div>
+<div class="ttc" id="pila_8c_html_a0b9952c70682c1412bdb47a70933b0c8"><div class="ttname"><a href="pila_8c.html#a0b9952c70682c1412bdb47a70933b0c8">pilas</a></div><div class="ttdeci">PILA ** pilas</div><div class="ttdef"><b>Definition:</b> <a href="pila_8c_source.html#l00042">pila.c:42</a></div></div>
+<div class="ttc" id="struct_s_t___p_i_l_a_html_ab042caa09e8430028d87252ad6646a52"><div class="ttname"><a href="struct_s_t___p_i_l_a.html#ab042caa09e8430028d87252ad6646a52">ST_PILA::maxItems</a></div><div class="ttdeci">int maxItems</div><div class="ttdef"><b>Definition:</b> <a href="pila_8c_source.html#l00035">pila.c:35</a></div></div>
+<div class="ttc" id="pila_8c_html_af178218c456015849c1a499412fbfbd1"><div class="ttname"><a href="pila_8c.html#af178218c456015849c1a499412fbfbd1">cleanStacks</a></div><div class="ttdeci">_EXT_ void cleanStacks()</div><div class="ttdef"><b>Definition:</b> <a href="pila_8c_source.html#l00086">pila.c:86</a></div></div>
+<div class="ttc" id="pila_8c_html_a76e64db083920898ed319afa103e9c9b"><div class="ttname"><a href="pila_8c.html#a76e64db083920898ed319afa103e9c9b">createStack</a></div><div class="ttdeci">_EXT_ void * createStack(int size, unsigned char pointer)</div><div class="ttdef"><b>Definition:</b> <a href="pila_8c_source.html#l00066">pila.c:66</a></div></div>
+<div class="ttc" id="struct_s_t___p_i_l_a_html_a439227feff9d7f55384e8780cfc2eb82"><div class="ttname"><a href="struct_s_t___p_i_l_a.html#a439227feff9d7f55384e8780cfc2eb82">ST_PILA::size</a></div><div class="ttdeci">int size</div><div class="ttdef"><b>Definition:</b> <a href="pila_8c_source.html#l00032">pila.c:32</a></div></div>
+<div class="ttc" id="pila_8c_html_a23f19882dbda4487c2f9bd166948832c"><div class="ttname"><a href="pila_8c.html#a23f19882dbda4487c2f9bd166948832c">nuevaPila</a></div><div class="ttdeci">PILA * nuevaPila(int size, unsigned char pointer)</div><div class="ttdef"><b>Definition:</b> <a href="pila_8c_source.html#l00185">pila.c:185</a></div></div>
+<div class="ttc" id="pila_8c_html_a2d5d0b13ff0627defd07ec3fbe614b58"><div class="ttname"><a href="pila_8c.html#a2d5d0b13ff0627defd07ec3fbe614b58">push</a></div><div class="ttdeci">_EXT_ void push(void *stack, void *data)</div><div class="ttdef"><b>Definition:</b> <a href="pila_8c_source.html#l00099">pila.c:99</a></div></div>
+<div class="ttc" id="struct_s_t___p_i_l_a_html"><div class="ttname"><a href="struct_s_t___p_i_l_a.html">ST_PILA</a></div><div class="ttdef"><b>Definition:</b> <a href="pila_8c_source.html#l00031">pila.c:31</a></div></div>
+<div class="ttc" id="amqsdp_8h_html_adfbc1051df776564281ac4220ba53a9e"><div class="ttname"><a href="amqsdp_8h.html#adfbc1051df776564281ac4220ba53a9e">_EXT_</a></div><div class="ttdeci">#define _EXT_</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8h_source.html#l00022">amqsdp.h:22</a></div></div>
+<div class="ttc" id="pila_8c_html_aa849c8d27b733322a37846b4dafd9711"><div class="ttname"><a href="pila_8c.html#aa849c8d27b733322a37846b4dafd9711">deleteStack</a></div><div class="ttdeci">_EXT_ void * deleteStack(void *stack)</div><div class="ttdef"><b>Definition:</b> <a href="pila_8c_source.html#l00077">pila.c:77</a></div></div>
+<div class="ttc" id="pila_8c_html_aeb5ee0fa1adfbec2c6c4ad6064d9327e"><div class="ttname"><a href="pila_8c.html#aeb5ee0fa1adfbec2c6c4ad6064d9327e">maxPilas</a></div><div class="ttdeci">int maxPilas</div><div class="ttdef"><b>Definition:</b> <a href="pila_8c_source.html#l00044">pila.c:44</a></div></div>
+<div class="ttc" id="pila_8c_html_ab6502b3f91c7bb37d52a088c55e5e8c7"><div class="ttname"><a href="pila_8c.html#ab6502b3f91c7bb37d52a088c55e5e8c7">numPilas</a></div><div class="ttdeci">int numPilas</div><div class="ttdef"><b>Definition:</b> <a href="pila_8c_source.html#l00043">pila.c:43</a></div></div>
+<div class="ttc" id="pila_8h_html"><div class="ttname"><a href="pila_8h.html">pila.h</a></div><div class="ttdoc">Funciones de gestion de pilas abtracta. </div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="pila_8c.html">pila.c</a></li>
+    <li class="footer">Generado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

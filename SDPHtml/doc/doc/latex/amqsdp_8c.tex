@@ -1,0 +1,472 @@
+\hypertarget{amqsdp_8c}{}\section{Referencia del Archivo src/amqsdp.c}
+\label{amqsdp_8c}\index{src/amqsdp.\+c@{src/amqsdp.\+c}}
+
+
+Cliente Websphere M\+Q\+Series.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}cmqc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+D\+P\+T\+R\+A\+P.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}amqsdp.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}global.\+h\char`\"{}}\\*
+Dependencia gráfica adjunta para amqsdp.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{amqsdp_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{\textquotesingle{}defines\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{amqsdp_8c_a2c1538d99cb1b248411c15badb3c0842}{\+\_\+\+A\+M\+Q\+S\+D\+P\+\_\+\+S\+R\+C\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{amqsdp_8c_a094c19a9716364046b2779fff6efa664}{M\+Q\+Free} (void)
+\item 
+int \hyperlink{amqsdp_8c_ab689e2ba6771a5113551222f6189c137}{M\+Q\+Conn} ()
+\item 
+void \hyperlink{amqsdp_8c_acc12f0f1458385b0f5c5a6234f817205}{M\+Q\+Disconn} ()
+\item 
+int \hyperlink{amqsdp_8c_a196cb274ac9c69cbe5daf9371668025c}{M\+Q\+Open} ()
+\item 
+void \hyperlink{amqsdp_8c_ae93fe1e642e758fbbe9c892ab8033aa4}{M\+Q\+Close} ()
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{amqsdp_8c_a12766b7a05c27f09555f40c88e08610b}{init\+A\+M\+Q} (int d, F\+I\+L\+E $\ast$f)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{amqsdp_8c_a3c337f7b77e495f85489f862d4df359c}{set\+Buffer\+Size} ()
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{amqsdp_8c_adba192fbf1af062214021fcb06229295}{unset\+Buffer\+Size} ()
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{amqsdp_8c_ac2122a579c04414c93370c338601c492}{set\+Max\+Group} (int group)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} int \hyperlink{amqsdp_8c_ab05385469ff40b1b77e3c41846d1421f}{enviar} (char $\ast$\hyperlink{messages_8c_a1c07f3735e9c63f3130a615745887a20}{sz\+Msg}, unsigned char force)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} int \hyperlink{amqsdp_8c_a6a6249b42450b376958cc3f668c44fdb}{M\+Q\+Connect} ()
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{amqsdp_8c_a4cf1ee13ff615962a3d86fcb8cfa57f5}{M\+Q\+Disconnect} ()
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} long \hyperlink{amqsdp_8c_a9531d8185ec00f217beb2bcb561099d6}{M\+Q\+Put} (char $\ast$msg, long len)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} long \hyperlink{amqsdp_8c_a5be1500f1c7b8b6afef1605c438017ef}{M\+Q\+Get} (char $\ast$buff, long len)
+\item 
+int \hyperlink{amqsdp_8c_a3fea393a72c9440cf4210ec0634d91b2}{M\+Q\+Open\+Output} ()
+\item 
+int \hyperlink{amqsdp_8c_ace216d31cea6ba0b0e5336b2517ed2a5}{M\+Q\+Open\+Input} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cmqc_8h_adc6ce41a36ea02c7128633fb49d2327b}{M\+Q\+O\+D} \hyperlink{amqsdp_8c_a3fb375f4ee6971a0a7241c1b9fe0250d}{od} = \{\hyperlink{cmqc_8h_aaca8efdc3c3886d6f06d841e99b3824b}{M\+Q\+O\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T}\}
+\item 
+\hyperlink{cmqc_8h_adba81d43f75836f834f8fa1c61d5517e}{M\+Q\+M\+D} \hyperlink{amqsdp_8c_ae87fabdedbfb0255167d3f0a7705ec2e}{md} = \{\hyperlink{cmqc_8h_a8886d85ef78d739f38beb8a302a0b3c0}{M\+Q\+M\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T}\}
+\item 
+\hyperlink{cmqc_8h_a3e6dadad27fbbca9ac41bfc9f1fb2755}{M\+Q\+P\+M\+O} \hyperlink{amqsdp_8c_a017b205b3e8f746565c6358ba97f80cd}{pmo} = \{\hyperlink{cmqc_8h_a7b568f0009a2c3c452407a4f803fa87a}{M\+Q\+P\+M\+O\+\_\+\+D\+E\+F\+A\+U\+L\+T}\}
+\item 
+\hyperlink{cmqc_8h_afc714b4f20c35240b4136d7921a72d96}{M\+Q\+C\+N\+O} \hyperlink{amqsdp_8c_a684758dad6f1bcbcf33011bad12a3687}{cno} = \{\hyperlink{cmqc_8h_af9f6084a129db0fe30bbd58db99540e9}{M\+Q\+C\+N\+O\+\_\+\+D\+E\+F\+A\+U\+L\+T}\}
+\item 
+\hyperlink{cmqc_8h_aa7dbc005fadce97bd1410ffa38a86932}{M\+Q\+C\+S\+P} \hyperlink{amqsdp_8c_a000eb961f9033ec28a6d0319adfc0cc4}{csp} = \{\hyperlink{cmqc_8h_a087ea7addc51ee1b57b13d89b0852cc7}{M\+Q\+C\+S\+P\+\_\+\+D\+E\+F\+A\+U\+L\+T}\}
+\item 
+\hyperlink{cmqc_8h_a00170ac137e1beb55a3c34f07a39fcc4}{M\+Q\+H\+C\+O\+N\+N} \hyperlink{amqsdp_8c_a9c88e25f067c51de112e0eacc559f462}{Hcon} = 0x0
+\item 
+\hyperlink{cmqc_8h_ac093f559f81163292e6016c68c947164}{M\+Q\+H\+O\+B\+J} \hyperlink{amqsdp_8c_a01edfcfbde290ed1c9a7a03b8c2f4500}{H\+Queue} = 0x0
+\item 
+\hyperlink{cmqc_8h_a1fb8d28cbda3fa8766a9821230cdb6d5}{M\+Q\+L\+O\+N\+G} \hyperlink{amqsdp_8c_ac43cc6b9c68558cea8e4a5b632df0363}{O\+\_\+options}
+\item 
+\hyperlink{cmqc_8h_a1fb8d28cbda3fa8766a9821230cdb6d5}{M\+Q\+L\+O\+N\+G} \hyperlink{amqsdp_8c_a0cfbea0c21c76cde9732ffc87c9ed260}{C\+\_\+options}
+\item 
+\hyperlink{cmqc_8h_a1fb8d28cbda3fa8766a9821230cdb6d5}{M\+Q\+L\+O\+N\+G} \hyperlink{amqsdp_8c_a84be6334ddf78b650dfed2b632293455}{mqcc}
+\item 
+\hyperlink{cmqc_8h_a1fb8d28cbda3fa8766a9821230cdb6d5}{M\+Q\+L\+O\+N\+G} \hyperlink{amqsdp_8c_a3537d2a2450ea0e24a3a56001020ec5f}{mqrc}
+\item 
+char \hyperlink{amqsdp_8c_a52b0abed1d4b7d10c3a8e42e40f8f80a}{Q\+M\+Name} \mbox{[}50\mbox{]}
+\item 
+char $\ast$ \hyperlink{amqsdp_8c_a30bbda1ba59bb12c2895c4006804a55d}{qmgr}
+\item 
+char $\ast$ \hyperlink{amqsdp_8c_a5a317b1553299b3cbe3ef6d6d2edcffc}{qname} = \char`\"{}S\+D\+P.\+T\+R\+A\+P\+P\+E\+R\char`\"{}
+\item 
+long \hyperlink{amqsdp_8c_a3ab85df1f9111b4eaaa988eff903f2b4}{buff\+Size} = 4095
+\item 
+int \hyperlink{amqsdp_8c_a21dcb4f76464d796d158cc3333ab18d8}{msgs} = 0
+\item 
+int \hyperlink{amqsdp_8c_a35708eb4d2bb797b73ab54979f5b991f}{max\+Group} = \hyperlink{sdpconfig_8h_aeefcc7b6f118beefd2cec532afced5df}{I\+T\+E\+M\+S\+\_\+\+B\+Y\+\_\+\+M\+S\+G}
+\item 
+int \hyperlink{amqsdp_8c_aed7ea92f45bd273dde380a45ddced592}{offset} = 0
+\item 
+char $\ast$ \hyperlink{amqsdp_8c_aff2566f4c366b48d73479bef43ee4d2e}{buffer} = 0x0
+\item 
+int \hyperlink{amqsdp_8c_a4fb693c3cca874aca4a9d2109cc561e5}{in\+Err}
+\item 
+int \hyperlink{amqsdp_8c_ad247c905cf5ce68a5eec344bcba86cc7}{dbg\+Level}
+\item 
+F\+I\+L\+E $\ast$ \hyperlink{amqsdp_8c_a5f9e912074a29350e020b7a09f43ff32}{traza}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Cliente Websphere M\+Q\+Series. 
+
+La informacion relativa a Q\+Manager, Nombre de cola, etc se obtiene del entorno
+
+\begin{DoxyAuthor}{Autor}
+\+: Javier Gonzalez 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+\+: 01/04/2015 
+\end{DoxyDate}
+\begin{DoxyVersion}{Versión}
+\+: 1.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\hypertarget{amqsdp_8c_a2c1538d99cb1b248411c15badb3c0842}{}\index{amqsdp.\+c@{amqsdp.\+c}!\+\_\+\+A\+M\+Q\+S\+D\+P\+\_\+\+S\+R\+C\+\_\+@{\+\_\+\+A\+M\+Q\+S\+D\+P\+\_\+\+S\+R\+C\+\_\+}}
+\index{\+\_\+\+A\+M\+Q\+S\+D\+P\+\_\+\+S\+R\+C\+\_\+@{\+\_\+\+A\+M\+Q\+S\+D\+P\+\_\+\+S\+R\+C\+\_\+}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{\+\_\+\+A\+M\+Q\+S\+D\+P\+\_\+\+S\+R\+C\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+A\+M\+Q\+S\+D\+P\+\_\+\+S\+R\+C\+\_\+}\label{amqsdp_8c_a2c1538d99cb1b248411c15badb3c0842}
+
+
+Definición en la línea 14 del archivo amqsdp.\+c.
+
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{amqsdp_8c_ab05385469ff40b1b77e3c41846d1421f}{}\index{amqsdp.\+c@{amqsdp.\+c}!enviar@{enviar}}
+\index{enviar@{enviar}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{enviar(char $\ast$sz\+Msg, unsigned char force)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} int enviar (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{sz\+Msg, }
+\item[{unsigned char}]{force}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8c_ab05385469ff40b1b77e3c41846d1421f}
+Envia el mensaje si force = true o se han alcanzado el el numero de mensajes a agrupar
+
+Si no lo almacena en el buffer para evitar envios masivos mensajes Se verifica si el mensaje cabe en el buffer alocado antes de alamacenarlo, seria el caso en el que el numero mensajes a agrupar es excesivo 
+
+Definición en la línea 108 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_a12766b7a05c27f09555f40c88e08610b}{}\index{amqsdp.\+c@{amqsdp.\+c}!init\+A\+M\+Q@{init\+A\+M\+Q}}
+\index{init\+A\+M\+Q@{init\+A\+M\+Q}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{init\+A\+M\+Q(int d, F\+I\+L\+E $\ast$f)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void init\+A\+M\+Q (
+\begin{DoxyParamCaption}
+\item[{int}]{dbg, }
+\item[{F\+I\+L\+E $\ast$}]{f}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8c_a12766b7a05c27f09555f40c88e08610b}
+Inicia el entorno M\+Q Para depuracion es necesario pasarlo el nivel de debug y el fichero a utilizar 
+
+Definición en la línea 77 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_ae93fe1e642e758fbbe9c892ab8033aa4}{}\index{amqsdp.\+c@{amqsdp.\+c}!M\+Q\+Close@{M\+Q\+Close}}
+\index{M\+Q\+Close@{M\+Q\+Close}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{M\+Q\+Close()}]{\setlength{\rightskip}{0pt plus 5cm}void M\+Q\+Close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8c_ae93fe1e642e758fbbe9c892ab8033aa4}
+
+
+Definición en la línea 251 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_ab689e2ba6771a5113551222f6189c137}{}\index{amqsdp.\+c@{amqsdp.\+c}!M\+Q\+Conn@{M\+Q\+Conn}}
+\index{M\+Q\+Conn@{M\+Q\+Conn}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{M\+Q\+Conn()}]{\setlength{\rightskip}{0pt plus 5cm}int M\+Q\+Conn (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8c_ab689e2ba6771a5113551222f6189c137}
+
+
+Definición en la línea 205 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_a6a6249b42450b376958cc3f668c44fdb}{}\index{amqsdp.\+c@{amqsdp.\+c}!M\+Q\+Connect@{M\+Q\+Connect}}
+\index{M\+Q\+Connect@{M\+Q\+Connect}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{M\+Q\+Connect()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} int M\+Q\+Connect (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8c_a6a6249b42450b376958cc3f668c44fdb}
+Establece la conexion con el gestor de colas 
+
+Definición en la línea 134 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_acc12f0f1458385b0f5c5a6234f817205}{}\index{amqsdp.\+c@{amqsdp.\+c}!M\+Q\+Disconn@{M\+Q\+Disconn}}
+\index{M\+Q\+Disconn@{M\+Q\+Disconn}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{M\+Q\+Disconn()}]{\setlength{\rightskip}{0pt plus 5cm}void M\+Q\+Disconn (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8c_acc12f0f1458385b0f5c5a6234f817205}
+
+
+Definición en la línea 219 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_a4cf1ee13ff615962a3d86fcb8cfa57f5}{}\index{amqsdp.\+c@{amqsdp.\+c}!M\+Q\+Disconnect@{M\+Q\+Disconnect}}
+\index{M\+Q\+Disconnect@{M\+Q\+Disconnect}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{M\+Q\+Disconnect()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void M\+Q\+Disconnect (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8c_a4cf1ee13ff615962a3d86fcb8cfa57f5}
+Libera la conexion con el gestor de colas 
+
+Definición en la línea 146 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_a094c19a9716364046b2779fff6efa664}{}\index{amqsdp.\+c@{amqsdp.\+c}!M\+Q\+Free@{M\+Q\+Free}}
+\index{M\+Q\+Free@{M\+Q\+Free}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{M\+Q\+Free(void)}]{\setlength{\rightskip}{0pt plus 5cm}void M\+Q\+Free (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8c_a094c19a9716364046b2779fff6efa664}
+\hypertarget{amqsdp_8c_a5be1500f1c7b8b6afef1605c438017ef}{}\index{amqsdp.\+c@{amqsdp.\+c}!M\+Q\+Get@{M\+Q\+Get}}
+\index{M\+Q\+Get@{M\+Q\+Get}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{M\+Q\+Get(char $\ast$buff, long len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} long M\+Q\+Get (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{msg, }
+\item[{long}]{len}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8c_a5be1500f1c7b8b6afef1605c438017ef}
+Lee un mensaje de la cola 
+
+Definición en la línea 175 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_a196cb274ac9c69cbe5daf9371668025c}{}\index{amqsdp.\+c@{amqsdp.\+c}!M\+Q\+Open@{M\+Q\+Open}}
+\index{M\+Q\+Open@{M\+Q\+Open}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{M\+Q\+Open()}]{\setlength{\rightskip}{0pt plus 5cm}int M\+Q\+Open (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8c_a196cb274ac9c69cbe5daf9371668025c}
+
+
+Definición en la línea 238 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_ace216d31cea6ba0b0e5336b2517ed2a5}{}\index{amqsdp.\+c@{amqsdp.\+c}!M\+Q\+Open\+Input@{M\+Q\+Open\+Input}}
+\index{M\+Q\+Open\+Input@{M\+Q\+Open\+Input}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{M\+Q\+Open\+Input()}]{\setlength{\rightskip}{0pt plus 5cm}int M\+Q\+Open\+Input (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8c_ace216d31cea6ba0b0e5336b2517ed2a5}
+Abre la cola de lectura 
+
+Definición en la línea 231 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_a3fea393a72c9440cf4210ec0634d91b2}{}\index{amqsdp.\+c@{amqsdp.\+c}!M\+Q\+Open\+Output@{M\+Q\+Open\+Output}}
+\index{M\+Q\+Open\+Output@{M\+Q\+Open\+Output}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{M\+Q\+Open\+Output()}]{\setlength{\rightskip}{0pt plus 5cm}int M\+Q\+Open\+Output (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8c_a3fea393a72c9440cf4210ec0634d91b2}
+Abre la cola de escritura 
+
+Definición en la línea 223 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_a9531d8185ec00f217beb2bcb561099d6}{}\index{amqsdp.\+c@{amqsdp.\+c}!M\+Q\+Put@{M\+Q\+Put}}
+\index{M\+Q\+Put@{M\+Q\+Put}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{M\+Q\+Put(char $\ast$msg, long len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} long M\+Q\+Put (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{msg, }
+\item[{long}]{len}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8c_a9531d8185ec00f217beb2bcb561099d6}
+Escribe el mensaje en la cola 
+
+Definición en la línea 152 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_a3c337f7b77e495f85489f862d4df359c}{}\index{amqsdp.\+c@{amqsdp.\+c}!set\+Buffer\+Size@{set\+Buffer\+Size}}
+\index{set\+Buffer\+Size@{set\+Buffer\+Size}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{set\+Buffer\+Size()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void set\+Buffer\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8c_a3c337f7b77e495f85489f862d4df359c}
+Crea el buffer de mensajes 
+
+Definición en la línea 82 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_ac2122a579c04414c93370c338601c492}{}\index{amqsdp.\+c@{amqsdp.\+c}!set\+Max\+Group@{set\+Max\+Group}}
+\index{set\+Max\+Group@{set\+Max\+Group}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{set\+Max\+Group(int group)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void set\+Max\+Group (
+\begin{DoxyParamCaption}
+\item[{int}]{group}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8c_ac2122a579c04414c93370c338601c492}
+Establece el numero de mensajes que se enviaran en un unico mensaje de la cola 
+
+Definición en la línea 93 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_adba192fbf1af062214021fcb06229295}{}\index{amqsdp.\+c@{amqsdp.\+c}!unset\+Buffer\+Size@{unset\+Buffer\+Size}}
+\index{unset\+Buffer\+Size@{unset\+Buffer\+Size}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{unset\+Buffer\+Size()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void unset\+Buffer\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{amqsdp_8c_adba192fbf1af062214021fcb06229295}
+Libera el buffer de mensajes 
+
+Definición en la línea 89 del archivo amqsdp.\+c.
+
+
+
+\subsection{Documentación de las variables}
+\hypertarget{amqsdp_8c_aff2566f4c366b48d73479bef43ee4d2e}{}\index{amqsdp.\+c@{amqsdp.\+c}!buffer@{buffer}}
+\index{buffer@{buffer}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{buffer}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ buffer = 0x0}\label{amqsdp_8c_aff2566f4c366b48d73479bef43ee4d2e}
+
+
+Definición en la línea 53 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_a3ab85df1f9111b4eaaa988eff903f2b4}{}\index{amqsdp.\+c@{amqsdp.\+c}!buff\+Size@{buff\+Size}}
+\index{buff\+Size@{buff\+Size}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{buff\+Size}]{\setlength{\rightskip}{0pt plus 5cm}long buff\+Size = 4095}\label{amqsdp_8c_a3ab85df1f9111b4eaaa988eff903f2b4}
+
+
+Definición en la línea 47 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_a0cfbea0c21c76cde9732ffc87c9ed260}{}\index{amqsdp.\+c@{amqsdp.\+c}!C\+\_\+options@{C\+\_\+options}}
+\index{C\+\_\+options@{C\+\_\+options}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{C\+\_\+options}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Q\+L\+O\+N\+G} C\+\_\+options}\label{amqsdp_8c_a0cfbea0c21c76cde9732ffc87c9ed260}
+
+
+Definición en la línea 35 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_a684758dad6f1bcbcf33011bad12a3687}{}\index{amqsdp.\+c@{amqsdp.\+c}!cno@{cno}}
+\index{cno@{cno}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{cno}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Q\+C\+N\+O} cno = \{{\bf M\+Q\+C\+N\+O\+\_\+\+D\+E\+F\+A\+U\+L\+T}\}}\label{amqsdp_8c_a684758dad6f1bcbcf33011bad12a3687}
+
+
+Definición en la línea 29 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_a000eb961f9033ec28a6d0319adfc0cc4}{}\index{amqsdp.\+c@{amqsdp.\+c}!csp@{csp}}
+\index{csp@{csp}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{csp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Q\+C\+S\+P} csp = \{{\bf M\+Q\+C\+S\+P\+\_\+\+D\+E\+F\+A\+U\+L\+T}\}}\label{amqsdp_8c_a000eb961f9033ec28a6d0319adfc0cc4}
+
+
+Definición en la línea 30 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_ad247c905cf5ce68a5eec344bcba86cc7}{}\index{amqsdp.\+c@{amqsdp.\+c}!dbg\+Level@{dbg\+Level}}
+\index{dbg\+Level@{dbg\+Level}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{dbg\+Level}]{\setlength{\rightskip}{0pt plus 5cm}int dbg\+Level}\label{amqsdp_8c_ad247c905cf5ce68a5eec344bcba86cc7}
+
+
+Definición en la línea 58 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_a9c88e25f067c51de112e0eacc559f462}{}\index{amqsdp.\+c@{amqsdp.\+c}!Hcon@{Hcon}}
+\index{Hcon@{Hcon}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{Hcon}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Q\+H\+C\+O\+N\+N} Hcon = 0x0}\label{amqsdp_8c_a9c88e25f067c51de112e0eacc559f462}
+
+
+Definición en la línea 32 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_a01edfcfbde290ed1c9a7a03b8c2f4500}{}\index{amqsdp.\+c@{amqsdp.\+c}!H\+Queue@{H\+Queue}}
+\index{H\+Queue@{H\+Queue}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{H\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Q\+H\+O\+B\+J} H\+Queue = 0x0}\label{amqsdp_8c_a01edfcfbde290ed1c9a7a03b8c2f4500}
+
+
+Definición en la línea 33 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_a4fb693c3cca874aca4a9d2109cc561e5}{}\index{amqsdp.\+c@{amqsdp.\+c}!in\+Err@{in\+Err}}
+\index{in\+Err@{in\+Err}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{in\+Err}]{\setlength{\rightskip}{0pt plus 5cm}int in\+Err}\label{amqsdp_8c_a4fb693c3cca874aca4a9d2109cc561e5}
+
+
+Definición en la línea 57 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_a35708eb4d2bb797b73ab54979f5b991f}{}\index{amqsdp.\+c@{amqsdp.\+c}!max\+Group@{max\+Group}}
+\index{max\+Group@{max\+Group}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{max\+Group}]{\setlength{\rightskip}{0pt plus 5cm}int max\+Group = {\bf I\+T\+E\+M\+S\+\_\+\+B\+Y\+\_\+\+M\+S\+G}}\label{amqsdp_8c_a35708eb4d2bb797b73ab54979f5b991f}
+
+
+Definición en la línea 51 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_ae87fabdedbfb0255167d3f0a7705ec2e}{}\index{amqsdp.\+c@{amqsdp.\+c}!md@{md}}
+\index{md@{md}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{md}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Q\+M\+D} md = \{{\bf M\+Q\+M\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T}\}}\label{amqsdp_8c_ae87fabdedbfb0255167d3f0a7705ec2e}
+
+
+Definición en la línea 27 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_a84be6334ddf78b650dfed2b632293455}{}\index{amqsdp.\+c@{amqsdp.\+c}!mqcc@{mqcc}}
+\index{mqcc@{mqcc}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{mqcc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Q\+L\+O\+N\+G} mqcc}\label{amqsdp_8c_a84be6334ddf78b650dfed2b632293455}
+
+
+Definición en la línea 36 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_a3537d2a2450ea0e24a3a56001020ec5f}{}\index{amqsdp.\+c@{amqsdp.\+c}!mqrc@{mqrc}}
+\index{mqrc@{mqrc}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{mqrc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Q\+L\+O\+N\+G} mqrc}\label{amqsdp_8c_a3537d2a2450ea0e24a3a56001020ec5f}
+
+
+Definición en la línea 37 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_a21dcb4f76464d796d158cc3333ab18d8}{}\index{amqsdp.\+c@{amqsdp.\+c}!msgs@{msgs}}
+\index{msgs@{msgs}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{msgs}]{\setlength{\rightskip}{0pt plus 5cm}int msgs = 0}\label{amqsdp_8c_a21dcb4f76464d796d158cc3333ab18d8}
+
+
+Definición en la línea 50 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_ac43cc6b9c68558cea8e4a5b632df0363}{}\index{amqsdp.\+c@{amqsdp.\+c}!O\+\_\+options@{O\+\_\+options}}
+\index{O\+\_\+options@{O\+\_\+options}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{O\+\_\+options}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Q\+L\+O\+N\+G} O\+\_\+options}\label{amqsdp_8c_ac43cc6b9c68558cea8e4a5b632df0363}
+
+
+Definición en la línea 34 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_a3fb375f4ee6971a0a7241c1b9fe0250d}{}\index{amqsdp.\+c@{amqsdp.\+c}!od@{od}}
+\index{od@{od}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{od}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Q\+O\+D} od = \{{\bf M\+Q\+O\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T}\}}\label{amqsdp_8c_a3fb375f4ee6971a0a7241c1b9fe0250d}
+
+
+Definición en la línea 26 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_aed7ea92f45bd273dde380a45ddced592}{}\index{amqsdp.\+c@{amqsdp.\+c}!offset@{offset}}
+\index{offset@{offset}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{offset}]{\setlength{\rightskip}{0pt plus 5cm}int offset = 0}\label{amqsdp_8c_aed7ea92f45bd273dde380a45ddced592}
+
+
+Definición en la línea 52 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_a017b205b3e8f746565c6358ba97f80cd}{}\index{amqsdp.\+c@{amqsdp.\+c}!pmo@{pmo}}
+\index{pmo@{pmo}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{pmo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Q\+P\+M\+O} pmo = \{{\bf M\+Q\+P\+M\+O\+\_\+\+D\+E\+F\+A\+U\+L\+T}\}}\label{amqsdp_8c_a017b205b3e8f746565c6358ba97f80cd}
+
+
+Definición en la línea 28 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_a30bbda1ba59bb12c2895c4006804a55d}{}\index{amqsdp.\+c@{amqsdp.\+c}!qmgr@{qmgr}}
+\index{qmgr@{qmgr}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{qmgr}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ qmgr}\label{amqsdp_8c_a30bbda1ba59bb12c2895c4006804a55d}
+
+
+Definición en la línea 41 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_a52b0abed1d4b7d10c3a8e42e40f8f80a}{}\index{amqsdp.\+c@{amqsdp.\+c}!Q\+M\+Name@{Q\+M\+Name}}
+\index{Q\+M\+Name@{Q\+M\+Name}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{Q\+M\+Name}]{\setlength{\rightskip}{0pt plus 5cm}char Q\+M\+Name\mbox{[}50\mbox{]}}\label{amqsdp_8c_a52b0abed1d4b7d10c3a8e42e40f8f80a}
+
+
+Definición en la línea 39 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_a5a317b1553299b3cbe3ef6d6d2edcffc}{}\index{amqsdp.\+c@{amqsdp.\+c}!qname@{qname}}
+\index{qname@{qname}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{qname}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ qname = \char`\"{}S\+D\+P.\+T\+R\+A\+P\+P\+E\+R\char`\"{}}\label{amqsdp_8c_a5a317b1553299b3cbe3ef6d6d2edcffc}
+
+
+Definición en la línea 42 del archivo amqsdp.\+c.
+
+\hypertarget{amqsdp_8c_a5f9e912074a29350e020b7a09f43ff32}{}\index{amqsdp.\+c@{amqsdp.\+c}!traza@{traza}}
+\index{traza@{traza}!amqsdp.\+c@{amqsdp.\+c}}
+\subsubsection[{traza}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+L\+E$\ast$ traza}\label{amqsdp_8c_a5f9e912074a29350e020b7a09f43ff32}
+
+
+Definición en la línea 59 del archivo amqsdp.\+c.
+

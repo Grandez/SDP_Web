@@ -1,0 +1,270 @@
+\hypertarget{md5_8c}{}\section{Referencia del Archivo src/md5.c}
+\label{md5_8c}\index{src/md5.\+c@{src/md5.\+c}}
+
+
+Implementacion de la firma digital segun R\+F\+C 1321.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}md5.\+h\char`\"{}}\\*
+Dependencia gráfica adjunta para md5.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{md5_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Estructuras de datos}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_m_d5___c_t_x}{M\+D5\+\_\+\+C\+T\+X}
+\end{DoxyCompactItemize}
+\subsection*{\textquotesingle{}defines\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{md5_8c_aa1a9ea99322858eccd1d285350b8e443}{\+\_\+\+M\+D5\+\_\+\+S\+R\+C\+\_\+}
+\item 
+\#define \hyperlink{md5_8c_a96d73bbd7af15cb1fc38c3f4a3bd82e9}{F}(x,  y,  z)~((z) $^\wedge$ ((x) \& ((y) $^\wedge$ (z))))
+\item 
+\#define \hyperlink{md5_8c_ad96b7cf3182ce2ba85e5a7a93b12c441}{G}(x,  y,  z)~((y) $^\wedge$ ((z) \& ((x) $^\wedge$ (y))))
+\item 
+\#define \hyperlink{md5_8c_ae42219072d798876e6b08e6b78614ff6}{H}(x,  y,  z)~(((x) $^\wedge$ (y)) $^\wedge$ (z))
+\item 
+\#define \hyperlink{md5_8c_ae9b91c8030fc9c6e383debe88f0364d7}{H2}(x,  y,  z)~((x) $^\wedge$ ((y) $^\wedge$ (z)))
+\item 
+\#define \hyperlink{md5_8c_ac0eafdc9ee161b71e7af98af736952fd}{I}(x,  y,  z)~((y) $^\wedge$ ((x) $\vert$ $\sim$(z)))
+\item 
+\#define \hyperlink{md5_8c_a642b3a091bb90dabdf2abb865fefab69}{S\+T\+E\+P}(f,  a,  b,  c,  d,  x,  t,  s)
+\item 
+\#define \hyperlink{md5_8c_a8be4bf419fd5ebe5cba399d782188517}{S\+E\+T}(n)
+\item 
+\#define \hyperlink{md5_8c_a22c5b6b56a260ea33a06c9fdebed523e}{G\+E\+T}(n)~(ctx-\/$>$block\mbox{[}(n)\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{\textquotesingle{}typedefs\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned int \hyperlink{md5_8c_ad854d8865ff7e0ce3717676b84926f54}{M\+D5\+\_\+u32plus}
+\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{md5_8c_acd7a26c7e6acb681ee336bfbc86e72bf}{M\+D5\+Init} (\hyperlink{struct_m_d5___c_t_x}{M\+D5\+\_\+\+C\+T\+X} $\ast$ctx)
+\item 
+void \hyperlink{md5_8c_aaa4f37af92ea5ca0e1281749421d4723}{M\+D5\+Update} (\hyperlink{struct_m_d5___c_t_x}{M\+D5\+\_\+\+C\+T\+X} $\ast$ctx, const void $\ast$data, unsigned long size)
+\item 
+void \hyperlink{md5_8c_afdf5d50df301891446e41c45eda5904d}{M\+D5\+Final} (unsigned char $\ast$result, \hyperlink{struct_m_d5___c_t_x}{M\+D5\+\_\+\+C\+T\+X} $\ast$ctx)
+\item 
+\hyperlink{sha256le_8h_adfbc1051df776564281ac4220ba53a9e}{\+\_\+\+E\+X\+T\+\_\+} void \hyperlink{md5_8c_aa75a1419e565ea619428681420b59179}{M\+D5} (char $\ast$out, const char $\ast$in)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Implementacion de la firma digital segun R\+F\+C 1321. 
+
+This is an Open\+S\+S\+L-\/compatible implementation of the R\+S\+A Data Security, Inc. M\+D5 Message-\/\+Digest Algorithm (R\+F\+C 1321).
+
+Homepage\+: \href{http://openwall.info/wiki/people/solar/software/public-domain-source-code/md5}{\tt http\+://openwall.\+info/wiki/people/solar/software/public-\/domain-\/source-\/code/md5}
+
+Author\+: Alexander Peslyak, better known as Solar Designer $<$solar at openwall.\+com$>$
+
+This software was written by Alexander Peslyak in 2001. No copyright is claimed, and the software is hereby placed in the public domain. In case this attempt to disclaim copyright and place the software in the public domain is deemed null and void, then the software is Copyright (c) 2001 Alexander Peslyak and it is hereby released to the general public under the following terms\+:
+
+Redistribution and use in source and binary forms, with or without modification, are permitted.
+
+There\textquotesingle{}s A\+B\+S\+O\+L\+U\+T\+E\+L\+Y N\+O W\+A\+R\+R\+A\+N\+T\+Y, express or implied.
+
+(This is a heavily cut-\/down \char`\"{}\+B\+S\+D license\char`\"{}.)
+
+This differs from Colin Plumb\textquotesingle{}s older public domain implementation in that no exactly 32-\/bit integer data type is required (any 32-\/bit or wider unsigned integer data type will do), there\textquotesingle{}s no compile-\/time endianness configuration, and the function prototypes match Open\+S\+S\+L\textquotesingle{}s. No code from Colin Plumb\textquotesingle{}s implementation has been reused; this comment merely compares the properties of the two independent implementations.
+
+The primary goals of this implementation are portability and ease of use. It is meant to be fast, but not as fast as possible. Some known optimizations are not included to reduce source code size and avoid compile-\/time configuration. 
+
+\subsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\hypertarget{md5_8c_aa1a9ea99322858eccd1d285350b8e443}{}\index{md5.\+c@{md5.\+c}!\+\_\+\+M\+D5\+\_\+\+S\+R\+C\+\_\+@{\+\_\+\+M\+D5\+\_\+\+S\+R\+C\+\_\+}}
+\index{\+\_\+\+M\+D5\+\_\+\+S\+R\+C\+\_\+@{\+\_\+\+M\+D5\+\_\+\+S\+R\+C\+\_\+}!md5.\+c@{md5.\+c}}
+\subsubsection[{\+\_\+\+M\+D5\+\_\+\+S\+R\+C\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+M\+D5\+\_\+\+S\+R\+C\+\_\+}\label{md5_8c_aa1a9ea99322858eccd1d285350b8e443}
+
+
+Definición en la línea 45 del archivo md5.\+c.
+
+\hypertarget{md5_8c_a96d73bbd7af15cb1fc38c3f4a3bd82e9}{}\index{md5.\+c@{md5.\+c}!F@{F}}
+\index{F@{F}!md5.\+c@{md5.\+c}}
+\subsubsection[{F}]{\setlength{\rightskip}{0pt plus 5cm}\#define F(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y, }
+\item[{}]{z}
+\end{DoxyParamCaption}
+)~((z) $^\wedge$ ((x) \& ((y) $^\wedge$ (z))))}\label{md5_8c_a96d73bbd7af15cb1fc38c3f4a3bd82e9}
+
+
+Definición en la línea 65 del archivo md5.\+c.
+
+\hypertarget{md5_8c_ad96b7cf3182ce2ba85e5a7a93b12c441}{}\index{md5.\+c@{md5.\+c}!G@{G}}
+\index{G@{G}!md5.\+c@{md5.\+c}}
+\subsubsection[{G}]{\setlength{\rightskip}{0pt plus 5cm}\#define G(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y, }
+\item[{}]{z}
+\end{DoxyParamCaption}
+)~((y) $^\wedge$ ((z) \& ((x) $^\wedge$ (y))))}\label{md5_8c_ad96b7cf3182ce2ba85e5a7a93b12c441}
+
+
+Definición en la línea 66 del archivo md5.\+c.
+
+\hypertarget{md5_8c_a22c5b6b56a260ea33a06c9fdebed523e}{}\index{md5.\+c@{md5.\+c}!G\+E\+T@{G\+E\+T}}
+\index{G\+E\+T@{G\+E\+T}!md5.\+c@{md5.\+c}}
+\subsubsection[{G\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+E\+T(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~(ctx-\/$>$block\mbox{[}(n)\mbox{]})}\label{md5_8c_a22c5b6b56a260ea33a06c9fdebed523e}
+
+
+Definición en la línea 99 del archivo md5.\+c.
+
+\hypertarget{md5_8c_ae42219072d798876e6b08e6b78614ff6}{}\index{md5.\+c@{md5.\+c}!H@{H}}
+\index{H@{H}!md5.\+c@{md5.\+c}}
+\subsubsection[{H}]{\setlength{\rightskip}{0pt plus 5cm}\#define H(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y, }
+\item[{}]{z}
+\end{DoxyParamCaption}
+)~(((x) $^\wedge$ (y)) $^\wedge$ (z))}\label{md5_8c_ae42219072d798876e6b08e6b78614ff6}
+
+
+Definición en la línea 67 del archivo md5.\+c.
+
+\hypertarget{md5_8c_ae9b91c8030fc9c6e383debe88f0364d7}{}\index{md5.\+c@{md5.\+c}!H2@{H2}}
+\index{H2@{H2}!md5.\+c@{md5.\+c}}
+\subsubsection[{H2}]{\setlength{\rightskip}{0pt plus 5cm}\#define H2(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y, }
+\item[{}]{z}
+\end{DoxyParamCaption}
+)~((x) $^\wedge$ ((y) $^\wedge$ (z)))}\label{md5_8c_ae9b91c8030fc9c6e383debe88f0364d7}
+
+
+Definición en la línea 68 del archivo md5.\+c.
+
+\hypertarget{md5_8c_ac0eafdc9ee161b71e7af98af736952fd}{}\index{md5.\+c@{md5.\+c}!I@{I}}
+\index{I@{I}!md5.\+c@{md5.\+c}}
+\subsubsection[{I}]{\setlength{\rightskip}{0pt plus 5cm}\#define I(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y, }
+\item[{}]{z}
+\end{DoxyParamCaption}
+)~((y) $^\wedge$ ((x) $\vert$ $\sim$(z)))}\label{md5_8c_ac0eafdc9ee161b71e7af98af736952fd}
+
+
+Definición en la línea 69 del archivo md5.\+c.
+
+\hypertarget{md5_8c_a8be4bf419fd5ebe5cba399d782188517}{}\index{md5.\+c@{md5.\+c}!S\+E\+T@{S\+E\+T}}
+\index{S\+E\+T@{S\+E\+T}!md5.\+c@{md5.\+c}}
+\subsubsection[{S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+E\+T(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)}\label{md5_8c_a8be4bf419fd5ebe5cba399d782188517}
+{\bfseries Valor\+:}
+\begin{DoxyCode}
+(ctx->block[(n)] = \(\backslash\)
+    (\hyperlink{md5_8c_ad854d8865ff7e0ce3717676b84926f54}{MD5\_u32plus})ptr[(n) * 4] | \(\backslash\)
+    ((\hyperlink{md5_8c_ad854d8865ff7e0ce3717676b84926f54}{MD5\_u32plus})ptr[(n) * 4 + 1] << 8) | \(\backslash\)
+    ((\hyperlink{md5_8c_ad854d8865ff7e0ce3717676b84926f54}{MD5\_u32plus})ptr[(n) * 4 + 2] << 16) | \(\backslash\)
+    ((\hyperlink{md5_8c_ad854d8865ff7e0ce3717676b84926f54}{MD5\_u32plus})ptr[(n) * 4 + 3] << 24))
+\end{DoxyCode}
+
+
+Definición en la línea 93 del archivo md5.\+c.
+
+\hypertarget{md5_8c_a642b3a091bb90dabdf2abb865fefab69}{}\index{md5.\+c@{md5.\+c}!S\+T\+E\+P@{S\+T\+E\+P}}
+\index{S\+T\+E\+P@{S\+T\+E\+P}!md5.\+c@{md5.\+c}}
+\subsubsection[{S\+T\+E\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+E\+P(
+\begin{DoxyParamCaption}
+\item[{}]{f, }
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d, }
+\item[{}]{x, }
+\item[{}]{t, }
+\item[{}]{s}
+\end{DoxyParamCaption}
+)}\label{md5_8c_a642b3a091bb90dabdf2abb865fefab69}
+{\bfseries Valor\+:}
+\begin{DoxyCode}
+(a) += f((b), (c), (d)) + (x) + (t); \(\backslash\)
+    (a) = (((a) << (s)) | (((a) & 0xffffffff) >> (32 - (s)))); \(\backslash\)
+    (a) += (b);
+\end{DoxyCode}
+
+
+Definición en la línea 74 del archivo md5.\+c.
+
+
+
+\subsection{Documentación de los \textquotesingle{}typedefs\textquotesingle{}}
+\hypertarget{md5_8c_ad854d8865ff7e0ce3717676b84926f54}{}\index{md5.\+c@{md5.\+c}!M\+D5\+\_\+u32plus@{M\+D5\+\_\+u32plus}}
+\index{M\+D5\+\_\+u32plus@{M\+D5\+\_\+u32plus}!md5.\+c@{md5.\+c}}
+\subsubsection[{M\+D5\+\_\+u32plus}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf M\+D5\+\_\+u32plus}}\label{md5_8c_ad854d8865ff7e0ce3717676b84926f54}
+
+
+Definición en la línea 49 del archivo md5.\+c.
+
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{md5_8c_aa75a1419e565ea619428681420b59179}{}\index{md5.\+c@{md5.\+c}!M\+D5@{M\+D5}}
+\index{M\+D5@{M\+D5}!md5.\+c@{md5.\+c}}
+\subsubsection[{M\+D5(char $\ast$out, const char $\ast$in)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+E\+X\+T\+\_\+} void M\+D5 (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{out, }
+\item[{const char $\ast$}]{in}
+\end{DoxyParamCaption}
+)}\label{md5_8c_aa75a1419e565ea619428681420b59179}
+Devuelve la firma M\+D5 asociada a in out debe ser un array de 32 bytes 
+
+Definición en la línea 310 del archivo md5.\+c.
+
+\hypertarget{md5_8c_afdf5d50df301891446e41c45eda5904d}{}\index{md5.\+c@{md5.\+c}!M\+D5\+Final@{M\+D5\+Final}}
+\index{M\+D5\+Final@{M\+D5\+Final}!md5.\+c@{md5.\+c}}
+\subsubsection[{M\+D5\+Final(unsigned char $\ast$result, M\+D5\+\_\+\+C\+T\+X $\ast$ctx)}]{\setlength{\rightskip}{0pt plus 5cm}void M\+D5\+Final (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$}]{result, }
+\item[{{\bf M\+D5\+\_\+\+C\+T\+X} $\ast$}]{ctx}
+\end{DoxyParamCaption}
+)}\label{md5_8c_afdf5d50df301891446e41c45eda5904d}
+
+
+Definición en la línea 259 del archivo md5.\+c.
+
+\hypertarget{md5_8c_acd7a26c7e6acb681ee336bfbc86e72bf}{}\index{md5.\+c@{md5.\+c}!M\+D5\+Init@{M\+D5\+Init}}
+\index{M\+D5\+Init@{M\+D5\+Init}!md5.\+c@{md5.\+c}}
+\subsubsection[{M\+D5\+Init(\+M\+D5\+\_\+\+C\+T\+X $\ast$ctx)}]{\setlength{\rightskip}{0pt plus 5cm}void M\+D5\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+D5\+\_\+\+C\+T\+X} $\ast$}]{ctx}
+\end{DoxyParamCaption}
+)}\label{md5_8c_acd7a26c7e6acb681ee336bfbc86e72bf}
+
+
+Definición en la línea 214 del archivo md5.\+c.
+
+\hypertarget{md5_8c_aaa4f37af92ea5ca0e1281749421d4723}{}\index{md5.\+c@{md5.\+c}!M\+D5\+Update@{M\+D5\+Update}}
+\index{M\+D5\+Update@{M\+D5\+Update}!md5.\+c@{md5.\+c}}
+\subsubsection[{M\+D5\+Update(\+M\+D5\+\_\+\+C\+T\+X $\ast$ctx, const void $\ast$data, unsigned long size)}]{\setlength{\rightskip}{0pt plus 5cm}void M\+D5\+Update (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+D5\+\_\+\+C\+T\+X} $\ast$}]{ctx, }
+\item[{const void $\ast$}]{data, }
+\item[{unsigned long}]{size}
+\end{DoxyParamCaption}
+)}\label{md5_8c_aaa4f37af92ea5ca0e1281749421d4723}
+
+
+Definición en la línea 225 del archivo md5.\+c.
+

@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Proyecto de Fin de Carrera: Fichero Fuente include/trapcodes.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Proyecto de Fin de Carrera
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Trapper SDPTRAPB</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Estructuras&#160;de&#160;Datos</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('trapcodes_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">trapcodes.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="trapcodes_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _TRAP_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">   #define _TRAP_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#abf8c519289600eaaea8c07a268de7194">    4</a></span>&#160;<span class="preprocessor">    #define END_MARK     0x01</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a237bc2180908e4111f8484da89aa2e8d">    6</a></span>&#160;<span class="preprocessor">    #define HTRAP       0x100  //  256</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#af918ab5b43b7193ccf30754fe57a5d55">    7</a></span>&#160;<span class="preprocessor">    #define HCODE       0x200  //  512</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a3097eb1fed719fa18f823e401ffda463">    8</a></span>&#160;<span class="preprocessor">    #define HACCESS     0x400  // 1024</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a964465eab727e43b3d21087eecbe7574">    9</a></span>&#160;<span class="preprocessor">    #define HUNDEF2     0x800</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a62067ec57aa60f39804f432fc180c26d">   10</a></span>&#160;<span class="preprocessor">    #define HUNDEF3    0x1000</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a2d0a30b85c2d9040df5c0e44af129770">   11</a></span>&#160;<span class="preprocessor">    #define HUNDEF4    0x2000</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a75a60e8a5ab65dc2e86256c6129febc4">   12</a></span>&#160;<span class="preprocessor">    #define HUNDEF5    0x4000</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a03fff3cb1e3230ec75109cbbb9d51945">   13</a></span>&#160;<span class="preprocessor">    #define HUNDEF     0x8000</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">// Mascara del grupo</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#aff974876b14049785960788e714d2a46">   17</a></span>&#160;<span class="preprocessor">    #define TRAP         0x01</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#ae6527c8381eb3f23b7fd6d6efec6ffc7">   18</a></span>&#160;<span class="preprocessor">    #define CODE         0x02</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a321a20f839f3d9ccd0db1dc865850dc7">   19</a></span>&#160;<span class="preprocessor">    #define ACCESS       0x04</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#aaaa9a61b79e5c0e31c3ab9a3396c1bb7">   20</a></span>&#160;<span class="preprocessor">    #define UNDEF2       0x08</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a1958c8a77ed4ea567f7e683b1642f843">   21</a></span>&#160;<span class="preprocessor">    #define UNDEF3       0x10</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a0c0ed874daad777853a5b7e576d93711">   22</a></span>&#160;<span class="preprocessor">    #define UNDEF4       0x20</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a91b063a4bb2d6e3edf297a91351bd0ec">   23</a></span>&#160;<span class="preprocessor">    #define UNDEF5       0x40</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#abde25a67f4046530ae1c572cefeb5869">   24</a></span>&#160;<span class="preprocessor">    #define UNDEF        0x80</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">// Mascara de TRAP</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a2c63ae95fe7c6106ae1ec9c283afa486">   28</a></span>&#160;<span class="preprocessor">    #define MODULE       0x02</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a4fa9231686d12bdfb2ecad40f744fe0a">   29</a></span>&#160;<span class="preprocessor">    #define PARAGRAPH    0x04</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#aa980b5e5e502cf62bdca6c0452b97516">   30</a></span>&#160;<span class="preprocessor">    #define CALL         0x08</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a7aad18faa9ed07aac5fdb9c76dc041da">   31</a></span>&#160;<span class="preprocessor">    #define SQL          0x10</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a266889edcc839d71e3200bfec5281021">   32</a></span>&#160;<span class="preprocessor">    #define CICS         0x20</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a686dea444026cbf1236c24e7edb3a96d">   33</a></span>&#160;<span class="preprocessor">    #define CUSTOM       0x40</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">// Usados en la libreria</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a1aa8fb6580169b450d7a303031ce5be5">   36</a></span>&#160;<span class="preprocessor">    #define COVER       0x100</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#acd926066f05b2f51e61f1ef6d8a7724e">   37</a></span>&#160;<span class="preprocessor">    #define PERS        0x200</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">// Mascara de CODE</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a7603f0308bf3641b5db73c0163d58473">   41</a></span>&#160;<span class="preprocessor">    #define BLOQUE       0x02</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a6bd579d720ce1064e4b62ee152ef107c">   42</a></span>&#160;<span class="preprocessor">    #define WORKINGS     0x04</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// Mascara de ACCESS</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a1354b70ac6803a06beebe84f61b5f95b">   46</a></span>&#160;<span class="preprocessor">    #define OPEN       0x01</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a0e29f488071372aa0530842e60b64511">   47</a></span>&#160;<span class="preprocessor">    #define CLOSE      0x02</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a9cec4693931a816d4ad374c3a00e0dae">   48</a></span>&#160;<span class="preprocessor">    #define INSERT     0x04</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#ada74e7db007a68e763f20c17f2985356">   49</a></span>&#160;<span class="preprocessor">    #define READ       0x08 </span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#ac2558c32fa879d85fe59f8c5f8dfbc04">   50</a></span>&#160;<span class="preprocessor">    #define UPDATE     0x10</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">    #undef DELETE</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#abbbe5949f3c1f72e439924f8cf503509">   52</a></span>&#160;<span class="preprocessor">    #define DELETE     0x20</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a53dc4af00adc7b3b4d12eafb71596dfc">   53</a></span>&#160;<span class="preprocessor">    #define SELECT     0x40</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#aeeaa356bf502aeb9533e65bc2e15e754">   54</a></span>&#160;<span class="preprocessor">    #define TOTAL      0x80</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">// Valores de code</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a52220397ecea855b3a99746e451426e1">   59</a></span>&#160;<span class="preprocessor">    #define BLOCK    HCODE + BLOQUE    // 514</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a582443b5837da456dff914c441bc092b">   60</a></span>&#160;<span class="preprocessor">    #define WORKING  HCODE + WORKINGS  // 516</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">// Valores BEG</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#aa2ed94e589b744dc61af0c5347a677a4">   64</a></span>&#160;<span class="preprocessor">    #define BEG_MODULE    HTRAP + MODULE    // 258</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a502fe347b3225e24b233d7f80f386982">   65</a></span>&#160;<span class="preprocessor">    #define BEG_PARAGRAPH HTRAP + PARAGRAPH // 260</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#aa12797a4365f4dabd2b053507533f4e7">   66</a></span>&#160;<span class="preprocessor">    #define BEG_CALL      HTRAP + CALL</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a2a3a9d838f8f408d34f65d6697a3d8ef">   67</a></span>&#160;<span class="preprocessor">    #define BEG_SQL       HTRAP + SQL</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#af319d039f970bcf319a76f611eb0b587">   68</a></span>&#160;<span class="preprocessor">    #define BEG_CICS      HTRAP + CICS</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#af11cc4b12e5db751f353c365b0161d88">   69</a></span>&#160;<span class="preprocessor">    #define BEG_INST      HTRAP + INST</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#aaae1698405580764e947f1d04d2e9426">   70</a></span>&#160;<span class="preprocessor">    #define BEG_CUSTOM    HTRAP + CUSTOM</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">// Valores END</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#afb184105b5223c6f1631cd7b9e235941">   74</a></span>&#160;<span class="preprocessor">    #define END_MODULE       BEG_MODULE    + END_MARK // 259</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a61a9bf2a39bd96ca80465936757f3a64">   75</a></span>&#160;<span class="preprocessor">    #define END_PARAGRAPH    BEG_PARAGRAPH + END_MARK</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a04f39035cb8fcab9798c273523e6e20f">   76</a></span>&#160;<span class="preprocessor">    #define END_CALL         BEG_CALL      + END_MARK</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#af31242d26a530b55735989a9825418df">   77</a></span>&#160;<span class="preprocessor">    #define END_SQL          BEG_SQL       + END_MARK</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#afc443727f3b34add263ef2597e66ae7f">   78</a></span>&#160;<span class="preprocessor">    #define END_CICS         BEG_CICS      + END_MARK</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a7d95a721ac4478793287a2b7d96dfe09">   79</a></span>&#160;<span class="preprocessor">    #define END_INST         BEG_INST      + END_MARK</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#ad103ae3a3ba1086ddd8c301315938421">   80</a></span>&#160;<span class="preprocessor">    #define END_CUSTOM       BEG_CUSTOM    + END_MARK</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">// Valores ACESS </span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a9561402155f37fbf51721f272d13f46e">   84</a></span>&#160;<span class="preprocessor">    #define ACC_OPEN    HACCESS + OPEN   // 1025</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a0b3fc7d973279fe65cecbf7e8c73aece">   85</a></span>&#160;<span class="preprocessor">    #define ACC_CLOSE   HACCESS + CLOSE  // 1026</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#ad9370107065fce1f10a086bcebd386c9">   86</a></span>&#160;<span class="preprocessor">    #define ACC_INSERT  HACCESS + INSERT</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#abc19ef2d3b23537b17e542598a0a6756">   87</a></span>&#160;<span class="preprocessor">    #define ACC_READ    HACCESS + READ</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a9d776b61bc437ec075614f00c139fed2">   88</a></span>&#160;<span class="preprocessor">    #define ACC_UPDATE  HACCESS + UPDATE</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a4159431c40d8199996e0fe6084d80656">   89</a></span>&#160;<span class="preprocessor">    #define ACC_DELETE  HACCESS + DELETE</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a9c0a5841ffb9a67e977332f87e7e560b">   90</a></span>&#160;<span class="preprocessor">    #define ACC_SELECT  HACCESS + SELECT</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#ae1fd414bbdd68bf3f5d23a68ad368700">   92</a></span>&#160;<span class="preprocessor">    #define MSG_BEG      0x00</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a3292b59f6757fa83862ca01626b39728">   93</a></span>&#160;<span class="preprocessor">    #define MSG_END      0x01</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#ad1c2a68073a929ff8c57b9d0f5c2b096">   94</a></span>&#160;<span class="preprocessor">    #define MSG_COVER   0x100</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a76314cba0d2db75cb750a7b4bee5e4f2">   95</a></span>&#160;<span class="preprocessor">    #define MSG_PERS    0x200</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="trapcodes_8h.html#a2fc64d1d5e66422495b347c48b85a9dd">   96</a></span>&#160;<span class="preprocessor">    #define MSG_PARRS   0x400</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="trapcodes_8h.html">trapcodes.h</a></li>
+    <li class="footer">Generado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,475 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Proyecto de Fin de Carrera: Fichero Fuente src/SDPTRAPB.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Proyecto de Fin de Carrera
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Trapper SDPTRAPB</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Estructuras&#160;de&#160;Datos</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_s_d_p_t_r_a_p_b_8c_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">SDPTRAPB.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_s_d_p_t_r_a_p_b_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="_s_d_p_t_r_a_p_b_8c.html#a078985ed6b26e9aa8ab5dc3db733ce0a">   16</a></span>&#160;<span class="preprocessor">#define _MAIN_MODULE_</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="_s_d_p_t_r_a_p_b_8c.html#aa34996ed15c54e509b65ea825013f094">   17</a></span>&#160;<span class="preprocessor">#define _SDPTRAPB_C_</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="_s_d_p_t_r_a_p_b_8c.html#a0afe4cbd0a945e888ddbfd92070d8e57">   19</a></span>&#160;<span class="preprocessor">#define NO_STDIO_REDIRECT</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;time.h&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="jggsal_8h.html">jggsal.h</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_s_d_p_t_r_a_p_b_8h.html">SDPTRAPB.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_s_d_p_t_r_a_p_8h.html">SDPTRAP.h</a>&quot;</span> </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="cob2c_8h.html">cob2c.h</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="modulos_8h.html">modulos.h</a>&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="timer_8h.html">timer.h</a>&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="messages_8h.html">messages.h</a>&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="md5_8h.html">md5.h</a>&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="amqsdp_8h.html">amqsdp.h</a>&quot;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="global_8h.html">global.h</a>&quot;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="_s_d_p_t_r_a_p_b_8c.html#a7b1065499acf2797bfe8d85cd6048da6">   40</a></span>&#160;<a class="code" href="struct_s_t___t_i_m_e_r.html">TIMER</a>  <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a7b1065499acf2797bfe8d85cd6048da6">current</a>;                           <span class="comment">/* Datos en el momento actual  */</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="_s_d_p_t_r_a_p_b_8c.html#ab3bb6926d5a7c2015951d6b80d9acd2a">   41</a></span>&#160;<a class="code" href="struct_s_t___t_i_m_e_r.html">TIMER</a>  <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#ab3bb6926d5a7c2015951d6b80d9acd2a">ultimo</a> = {0,<span class="stringliteral">&quot;&quot;</span>,0,0,0,0,0,0x0} ;    <span class="comment">/* Ultimos datos resumidos     */</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="_s_d_p_t_r_a_p_b_8c.html#a5f9e912074a29350e020b7a09f43ff32">   42</a></span>&#160;FILE  *<a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a5f9e912074a29350e020b7a09f43ff32">traza</a> = 0x0;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">/************************************************/</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">/***           PROTOTYPES                     ***/</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">/************************************************/</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#ad67bdaaddcfa1424dad31c0b8187f829">startProcess</a>      (<span class="keywordtype">int</span> option);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#aa42745580a553732a3f221db4d209801">endProcess</a>        (<span class="keywordtype">int</span> option, <span class="keywordtype">char</span> *sdpData);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a0704e6747f6e4e33d32b791e60c85953">calculateTimers</a>   (<a class="code" href="struct_s_t___t_i_m_e_r.html">TIMER</a> *timer);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#ad714df92d7ba0d4f11a8de881029449f">initSystem</a>        (<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a791a48c81cdf8f968eb6e0282729ff14">cleanSystem</a>       (<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a004616c530a9e96c121bf5aa81198eab">nuevoModulo</a>       (<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">/************************************************/</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">/***  PUBLIC FUNCTIONS (DLL)                  ***/</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">/************************************************/</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="_s_d_p_t_r_a_p_b_8c.html#afe26885736f7df4b2157bb4dfe32ce20">   64</a></span>&#160;<a class="code" href="_s_d_p_t_r_a_p_b_8h.html#aad8a241e13cd4731254878eed6271c8c">SDPTRAP_DLL</a> <span class="keywordtype">void</span> <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#afe26885736f7df4b2157bb4dfe32ce20">SDPTRAPB_setDebugLevel</a>(<span class="keywordtype">int</span> level) {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="global_8h.html#ad247c905cf5ce68a5eec344bcba86cc7">dbgLevel</a> = level;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="_s_d_p_t_r_a_p_b_8c.html#a56bd96cf4c11628e4f0e301c5b8e5872">   71</a></span>&#160;<a class="code" href="_s_d_p_t_r_a_p_b_8h.html#aad8a241e13cd4731254878eed6271c8c">SDPTRAP_DLL</a> <span class="keywordtype">void</span> <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a56bd96cf4c11628e4f0e301c5b8e5872">SDPTRAPB_setModo</a>(<span class="keywordtype">int</span> mode) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="global_8h.html#ad2085c6c4c17426ec0d5c1198e013921">modo</a> = mode;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="_s_d_p_t_r_a_p_b_8c.html#ae94cd489111188c3ccda942c856494f2">   83</a></span>&#160;<a class="code" href="_s_d_p_t_r_a_p_b_8h.html#aad8a241e13cd4731254878eed6271c8c">SDPTRAP_DLL</a> <span class="keywordtype">void</span> <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#ae94cd489111188c3ccda942c856494f2">SDPTRAPB</a>(<span class="keywordtype">int</span> *option, <span class="keywordtype">int</span> *len, <span class="keywordtype">char</span> *sdpData, <span class="keywordtype">char</span> *modulo) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">int</span> tipo = *option &amp; 0xFF; <span class="comment">/* Quitar el byte superior */</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="global_8h.html#a4fb693c3cca874aca4a9d2109cc561e5">inErr</a> != 0) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="global_8h.html#ad247c905cf5ce68a5eec344bcba86cc7">dbgLevel</a> &gt; 0 &amp;&amp; <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a5f9e912074a29350e020b7a09f43ff32">traza</a> == 0x0) {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a5f9e912074a29350e020b7a09f43ff32">traza</a> = fopen(<span class="stringliteral">&quot;sdptrab.log&quot;</span>, <span class="stringliteral">&quot;at&quot;</span>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        setvbuf(<a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a5f9e912074a29350e020b7a09f43ff32">traza</a>, <a class="code" href="sdpconfig_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, _IONBF, 0);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="global_8h.html#ad247c905cf5ce68a5eec344bcba86cc7">dbgLevel</a> &amp; <a class="code" href="sdpconfig_8h.html#a44f6930298af62aaaa4af242749e286d">DBG_CALL</a>) fprintf(<a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a5f9e912074a29350e020b7a09f43ff32">traza</a>, <span class="stringliteral">&quot;CALL  : %d-%d-%s\n&quot;</span>, tipo, *option, modulo);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="comment">// Captura los tiempos actuales en current</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    getTimers(&amp;current);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="global_8h.html#ad247c905cf5ce68a5eec344bcba86cc7">dbgLevel</a> &amp; <a class="code" href="sdpconfig_8h.html#ae94dc26fa7b9b56988e51bd5d00391b5">DBG_TIMER</a>) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        fprintf(<a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a5f9e912074a29350e020b7a09f43ff32">traza</a>, <span class="stringliteral">&quot;TIMER : %ld-%ld\n&quot;</span>, current.<a class="code" href="struct_s_t___t_i_m_e_r.html#a9ff17a87e2d5c2c20efd3883fc5e8afd">systemTime</a>, current.<a class="code" href="struct_s_t___t_i_m_e_r.html#ae4c31cb2b4477be7ae2f947073b3d770">cpuTime</a>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="comment">/* Actualiza la variabel global SDP sdp */</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="cob2c_8h.html#a7b6a88dac211a2521b42d23d3080c09d">copyCobolToCStruct</a>(&amp;<a class="code" href="global_8h.html#a44585a47047393e8faf0eef343b3b39d">sdp</a>, sdpData, modulo, *len);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="comment">/* Las opciones acabadas es 0 son inicio, si no son finales */</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">if</span> (tipo &amp; <a class="code" href="trapcodes_8h.html#abf8c519289600eaaea8c07a268de7194">END_MARK</a>) {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#aa42745580a553732a3f221db4d209801">endProcess</a>(tipo, sdpData);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#ad67bdaaddcfa1424dad31c0b8187f829">startProcess</a>(tipo);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">/************************************************/</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">/***          PRIVATE FUNCTIONS               ***/</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">/************************************************/</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment"> * Mensajes de inicio</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment"> * La primera vez se detecta por que las pilas son nulas</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment"> * Entonces crea el identificador de la sesion</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="_s_d_p_t_r_a_p_b_8c.html#ad67bdaaddcfa1424dad31c0b8187f829">  125</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#ad67bdaaddcfa1424dad31c0b8187f829">startProcess</a>(<span class="keywordtype">int</span> tipo) {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">char</span> data[1024];</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="global_8h.html#a88cac69ee038c814b384a20eb156a7d8">pilaTimers</a> == 0x0)           <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#ad714df92d7ba0d4f11a8de881029449f">initSystem</a>();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">if</span> (tipo &amp; <a class="code" href="trapcodes_8h.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>)               <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a004616c530a9e96c121bf5aa81198eab">nuevoModulo</a>();</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    strcpy(current.<a class="code" href="struct_s_t___t_i_m_e_r.html#aa62a205ca9e35b3b88632d2ec557a5a0">label</a>,<a class="code" href="global_8h.html#a44585a47047393e8faf0eef343b3b39d">sdp</a>.<a class="code" href="struct_s_t___s_d_p.html#aa62a205ca9e35b3b88632d2ec557a5a0">label</a>);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    current.<a class="code" href="struct_s_t___t_i_m_e_r.html#a913ffe6a1b92facf1adf87d5190445bc">tipo</a> = tipo;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="pila_8h.html#afd15d0a4ab9c26be333625ced34d00d9">stackDepth</a>(<a class="code" href="global_8h.html#a88cac69ee038c814b384a20eb156a7d8">pilaTimers</a>) == 0) <a class="code" href="messages_8h.html#a758539cefbe1e6b284f5cee92b59f8bc">sendBeginSession</a>(&amp;current);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="global_8h.html#ad247c905cf5ce68a5eec344bcba86cc7">dbgLevel</a> &amp; <a class="code" href="sdpconfig_8h.html#a4487f9d50b1daa14e880dc3cc740a39e">DBG_PUSH</a>) {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        fprintf(<a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a5f9e912074a29350e020b7a09f43ff32">traza</a>, <span class="stringliteral">&quot;PUSH  : %d-%s-%ld-%ld\n&quot;</span>, </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                       current.<a class="code" href="struct_s_t___t_i_m_e_r.html#a913ffe6a1b92facf1adf87d5190445bc">tipo</a>, current.<a class="code" href="struct_s_t___t_i_m_e_r.html#aa62a205ca9e35b3b88632d2ec557a5a0">label</a>, current.<a class="code" href="struct_s_t___t_i_m_e_r.html#a9ff17a87e2d5c2c20efd3883fc5e8afd">systemTime</a>, current.<a class="code" href="struct_s_t___t_i_m_e_r.html#ae4c31cb2b4477be7ae2f947073b3d770">cpuTime</a>);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <a class="code" href="pila_8h.html#a2d5d0b13ff0627defd07ec3fbe614b58">push</a>(<a class="code" href="global_8h.html#a88cac69ee038c814b384a20eb156a7d8">pilaTimers</a>, &amp;current);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;}</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment"> * Mensaje de fin</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment"> * En el caso de fin de modulo, puede que haya parrafos pendientes</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="comment"> * por lo que tambien hay que quitarlos</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="comment"> * Asi que de manera general, se quitan todos los timers</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment"> * hasta que cuadran por nombre de etiqueta</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="_s_d_p_t_r_a_p_b_8c.html#aa42745580a553732a3f221db4d209801">  151</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#aa42745580a553732a3f221db4d209801">endProcess</a>(<span class="keywordtype">int</span> tipo, <span class="keywordtype">char</span> *sdpData) {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <a class="code" href="struct_s_t___t_i_m_e_r.html">TIMER</a> *timer;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <a class="code" href="struct_s_t___t_i_m_e_r.html">TIMER</a>  <span class="keyword">internal</span>;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordtype">int</span>    flag = 0xFF;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    tipo &amp;= (0xFF ^ <a class="code" href="trapcodes_8h.html#abf8c519289600eaaea8c07a268de7194">END_MARK</a>); <span class="comment">/* Quitar la marca de fin de proceso */</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    timer = (<a class="code" href="struct_s_t___t_i_m_e_r.html">TIMER</a> *) <a class="code" href="pila_8h.html#ad9cf92c298635b8dad7b5a95d3f5dade">pop</a>(<a class="code" href="global_8h.html#a88cac69ee038c814b384a20eb156a7d8">pilaTimers</a>);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="global_8h.html#ad247c905cf5ce68a5eec344bcba86cc7">dbgLevel</a> &amp; <a class="code" href="sdpconfig_8h.html#ac85c3723adc8b9ef82670d5ecd43c328">DBG_POP</a>) {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        fprintf(<a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a5f9e912074a29350e020b7a09f43ff32">traza</a>, <span class="stringliteral">&quot;POPTRP: %d-%s-%s-%ld-%ld\n&quot;</span>, </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                timer-&gt;<a class="code" href="struct_s_t___t_i_m_e_r.html#a913ffe6a1b92facf1adf87d5190445bc">tipo</a>, timer-&gt;<a class="code" href="struct_s_t___t_i_m_e_r.html#aa62a205ca9e35b3b88632d2ec557a5a0">label</a>, <a class="code" href="global_8h.html#a44585a47047393e8faf0eef343b3b39d">sdp</a>.<a class="code" href="struct_s_t___s_d_p.html#aa62a205ca9e35b3b88632d2ec557a5a0">label</a>, timer-&gt;<a class="code" href="struct_s_t___t_i_m_e_r.html#a9ff17a87e2d5c2c20efd3883fc5e8afd">systemTime</a>, timer-&gt;<a class="code" href="struct_s_t___t_i_m_e_r.html#ae4c31cb2b4477be7ae2f947073b3d770">cpuTime</a>);  </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="comment">/* </span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="comment">     * En los casos en que se produzca un salto anormal de la pila</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="comment">     * por ejemplo, un goback</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="comment">     * Quitar elementos de la pila hasta encontrar su pareja</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordflow">while</span> (strcmp(timer-&gt;<a class="code" href="struct_s_t___t_i_m_e_r.html#aa62a205ca9e35b3b88632d2ec557a5a0">label</a>, <a class="code" href="global_8h.html#a44585a47047393e8faf0eef343b3b39d">sdp</a>.<a class="code" href="struct_s_t___s_d_p.html#aa62a205ca9e35b3b88632d2ec557a5a0">label</a>) &amp;&amp; timer-&gt;<a class="code" href="struct_s_t___t_i_m_e_r.html#a913ffe6a1b92facf1adf87d5190445bc">tipo</a> != tipo) {</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;          <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a0704e6747f6e4e33d32b791e60c85953">calculateTimers</a>(timer);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;          <a class="code" href="messages_8h.html#ad9a5bcb8859dbde9b0a6029b344b68cd">processMessage</a>(timer-&gt;<a class="code" href="struct_s_t___t_i_m_e_r.html#a913ffe6a1b92facf1adf87d5190445bc">tipo</a>, timer);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;          timer = (<a class="code" href="struct_s_t___t_i_m_e_r.html">TIMER</a> *) <a class="code" href="pila_8h.html#ad9cf92c298635b8dad7b5a95d3f5dade">pop</a>(<a class="code" href="global_8h.html#a88cac69ee038c814b384a20eb156a7d8">pilaTimers</a>);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;          <span class="keywordflow">if</span> (<a class="code" href="global_8h.html#ad247c905cf5ce68a5eec344bcba86cc7">dbgLevel</a> &amp; DBG_POP) {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;              fprintf(<a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a5f9e912074a29350e020b7a09f43ff32">traza</a>, <span class="stringliteral">&quot;POPTRP: %d-%s-%s-%ld-%ld\n&quot;</span>, </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                      timer-&gt;<a class="code" href="struct_s_t___t_i_m_e_r.html#a913ffe6a1b92facf1adf87d5190445bc">tipo</a>, timer-&gt;<a class="code" href="struct_s_t___t_i_m_e_r.html#aa62a205ca9e35b3b88632d2ec557a5a0">label</a>, <a class="code" href="global_8h.html#a44585a47047393e8faf0eef343b3b39d">sdp</a>.<a class="code" href="struct_s_t___s_d_p.html#aa62a205ca9e35b3b88632d2ec557a5a0">label</a>, timer-&gt;<a class="code" href="struct_s_t___t_i_m_e_r.html#a9ff17a87e2d5c2c20efd3883fc5e8afd">systemTime</a>, timer-&gt;<a class="code" href="struct_s_t___t_i_m_e_r.html#ae4c31cb2b4477be7ae2f947073b3d770">cpuTime</a>);  </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;          }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="comment">// Hacer el proceso previo a fin de modulo</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">if</span> (tipo &amp; <a class="code" href="trapcodes_8h.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>) <a class="code" href="messages_8h.html#a5e92dab3c2b325b433c5a2ef36289b01">processEndModule</a>(sdpData);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a0704e6747f6e4e33d32b791e60c85953">calculateTimers</a>(timer); <span class="comment">// Actualiza el timer</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <a class="code" href="messages_8h.html#ad9a5bcb8859dbde9b0a6029b344b68cd">processMessage</a>(tipo &amp; flag, timer);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="pila_8h.html#afd15d0a4ab9c26be333625ced34d00d9">stackDepth</a>(<a class="code" href="global_8h.html#a88cac69ee038c814b384a20eb156a7d8">pilaTimers</a>) == 0) {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <a class="code" href="messages_8h.html#af7fe7da407d194ebb7f01bccff7414e1">sendPendingData</a>();</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <a class="code" href="messages_8h.html#a8074fb403729c61320ce49f469576e0c">sendEndSession</a>(&amp;current);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a791a48c81cdf8f968eb6e0282729ff14">cleanSystem</a>();</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;}</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="comment">/* </span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="comment"> * Calcula los tiempos que hay que registrar </span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="comment"> * Deja los tiempos como ultimo</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="_s_d_p_t_r_a_p_b_8c.html#a0704e6747f6e4e33d32b791e60c85953">  200</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a0704e6747f6e4e33d32b791e60c85953">calculateTimers</a>(<a class="code" href="struct_s_t___t_i_m_e_r.html">TIMER</a> *timer) {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    timer-&gt;<a class="code" href="struct_s_t___t_i_m_e_r.html#a9ff17a87e2d5c2c20efd3883fc5e8afd">systemTime</a>  = current.<a class="code" href="struct_s_t___t_i_m_e_r.html#a9ff17a87e2d5c2c20efd3883fc5e8afd">systemTime</a> - timer-&gt;<a class="code" href="struct_s_t___t_i_m_e_r.html#a9ff17a87e2d5c2c20efd3883fc5e8afd">systemTime</a>;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    timer-&gt;<a class="code" href="struct_s_t___t_i_m_e_r.html#ae4c31cb2b4477be7ae2f947073b3d770">cpuTime</a>     = current.<a class="code" href="struct_s_t___t_i_m_e_r.html#ae4c31cb2b4477be7ae2f947073b3d770">cpuTime</a>    - timer-&gt;<a class="code" href="struct_s_t___t_i_m_e_r.html#ae4c31cb2b4477be7ae2f947073b3d770">cpuTime</a>;     </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;     <span class="comment">/*</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="comment">      * Si no hay anterior todo se ha consumido aqui</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="comment">      * Si no aqui se ha consumido la diferencia entre el actual y ultimo</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;     <span class="keywordflow">if</span> (ultimo.<a class="code" href="struct_s_t___t_i_m_e_r.html#a9ff17a87e2d5c2c20efd3883fc5e8afd">systemTime</a> == 0) {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;         timer-&gt;<a class="code" href="struct_s_t___t_i_m_e_r.html#a8c0fad2befd4574e6a7fae46124d5339">intSystemTime</a> = timer-&gt;<a class="code" href="struct_s_t___t_i_m_e_r.html#a9ff17a87e2d5c2c20efd3883fc5e8afd">systemTime</a>;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;         timer-&gt;<a class="code" href="struct_s_t___t_i_m_e_r.html#a61dff6fa53638f76ef2f5c004a58992b">intCpuTime</a>    = timer-&gt;<a class="code" href="struct_s_t___t_i_m_e_r.html#ae4c31cb2b4477be7ae2f947073b3d770">cpuTime</a>;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;     }</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;     <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        timer-&gt;<a class="code" href="struct_s_t___t_i_m_e_r.html#a8c0fad2befd4574e6a7fae46124d5339">intSystemTime</a> = current.<a class="code" href="struct_s_t___t_i_m_e_r.html#a9ff17a87e2d5c2c20efd3883fc5e8afd">systemTime</a> - ultimo.<a class="code" href="struct_s_t___t_i_m_e_r.html#a9ff17a87e2d5c2c20efd3883fc5e8afd">systemTime</a>;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        timer-&gt;<a class="code" href="struct_s_t___t_i_m_e_r.html#a61dff6fa53638f76ef2f5c004a58992b">intCpuTime</a>    = current.<a class="code" href="struct_s_t___t_i_m_e_r.html#ae4c31cb2b4477be7ae2f947073b3d770">cpuTime</a>    - ultimo.<a class="code" href="struct_s_t___t_i_m_e_r.html#ae4c31cb2b4477be7ae2f947073b3d770">cpuTime</a>;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;     }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;     timer-&gt;<a class="code" href="struct_s_t___t_i_m_e_r.html#a23a3531ed93eb7f069a5f33ee77d7ca8">veces</a> = 1;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;     ultimo = <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a7b1065499acf2797bfe8d85cd6048da6">current</a>;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;}</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
+<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="_s_d_p_t_r_a_p_b_8c.html#a004616c530a9e96c121bf5aa81198eab">  222</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a004616c530a9e96c121bf5aa81198eab">nuevoModulo</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <a class="code" href="struct_s_t___m_o_d.html">MOD</a> *modulo = <a class="code" href="modulos_8h.html#a3f474d9711cf3cb795b314712a2e3ac0">addModule</a>(&amp;<a class="code" href="global_8h.html#a44585a47047393e8faf0eef343b3b39d">sdp</a>, <a class="code" href="global_8h.html#ad2085c6c4c17426ec0d5c1198e013921">modo</a>);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    modulo-&gt;<a class="code" href="struct_s_t___m_o_d.html#a41aafff34874651f2469d2d622a7d60d">monitor</a> = 0xFF;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="global_8h.html#ad247c905cf5ce68a5eec344bcba86cc7">dbgLevel</a> &gt; <a class="code" href="sdpconfig_8h.html#a34617f3ac0249ca877bddc57f6982401">DBG_MOD</a>) fprintf(<a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a5f9e912074a29350e020b7a09f43ff32">traza</a>, <span class="stringliteral">&quot;PUSHM : %s\n&quot;</span>, modulo-&gt;<a class="code" href="struct_s_t___m_o_d.html#a59b9df3193b6f874922b75715fc1bc81">nombre</a>);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <a class="code" href="pila_8h.html#a2d5d0b13ff0627defd07ec3fbe614b58">push</a>(<a class="code" href="global_8h.html#a8ad0071cdfdcab41ce0ad1fbd76a9e58">pilaModulos</a>, modulo);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;}</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment"> * Crea el hash SHA de inicio de la sesion</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment"> * Prepara el buffer de envio</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="comment"> * Inicia las pilas</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="comment"> * Envia el mensaje de inicio de sesion</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
+<div class="line"><a name="l00236"></a><span class="lineno"><a class="line" href="_s_d_p_t_r_a_p_b_8c.html#ad714df92d7ba0d4f11a8de881029449f">  236</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#ad714df92d7ba0d4f11a8de881029449f">initSystem</a>() {</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;   FILETIME systemTime;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;   <span class="keywordtype">char</span> hostname[128];</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;   <span class="keywordtype">char</span> <a class="code" href="messages_8c.html#a1c07f3735e9c63f3130a615745887a20">szMsg</a>[512];</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;   <span class="comment">/* Verificar la agrupacion de mensajes */</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;   <span class="keywordtype">char</span> *var = getenv(<span class="stringliteral">&quot;SDP_GROUP&quot;</span>);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;   <span class="keywordflow">if</span> (var != 0x0)  <a class="code" href="amqsdp_8h.html#ac2122a579c04414c93370c338601c492">setMaxGroup</a>(atoi(var));</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;   <span class="comment">/* Verificar el modo de trabajo */</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;   var = getenv(<span class="stringliteral">&quot;SDP_MODE&quot;</span>);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;   <span class="keywordflow">if</span> (var != 0x0)  <a class="code" href="global_8h.html#ad2085c6c4c17426ec0d5c1198e013921">modo</a> = atoi(var);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;   <a class="code" href="amqsdp_8h.html#a3c337f7b77e495f85489f862d4df359c">setBufferSize</a>();</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;   <span class="comment">/* Crear las pilas */</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;   <a class="code" href="global_8h.html#a88cac69ee038c814b384a20eb156a7d8">pilaTimers</a>  = (<span class="keywordtype">void</span> *) <a class="code" href="pila_8h.html#a76e64db083920898ed319afa103e9c9b">createStack</a>(<span class="keyword">sizeof</span>(<a class="code" href="struct_s_t___t_i_m_e_r.html">TIMER</a>), <a class="code" href="sdpconfig_8h.html#aa93f0eb578d23995850d61f7d61c55c1">FALSE</a>);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;   <a class="code" href="global_8h.html#a8ad0071cdfdcab41ce0ad1fbd76a9e58">pilaModulos</a> = (<span class="keywordtype">void</span> *) <a class="code" href="pila_8h.html#a76e64db083920898ed319afa103e9c9b">createStack</a>(<span class="keyword">sizeof</span>(<a class="code" href="struct_s_t___m_o_d.html">MOD</a> *), <a class="code" href="sdpconfig_8h.html#aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</a>);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;   <span class="comment">/* Generar el identificador de la sesion */</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;   hostname[127] = 0x0;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;   gethostname(hostname, 127);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;   getlogin(hostname, <span class="keyword">sizeof</span>(hostname));</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;   <a class="code" href="global_8h.html#a0147a5b81499984f9cb00379a8cb84af">usuario</a> = strdup(hostname);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;   GetSystemTimeAsFileTime(&amp;systemTime);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;   <a class="code" href="global_8h.html#a2ebee5a02dd55f1f92212c6b202f649b">idSession</a> = (<span class="keywordtype">char</span> *) malloc(<a class="code" href="sdpconfig_8h.html#ad6074dd11ab3c97c8135c43aab03ae95">HASH_SIZE</a> + 1);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;   </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;   sprintf(szMsg, <span class="stringliteral">&quot;%s%lu%lu%d%s&quot;</span>, <a class="code" href="global_8h.html#a44585a47047393e8faf0eef343b3b39d">sdp</a>.<a class="code" href="struct_s_t___s_d_p.html#a11de7bbb4add4ed0cf596ea7a05cb841">firma</a>, systemTime.dwHighDateTime, systemTime.dwLowDateTime, getpid(), hostname);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;   </div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;   <a class="code" href="sdpconfig_8h.html#a37f0a3c295994e30902acb1b76bd094a">FIRMA</a>(<a class="code" href="global_8h.html#a2ebee5a02dd55f1f92212c6b202f649b">idSession</a>, szMsg);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;   <span class="keywordflow">if</span> (<a class="code" href="global_8h.html#ad247c905cf5ce68a5eec344bcba86cc7">dbgLevel</a> &amp; <a class="code" href="sdpconfig_8h.html#ae39a9c80905518ddfdc1e04d6bd45fbe">DBG_SESION</a>) fprintf(<a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a5f9e912074a29350e020b7a09f43ff32">traza</a>, <span class="stringliteral">&quot;SESION: %s-%s\n&quot;</span>, <a class="code" href="global_8h.html#a44585a47047393e8faf0eef343b3b39d">sdp</a>.<a class="code" href="struct_s_t___s_d_p.html#a59b9df3193b6f874922b75715fc1bc81">nombre</a>, <a class="code" href="global_8h.html#a2ebee5a02dd55f1f92212c6b202f649b">idSession</a>);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;   <span class="comment">/* Conectar el gestor de colas */</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;   <a class="code" href="amqsdp_8h.html#a5b1c0890d82a1e4fd8201da9ece0c6ae">initAMQ</a>(<a class="code" href="global_8h.html#ad247c905cf5ce68a5eec344bcba86cc7">dbgLevel</a>, <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a5f9e912074a29350e020b7a09f43ff32">traza</a>);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;   <a class="code" href="global_8h.html#a4fb693c3cca874aca4a9d2109cc561e5">inErr</a> = <a class="code" href="amqsdp_8h.html#acb3870940341d48437b3a835098fc53e">MQConnect</a>();</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="global_8h.html#a4fb693c3cca874aca4a9d2109cc561e5">inErr</a> == 0) <a class="code" href="global_8h.html#a4fb693c3cca874aca4a9d2109cc561e5">inErr</a> = <a class="code" href="amqsdp_8h.html#a147a0974e48f9171a63535159f34585d">MQOpenOutput</a>();</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;}</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="comment"> * Libera la memoria y cierra las conexiones</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno"><a class="line" href="_s_d_p_t_r_a_p_b_8c.html#a791a48c81cdf8f968eb6e0282729ff14">  281</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a791a48c81cdf8f968eb6e0282729ff14">cleanSystem</a>() {</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <a class="code" href="amqsdp_8h.html#a49ea4971cfd64e5b120d9dd38050426e">MQDisconnect</a>();</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <a class="code" href="global_8h.html#a88cac69ee038c814b384a20eb156a7d8">pilaTimers</a> = <a class="code" href="pila_8h.html#aa849c8d27b733322a37846b4dafd9711">deleteStack</a>(<a class="code" href="global_8h.html#a88cac69ee038c814b384a20eb156a7d8">pilaTimers</a>);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <a class="code" href="pila_8h.html#abfe71b23c5a319ae12879661e4dfa126">cleanStacks</a>();</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <a class="code" href="modulos_8h.html#a230d4f404c68f3232804e3ad1d7eff7a">cleanModules</a>();</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    </div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <a class="code" href="global_8h.html#a88cac69ee038c814b384a20eb156a7d8">pilaTimers</a>  = <a class="code" href="sdpconfig_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <a class="code" href="global_8h.html#a8ad0071cdfdcab41ce0ad1fbd76a9e58">pilaModulos</a> = <a class="code" href="sdpconfig_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <a class="code" href="amqsdp_8h.html#adba192fbf1af062214021fcb06229295">unsetBufferSize</a>();</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    free(<a class="code" href="global_8h.html#a2ebee5a02dd55f1f92212c6b202f649b">idSession</a>);</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a5f9e912074a29350e020b7a09f43ff32">traza</a> != <a class="code" href="sdpconfig_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) {</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        fclose(<a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a5f9e912074a29350e020b7a09f43ff32">traza</a>);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <a class="code" href="_s_d_p_t_r_a_p_b_8c.html#a5f9e912074a29350e020b7a09f43ff32">traza</a> = 0x0;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    }</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;}</div>
+<div class="ttc" id="sdpconfig_8h_html_ae39a9c80905518ddfdc1e04d6bd45fbe"><div class="ttname"><a href="sdpconfig_8h.html#ae39a9c80905518ddfdc1e04d6bd45fbe">DBG_SESION</a></div><div class="ttdeci">#define DBG_SESION</div><div class="ttdef"><b>Definition:</b> <a href="sdpconfig_8h_source.html#l00046">sdpconfig.h:46</a></div></div>
+<div class="ttc" id="_s_d_p_t_r_a_p_b_8c_html_ab3bb6926d5a7c2015951d6b80d9acd2a"><div class="ttname"><a href="_s_d_p_t_r_a_p_b_8c.html#ab3bb6926d5a7c2015951d6b80d9acd2a">ultimo</a></div><div class="ttdeci">TIMER ultimo</div><div class="ttdef"><b>Definition:</b> <a href="_s_d_p_t_r_a_p_b_8c_source.html#l00041">SDPTRAPB.c:41</a></div></div>
+<div class="ttc" id="messages_8h_html_a8074fb403729c61320ce49f469576e0c"><div class="ttname"><a href="messages_8h.html#a8074fb403729c61320ce49f469576e0c">sendEndSession</a></div><div class="ttdeci">_EXT_ void sendEndSession(TIMER *current)</div><div class="ttdef"><b>Definition:</b> <a href="messages_8c_source.html#l00379">messages.c:379</a></div></div>
+<div class="ttc" id="sdpconfig_8h_html_a37f0a3c295994e30902acb1b76bd094a"><div class="ttname"><a href="sdpconfig_8h.html#a37f0a3c295994e30902acb1b76bd094a">FIRMA</a></div><div class="ttdeci">#define FIRMA(a, b)</div><div class="ttdef"><b>Definition:</b> <a href="sdpconfig_8h_source.html#l00076">sdpconfig.h:76</a></div></div>
+<div class="ttc" id="amqsdp_8h_html_acb3870940341d48437b3a835098fc53e"><div class="ttname"><a href="amqsdp_8h.html#acb3870940341d48437b3a835098fc53e">MQConnect</a></div><div class="ttdeci">_EXT_ int MQConnect(void)</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00134">amqsdp.c:134</a></div></div>
+<div class="ttc" id="struct_s_t___t_i_m_e_r_html_a8c0fad2befd4574e6a7fae46124d5339"><div class="ttname"><a href="struct_s_t___t_i_m_e_r.html#a8c0fad2befd4574e6a7fae46124d5339">ST_TIMER::intSystemTime</a></div><div class="ttdeci">ULONG intSystemTime</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00049">sdpTypes.h:49</a></div></div>
+<div class="ttc" id="messages_8h_html"><div class="ttname"><a href="messages_8h.html">messages.h</a></div><div class="ttdoc">Funciones de gestion del envio de mensajes al sistema de colas. </div></div>
+<div class="ttc" id="sdpconfig_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="sdpconfig_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="sdpconfig_8h_source.html#l00039">sdpconfig.h:39</a></div></div>
+<div class="ttc" id="_s_d_p_t_r_a_p_8h_html"><div class="ttname"><a href="_s_d_p_t_r_a_p_8h.html">SDPTRAP.h</a></div><div class="ttdoc">Fichero de cabecera con los ficheros de cabecera comunes. </div></div>
+<div class="ttc" id="amqsdp_8h_html_adba192fbf1af062214021fcb06229295"><div class="ttname"><a href="amqsdp_8h.html#adba192fbf1af062214021fcb06229295">unsetBufferSize</a></div><div class="ttdeci">_EXT_ void unsetBufferSize()</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00089">amqsdp.c:89</a></div></div>
+<div class="ttc" id="sdpconfig_8h_html_aa93f0eb578d23995850d61f7d61c55c1"><div class="ttname"><a href="sdpconfig_8h.html#aa93f0eb578d23995850d61f7d61c55c1">FALSE</a></div><div class="ttdeci">#define FALSE</div><div class="ttdef"><b>Definition:</b> <a href="sdpconfig_8h_source.html#l00036">sdpconfig.h:36</a></div></div>
+<div class="ttc" id="_s_d_p_t_r_a_p_b_8c_html_ad67bdaaddcfa1424dad31c0b8187f829"><div class="ttname"><a href="_s_d_p_t_r_a_p_b_8c.html#ad67bdaaddcfa1424dad31c0b8187f829">startProcess</a></div><div class="ttdeci">void startProcess(int option)</div><div class="ttdef"><b>Definition:</b> <a href="_s_d_p_t_r_a_p_b_8c_source.html#l00125">SDPTRAPB.c:125</a></div></div>
+<div class="ttc" id="global_8h_html_a44585a47047393e8faf0eef343b3b39d"><div class="ttname"><a href="global_8h.html#a44585a47047393e8faf0eef343b3b39d">sdp</a></div><div class="ttdeci">SDP sdp</div></div>
+<div class="ttc" id="messages_8h_html_a5e92dab3c2b325b433c5a2ef36289b01"><div class="ttname"><a href="messages_8h.html#a5e92dab3c2b325b433c5a2ef36289b01">processEndModule</a></div><div class="ttdeci">_EXT_ void processEndModule(char *data)</div><div class="ttdef"><b>Definition:</b> <a href="messages_8c_source.html#l00193">messages.c:193</a></div></div>
+<div class="ttc" id="cob2c_8h_html"><div class="ttname"><a href="cob2c_8h.html">cob2c.h</a></div><div class="ttdoc">Fichero de cabecera para convertir la copy COBOL en una estructura SDP. </div></div>
+<div class="ttc" id="_s_d_p_t_r_a_p_b_8c_html_ae94cd489111188c3ccda942c856494f2"><div class="ttname"><a href="_s_d_p_t_r_a_p_b_8c.html#ae94cd489111188c3ccda942c856494f2">SDPTRAPB</a></div><div class="ttdeci">SDPTRAP_DLL void SDPTRAPB(int *option, int *len, char *sdpData, char *modulo)</div><div class="ttdoc">Punto de entrada a la libreria SDPTRAPB. </div><div class="ttdef"><b>Definition:</b> <a href="_s_d_p_t_r_a_p_b_8c_source.html#l00083">SDPTRAPB.c:83</a></div></div>
+<div class="ttc" id="amqsdp_8h_html_a147a0974e48f9171a63535159f34585d"><div class="ttname"><a href="amqsdp_8h.html#a147a0974e48f9171a63535159f34585d">MQOpenOutput</a></div><div class="ttdeci">_EXT_ int MQOpenOutput(void)</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00223">amqsdp.c:223</a></div></div>
+<div class="ttc" id="struct_s_t___t_i_m_e_r_html_a23a3531ed93eb7f069a5f33ee77d7ca8"><div class="ttname"><a href="struct_s_t___t_i_m_e_r.html#a23a3531ed93eb7f069a5f33ee77d7ca8">ST_TIMER::veces</a></div><div class="ttdeci">ULONG veces</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00046">sdpTypes.h:46</a></div></div>
+<div class="ttc" id="amqsdp_8h_html_ac2122a579c04414c93370c338601c492"><div class="ttname"><a href="amqsdp_8h.html#ac2122a579c04414c93370c338601c492">setMaxGroup</a></div><div class="ttdeci">_EXT_ void setMaxGroup(int group)</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00093">amqsdp.c:93</a></div></div>
+<div class="ttc" id="_s_d_p_t_r_a_p_b_8h_html"><div class="ttname"><a href="_s_d_p_t_r_a_p_b_8h.html">SDPTRAPB.h</a></div><div class="ttdoc">Fichero de cabecera de la libreria SDPTRAPB Define las constantes y los valores globales de comportam...</div></div>
+<div class="ttc" id="struct_s_t___s_d_p_html_aa62a205ca9e35b3b88632d2ec557a5a0"><div class="ttname"><a href="struct_s_t___s_d_p.html#aa62a205ca9e35b3b88632d2ec557a5a0">ST_SDP::label</a></div><div class="ttdeci">char label[MAX_PARRAFO+1]</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00029">sdpTypes.h:29</a></div></div>
+<div class="ttc" id="_s_d_p_t_r_a_p_b_8h_html_aad8a241e13cd4731254878eed6271c8c"><div class="ttname"><a href="_s_d_p_t_r_a_p_b_8h.html#aad8a241e13cd4731254878eed6271c8c">SDPTRAP_DLL</a></div><div class="ttdeci">#define SDPTRAP_DLL</div><div class="ttdef"><b>Definition:</b> <a href="_s_d_p_t_r_a_p_b_8h_source.html#l00033">SDPTRAPB.h:33</a></div></div>
+<div class="ttc" id="sdpconfig_8h_html_aa8cecfc5c5c054d2875c03e77b7be15d"><div class="ttname"><a href="sdpconfig_8h.html#aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</a></div><div class="ttdeci">#define TRUE</div><div class="ttdef"><b>Definition:</b> <a href="sdpconfig_8h_source.html#l00033">sdpconfig.h:33</a></div></div>
+<div class="ttc" id="struct_s_t___t_i_m_e_r_html"><div class="ttname"><a href="struct_s_t___t_i_m_e_r.html">ST_TIMER</a></div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00043">sdpTypes.h:43</a></div></div>
+<div class="ttc" id="_s_d_p_t_r_a_p_b_8c_html_a7b1065499acf2797bfe8d85cd6048da6"><div class="ttname"><a href="_s_d_p_t_r_a_p_b_8c.html#a7b1065499acf2797bfe8d85cd6048da6">current</a></div><div class="ttdeci">TIMER current</div><div class="ttdef"><b>Definition:</b> <a href="_s_d_p_t_r_a_p_b_8c_source.html#l00040">SDPTRAPB.c:40</a></div></div>
+<div class="ttc" id="_s_d_p_t_r_a_p_b_8c_html_afe26885736f7df4b2157bb4dfe32ce20"><div class="ttname"><a href="_s_d_p_t_r_a_p_b_8c.html#afe26885736f7df4b2157bb4dfe32ce20">SDPTRAPB_setDebugLevel</a></div><div class="ttdeci">SDPTRAP_DLL void SDPTRAPB_setDebugLevel(int level)</div><div class="ttdef"><b>Definition:</b> <a href="_s_d_p_t_r_a_p_b_8c_source.html#l00064">SDPTRAPB.c:64</a></div></div>
+<div class="ttc" id="messages_8h_html_af7fe7da407d194ebb7f01bccff7414e1"><div class="ttname"><a href="messages_8h.html#af7fe7da407d194ebb7f01bccff7414e1">sendPendingData</a></div><div class="ttdeci">_EXT_ void sendPendingData(void)</div><div class="ttdef"><b>Definition:</b> <a href="messages_8c_source.html#l00406">messages.c:406</a></div></div>
+<div class="ttc" id="global_8h_html"><div class="ttname"><a href="global_8h.html">global.h</a></div><div class="ttdoc">Define las variables de uso global para todo el sistema. </div></div>
+<div class="ttc" id="struct_s_t___s_d_p_html_a11de7bbb4add4ed0cf596ea7a05cb841"><div class="ttname"><a href="struct_s_t___s_d_p.html#a11de7bbb4add4ed0cf596ea7a05cb841">ST_SDP::firma</a></div><div class="ttdeci">char firma[HASH_SIZE+1]</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00027">sdpTypes.h:27</a></div></div>
+<div class="ttc" id="global_8h_html_ad247c905cf5ce68a5eec344bcba86cc7"><div class="ttname"><a href="global_8h.html#ad247c905cf5ce68a5eec344bcba86cc7">dbgLevel</a></div><div class="ttdeci">int dbgLevel</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00058">amqsdp.c:58</a></div></div>
+<div class="ttc" id="struct_s_t___t_i_m_e_r_html_a913ffe6a1b92facf1adf87d5190445bc"><div class="ttname"><a href="struct_s_t___t_i_m_e_r.html#a913ffe6a1b92facf1adf87d5190445bc">ST_TIMER::tipo</a></div><div class="ttdeci">int tipo</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00044">sdpTypes.h:44</a></div></div>
+<div class="ttc" id="timer_8h_html"><div class="ttname"><a href="timer_8h.html">timer.h</a></div><div class="ttdoc">Fichero de cabecera para incluir los modulos de calculo de timers. </div></div>
+<div class="ttc" id="global_8h_html_a4fb693c3cca874aca4a9d2109cc561e5"><div class="ttname"><a href="global_8h.html#a4fb693c3cca874aca4a9d2109cc561e5">inErr</a></div><div class="ttdeci">int inErr</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00057">amqsdp.c:57</a></div></div>
+<div class="ttc" id="struct_s_t___t_i_m_e_r_html_a61dff6fa53638f76ef2f5c004a58992b"><div class="ttname"><a href="struct_s_t___t_i_m_e_r.html#a61dff6fa53638f76ef2f5c004a58992b">ST_TIMER::intCpuTime</a></div><div class="ttdeci">ULONG intCpuTime</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00050">sdpTypes.h:50</a></div></div>
+<div class="ttc" id="global_8h_html_a8ad0071cdfdcab41ce0ad1fbd76a9e58"><div class="ttname"><a href="global_8h.html#a8ad0071cdfdcab41ce0ad1fbd76a9e58">pilaModulos</a></div><div class="ttdeci">void * pilaModulos</div></div>
+<div class="ttc" id="_s_d_p_t_r_a_p_b_8c_html_a56bd96cf4c11628e4f0e301c5b8e5872"><div class="ttname"><a href="_s_d_p_t_r_a_p_b_8c.html#a56bd96cf4c11628e4f0e301c5b8e5872">SDPTRAPB_setModo</a></div><div class="ttdeci">SDPTRAP_DLL void SDPTRAPB_setModo(int mode)</div><div class="ttdef"><b>Definition:</b> <a href="_s_d_p_t_r_a_p_b_8c_source.html#l00071">SDPTRAPB.c:71</a></div></div>
+<div class="ttc" id="struct_s_t___t_i_m_e_r_html_ae4c31cb2b4477be7ae2f947073b3d770"><div class="ttname"><a href="struct_s_t___t_i_m_e_r.html#ae4c31cb2b4477be7ae2f947073b3d770">ST_TIMER::cpuTime</a></div><div class="ttdeci">ULONG cpuTime</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00048">sdpTypes.h:48</a></div></div>
+<div class="ttc" id="struct_s_t___t_i_m_e_r_html_aa62a205ca9e35b3b88632d2ec557a5a0"><div class="ttname"><a href="struct_s_t___t_i_m_e_r.html#aa62a205ca9e35b3b88632d2ec557a5a0">ST_TIMER::label</a></div><div class="ttdeci">char label[MAX_PARRAFO+1]</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00045">sdpTypes.h:45</a></div></div>
+<div class="ttc" id="modulos_8h_html_a230d4f404c68f3232804e3ad1d7eff7a"><div class="ttname"><a href="modulos_8h.html#a230d4f404c68f3232804e3ad1d7eff7a">cleanModules</a></div><div class="ttdeci">_EXT_ void cleanModules(void)</div><div class="ttdef"><b>Definition:</b> <a href="modulos_8c_source.html#l00189">modulos.c:189</a></div></div>
+<div class="ttc" id="global_8h_html_ad2085c6c4c17426ec0d5c1198e013921"><div class="ttname"><a href="global_8h.html#ad2085c6c4c17426ec0d5c1198e013921">modo</a></div><div class="ttdeci">int modo</div></div>
+<div class="ttc" id="cob2c_8h_html_a7b6a88dac211a2521b42d23d3080c09d"><div class="ttname"><a href="cob2c_8h.html#a7b6a88dac211a2521b42d23d3080c09d">copyCobolToCStruct</a></div><div class="ttdeci">_EXT_ void copyCobolToCStruct(SDP *sdp, char *data, char *modulo, int len)</div><div class="ttdef"><b>Definition:</b> <a href="cob2c_8c_source.html#l00043">cob2c.c:43</a></div></div>
+<div class="ttc" id="modulos_8h_html_a3f474d9711cf3cb795b314712a2e3ac0"><div class="ttname"><a href="modulos_8h.html#a3f474d9711cf3cb795b314712a2e3ac0">addModule</a></div><div class="ttdeci">_EXT_ MOD * addModule(SDP *sdp, int mode)</div><div class="ttdef"><b>Definition:</b> <a href="modulos_8c_source.html#l00053">modulos.c:53</a></div></div>
+<div class="ttc" id="global_8h_html_a2ebee5a02dd55f1f92212c6b202f649b"><div class="ttname"><a href="global_8h.html#a2ebee5a02dd55f1f92212c6b202f649b">idSession</a></div><div class="ttdeci">char * idSession</div></div>
+<div class="ttc" id="_s_d_p_t_r_a_p_b_8c_html_a791a48c81cdf8f968eb6e0282729ff14"><div class="ttname"><a href="_s_d_p_t_r_a_p_b_8c.html#a791a48c81cdf8f968eb6e0282729ff14">cleanSystem</a></div><div class="ttdeci">void cleanSystem(void)</div><div class="ttdef"><b>Definition:</b> <a href="_s_d_p_t_r_a_p_b_8c_source.html#l00281">SDPTRAPB.c:281</a></div></div>
+<div class="ttc" id="sdpconfig_8h_html_a44f6930298af62aaaa4af242749e286d"><div class="ttname"><a href="sdpconfig_8h.html#a44f6930298af62aaaa4af242749e286d">DBG_CALL</a></div><div class="ttdeci">#define DBG_CALL</div><div class="ttdef"><b>Definition:</b> <a href="sdpconfig_8h_source.html#l00043">sdpconfig.h:43</a></div></div>
+<div class="ttc" id="struct_s_t___m_o_d_html_a59b9df3193b6f874922b75715fc1bc81"><div class="ttname"><a href="struct_s_t___m_o_d.html#a59b9df3193b6f874922b75715fc1bc81">ST_MOD::nombre</a></div><div class="ttdeci">char nombre[MAX_MODULE+1]</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00062">sdpTypes.h:62</a></div></div>
+<div class="ttc" id="struct_s_t___t_i_m_e_r_html_a9ff17a87e2d5c2c20efd3883fc5e8afd"><div class="ttname"><a href="struct_s_t___t_i_m_e_r.html#a9ff17a87e2d5c2c20efd3883fc5e8afd">ST_TIMER::systemTime</a></div><div class="ttdeci">ULONG systemTime</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00047">sdpTypes.h:47</a></div></div>
+<div class="ttc" id="modulos_8h_html"><div class="ttname"><a href="modulos_8h.html">modulos.h</a></div><div class="ttdoc">Funciones de gestion de los modulos activos en una sesion. </div></div>
+<div class="ttc" id="_s_d_p_t_r_a_p_b_8c_html_aa42745580a553732a3f221db4d209801"><div class="ttname"><a href="_s_d_p_t_r_a_p_b_8c.html#aa42745580a553732a3f221db4d209801">endProcess</a></div><div class="ttdeci">void endProcess(int option, char *sdpData)</div><div class="ttdef"><b>Definition:</b> <a href="_s_d_p_t_r_a_p_b_8c_source.html#l00151">SDPTRAPB.c:151</a></div></div>
+<div class="ttc" id="trapcodes_8h_html_abf8c519289600eaaea8c07a268de7194"><div class="ttname"><a href="trapcodes_8h.html#abf8c519289600eaaea8c07a268de7194">END_MARK</a></div><div class="ttdeci">#define END_MARK</div><div class="ttdef"><b>Definition:</b> <a href="trapcodes_8h_source.html#l00004">trapcodes.h:4</a></div></div>
+<div class="ttc" id="jggsal_8h_html"><div class="ttname"><a href="jggsal_8h.html">jggsal.h</a></div><div class="ttdoc">Software Abstraction Layer. </div></div>
+<div class="ttc" id="sdpconfig_8h_html_a34617f3ac0249ca877bddc57f6982401"><div class="ttname"><a href="sdpconfig_8h.html#a34617f3ac0249ca877bddc57f6982401">DBG_MOD</a></div><div class="ttdeci">#define DBG_MOD</div><div class="ttdef"><b>Definition:</b> <a href="sdpconfig_8h_source.html#l00050">sdpconfig.h:50</a></div></div>
+<div class="ttc" id="sdpconfig_8h_html_ae94dc26fa7b9b56988e51bd5d00391b5"><div class="ttname"><a href="sdpconfig_8h.html#ae94dc26fa7b9b56988e51bd5d00391b5">DBG_TIMER</a></div><div class="ttdeci">#define DBG_TIMER</div><div class="ttdef"><b>Definition:</b> <a href="sdpconfig_8h_source.html#l00049">sdpconfig.h:49</a></div></div>
+<div class="ttc" id="global_8h_html_a88cac69ee038c814b384a20eb156a7d8"><div class="ttname"><a href="global_8h.html#a88cac69ee038c814b384a20eb156a7d8">pilaTimers</a></div><div class="ttdeci">void * pilaTimers</div></div>
+<div class="ttc" id="struct_s_t___m_o_d_html_a41aafff34874651f2469d2d622a7d60d"><div class="ttname"><a href="struct_s_t___m_o_d.html#a41aafff34874651f2469d2d622a7d60d">ST_MOD::monitor</a></div><div class="ttdeci">char monitor</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00065">sdpTypes.h:65</a></div></div>
+<div class="ttc" id="pila_8h_html_aa849c8d27b733322a37846b4dafd9711"><div class="ttname"><a href="pila_8h.html#aa849c8d27b733322a37846b4dafd9711">deleteStack</a></div><div class="ttdeci">_EXT_ void * deleteStack(void *stack)</div><div class="ttdef"><b>Definition:</b> <a href="pila_8c_source.html#l00077">pila.c:77</a></div></div>
+<div class="ttc" id="amqsdp_8h_html_a3c337f7b77e495f85489f862d4df359c"><div class="ttname"><a href="amqsdp_8h.html#a3c337f7b77e495f85489f862d4df359c">setBufferSize</a></div><div class="ttdeci">_EXT_ void setBufferSize()</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00082">amqsdp.c:82</a></div></div>
+<div class="ttc" id="pila_8h_html_afd15d0a4ab9c26be333625ced34d00d9"><div class="ttname"><a href="pila_8h.html#afd15d0a4ab9c26be333625ced34d00d9">stackDepth</a></div><div class="ttdeci">_EXT_ int stackDepth(void *stack)</div></div>
+<div class="ttc" id="sdpconfig_8h_html_ac85c3723adc8b9ef82670d5ecd43c328"><div class="ttname"><a href="sdpconfig_8h.html#ac85c3723adc8b9ef82670d5ecd43c328">DBG_POP</a></div><div class="ttdeci">#define DBG_POP</div><div class="ttdef"><b>Definition:</b> <a href="sdpconfig_8h_source.html#l00045">sdpconfig.h:45</a></div></div>
+<div class="ttc" id="messages_8c_html_a1c07f3735e9c63f3130a615745887a20"><div class="ttname"><a href="messages_8c.html#a1c07f3735e9c63f3130a615745887a20">szMsg</a></div><div class="ttdeci">char szMsg[4095]</div><div class="ttdef"><b>Definition:</b> <a href="messages_8c_source.html#l00041">messages.c:41</a></div></div>
+<div class="ttc" id="_s_d_p_t_r_a_p_b_8c_html_a004616c530a9e96c121bf5aa81198eab"><div class="ttname"><a href="_s_d_p_t_r_a_p_b_8c.html#a004616c530a9e96c121bf5aa81198eab">nuevoModulo</a></div><div class="ttdeci">void nuevoModulo(void)</div><div class="ttdef"><b>Definition:</b> <a href="_s_d_p_t_r_a_p_b_8c_source.html#l00222">SDPTRAPB.c:222</a></div></div>
+<div class="ttc" id="amqsdp_8h_html_a49ea4971cfd64e5b120d9dd38050426e"><div class="ttname"><a href="amqsdp_8h.html#a49ea4971cfd64e5b120d9dd38050426e">MQDisconnect</a></div><div class="ttdeci">_EXT_ void MQDisconnect(void)</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00146">amqsdp.c:146</a></div></div>
+<div class="ttc" id="amqsdp_8h_html_a5b1c0890d82a1e4fd8201da9ece0c6ae"><div class="ttname"><a href="amqsdp_8h.html#a5b1c0890d82a1e4fd8201da9ece0c6ae">initAMQ</a></div><div class="ttdeci">_EXT_ void initAMQ(int dbg, FILE *f)</div><div class="ttdef"><b>Definition:</b> <a href="amqsdp_8c_source.html#l00077">amqsdp.c:77</a></div></div>
+<div class="ttc" id="pila_8h_html_ad9cf92c298635b8dad7b5a95d3f5dade"><div class="ttname"><a href="pila_8h.html#ad9cf92c298635b8dad7b5a95d3f5dade">pop</a></div><div class="ttdeci">_EXT_ void * pop(void *stack)</div></div>
+<div class="ttc" id="_s_d_p_t_r_a_p_b_8c_html_ad714df92d7ba0d4f11a8de881029449f"><div class="ttname"><a href="_s_d_p_t_r_a_p_b_8c.html#ad714df92d7ba0d4f11a8de881029449f">initSystem</a></div><div class="ttdeci">void initSystem(void)</div><div class="ttdef"><b>Definition:</b> <a href="_s_d_p_t_r_a_p_b_8c_source.html#l00236">SDPTRAPB.c:236</a></div></div>
+<div class="ttc" id="sdpconfig_8h_html_ad6074dd11ab3c97c8135c43aab03ae95"><div class="ttname"><a href="sdpconfig_8h.html#ad6074dd11ab3c97c8135c43aab03ae95">HASH_SIZE</a></div><div class="ttdeci">#define HASH_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="sdpconfig_8h_source.html#l00075">sdpconfig.h:75</a></div></div>
+<div class="ttc" id="struct_s_t___m_o_d_html"><div class="ttname"><a href="struct_s_t___m_o_d.html">ST_MOD</a></div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00061">sdpTypes.h:61</a></div></div>
+<div class="ttc" id="global_8h_html_a0147a5b81499984f9cb00379a8cb84af"><div class="ttname"><a href="global_8h.html#a0147a5b81499984f9cb00379a8cb84af">usuario</a></div><div class="ttdeci">char * usuario</div></div>
+<div class="ttc" id="_s_d_p_t_r_a_p_b_8c_html_a5f9e912074a29350e020b7a09f43ff32"><div class="ttname"><a href="_s_d_p_t_r_a_p_b_8c.html#a5f9e912074a29350e020b7a09f43ff32">traza</a></div><div class="ttdeci">FILE * traza</div><div class="ttdef"><b>Definition:</b> <a href="_s_d_p_t_r_a_p_b_8c_source.html#l00042">SDPTRAPB.c:42</a></div></div>
+<div class="ttc" id="amqsdp_8h_html"><div class="ttname"><a href="amqsdp_8h.html">amqsdp.h</a></div><div class="ttdoc">Cliente Websphere MQSeries. </div></div>
+<div class="ttc" id="trapcodes_8h_html_a2c63ae95fe7c6106ae1ec9c283afa486"><div class="ttname"><a href="trapcodes_8h.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a></div><div class="ttdeci">#define MODULE</div><div class="ttdef"><b>Definition:</b> <a href="trapcodes_8h_source.html#l00028">trapcodes.h:28</a></div></div>
+<div class="ttc" id="messages_8h_html_ad9a5bcb8859dbde9b0a6029b344b68cd"><div class="ttname"><a href="messages_8h.html#ad9a5bcb8859dbde9b0a6029b344b68cd">processMessage</a></div><div class="ttdeci">_EXT_ void processMessage(int tipo, TIMER *timer)</div><div class="ttdef"><b>Definition:</b> <a href="messages_8c_source.html#l00076">messages.c:76</a></div></div>
+<div class="ttc" id="pila_8h_html_a76e64db083920898ed319afa103e9c9b"><div class="ttname"><a href="pila_8h.html#a76e64db083920898ed319afa103e9c9b">createStack</a></div><div class="ttdeci">_EXT_ void * createStack(int size, unsigned char pointer)</div><div class="ttdef"><b>Definition:</b> <a href="pila_8c_source.html#l00066">pila.c:66</a></div></div>
+<div class="ttc" id="struct_s_t___s_d_p_html_a59b9df3193b6f874922b75715fc1bc81"><div class="ttname"><a href="struct_s_t___s_d_p.html#a59b9df3193b6f874922b75715fc1bc81">ST_SDP::nombre</a></div><div class="ttdeci">char nombre[MAX_MODULE+1]</div><div class="ttdef"><b>Definition:</b> <a href="sdp_types_8h_source.html#l00026">sdpTypes.h:26</a></div></div>
+<div class="ttc" id="md5_8h_html"><div class="ttname"><a href="md5_8h.html">md5.h</a></div><div class="ttdoc">Fichero de cabecera para el calculo de la firma MD5 de un texto Modificado a partir del algoritmo des...</div></div>
+<div class="ttc" id="pila_8h_html_abfe71b23c5a319ae12879661e4dfa126"><div class="ttname"><a href="pila_8h.html#abfe71b23c5a319ae12879661e4dfa126">cleanStacks</a></div><div class="ttdeci">_EXT_ void cleanStacks(void)</div><div class="ttdef"><b>Definition:</b> <a href="pila_8c_source.html#l00086">pila.c:86</a></div></div>
+<div class="ttc" id="_s_d_p_t_r_a_p_b_8c_html_a0704e6747f6e4e33d32b791e60c85953"><div class="ttname"><a href="_s_d_p_t_r_a_p_b_8c.html#a0704e6747f6e4e33d32b791e60c85953">calculateTimers</a></div><div class="ttdeci">void calculateTimers(TIMER *timer)</div><div class="ttdef"><b>Definition:</b> <a href="_s_d_p_t_r_a_p_b_8c_source.html#l00200">SDPTRAPB.c:200</a></div></div>
+<div class="ttc" id="sdpconfig_8h_html_a4487f9d50b1daa14e880dc3cc740a39e"><div class="ttname"><a href="sdpconfig_8h.html#a4487f9d50b1daa14e880dc3cc740a39e">DBG_PUSH</a></div><div class="ttdeci">#define DBG_PUSH</div><div class="ttdef"><b>Definition:</b> <a href="sdpconfig_8h_source.html#l00044">sdpconfig.h:44</a></div></div>
+<div class="ttc" id="messages_8h_html_a758539cefbe1e6b284f5cee92b59f8bc"><div class="ttname"><a href="messages_8h.html#a758539cefbe1e6b284f5cee92b59f8bc">sendBeginSession</a></div><div class="ttdeci">_EXT_ void sendBeginSession(TIMER *current)</div><div class="ttdef"><b>Definition:</b> <a href="messages_8c_source.html#l00370">messages.c:370</a></div></div>
+<div class="ttc" id="pila_8h_html_a2d5d0b13ff0627defd07ec3fbe614b58"><div class="ttname"><a href="pila_8h.html#a2d5d0b13ff0627defd07ec3fbe614b58">push</a></div><div class="ttdeci">_EXT_ void push(void *stack, void *data)</div><div class="ttdef"><b>Definition:</b> <a href="pila_8c_source.html#l00099">pila.c:99</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_s_d_p_t_r_a_p_b_8c.html">SDPTRAPB.c</a></li>
+    <li class="footer">Generado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>
