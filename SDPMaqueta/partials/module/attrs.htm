@@ -1,0 +1,59 @@
+<div class="panel-heading">
+    {{MSG.MOD_ATTR_TITLE}}
+</div>
+<div class="panel-body">
+
+    <table class="table-listado table-hover">
+
+        <tr>
+            <td class="col-md-9">{{MSG.MOD_ATTR_MAIN}}</td>
+            <td class="col-md-3" align="right">
+                <img src="img/tick.png"    height="12" width="12" data-ng-show="node.attrs.main == true">
+                <img src="img/cancel.png"  height="12" width="12" data-ng-show="node.attrs.main == false">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="col-md-9">{{MSG.MOD_ATTR_CICS}}</td>
+            <td class="col-md-3" align="right">
+                <img src="img/tick.png"    height="12" width="12" data-ng-show="node.attrs.cics == true">
+                <img src="img/cancel.png"  height="12" width="12" data-ng-show="node.attrs.cics == false">
+            </td>
+        </tr>
+        <tr>
+            <td class="col-md-9">{{MSG.MOD_ATTR_SQL}}</td>
+            <td class="col-md-3" align="right">
+                <img src="img/tick.png"    height="12" width="12" data-ng-show="node.attrs.sgdb == true">
+                <img src="img/cancel.png"  height="12" width="12" data-ng-show="node.attrs.sgdb == false">
+            </td>
+        </tr>
+        <tr>
+            <td class="col-md-9">{{MSG.MOD_ATTR_MQ}}</td>
+            <td class="col-md-3" align="right">
+                <img src="img/tick.png"    height="12" width="12" data-ng-show="node.attrs.mq == true">
+                <img src="img/cancel.png"  height="12" width="12" data-ng-show="node.attrs.mq == false">
+            </td>
+        </tr>
+        <tr>
+            <td class="col-md-9">{{MSG.MOD_ATTR_FILE}}</td>
+            <td class="col-md-3" align="right">
+                <img src="img/tick.png"    height="12" width="12" data-ng-show="node.attrs.file == true">
+                <img src="img/cancel.png"  height="12" width="12" data-ng-show="node.attrs.file == false">
+            </td>
+        </tr>
+        <tr>
+            <td class="col-md-9">{{MSG.MOD_ATTR_MODS}}</td>
+            <td class="col-md-3" align="right">
+                <img src="img/tick.png"    height="12" width="12" data-ng-show="node.attrs.call == true">
+                <img src="img/cancel.png"  height="12" width="12" data-ng-show="node.attrs.call == false">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="col-md-9">&nbsp </td>
+            <td class="col-md-3" align="right"> &nbsp</td>
+        </tr>
+
+    </table>
+
+</div>

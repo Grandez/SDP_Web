@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Layout - jQuery EasyUI Demo</title>
+    <link rel="stylesheet" type="text/css" href="../lib/ui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../lib/ui/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="../lib/ui/demo.css">
+
+    <link rel="stylesheet" type="text/css" href="../lib/bootstrap/bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="../css/sdpMain.css">
+
+    <script type="text/javascript" src="../lib/ui/jquery.min.js"></script>
+    <script type="text/javascript" src="../lib/ui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+</head>
+<body class="easyui-layout">
+   <div data-options="region:'north',border:false" style="height:50px;">north region</div>
+   <div data-options="region:'west',split:true,hideCollapsedContent:false,title:'Areas'" style="width:150px;padding:10px;">
+       <div style="margin:10px 0;">west content</div>
+       <div> <!-- class="easyui-panel" style="padding:5px"> -->
+           <ul id=tree class="easyui-tree" data-options="url:'../data/tree_data.json',method:'get',animate:true,lines:true"></ul>
+       </div>
+   </div>
+   <div data-options="region:'east',split:true,collapsed:true,title:'East'" style="width:100px;padding:10px;">east region</div>
+   <div data-options="region:'south',border:false" style="height:50px;background:#A9FACD;padding:10px;">south region</div>
+   <div data-options="region:'center'">
+       <div class="sdpHeader">
+           <a href="doc"><span class="marca">Resumen</span></a>
+           <a href="doc"><span class="marca">Statico</span></a>
+           <a href="doc"><span class="marca">Dinamico</span></a>
+           <div class="pull-right" style="border: none">
+               <select ng-model="rango" ng-change="cambiaRango(rango)" convert-to-number>
+                   <option value="1">{{MSG.CBO_DIA}}</option>
+                   <option value="2">{{MSG.CBO_SEMANA}}</option>
+                   <option value="3">{{MSG.CBO_MES}}</option>
+                   <option value="4">{{MSG.CBO_TRIMESTRE}}</option>
+                   <option value="5">{{MSG.CBO_TODOS}}</option>
+               </select>
+           </div>
+           <div><a href="htm/module.htm">Aplicacion</a></h1>
+       </div>
+   </div>
+   <script>
+       $('#tree').tree({
+           onClick: function(node){
+               alert(node.text);  // alert node text property when clicked
+           }
+       });
+   </script>
+</body>
+</html>
+
+﻿ 

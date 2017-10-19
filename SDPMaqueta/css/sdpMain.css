@@ -1,3 +1,59 @@
+.sdpHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 32px;
+    /*    background-color: black; */
+    background: #000000;
+
+
+    background: -moz-linear-gradient(bottom, #000000 0%, #000000 50%, #3c3c3c 51%, #393939 78%, #888888 100%);
+    background: -webkit-linear-gradient(bottom, #000000 0%, #000000 50%, #3c3c3c 51%, #393939 78%, #888888 100%);
+    background: -o-linear-gradient(bottom, #000000 0%, #000000 50%, #3c3c3c 51%, #393939 78%, #888888 100%);
+    background: -ms-linear-gradient(bottom, #000000 0%, #000000 50%, #3c3c3c 51%, #393939 78%, #888888 100%);
+    background: linear-gradient(to top, #000000 0%, #000000 50%, #3c3c3c 51%, #393939 78%, #888888 100%);
+
+}
+
+.sdpHeaderRight {
+    top: 0;
+    float: right;
+    z-index: 9;
+
+}
+
+.sdpContent {
+    position: fixed;
+    top: 32px;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+
+.sdpFooter {
+    position: fixed;
+    padding-top: 3px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background-color: #000000;
+    color: white;
+    font-size: x-small;
+}
+
+.sdpPeriod {
+    color: white;
+}
+
+.sdpPanel {
+    background-image: url("../img/buho_fondo.jpg");
+    background-repeat:no-repeat;
+}
+
 iframe {
     margin:0;
     padding:0;
@@ -16,43 +72,6 @@ iframe {
     line-height: 32px;
 }
 
-.sdpHeader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 32px;
-/*    background-color: black; */
-    background: #000000;
-    /* Old browsers */
-
-    background: -moz-linear-gradient(bottom, #000000 0%, #000000 50%, #3c3c3c 51%, #393939 78%, #888888 100%);
-    background: -webkit-linear-gradient(bottom, #000000 0%, #000000 50%, #3c3c3c 51%, #393939 78%, #888888 100%);
-    background: -o-linear-gradient(bottom, #000000 0%, #000000 50%, #3c3c3c 51%, #393939 78%, #888888 100%);
-    background: -ms-linear-gradient(bottom, #000000 0%, #000000 50%, #3c3c3c 51%, #393939 78%, #888888 100%);
-    background: linear-gradient(to top, #000000 0%, #000000 50%, #3c3c3c 51%, #393939 78%, #888888 100%);
-
-}
-.sdpFooter {
-    position: fixed;
-    padding-top: 3px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 20px;
-    background-color: #000000;
-    color: white;
-    font-size: x-small;
-}
-.sdpContent {
-    position: fixed;
-    top: 32px;
-    bottom: 20px;
-    left: 0;
-    right: 0;
-    background-color: #FFFFFF;
-    overflow: auto;
-}
 
 .jumbotron {
     position: absolute;
@@ -106,10 +125,13 @@ iframe {
     pointer-events: none;
 }
 
+.sdpContainer {
+    padding: 2em 2em 2em 2em;
+}
+
 .contenedor {
     padding: 0.5em 0.5em 0em 0.5em;
-    border-style: solid;
-    border-width: 1px;
+    background-color: white;
 }
 
 .centrado {
@@ -124,6 +146,15 @@ iframe {
     font-weight: bold;
     text-align: center;
 }
+
+.sdpMenu {
+    padding-top: 4px;
+}
+
+.sdpMenu > li > a{
+    padding-top: 2px;
+}
+
 .sdpBox {
     border-style: solid;
     border-width: 1px;
@@ -146,7 +177,7 @@ iframe {
 .sdpForm {
     padding: 0.5em;
 //    width: 100%;
-    cellspacing:0.5em
+    cellspacing:0.5em;
     cellpadding: 0.5em;
 }
 
@@ -199,7 +230,7 @@ iframe {
     opacity: 1.0;
 }
 
-
+/*
 select {
     margin: 0px;
 //    border: 1px solid #111;
@@ -216,7 +247,7 @@ select {
     appearance: none;
 //    background: url(http://www.stackoverflow.com/favicon.ico) 96% / 15% no-repeat #eee;
 }
-
+*/
 /*target Internet Explorer 9 and Internet Explorer 10:*/
 @media screen and (min-width:0\0) {
     select {
@@ -269,6 +300,7 @@ select {
     text-align: right;
 }
 
+/*
 li.jstree-open > a .jstree-icon {
     background:url("../img/folder-open2.png") 0px 0px no-repeat !important;
 }
@@ -283,6 +315,7 @@ li.jstree-closed > a .jstree-icon {
 .nodo {
     background:url("../img/closed.png") 0px 0px no-repeat !important;
 }
+*/
 .sdpCheckRed {
     color: red;
     font-weight: bolder;
@@ -292,7 +325,22 @@ li.jstree-closed > a .jstree-icon {
     font-weight: bolder;
 }
 
-.sdpCheckrGreen {
+.sdpCheckGreen {
     color: green;
     font-weight: bolder;
+}
+
+.sdpStatus {
+    height: 8em;
+/*    align: center; */
+}
+
+.sdpStatusHelper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.sdpCollapsable {
+    color: #000000;
 }

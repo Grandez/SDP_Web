@@ -1,0 +1,74 @@
+<div ui-layout="{flow : 'row'}" >
+    <div id="moduloTop" ui-layout-container size="65%" >
+        <div class="container col-lg-12">
+            <div class="panel panel-primary"
+                 data-ng-show="node.base.desc.length"
+                 data-ng-include="'partials/module/descripcion.htm'">
+            </div>
+
+            <div class="panel panel-primary col-lg-2"
+                 data-ng-include="'partials/module/resumen.htm'">
+            </div>
+            <div class="panel panel-primary col-lg-2"
+                 data-ng-include="'partials/module/attrs.htm'">
+            </div>
+
+            <div class="panel panel-primary col-lg-2"
+                 data-ng-include="'partials/module/sqale.htm'">
+            </div>
+            <div class="panel panel-primary col-lg-2"
+                 data-ng-include="'partials/module/issues.htm'">
+            </div>
+            <div id="grfCoverage" class="col-lg-2", style="height: 140px">
+            </div>
+            <div class="panel col-lg-1 pull-right" >
+                <!--                <span class="spStatusHelper"></span>-->
+                <img class="sdpStatus" data-ng-show="node.status ==  0" src="img/cancel.png">
+                <img class="sdpStatus" data-ng-show="node.status ==  1" src="img/tick.png">
+                <img class="sdpStatus" data-ng-show="node.status == -1" src="img/approved.png">
+            </div>
+
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="container col-lg-12">
+            <div class="panel panel-primary col-lg-2"
+                 data-ng-include="'partials/module/verbs.htm'">
+            </div>
+
+            <div class="panel panel-primary col-lg-2"
+                 data-ng-include="'partials/module/dependences.htm'">
+            </div>
+            <div class="panel panel-primary col-lg-2"
+                 data-ng-include="'partials/module/persistence.htm'">
+            </div>
+
+            <div class="panel panel-primary col-lg-2"
+                 data-ng-include="'partials/module/comment.htm'">
+            </div>
+
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="container col-lg-12">
+            <div class="panel panel-primary col-lg-5">
+                <div class="panel-heading">{{MSG.GRF_TIT_PARR_LINES}}</div>
+                <div id="grfParrLines", class="panel-body"></div>
+            </div>
+
+            <div class="panel panel-primary col-lg-5">
+                 <div class="panel-heading">{{MSG.GRF_TIT_PARR_CC}}</div>
+                 <div id="grfParrCC", class="panel-body"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="moduloBottom" ui-layout-container>
+        <div id="divFuente"  data-ng-include="'partials/module/codigo.htm'">
+             <!--data-ng-show="node.footer == 'source'">-->
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,80 @@
+<div class="panel-heading">
+    {{MSG.MOD_ISSUE_TITLE}}
+</div>
+<div class="panel-body">
+
+    <table class="table-listado table-hover">
+        <tr class="clickable"
+            data-ng-click="cambiaPieModulo(2)"
+            ng-repeat="x in node.issues">
+            <td class="col-md-5" >{{x.label}}</td>
+            <td class="col-md-5 text-right">{{x.actual}}</td>
+            <td class="col-md-1" align="center" ng-show="x.delta == 0">
+               <span class="glyphicon glyphicon-triangle-right" style="color: yellow"/>
+            </td>
+            <td class="col-md-1" align="center" ng-show="x.delta > 0">
+                <span class="glyphicon glyphicon-triangle-top" style="color: green"/>
+            </td>
+            <td class="col-md-1" align="center" ng-show="x.delta < 0">
+                <span class="glyphicon glyphicon-triangle-bottom" style="color: red"/>
+            </td>
+
+        </tr>
+
+<!--
+        <tr class="listado clickable"
+            data-ng-click="cambiaPieModulo(2)"
+            title={{MSG.RES_SHOW_EXE}}
+            data-toggle="tooltip"
+            data-placement="top" tooltip>
+            <td class="col-md-7" >{{MSG.MOD_ISSUE_4}}</td>
+            <td class="col-md-5 text-right tbLinea">{{node.issues[4]}}</td>
+        </tr>
+        <tr class="listado clickable"
+            data-ng-click="cambiaPieModulo(2)"
+            title={{MSG.RES_SHOW_EXE}}
+            data-toggle="tooltip"
+            data-placement="top" tooltip>
+            <td class="col-md-7" >{{MSG.MOD_ISSUE_3}}</td>
+            <td class="col-md-5 text-right tbLinea">{{node.issues[3]}}</td>
+        </tr>
+        <tr class="listado clickable"
+            data-ng-click="cambiaPieModulo(2)"
+            title={{MSG.RES_SHOW_EXE}}
+            data-toggle="tooltip"
+            data-placement="top" tooltip>
+            <td class="col-md-7" >{{MSG.MOD_ISSUE_2}}</td>
+            <td class="col-md-5 text-right tbLinea">{{node.issues[2]}}</td>
+        </tr>
+        <tr class="listado clickable"
+            data-ng-click="cambiaPieModulo(2)"
+            title={{MSG.RES_SHOW_EXE}}
+            data-toggle="tooltip"
+            data-placement="top" tooltip>
+            <td class="col-md-7" >{{MSG.MOD_ISSUE_1}}</td>
+            <td class="col-md-5 text-right tbLinea">{{node.issues[1]}}</td>
+        </tr>
+        <tr class="listado clickable"
+            data-ng-click="cambiaPieModulo(2)"
+            title={{MSG.RES_SHOW_EXE}}
+            data-toggle="tooltip"
+            data-placement="top" tooltip>
+            <td class="col-md-7" >{{MSG.MOD_ISSUE_0}}</td>
+            <td class="col-md-5 text-right tbLinea">{{node.issues[0]}}</td>
+        </tr>
+
+        <tr class="listado clickable"
+            data-ng-click="cambiaPieModulo(2)"
+            title={{MSG.RES_SHOW_EXE}}
+            data-toggle="tooltip"
+            data-placement="top" tooltip>
+            <td class="col-md-7 marcado" >{{MSG.MOD_ISSUE_TOTAL}}</td>
+            <td class="col-md-5 marcado text-right tbLinea">{{node.issues[6]}}</td>
+        </tr>
+-->
+
+
+    </table>
+
+</div>
+</div>

@@ -1,0 +1,82 @@
+<div class="panel-heading">
+    {{MSG.MOD_SUMM_TITLE}}
+</div>
+<div class="panel-body">
+
+      <table class="table-listado">
+          <tr class="clickable"
+              data-ng-click="cambiaPieModulo(2)"
+              title={{MSG.RES_SHOW_EXE}}
+              data-toggle="tooltip"
+              data-placement="top" tooltip>
+              <td class="col-md-7" >{{MSG.MOD_SUMM_MEMBER}}</td>
+              <td class="col-md-5 text-right tbLinea">
+                  {{node.summary.fileName}}
+              </td>
+          </tr>
+
+          <tr class="clickable"
+              data-ng-click="cambiaPieModulo(2)"
+              title={{MSG.RES_SHOW_EXE}}
+              data-toggle="tooltip"
+              data-placement="top" tooltip>
+              <td class="col-md-7" >{{MSG.MOD_SUMM_NAME}}</td>
+              <td class="col-md-5 text-right tbLinea">
+                  {{node.summary.memberName}}
+              </td>
+          </tr>
+          <tr>
+              <td class="col-md-7 clickable"
+                  data-ng-click="cambiaPieModulo(1)"
+                  title={{MSG.MOD_SUMM_AUTHOR}}
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  tooltip>
+                  {{MSG.MOD_SUMM_AUTHOR}}
+              </td>
+              <td class="col-md-5 text-right clickable"
+                  data-ng-click="ventana(3)"
+                  title={{MSG.CLICK_DETAIL}}
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  tooltip>
+                  {{node.summary.author}}
+              </td>
+          </tr>
+          <tr>
+              <td class="col-md-5">{{MSG.MOD_SUMM_VERSIONS}}</td>
+              <td class="col-md-7 text-right ">
+                  {{node.summary.versions}}
+              </td>
+          </tr>
+
+          <tr class="clickable"
+              data-ng-click="cambiaPieModulo(1)"
+              title={{MSG.RES_SHOW_SRC}}
+              data-toggle="tooltip"
+              data-placement="top" tooltip>
+              <td class="col-md-5 tbLinea ">{{MSG.MOD_SUMM_DATE}}</td>
+              <td class="col-md-7 tbLinea text-right ">
+                  {{node.summary.tms | date }}
+              </td>
+          </tr>
+
+          <tr class="clickable"
+              data-ng-click="cambiaPieModulo(2)"
+              title={{MSG.RES_SHOW_EXE}}
+              data-toggle="tooltip"
+              data-placement="top" tooltip>
+              <td class="col-md-7">{{MSG.MOD_SUMM_USER}}</td>
+              <td class="col-md-5 text-right">
+                  {{node.summary.uid}}
+              </td>
+          </tr>
+
+          <tr>
+              <td class="col-md-7">&nbsp </td>
+              <td class="col-md-5" align="right"> &nbsp</td>
+          </tr>
+
+      </table>
+
+</div>

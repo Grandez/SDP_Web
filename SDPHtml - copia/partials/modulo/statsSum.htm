@@ -1,0 +1,50 @@
+<div class="panel-heading">{{MSG.TITLE_EJECUCION}}</div>
+<div class="panel-body">
+
+    <table class="table table-hover">
+        <tr class="listado">
+            <td colspan="2" class="col-md-7" >{{MSG.STAT_EXECS}}</td>
+            <td class="col-md-5 text-right tbLinea">{{stats.ejecuciones | number}}</td>
+        </tr>
+
+        <tr class="listado">
+            <td colspan="3" class="col-md-12 tbLinea sdpSeccion">Media Tiempos (mSg.)</td>
+        </tr>
+
+        <tr class="listado">
+            <td class="col-md-1 tbLinea "></td>
+            <td class="col-md-7 tbLinea ">Elapsed</td>
+            <td class="col-md-4 tbLinea text-right ">{{stats.elapsedTime / 1000 | number: 0 }}</td>
+        </tr>
+
+        <tr class="listado">
+            <td class="col-md-1 tbLinea "></td>
+            <td class="col-md-7 tbLinea ">CPU</td>
+            <td class="col-md-4 tbLinea text-right ">{{stats.cpuTime / 1000 | number: 0 }}</td>
+        </tr>
+
+        <tr class="listado">
+            <td colspan="3" class="col-md-12 tbLinea sdpSeccion">{{MSG.STAT_IO}}</td>
+        </tr>
+
+        <tr class="listado">
+            <td class="col-md-1 tbLinea "></td>
+            <td class="col-md-7 tbLinea ">Procesados</td>
+            <td class="col-md-4 tbLinea text-right ">{{stats.input | number: 0}}</td>
+        </tr>
+
+        <tr class="listado">
+            <td class="col-md-1 tbLinea "></td>
+            <td class="col-md-7 tbLinea ">Generados</td>
+            <td class="col-md-4 tbLinea text-right ">{{stats.output | number: 0}}</td>
+        </tr>
+
+        <tr class="listado">
+            <td colspan="2" class="col-md-8 tbLinea ">Modulos</td>
+            <td class="col-md-4 tbLinea text-right ">{{stats.output | number: 0}}</td>
+        </tr>
+
+    </table>
+
+</div>
+</div>

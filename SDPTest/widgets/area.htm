@@ -1,0 +1,33 @@
+pnlalertas.htm</div>
+<div ui-layout="{flow : 'row'}" >
+    <div ui-layout-container size="42%" >
+
+        <div class="contenedor col-lg-4">
+            <div class="panel panel-primary" ng-include="'partials/appl/alertas.htm'"></div>
+            <div class="panel panel-primary" ng-include="'partials/appl/stats.htm'"></div>
+        </div>
+
+        <div class="contenedor col-lg-8">
+             <div class="panel panel-primary col-lg-12 pull-right">
+                    <div class="panel-heading clickable"
+                         data-ng-click="panelGrafico(1, 'grfArea')"
+                         title="Ampliar"
+                         data-toggle="tooltip"
+                         data-placement="top" tooltip>
+                        {{MSG.APPL}}
+                    </div>
+                    <div class="panel-body">
+                        <div id="grfArea" style="height: 190px;"></div>
+                    </div>
+             </div>
+        </div>
+    </div>
+
+    <div ui-layout-container>
+        <div class="contenedor" style="overflow: auto;">
+            <div class="panel panel-primary"
+                 ng-include="'partials/appl/logging.htm'">
+            </div>
+        </div>
+    </div>
+</div>

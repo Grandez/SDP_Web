@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html  data-ng-app="sdp" data-ng-controller="sdpCtrl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width
+                                  , initial-scale=1.0
+                                  , maximum-scale=1.0
+                                  , user-scalable=no">
+
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <title>Serendipity</title>
+
+
+    <!--<link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css">-->
+
+    <link rel="stylesheet" type="text/css" href="css/sdpMain.css">
+
+    <link type="text/css" rel="stylesheet" href="lib/jqwidgets/jqwidgets/styles/jqx.base.css" />
+    <link type="text/css" rel="stylesheet" href="lib/jqwidgets/jqwidgets/styles/jqx.shinyblack.css" />
+
+
+    <script src="lib/jquery-3.2.1.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-sanitize.js"></script>
+    <script src="lib/angular/angular-route.js"></script>
+
+    <script type="text/javascript" src="lib/jqwidgets/scripts/demos.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxcalendar.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxdocking.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxmenu.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxpanel.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxtabs.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxtooltip.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxlistbox.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxnumberinput.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxradiobutton.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxinput.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxribbon.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxlayout.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxtree.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxsplitter.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxwindow.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxangular.js"></script>
+
+
+</head>
+
+<body>
+
+   <div class="sdpHeader">
+       Cabecera
+       <nav>
+           <a href="#portal">portal</a>
+           <a href="#area">Area</a>
+           <a href="#appl">Aplicacion</a>
+           <a href="#module">Modulo</a>
+           <a href="#module2">Modulo 2</a>
+           <a href="#dock">Docking</a>
+       </nav>
+   </div>
+
+   <div class="sdpContent">
+
+       <!--<div ng-view></div>-->
+
+   </div>
+
+
+   <div class="sdpFooter">Pie de pagina {{MSG.AUTOR}}</div>
+   <!-- DATA para maqueta-->
+
+   <script src="data/dataTree.js"></script>
+   <script src="data/msg.js"></script>
+
+   <script src="js/layout.js"></script>
+   <script src="js/main.js"></script>
+<!--
+   <script>
+       var sdp = angular.module("sdp", [  ]);
+       sdp.controller('sdpCtrl', function($scope) {
+           $scope.vista = 3;
+           });
+
+   </script>
+-->
+</body>
+
+</html>

@@ -1,0 +1,338 @@
+.sdpHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 32px;
+    /*    background-color: black; */
+    background: #000000;
+
+
+    background: -moz-linear-gradient(bottom, #000000 0%, #000000 50%, #3c3c3c 51%, #393939 78%, #888888 100%);
+    background: -webkit-linear-gradient(bottom, #000000 0%, #000000 50%, #3c3c3c 51%, #393939 78%, #888888 100%);
+    background: -o-linear-gradient(bottom, #000000 0%, #000000 50%, #3c3c3c 51%, #393939 78%, #888888 100%);
+    background: -ms-linear-gradient(bottom, #000000 0%, #000000 50%, #3c3c3c 51%, #393939 78%, #888888 100%);
+    background: linear-gradient(to top, #000000 0%, #000000 50%, #3c3c3c 51%, #393939 78%, #888888 100%);
+
+}
+
+.sdpHeaderRight {
+    top: 0;
+    float: right;
+    z-index: 9;
+
+}
+
+.sdpContent {
+    position: fixed;
+    top: 32px;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+
+.sdpFooter {
+    position: fixed;
+    padding-top: 3px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background-color: #000000;
+    color: white;
+    font-size: x-small;
+}
+
+.sdpPeriod {
+    color: white;
+}
+
+.sdpPanel {
+    background-image: url("../img/buho_fondo.jpg");
+    background-repeat:no-repeat;
+}
+
+iframe {
+    margin:0;
+    padding:0;
+    height:100%;
+    display:block;
+    width:100%;
+    border:none;
+}
+
+.marca {
+    color: #FFFFFF;
+    font-weight: bolder;
+    font-size: 18px;
+    cursor: pointer;
+    vertical-align:middle;
+    line-height: 32px;
+}
+
+
+.jumbotron {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: #FFFFFF;
+}
+
+.marcado {
+	font-weight: bold;
+	
+}
+
+.sdpFormErr  {
+    color: red;
+}
+
+.nav, .pagination, .carousel, .panel-title a {
+    cursor: pointer;
+}
+
+.listado {
+    border: none;
+    font-size: 12px;
+}
+
+.graphPie {
+    width: 150px;
+    height: 150px;
+    float: left
+}
+
+.tbLinea {
+    border-top: none;
+}
+
+.clickable:hover {
+    cursor: pointer;
+}
+
+.left-inner-addon {
+    position: relative;
+}
+.left-inner-addon input {
+    padding-left: 30px;
+}
+.left-inner-addon i {
+    position: absolute;
+    padding: 10px 12px;
+    pointer-events: none;
+}
+
+.contenedor {
+    padding: 0.5em 0.5em 0em 0.5em;
+    background-color: white;
+}
+
+.centrado {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.cabecera {
+    font-color: #337ab7;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sdpMenu {
+    padding-top: 4px;
+}
+
+.sdpMenu > li > a{
+    padding-top: 2px;
+}
+
+.sdpBox {
+    border-style: solid;
+    border-width: 1px;
+    padding-top: 6px;
+    padding-left: 1em;
+    margin-bottom: 1em;
+}
+
+.sdpBoxTitle {
+    position: absolute;
+    top: -10px;
+    background-color: white;
+    text-align: center;
+}
+
+.sdpSeccion {
+    font-weight: bold;
+}
+
+.sdpForm {
+    padding: 0.5em;
+//    width: 100%;
+    cellspacing:0.5em;
+    cellpadding: 0.5em;
+}
+
+.sdpRight {
+    text-align: right;
+}
+
+.filtro {
+//    color: white;
+//    background-color: black;
+    padding-right: 2em;
+    box-sizing: unset;
+}
+
+.filtro:hover {
+    cursor: pointer;
+}
+.filtro li ul a{
+    background: #fff;
+    border:1px solid #C3C3C3;
+    border-top:none;
+}
+
+.filtro li ul a:hover{
+    background:#eee;
+}
+
+.filtro li ul ul {
+    border-top:1px solid #C3C3C3;
+}
+.serverError {
+    background-color: #FFFFFF;
+    vertical-align: middle;
+    z-index: 9999;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+#aviso {
+    vertical-align: middle;
+    position: relative;
+    top: 40%;
+    left: 40%;
+    transform: translateY(-40%);
+    transform: translateX(-40%);
+    opacity: 1.0;
+}
+
+/*
+select {
+    margin: 0px;
+//    border: 1px solid #111;
+    border: 0px solid #000000;
+    background: #000000;
+    color: #FFFFFF;
+    width: 150px;
+    padding: 0px 0px 0px 0px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    height: 25px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+//    background: url(http://www.stackoverflow.com/favicon.ico) 96% / 15% no-repeat #eee;
+}
+*/
+/*target Internet Explorer 9 and Internet Explorer 10:*/
+@media screen and (min-width:0\0) {
+    select {
+        background:none;
+        padding: 5px;
+    }
+}
+
+.contactOuter {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: white;
+    background-image: url("../img/buho_fondo.jpg");
+    background-repeat: no-repeat;
+/*    background-size: contain; */
+}
+
+.contactData {
+    background-color: #f3f3f3;
+    color: #663399;
+    padding: 15px 25px;
+    width: 100%;
+    max-width: 500px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;top: 50%;
+}
+
+.vertical-center {
+    min-height: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.table-centered {
+    margin: 0 auto !important;
+    float: none !important;
+}
+
+.sdpWinTxt {
+    font-size: 12px;
+}
+.sdpWinData {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: right;
+}
+
+/*
+li.jstree-open > a .jstree-icon {
+    background:url("../img/folder-open2.png") 0px 0px no-repeat !important;
+}
+
+li.jstree-closed > a .jstree-icon {
+    background:url("../img/closed.png") 0px 0px no-repeat !important;
+}
+
+.hoja {
+    background:url("../img/sheetsc.png") 0px 0px no-repeat !important;
+}
+.nodo {
+    background:url("../img/closed.png") 0px 0px no-repeat !important;
+}
+*/
+.sdpCheckRed {
+    color: red;
+    font-weight: bolder;
+}
+.sdpCheckYellow {
+    color: yellow;
+    font-weight: bolder;
+}
+
+.sdpCheckGreen {
+    color: green;
+    font-weight: bolder;
+}
+
+.sdpStatus {
+    height: 8em;
+/*    align: center; */
+}
+
+.sdpStatusHelper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}

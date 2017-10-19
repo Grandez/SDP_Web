@@ -1,0 +1,89 @@
+<div class="panel-heading">
+    {{MSG.MOD_SQALE_TITLE}}
+</div>
+<div class="panel-body">
+
+    <table class="table-listado">
+        <tr class="clickable"
+            data-ng-click="cambiaPieModulo(2)"
+            title={{MSG.RES_SHOW_EXE}}
+            data-toggle="tooltip"
+            data-placement="top" tooltip>
+            <td class="col-md-7" >{{MSG.MOD_ALE_REUSE}}</td>
+            <td class="col-md-5 text-right">{{node.sqale.reuse}}</td>
+        </tr>
+        <tr>
+            <td class="col-md-7 clickable"
+                data-ng-click="cambiaPieModulo(1)"
+                title={{MSG.RES_SHOW_SRC}}
+                data-toggle="tooltip"
+                data-placement="top"
+                tooltip>
+                {{MSG.MOD_ALE_MANT}}
+            </td>
+            <td class="col-md-5 clickable text-right"
+                data-ng-click="ventana(3)"
+                title={{MSG.CLICK_DETAIL}}
+                data-toggle="tooltip"
+                data-placement="top"
+                tooltip>
+                {{node.sqale.mant}}
+            </td>
+        </tr>
+
+        <tr>
+            <td class="col-md-7 clickable"
+                data-ng-click="cambiaPieModulo(1)"
+                title={{MSG.RES_SHOW_SRC}}
+                data-toggle="tooltip"
+                data-placement="top"
+                tooltip>
+                {{MSG.MOD_ALE_EFICCIENCY}}
+            </td>
+
+            <td class="col-md-5 clickable text-right"
+                data-ng-click="ventana(3)"
+                title={{MSG.CLICK_DETAIL}}
+                data-toggle="tooltip"
+                data-placement="top"
+                tooltip>
+                {{node.sqale.eficciency}}
+            </td>
+        </tr>
+
+
+        <tr class="clickable"
+            data-ng-click="cambiaPieModulo(1)"
+            title={{MSG.RES_SHOW_SRC}}
+            data-toggle="tooltip"
+            data-placement="top" tooltip>
+            <td class="col-md-7">{{MSG.MOD_ALE_ACCURACY}}</td>
+            <td class="col-md-5 text-right ">{{node.sqale.accuracy}}</td>
+        </tr>
+
+        <tr class="clickable"
+            data-ng-click="cambiaPieModulo(1)"
+            title={{MSG.RES_SHOW_SRC}}
+            data-toggle="tooltip"
+            data-placement="top" tooltip>
+            <td class="col-md-7">{{MSG.MOD_ALE_OTHER}}</td>
+            <td class="col-md-5 text-right ">{{node.sqale.other}}</td>
+        </tr>
+
+        <tr>
+            <td class="col-md-7">&nbsp </td>
+            <td class="col-md-5" align="right"> &nbsp</td>
+        </tr>
+
+        <tr class="clickable"
+            data-ng-click="cambiaPieModulo(1)"
+            title={{MSG.RES_SHOW_SRC}}
+            data-toggle="tooltip"
+            data-placement="top" tooltip>
+            <td class="col-md-7">{{MSG.MOD_ALE_TOTAL}}</td>
+            <td class="col-md-5 text-right ">{{node.sqale.total}}</td>
+        </tr>
+
+    </table>
+
+</div>

@@ -1,0 +1,117 @@
+<div class="panel-heading">
+    {{MSG.MOD_DEPS_TITLE}}
+</div>
+<div class="panel-body">
+
+    <table class="table-listado">
+<!--
+        <tr class="listado clickable"
+            data-ng-click="cambiaPieModulo(2)"
+            title={{MSG.RES_SHOW_EXE}}
+            data-toggle="tooltip"
+            data-placement="top" tooltip>
+            <td colspan="2" class="col-md-8" >MSG.MOD_DEP_FILES</td>
+            <td class="col-md-4 text-right tbLinea">{{node.deps.files}}</td>
+        </tr>
+-->
+
+        <tr>
+            <td colspan="2" class="col-md-7 tbLinea sdpSeccion">{{MSG.MOD_DEPS_COPYS}}</td>
+            <td class="col-md-5 text-right tbLinea">23</td>
+        </tr>
+
+        <tr>
+            <td class="col-md-1 tbLinea "></td>
+            <td class="col-md-7 tbLinea clickable"
+                data-ng-click="cambiaPieModulo(1)"
+                title={{MSG.RES_SHOW_SRC}}>
+                {{MSG.MOD_DEPS_CPY_FILE}}
+            </td>
+            <td class="col-md-4 tbLinea text-right clickable"
+                data-ng-click="ventana(3)"
+                title={{MSG.CLICK_DETAIL}}
+                data-toggle="tooltip"
+                data-placement="top"
+                tooltip>
+                0
+            </td>
+        </tr>
+        <tr>
+            <td class="col-md-1 tbLinea "></td>
+            <td class="col-md-7 tbLinea clickable"
+                data-ng-click="cambiaPieModulo(1)"
+                title={{MSG.RES_SHOW_SRC}}>
+                {{MSG.MOD_DEPS_CPY_DATA}}
+            </td>
+            <td class="col-md-4 tbLinea text-right clickable"
+                data-ng-click="ventana(3)"
+                title={{MSG.CLICK_DETAIL}}
+                data-toggle="tooltip"
+                data-placement="top"
+                tooltip>
+                0
+            </td>
+        </tr>
+
+        <tr>
+            <td class="col-md-1 tbLinea "></td>
+            <td class="col-md-7 tbLinea clickable"
+                data-ng-click="cambiaPieModulo(1)"
+                title={{MSG.RES_SHOW_SRC}}>
+                {{MSG.MOD_DEPS_CPY_LINK}}
+            </td>
+            <td class="col-md-4 tbLinea text-right clickable"
+                data-ng-click="ventana(3)"
+                title={{MSG.CLICK_DETAIL}}
+                data-toggle="tooltip"
+                data-placement="top"
+                tooltip>
+                0
+            </td>
+        </tr>
+        <tr>
+            <td class="col-md-1 tbLinea "></td>
+            <td class="col-md-7 tbLinea clickable"
+                data-ng-click="cambiaPieModulo(1)"
+                title={{MSG.RES_SHOW_SRC}}>
+                {{MSG.MOD_DEPS_CPY_CODE}}
+            </td>
+            <td class="col-md-4 tbLinea text-right clickable"
+                data-ng-click="ventana(3)"
+                title={{MSG.CLICK_DETAIL}}
+                data-toggle="tooltip"
+                data-placement="top"
+                tooltip>
+                0
+            </td>
+        </tr>
+
+
+        <tr>
+            <td colspan="3" class="col-md-12 tbLinea sdpSeccion">{{MSG.MOD_DEPS_MODULES}}</td>
+        </tr>
+
+        <tr>
+            <td class="col-md-1 tbLinea "></td>
+            <td class="col-md-7 clickable"
+                tooltips tooltip-smart="true"
+                tooltip-template="Click show detail"
+                data-ng-click="ventana(2)">
+                {{MSG.MOD_DEPS_CALL}}
+            </td>
+            <td class="col-md-4 text-right">{{modulo.depSummary.call}}</td>
+        </tr>
+
+        <tr class="clickable"
+            data-ng-click="cambiaPieModulo(2)"
+            title={{MSG.RES_SHOW_EXE}}
+            data-toggle="tooltip"
+            data-placement="top" tooltip>
+            <td class="col-md-1 tbLinea "></td>
+            <td class="col-md-7">{{MSG.MOD_DEPS_TRAN}}</td>
+            <td class="col-md-4 text-right">{{modulo.depSummary.callAll}}</td>
+        </tr>
+
+    </table>
+
+</div>

@@ -4,16 +4,22 @@ var colors1 =  ["#0000FF", "#55BF3B", "#FFFACD", "#ff8c00", "#7798BF",
                 "#A0522D", "#4B0082", "#8B4513", "#FF00FF", "#7B68EE",
                 "#2F4F4F", "#6B8E23", "#6A5ACD", "#EE82EE", "#4682B4"];
 
-function graficoParrafos($scope, parrafos, idGrafico, panel) {
+function grfParrsLines($scope, panel) {
 
-    var sc = $scope;
-    while (sc.colors == undefined) {
-        sc = sc.$parent;
-    }
+    var labels    = $scope.node.parrs.data.map(function (item) { return item.nombre; });
+    var sentences = $scope.node.parrs.data.map(function (item) { return item.sentencias;  });
+    _grfParrColumn("grfParrLines", panel, labels, sentences, $scope.node.parrs.limits.sentences)
+}
+function grfParrsCC($scope, panel) {
 
-    var sdp = getSDP($scope);
+    var labels = $scope.node.parrs.data.map(function (item) { return item.nombre;  });
+    var cc     = $scope.node.parrs.data.map(function (item) { return item.cc;      });
+    _grfParrColumn("grfParrCC", panel, labels, cc, $scope.node.parrs.limits.cc)
+}
 
-    var patron =  {
+function _grfParrColumn(idGraph, panel, labels, data, line) {
+
+var patron =  {
         chart:  { type: 'column'
             ,spacingLeft:  0
             ,spacingRight: 0
@@ -22,24 +28,25 @@ function graficoParrafos($scope, parrafos, idGrafico, panel) {
             ,marginRight: 45
         }
         ,title:   null
-        ,xAxis:  { categories: [] }
-        ,yAxis: [{
+        ,xAxis:  { categories: labels }
+        ,yAxis: {
             lineWidth: 1
             ,tickWidth: 1
-            ,title: {
-                text: 'Sentencias'
-                ,y: 0
-            }
+            ,title: null
+        //            ,title: {
+                //text: 'Sentencias',
+        //        y: 0
+        //    }
+            ,plotLines: [{
+               value: line
+              ,color: 'red'
+              ,dashStyle: 'shortdash'
+              ,width: 2
+//            label: {
+//                text: 'Last quarter minimum'
+//            }
+            }]
         }
-            ,{ lineWidth: 1
-                ,tickWidth: 1
-                ,opposite: true
-                ,title: {
-                    text: 'Complejidad'
-                    ,y: 0
-                }
-            }
-        ]
         ,plotOptions: {
             series: {
                 pointPadding: 0
@@ -47,31 +54,26 @@ function graficoParrafos($scope, parrafos, idGrafico, panel) {
                 ,colorByPoint: true
             }
         }
-        ,series: [ { name: $scope.MSG.TIT_SENTENCIAS
-                    ,colors: sc.colors1
-                    ,colorByPoint: true
-                    ,data: []
+        ,series: [ { // name: "nada" // $scope.MSG.TIT_SENTENCIAS
+                    //,colors: sc.colors1
+                    colorByPoint: true
+                    ,data: data
                    }
-                 ,{ name: $scope.MSG.TIT_COMPLEJIDAD
-                   ,colors: sc.colors2
-                   ,colorByPoint: true
-                   ,yAxis: 1
-                   ,data: []
-                  }
                  ]
     };
 
     if (panel == true) {
-        $scope.titulo = $scope.MSG.TIT_PARRAFOS;
-        patron.chart.renderTo = idGrafico;
+//        $scope.titulo = $scope.MSG.TIT_PARRAFOS;
+        patron.chart.renderTo = idGraph;
         patron.chart.spacingLeft =  50;
-        patron.chart.spacingRight = 50;
+        patron.chart.spacingRight = 5;
         patron.chart.spacingTop = 25;
         patron.chart.spacingBottom = 25;
-        patron.chart.marginLeft = 100;
-        patron.chart.marginRight = 100;
+        patron.chart.marginLeft = 60;
+        patron.chart.marginRight = 10;
     }
 
+    /*
     for (index = 0; index < parrafos.length; index++) {
         patron.xAxis.categories.push(parrafos[index].nombre);
         if (parrafos[index].sentencias > sdp.maxStmt) {
@@ -87,7 +89,8 @@ function graficoParrafos($scope, parrafos, idGrafico, panel) {
             patron.series[1].data.push({y: parrafos[index].cc});
         }
     }
-    var graf = angular.element($("#" + idGrafico));
+    */
+    var graf = angular.element($("#" + idGraph));
     graf.highcharts(patron);
 }
 
@@ -99,7 +102,7 @@ function graficoUsoParrafos($scope, parrafos, idGrafico, panel) {
             ,spacingTop:   0
             ,spacingLeft:  45
             ,spacingRight: 0
-            ,marginLeft: 0
+            ,marginLeft: 45
             ,marginRight: 0
             ,width: null
             ,height: null
@@ -177,4 +180,98 @@ function graficoConsumoParrafos($scope, parrafos, idGrafico, panel) {
 
     var graf = angular.element($("#" + idGrafico));
     graf.highcharts(patron);
+}
+
+function graficoCoverage($scope, coverage, idGrafico) {
+
+    stop1 = coverage.minimum / 3;
+    stop2 = stop1 * 2;
+    stop3 = coverage.minimum;
+
+    color = "black";
+    if (coverage.actual > 0)     color="red";
+    if (coverage.actual > stop1) color="yellow";
+    if (coverage.actual > stop2) color="green";
+
+    var gaugeOptions = {
+         chart: { type: 'solidgauge'  }
+        ,title: null
+        ,legend: {enabled: false}
+        ,pane: {
+            center: ['50%', '50%'],
+            size: '100%',
+            startAngle: -180,
+            endAngle: 180,
+            background: {
+                backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || '#EEE',
+                innerRadius: '60%',
+                outerRadius: '100%',
+                shape: 'arc'
+            }
+        },
+
+        tooltip: {
+            enabled: false
+        },
+
+        // the value axis
+        yAxis: {
+            stops: [
+                [stop1, '#DF5353'], // red
+                [stop2, '#DDDF0D'], // yellow
+                [stop3, '#55BF3B']  // green
+            ],
+            lineWidth: 0,
+            minorTickInterval: null,
+            tickAmount: 2,
+            title: {
+                y: -70
+            },
+            labels: {
+                y: 16
+            }
+        },
+
+        plotOptions: {
+            solidgauge: {
+                dataLabels: {
+                    y: 30,
+                    borderWidth: 0,
+                    useHTML: true
+                }
+            }
+        }
+    };
+
+    var gaugeCoverage =  {
+        yAxis: {
+            min: 0,
+            max: 100,
+            title: {
+                text: 'Speed'
+            }
+        },
+
+        credits: {
+            enabled: false
+        },
+
+        series: [{
+            name: 'Coverage',
+            data: [coverage.actual],
+            dataLabels: {
+                format: '<div style="text-align:center"><span style="font-size:25px;color:' + color + '">{y}%</div>'
+//                ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}%</div>'
+            }
+/*
+            ,tooltip: {
+                valueSuffix: ' km/h'
+            }
+*/
+        }]
+
+    };
+    var graf = angular.element($("#" + idGrafico));
+    graf.highcharts(Highcharts.merge(gaugeOptions, gaugeCoverage));
+
 }

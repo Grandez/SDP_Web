@@ -1,0 +1,50 @@
+.codigo {
+    padding: 0;
+    margin: 0 0 0 0px;
+    background-color: #FFFFFF;
+    border: none;
+    line-height: 0.6;
+    overflow: hidden;
+}
+
+.comment {
+    color: blue;
+    font-style: italic;
+    overflow: hidden;
+
+}
+
+.parrafo {
+    font-weight: bold;
+    overflow: hidden;
+
+}
+
+.usado {
+    background-color: yellow;
+    overflow: hidden;
+
+}
+
+.malo {
+    background-color: red !important;
+    color: white !important;
+    overflow: hidden;
+}
+
+.normal {
+    overflow: hidden;
+
+}
+
+.unused {
+    overflow: hidden;
+    font-style: italic;
+    color: grey;
+}
+
+.escrito {
+    font-weight: bold;
+    overflow: hidden;
+
+}

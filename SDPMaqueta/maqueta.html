@@ -1,0 +1,216 @@
+<html data-ng-app="SDP">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <meta name="viewport" content="width=device-width
+                                  , initial-scale=1
+                                  , maximum-scale=1
+                                  , user-scalable=no"/>
+
+
+
+    <title>Serendipity</title>
+
+    <script src="lib/jquery-3.2.1.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.css">
+    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+
+    <!-- Bootstrap table -->
+    <link rel="stylesheet" href="lib/bootstrap-table/bootstrap-table.css">
+    <script src="lib/bootstrap-table/bootstrap-table.js"></script>
+
+    <!-- Splitter -->
+    <link rel="stylesheet" href="lib/uilayout/ui-layout.css">
+    <!--<link rel="stylesheet" href="css/login.css" />-->
+
+    <!-- Angular -->
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-sanitize.js"></script>
+    <script src="lib/angular/angular-cookies.js"></script>
+    <script src="lib/angular-ui-router.js"></script>
+
+    <script src="lib/highcharts/code/highcharts.js"></script>
+    <script src="lib/highcharts/code/highcharts-3d.js"></script>
+    <script src="lib/highcharts/code/highcharts-more.js"></script>
+    <script src="lib/highcharts/code/modules/solid-gauge.js"></script>
+
+    <!-- JSTree -->
+    <script src="lib/jstree/jstree.js"></script>
+    <script src="lib/jstreegrid.js"></script>
+    <!--<link rel="stylesheet" href="lib/jstree/themes/classic/style.css">-->
+    <!--<link rel="stylesheet" href="lib/jstree/themes/proton/style.css">-->
+    <link rel="stylesheet" href="lib/jstree/themes/code/code.css">
+    <link rel="stylesheet" href="lib/jstree/themes/default/style.css">
+    <link rel="stylesheet" href="lib/jstree/themes/default-dark/style.css">
+    <link rel="stylesheet" href="lib/jstree/themes/proton/style.css">
+    <link rel="stylesheet" href="css/sdpCode.css">
+
+
+    <script src="js/controllers/loginCtrl.js"></script>
+    <script src="js/controllers/sdpCtrl.js"></script>
+    <script src="js/controllers/areaCtrl.js"></script>
+    <script src="js/controllers/applCtrl.js"></script>
+    <script src="js/controllers/moduleCtrl.js"></script>
+    <script src="js/controllers/codeCtrl.js"></script>
+
+</head>
+
+<body data-ng-controller="sdpCtrl as sdp">
+
+<div class="sdpHeader">
+    <!-- Menu de modulos -->
+    <div class="col-lg-6">
+       <nav class="navbar navbar-inverse"
+            role="navigation"
+            ng-style="{marginLeft: sizeSplit}"
+            ng-show="global.pageType == 1">
+            <ul class="nav navbar-nav">
+               <li ng-class="{'active': global.mnuItem == 1}">
+                   <a ng-click="global.mnuType = 1">{{MSG.MNU_GENERAL}}</a>
+               </li>
+               <li ng-class="{'active': global.mnuItem == 2}">
+                   <a ng-click="global.mnuType = 2">{{MSG.MNU_DYNAMIC}}</a>
+               </li>
+               <li ng-class="{'active': mnuItem == 3}">
+                   <a ng-click="global.mnuType = 3">{{MSG.MNU_STATIC}}</a>
+               </li>
+            </ul>
+        </nav>
+        <nav class="navbar navbar-inverse"
+             role="navigation"
+             ng-style="{marginLeft: sizeSplit}"
+             ng-show="global.pageType == 2">
+            <ul class="nav navbar-nav">
+                <li ng-class="{'active': global.mnuItem == 1}">
+                    <a ng-click="global.mnuType = 1">{{MSG.MNU_GENERAL}}</a>
+                </li>
+                <li ng-class="{'active': global.mnuItem == 2}">
+                    <a ng-click="global.mnuType = 2">{{MSG.MNU_DYNAMIC}}</a>
+                </li>
+                <li ng-class="{'active': global.mnuItem == 3}">
+                    <a ng-click="global.mnuType = 3">{{MSG.MNU_STATIC}}</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="navbar navbar-inverse"
+             role="navigation"
+             ng-style="{marginLeft: sizeSplit}"
+             ng-show="global.pageType == 3">
+            <ul class="nav navbar-nav">
+                <li ng-class="{'active': global.mnuItem == 1}">
+                    <a ng-click="global.mnuType = 1">{{MSG.MNU_GENERAL}}</a>
+                </li>
+                <li ng-class="{'active': global.mnuItem == 2}">
+                    <a ng-click="global.mnuType = 2">{{MSG.MNU_DYNAMIC}}</a>
+                </li>
+                <li ng-class="{'active': global.mnuItem == 3}">
+                    <a ng-click="global.mnuType = 3">{{MSG.MNU_STATIC}}</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+       <div class="sdpHeaderRight">
+           <span>{{global.mnuItem}}</span>
+        <span class="sdpPeriod clickable"
+              ng-show="global.showPeriodLabel==true"
+              ng-click="showPeriodLabel = !showPeriodLabel">
+              {{global.periods[global.periodId].name}}
+        </span>
+        <select ng-show="global.showPeriodLabel==false"
+                ng-model="global.period"
+                ng-init="global.period.id = global.periodId"
+                ng-change="changePeriodCombo(global.period.id)"
+                ng-blur="global.showPeriodLabel=1"
+                ng-options="item as item.name for item in global.periods"></select>
+       </select>
+    </div>
+</div>
+
+<div class="sdpContent">
+
+    <div ui-layout  >
+
+        <div ui-layout-container>
+            <div ui-layout="{flow : 'column'}" >
+                <div ui-layout-container size="250px" >
+
+                    <div class="left-inner-addon ">
+                        <img src="img/buho_32.png" alt="Filter" height="32" width="42">
+                        <input type="search"
+                               data-ng-model="mascara"
+                               data-ng-keyup="buscaArbol()"/>
+                    </div>
+
+                    <div id="arbol" data-ng-model="arbol"> </div>
+                </div>
+                <div ui-layout-container >
+                    <div ui-view></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+   <div class="sdpFooter">Pie de pagina {{MSG.AUTOR}}</div>
+
+   <script src="lib/uilayout/ui-layout.js"></script>
+   <script src="lib/sdpcobol.js"></script>
+
+
+   <script src="js/common/sdpBase.js"></script>
+   <script src="js/common/JavaCodes.js"></script>
+   <script src="js/common/WebCodes.js"></script>
+
+   <script src="js/factory/sdpSdp.js"></script>
+   <script src="js/factory/sdpAppl.js"></script>
+   <script src="js/factory/sdpArea.js"></script>
+   <script src="js/factory/sdpModule.js"></script>
+
+   <script src="js/loaders/sdpAjax.js"></script>
+   <script src="js/loaders/sdpLoader.js"></script>
+   <script src="js/loaders/sdpLoadBase.js"></script>
+   <script src="js/loaders/sdpLoadArea.js"></script>
+   <script src="js/loaders/sdpLoadModule.js"></script>
+
+   <script src="js/graficos/grfModulo.js"></script>
+
+   <script src="js/common/sdpTree.js"></script>
+
+   <!-- Debug -->
+   <!--<script src="data/msg.js"></script>-->
+
+   <script src="data/data.js"></script>
+   <script src="data/dataArea.js"></script>
+   <script src="data/dataMod.js"></script>
+   <script src="data/dataTree.js"></script>
+
+   <script src="data/module0.js"></script>
+   <script src="data/module1.js"></script>
+   <script src="data/module2.js"></script>
+
+   <script src="data/source0.js"></script>
+   <script src="data/source1.js"></script>
+   <script src="data/source2.js"></script>
+
+   <script src="data/parrafos0.js"></script>
+   <script src="data/parrafos1.js"></script>
+   <script src="data/parrafos2.js"></script>
+
+  <script src="data/status0.js"></script>
+  <script src="data/status1.js"></script>
+  <script src="data/status2.js"></script>
+
+   <script src="data/log.js"></script>
+
+   <script src="js/sdpClient.js"></script>
+</body>
+
+</html>

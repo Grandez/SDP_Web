@@ -1,0 +1,25 @@
+<div  ng-controller="modCtrl">
+    <jqx-splitter jqx-settings="modSplitter">
+        <div>Panel 1</div>
+        <div>
+            <jqx-splitter jqx-settings="modDataSplitter">
+                    <div>
+                            <jqx-menu jqx-on-itemclick="mnuModClick($event, id)">
+                                <ul>
+                                    <li id="modResumen"><a href="#Summary">Resumen</a></li>
+                                    <li id="modOtro1"><a href="#Static">Estatico</a>
+                                    <li id="modOtro2"><a href="#Dynamic">Dinamico</a>
+                                </ul>
+                            </jqx-menu>
+                        datos
+                    </div>
+                <div>Panel 3</div>
+            </jqx-splitter></div>
+    </jqx-splitter>
+</div>
+
+<h1>Estoy en module</h1>
+<div id="modView1"   data-ng-show="modVista ==  1" data-ng-include="'partials/module/resumen.htm'"></div>
+<div id="modView2"   data-ng-show="modVista ==  2" data-ng-include="'partials/module/otro.htm'"></div>
+<div id="modView3"   data-ng-show="modVista ==  3" data-ng-include="'partials/module/otro.htm'"></div>
+

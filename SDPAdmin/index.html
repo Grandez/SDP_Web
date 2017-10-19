@@ -1,0 +1,102 @@
+<html data-ng-app="SDP">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <meta name="viewport" content="width=device-width
+                                  , initial-scale=1
+                                  , maximum-scale=1
+                                  , user-scalable=no"/>
+
+
+
+    <title>Serendipity</title>
+
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap-theme.css">
+
+    <link rel="stylesheet" type="text/css" href="css/sdpMain.css">
+
+
+    <script src="lib/jquery-3.2.1.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-sanitize.js"></script>
+    <script src="lib/angular-ui-router.js"></script>
+
+
+    <script src="js/controllers/loginCtrl.js"></script>
+    <script src="js/controllers/sdpCtrl.js"></script>
+    <script src="js/controllers/areaCtrl.js"></script>
+    <script src="js/controllers/moduleCtrl.js"></script>
+
+</head>
+
+<body data-ng-controller="sdpCtrl">
+
+<div class="sdpHeader">
+    Cabecera
+<!--
+    <nav>
+        <a href="#portal">portal</a>
+        <a href="#area">Area</a>
+        <a href="#appl">Aplicacion</a>
+        <a href="#module">Modulo</a>
+        <a href="#module2">Modulo 2</a>
+        <a href="#dock">Docking</a>
+    </nav>
+-->
+</div>
+
+<div class="sdpContent">
+
+
+</div>
+
+   <div class="sdpFooter">Pie de pagina {{MSG.AUTOR}}</div>
+
+
+   <script src="js/common/sdpBase.js"></script>
+
+   <script src="js/factory/sdpSdp.js"></script>
+   <script src="js/factory/sdpAppl.js"></script>
+   <script src="js/factory/sdpArea.js"></script>
+   <script src="js/factory/sdpModule.js"></script>
+
+   <script src="js/loaders/sdpAjax.js"></script>
+   <script src="js/loaders/sdpLoader.js"></script>
+   <script src="js/loaders/sdpLoadBase.js"></script>
+   <script src="js/loaders/sdpLoadAppl.js"></script>
+   <script src="js/loaders/sdpLoadModule.js"></script>
+
+   <script src="js/graficos/grfModulo.js"></script>
+
+   <script src="js/common/sdpTree.js"></script>
+
+   <!-- Debug -->
+   <script src="data/msg.js"></script>
+
+   <script src="data/data.js"></script>
+   <script src="data/dataArea.js"></script>
+   <script src="data/dataMod.js"></script>
+   <script src="data/dataTree.js"></script>
+
+   <script src="data/module0.js"></script>
+   <script src="data/module1.js"></script>
+   <script src="data/module2.js"></script>
+
+   <script src="data/source0.js"></script>
+   <script src="data/source1.js"></script>
+   <script src="data/source2.js"></script>
+
+   <script src="data/parrafos0.js"></script>
+   <script src="data/parrafos1.js"></script>
+   <script src="data/parrafos2.js"></script>
+
+   <script src="js/sdp.js"></script>
+</body>
+
+</html>

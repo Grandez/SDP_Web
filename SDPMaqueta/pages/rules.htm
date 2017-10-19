@@ -1,0 +1,48 @@
+<div data-ng-controller="sdpAdmRulesCtrl">
+<div ui-layout  >
+
+    <div ui-layout-container>
+        <div ui-layout="{flow : 'column'}" >
+            <div ui-layout-container size="20%" >
+                <div class="left-inner-addon ">
+                    <i class="glyphicon glyphicon-search"></i>
+                    <input type="search"
+                           class="form-control"
+                           data-ng-model="mascara"
+                           data-ng-keyup="buscaArbol()"/>
+                </div>
+
+                <div id="rules" align="left"></div>
+
+            </div>
+            <div ui-layout-container class="contenedor">
+                <div id="divRuleGroup"
+                     data-ng-include="'partials/rules/group.htm'"
+                     data-ng-show="ruleLeaf == false">
+                </div>
+                <div id="divRuleRule"
+                     data-ng-include="'partials/rules/item.htm'"
+                     data-ng-show="ruleLeaf == true">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <div ng-show="modalWindow != 0">
+        <div class="modal-background" ng-click="close()">
+
+        </div>
+        <div class="modal-window">
+            <div ng-include="'windows/admin/markdown.htm'"
+                 ng-show="modalType == 1">
+            </div>
+            <div ng-include="'windows/admin/editRule.htm'"
+                 ng-show="modalType == 2">
+            </div>
+        </div>
+
+    </div>
+</div>

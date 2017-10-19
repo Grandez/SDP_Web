@@ -1,0 +1,73 @@
+<html  data-ng-app="sdp" data-ng-controller="sdpCtrl">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width
+                                  , initial-scale=1
+                                  , maximum-scale=1
+                                  , user-scalable=no">
+
+	<meta http-equiv="pragma" content="no-cache" />
+
+	<title>Portal Serendipity</title>
+
+	<link rel="stylesheet" type="text/css" href="lib/ui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="lib/ui/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="lib/ui/demo.css">
+
+	<!--<link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css">-->
+
+	<link rel="stylesheet" type="text/css" href="css/sdpMain.css">
+
+	<!--<script src="lib/angular/angular-sanitize.js"></script>-->
+	<!--<script src="lib/angular/angular-locale_es.js"></script>-->
+
+</head>
+
+<body >
+<h1>Angular Routing</h1>
+<nav>
+	<ul>
+		<li><a href="#portal">Portal</a></li>
+		<li><a href="#module">Modulo</a></li>
+	</ul>
+</nav>
+
+<div data-options="region:'north',border:false" style="height:50px;">
+	<button ng-click="vista = 0">Ir a vista 0 Portal</button>
+	<button ng-click="vista = 1">Ir a vista 1 Area </button>
+	<button ng-click="vista = 2">Ir a vista 2 Appl </button>
+	<button ng-click="vista = 3">Ir a vista 3 Module </button>
+	La vista es {{vista}}
+</div>
+
+		<div ng-view></div>
+
+
+
+<script type="text/javascript" src="lib/ui/jquery.min.js"></script>
+<script type="text/javascript" src="lib/ui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="lib/ui/jquery.portal.js"></script>
+
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular/angular-sanitize.js"></script>
+<script src="lib/angular/angular-route.js"></script>
+
+<!-- DATA para maqueta-->
+
+<script src="data/dataTree.js"></script>
+<script src="data/msg.js"></script>
+
+<script src="js/main.js"></script>
+<!--
+   <script>
+       var sdp = angular.module("sdp", [  ]);
+       sdp.controller('sdpCtrl', function($scope) {
+           $scope.vista = 3;
+           });
+
+   </script>
+-->
+</body>
+
+</html>

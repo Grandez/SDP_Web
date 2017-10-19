@@ -1,0 +1,144 @@
+<html data-ng-app="SDPADM">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <meta name="viewport" content="width=device-width
+                                  , initial-scale=1
+                                  , maximum-scale=1
+                                  , user-scalable=no"/>
+
+
+
+    <title>Serendipity</title>
+
+    <script src="lib/jquery-3.2.1.js"></script>
+    <script src="lib/underscore.js"></script>
+
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.css">
+    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+    <!--<link rel="stylesheet" href="lib/bootstrap/bootstrap-theme.css">-->
+
+<!--
+    <link rel="stylesheet" type="text/css" href="css/mnubar.css">
+    <link rel="stylesheet" type="text/css" href="css/sdpMain.css">
+    <link rel="stylesheet" type="text/css" href="css/sdpCode.css">
+-->
+    <!--
+        <link type="text/css" rel="stylesheet" href="lib/jqwidgets/jqwidgets/styles/jqx.base.css" />
+        <link type="text/css" rel="stylesheet" href="lib/jqwidgets/jqwidgets/styles/jqx.shinyblack.css" />
+    -->
+
+    <link rel="stylesheet" href="lib/jstree/themes/default/style.css">
+
+    <!-- Splitter -->
+    <link rel="stylesheet" href="lib/uilayout/ui-layout.css">
+    <!--<link rel="stylesheet" href="css/login.css" />-->
+
+    <!--         ANGULAR JS         -->
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-sanitize.js"></script>
+    <script src="lib/angular/angular-cookies.js"></script>
+    <script src="lib/angular/angular-modal-service.js"></script>
+
+    <script src="lib/angular/ui-bootstrap-tpls-2.5.0.js"></script>
+    <script src="lib/angular-ui-router.js"></script>
+
+
+    <script src="lib/highcharts/code/highcharts.js"></script>
+    <script src="lib/highcharts/code/highcharts-3d.js"></script>
+    <script src="lib/highcharts/code/highcharts-more.js"></script>
+    <script src="lib/highcharts/code/modules/solid-gauge.js"></script>
+
+
+    <link rel="stylesheet" href="lib/jstree/themes/default/style.min.css" />
+    <link rel="stylesheet" href="lib/jstree/themes/proton/style.css">
+    <script src="lib/jstree/jstree.js"></script>
+
+    <link rel="stylesheet" href="lib/mdeditor/examples/css/style.css" />
+    <link rel="stylesheet" href="lib/mdeditor/css/editormd.css" />
+    <script src="lib/mdeditor/editormd.js"></script>
+
+    <link rel="stylesheet" href="lib/codemirror/codemirror.css">
+    <script src="lib/codemirror/codemirror.js"></script>
+
+    <!-- Editor Markdown -->
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="lib/bootstrap-markdown/css/bootstrap-markdown.min.css">
+    <link rel="stylesheet" href="lib//highlight/styles/github.css">
+    <link rel="stylesheet" href="lib/markdown/styles/angular-markdown-editor.css">
+
+    <script type="text/javascript" src="lib/marked/lib/marked.js"></script>
+    <script type="text/javascript" src="lib/angular-marked/angular-marked.js"></script>
+    <script type="text/javascript" src="lib/bootstrap-markdown/js/bootstrap-markdown.js"></script>
+    <script type="text/javascript" src="lib//highlight/highlight.pack.js"></script>
+    <script type="text/javascript" src="lib/angular/angular-highlightjs.js"></script>
+    <script type="text/javascript" src="lib/markdown/angular-markdown-editor.js"></script>
+
+    <!-- You could also load any available locale, look on their website https://github.com/toopay/bootstrap-markdown/tree/master/locale -->
+    <!--<script type="text/javascript" src="../node_modules/bootstrap-markdown/locale/bootstrap-markdown.fr.js"></script>-->
+    <!--<script src="js/controllers/loginCtrl.js"></script>-->
+    <script src="js/controllers/admin/sdpAdmCtrl.js"></script>
+    <script src="js/controllers/admin/sdpAdmConfigCtrl.js"></script>
+    <script src="js/controllers/admin/sdpAdmRulesCtrl.js"></script>
+    <script src="js/controllers/admin/modalsCtrl.js"></script>
+</head>
+
+<body data-ng-controller="sdpAdmCtrl">
+
+<div class="sdpHeader">
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="#">AngularUI Router</a>
+        </div>
+        <ul class="nav navbar-nav sdpMenu">
+            <li><a ui-sref="home">Sistema</a></li>
+            <li><a ui-sref="config">Configuracion</a></li>
+            <li><a ui-sref="issues">Reglas</a></li>
+        </ul>
+    </nav>
+
+</div>
+
+<div class="sdpContent sdpPanel">
+    <div ui-view></div>
+</div>
+
+<div class="sdpFooter">Pie de pagina {{MSG.AUTOR}}</div>
+
+<script src="lib/uilayout/ui-layout.js"></script>
+
+<script src="js/common/sdpBase.js"></script>
+<script src="js/common/JavaCodes.js"></script>
+
+<script src="js/factory/sdpSdp.js"></script>
+<script src="js/factory/sdpAdmin.js"></script>
+
+<script src="js/factory/sdpArea.js"></script>
+<script src="js/factory/sdpModule.js"></script>
+
+<script src="js/loaders/sdpAjax.js"></script>
+<script src="js/loaders/sdpLoader.js"></script>
+<script src="js/loaders/sdpLoadBase.js"></script>
+<script src="js/loaders/sdpLoadAdmin.js"></script>
+<script src="js/loaders/sdpLoadModule.js"></script>
+
+<script src="js/graficos/grfModulo.js"></script>
+
+<script src="js/common/sdpTree.js"></script>
+
+<!-- Debug -->
+<script src="data/msg.js"></script>
+
+<script src="data/data.js"></script>
+<script src="data/dataArea.js"></script>
+<script src="data/dataMod.js"></script>
+<script src="data/dataTree.js"></script>
+
+<script src="js/sdpAdmin.js"></script>
+</body>
+
+</html>

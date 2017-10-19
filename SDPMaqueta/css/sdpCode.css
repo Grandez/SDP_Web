@@ -1,30 +1,50 @@
-.codigo {
-    padding: 0;
-    margin: 0 0 0 0px;
-    background-color: #FFFFFF;
-    border: none;
-    line-height: 1.0;
-    overflow: hidden;
+.codeLine {
+    text-align: right;
+    font-family: "Courier New", sans-serif;
+    font-size: 12px;
+    line-height: 12px;
+    background-color: #f0f0f0;
+    color: black;
+    white-space: pre;
 }
 
-.comment {
+.codeSource {
+    text-align: left;
+    font-family: "Courier New", sans-serif;
+    font-size: 12px;
+    line-height: 12px;
+    white-space: pre;
+}
+
+.sdpSrcDivision {
+    font-weight: bolder;
+}
+
+.sdpSrcSection {
+    font-weight: bold;
+}
+
+.sdpSrcComment {
     color: blue;
     font-style: italic;
-    line-height: 1.0;
     overflow: hidden;
-
+    white-space: pre;
 }
 
-.parrafo {
+.sdpSrcParrafo {
     font-weight: bold;
-    line-height: 1.0;
     overflow: hidden;
-
 }
+
+.sdpSrcCode {
+    font-weight: normal;
+    white-space: pre;
+}
+
+
 
 .usado {
     background-color: yellow;
-    line-height: 1.0;
     overflow: hidden;
 
 }
@@ -32,18 +52,15 @@
 .malo {
     background-color: red !important;
     color: white !important;
-    line-height: 1.0;
     overflow: hidden;
 }
 
 .normal {
-    line-height: 1.0;
     overflow: hidden;
 
 }
 
 .unused {
-    line-height: 1.0;
     overflow: hidden;
     font-style: italic;
     color: grey;
@@ -51,7 +68,6 @@
 
 .escrito {
     font-weight: bold;
-    line-height: 1.0;
     overflow: hidden;
 
 }
