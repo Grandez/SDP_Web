@@ -1,0 +1,79 @@
+  <div class="panel-heading">
+      {{MSG.LOG}}
+  </div>
+  <div class="panel-body" style="padding: 0px;">
+      <table data-toggle="table"
+             data-url="http://issues.wenzhixin.net.cn/examples/bootstrap_table/data"
+      <table data=LOG
+             data-pagination="true"
+             data-side-pagination="server"
+             data-page-list="[5, 10, 20, 50, 100, 200]"
+             data-search="true">
+<!--             data-height="300"> -->
+          <thead>
+          <tr>
+              <th data-field="id"     data-sortable="true" data-align="left">  {{MSG.LOG_ID}}  </th>
+              <th data-field="object" data-sortable="true" data-align="left">  {{MSG.LOG_OBJ}} </th>
+              <th data-field="date"   data-sortable="true" data-align="right"> {{MSG.LOG_DATE}}</th>
+              <th data-field="uid"    data-sortable="true" data-align="left">  {{MSG.LOG_UID}} </th>
+              <th data-field="msg"    data-sortable="false" data-align="left"> {{MSG_LOG_MSG}} </th>
+          </tr>
+          </thead>
+      </table>
+
+<!--
+      <table class="table table-hover table-striped">
+          <thead class="panel-heading">
+            <tr>
+               <th class="panel-heading"
+                   data-ng-class="{'clickable': sdp.filterLog[0] != null}"
+                   data-ng-click="filtroLog(0, fila.codigo)">
+                   <span class="pull-left glyphicon glyphicon-filter" data-ng-show="sdp.filterLog[0] != null"></span>
+                   {{MSG.LOG_ID}}
+               </th>
+               <th class="panel-heading"
+                   data-ng-class="{'clickable': sdp.filterLog[1] != null}"
+                   data-ng-click="filtroLog(1, fila.log.objeto)">
+                   <span class="pull-left glyphicon glyphicon-filter" data-ng-show="sdp.filterLog[1] != null"></span>
+                   {{MSG.LOG_OBJ}}
+               </th>
+               <th class="panel-heading"
+                   data-ng-class="{'clickable': sdp.filterLog[2] != null}"
+                   data-ng-click="filtroLog(2, fila.log.tms)">
+                   <span class="pull-left glyphicon glyphicon-filter" data-ng-show="sdp.filterLog[2] != null"></span>
+                   {{MSG.LOG_DATE}}
+               </th>
+               <th class="panel-heading"
+                   data-ng-class="{'clickable': sdp.filterLog[2] != null}"
+                   data-ng-click="filtroLog(3, fila.log.uid)">
+                   <span class="pull-left glyphicon glyphicon-filter" data-ng-show="sdp.filterLog[3] != null"></span>
+                   {{MSG.LOG_UID}}
+               </th>
+               <th class="panel-heading">
+                   {{MSG_LOG_MSG}}
+               </th>
+          </tr>
+
+          </thead>
+          <tr class="listado" data-ng-repeat="fila in logData">
+              <td class="col-md-1 clickable" data-ng-click="filtroLog(0, fila.codigo)">
+                  {{fila.codigo}}
+              </td>
+              <td class="col-md-1 clickable" data-ng-click="filtroLog(1, fila.log.objeto)">
+                  {{fila.log.objeto}}
+              </td>
+              <td class="col-md-1 clickable" data-ng-click="filtroLog(2, fila.log.tms)">
+                  {{fila.log.tms | date : 'short' : timezone}}
+              </td>
+              <td class="col-md-1 clickable" data-ng-click="filtroLog(3, fila.log.uid)">
+                  {{fila.log.uid}}
+              </td>
+              <td class="col-md-8">
+                  {{fila.msg}}
+              </td>
+          </tr>
+
+      </table>
+-->
+
+  </div>

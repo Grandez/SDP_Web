@@ -4,6 +4,7 @@
 
     var sdpApp = angular.module("sdpAdmin", [ "ui.layout"
                                              ,"ui.bootstrap"
+                                             ,"ngAnimate"
                                              ,"ngSanitize"
                                              ,"ngDialog"
     ]);
@@ -63,17 +64,6 @@
                                  ,"glbFactAdmin"
                                  ,"ngDialog"
                                  , sdpAdm ] );
-
-    sdpApp.filter('numberFixedLen' , function () {
-        return function (n, len) {
-            var num = parseInt(n, 10);
-            len = parseInt(len, 10);
-            if (isNaN(num) || isNaN(len)) return n;
-            num = ''+num;
-            while (num.length < len)  num = '0'+num;
-            return num;
-        };
-    });
 
 }).call(this);
 

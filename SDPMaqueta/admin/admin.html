@@ -1,0 +1,153 @@
+<html data-ng-app="SDPADM">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <meta name="viewport" content="width=device-width
+                                  , initial-scale=1
+                                  , maximum-scale=1
+                                  , user-scalable=no"/>
+
+
+
+    <title>Serendipity Administration</title>
+
+    <script src="../lib/jquery-3.2.1.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap-theme.css">
+    <script src="../lib/bootstrap/dist/js/bootstrap.js"></script>
+
+    <!-- Bootstrap table -->
+    <link rel="stylesheet" href="../lib/bootstrap-table/bootstrap-table.css">
+    <script src="../lib/bootstrap-table/bootstrap-table.js"></script>
+
+    <!-- Splitter -->
+    <link rel="stylesheet" href="../lib/uilayout/ui-layout.css">
+    <!--<link rel="stylesheet" href="../css/login.css" />-->
+
+    <!-- Angular -->
+    <script src="../lib/angular/angular.js"></script>
+    <script src="../lib/angular/angular-sanitize.js"></script>
+    <script src="../lib/angular/angular-cookies.js"></script>
+    <script src="../lib/angular-ui-router.js"></script>
+
+    <!-- UI Bootstrap -->
+    <script src="../lib/ui-bootstrap.js"></script>
+
+    <script src="../lib/highcharts/code/highcharts.js"></script>
+    <script src="../lib/highcharts/code/highcharts-3d.js"></script>
+    <script src="../lib/highcharts/code/highcharts-more.js"></script>
+    <script src="../lib/highcharts/code/modules/solid-gauge.js"></script>
+
+    <!-- JSTree -->
+    <script src="../lib/jstree/jstree.js"></script>
+    <script src="../lib/jstreegrid.js"></script>
+    <!--<link rel="stylesheet" href="../lib/jstree/themes/classic/style.css">-->
+    <!--<link rel="stylesheet" href="../lib/jstree/themes/proton/style.css">-->
+    <link rel="stylesheet" href="../lib/jstree/themes/code/code.css">
+    <link rel="stylesheet" href="../lib/jstree/themes/default/style.css">
+    <link rel="stylesheet" href="../lib/jstree/themes/default-dark/style.css">
+    <link rel="stylesheet" href="../lib/jstree/themes/proton/style.css">
+    <link rel="stylesheet" href="../css/sdpCode.css">
+
+    <script src="js/controllers/admCtrl.js"></script>
+    <script src="js/controllers/rulesCtrl.js"></script>
+    <script src="js/controllers/configCtrl.js"></script>
+
+
+    <script src="js/controllers/moduleCtrl.js"></script>
+    <script src="js/controllers/codeCtrl.js"></script>
+
+</head>
+
+<body data-ng-controller="admCtrl">
+
+<div class="sdpHeader">
+    <div class="col-lg-6">
+        <nav class="navbar navbar-inverse"
+             role="navigation"
+             ng-style="{marginLeft: sizeSplit}">
+            <ul class="nav navbar-nav">
+                <li ng-class="{'active': global.mnuItem == 1}">
+                    <a ng-click="global.mnuType = 1">{{MSG.MNU_APPL}}</a>
+                </li>
+                <li ng-class="{'active': global.mnuItem == 2}">
+                    <a ng-click="global.mnuType = 2">{{MSG.MNU_CONFIG}}</a>
+                </li>
+                <li ng-class="{'active': mnuItem == 3}">
+                    <a ng-click="global.mnuType = 3">{{MSG.MNU_RULES}}</a>
+                </li>
+                <li ng-class="{'active': mnuItem == 4}">
+                    <a ng-click="global.mnuType = 4">{{MSG.MNU_USERS}}</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<div class="sdpContent">
+    <div ui-view></div>
+</div>
+
+   <div class="sdpFooter">Pie de pagina {{MSG.AUTOR}}</div>
+
+   <script src="../lib/uilayout/ui-layout.js"></script>
+   <!--<script src="../lib/sdpcobol.js"></script>-->
+
+
+   <script src="js/common/sdpBase.js"></script>
+   <script src="js/common/JavaCodes.js"></script>
+   <script src="js/common/WebCodes.js"></script>
+
+   <script src="js/factory/sdpSdp.js"></script>
+   <script src="js/factory/sdpAppl.js"></script>
+   <script src="js/factory/sdpArea.js"></script>
+   <script src="js/factory/sdpModule.js"></script>
+
+   <script src="js/loaders/sdpAjax.js"></script>
+   <script src="js/loaders/sdpLoader.js"></script>
+   <script src="js/loaders/sdpLoadBase.js"></script>
+   <script src="js/loaders/sdpLoadArea.js"></script>
+   <script src="js/loaders/sdpLoadModule.js"></script>
+
+   <script src="js/graficos/grfModulo.js"></script>
+
+   <!-- Debug -->
+   <!--<script src="../data/msg.js"></script>-->
+
+   <!--<script src="../data/data.js"></script>-->
+   <!--<script src="../data/dataArea.js"></script>-->
+   <!--<script src="../data/dataMod.js"></script>-->
+   <!--<script src="../data/dataTree.js"></script>-->
+
+   <!--<script src="../data/module0.js"></script>-->
+   <!--<script src="../data/module1.js"></script>-->
+   <!--<script src="../data/module2.js"></script>-->
+
+   <!--<script src="../data/source0.js"></script>-->
+   <!--<script src="../data/source1.js"></script>-->
+   <!--<script src="../data/source2.js"></script>-->
+
+   <!--<script src="../data/parrafos0.js"></script>-->
+   <!--<script src="../data/parrafos1.js"></script>-->
+   <!--<script src="../data/parrafos2.js"></script>-->
+
+  <!--<script src="../data/status0.js"></script>-->
+  <!--<script src="../data/status1.js"></script>-->
+  <!--<script src="../data/status2.js"></script>-->
+
+   <!--<script src="../data/log.js"></script>-->
+
+
+    <script src="js/loaders/sdpLoadAdmin.js"></script>
+    <script src="js/loaders/sdpLoadConfig.js"></script>
+    <script src="js/common/admTree.js"></script>
+
+    <script src="js/sdpAdmin.js"></script>
+</body>
+
+</html>

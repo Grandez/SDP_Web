@@ -1,0 +1,27 @@
+<div data-ng-controller="sdpAdmConfigCtrl">
+
+
+    <div class="contenedor col-lg-6 col-lg-offset-3">
+        <div class="panel-heading">
+             Configuracion
+        </div>
+        <div class="panel-body" style="padding: 0px;">
+
+             <table class="table table-hover table-striped">
+                    <thead class="panel-heading">
+                           <tr>
+                               <th class="panel-heading">{{MSG.LOG_ID}}</th>
+                               <th class="panel-heading">{{MSG.LOG_OBJ}}</th>
+                               <th class="panel-heading">{{MSG.LOG_DATE}}</th>
+                            </tr>
+                    </thead>
+                    <tr class="listado" data-ng-repeat="fila in config">
+                       <td class="col-md-3" data-ng-click="configDetail($index, fila)">{{fila.clave}}</td>
+                       <td class="col-md-2" data-ng-click="configDetail($index, fila)">{{fila.valor}}</td>
+                       <td class="col-md-1"><span class="glyphicon glyphicon-pencil"></span></td>
+                    </tr>
+             </table>
+        </div>
+     </div>
+
+</div>

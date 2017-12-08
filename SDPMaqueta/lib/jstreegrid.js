@@ -245,14 +245,13 @@
 				if (!styled) {
 					styled = true;
 					styles = [
-						'.jstree-grid-cell {vertical-align: top; overflow:hidden;margin-left:0;position:relative;width: 100%;padding-left:7px;white-space: pre;}',
-						'.jstree-grid-cell span {margin-right:0px;margin-right:0px;*display:inline;*+display:inline;white-space: pre;}',
+						'.jstree-grid-cell {vertical-align: top; overflow:hidden;margin-left:0;position:relative;width: 100%;padding-left:7px;white-space: nowrap;}',
+						'.jstree-grid-cell span {margin-right:0px;margin-right:0px;*display:inline;*+display:inline;white-space: nowrap;}',
 						'.jstree-grid-separator {position:absolute; top:0; right:0; height:24px; margin-left: -2px; border-width: 0 2px 0 0; *display:inline; *+display:inline; margin-right:0px;width:0px;}',
-						// '.jstree-grid-header-cell {overflow: hidden; white-space: nowrap;padding: 1px 3px 2px 5px; cursor: default;}',
-						'.jstree-grid-header-cell {visibility: hidden; display: none}',
+						'.jstree-grid-header-cell {overflow: hidden; white-space: nowrap;padding: 1px 3px 2px 5px; cursor: default;}',
 						'.jstree-grid-header-themeroller {border: 0; padding: 1px 3px;}',
-                        '.jstree-grid-header-regular {position:relative; background-color: #EBF3FD; z-index: 1}', //JGG #EBF3FD; z-index: 1;}',
-                        '.jstree-grid-hidden {display: none;}',
+            '.jstree-grid-header-regular {position:relative; background-color: #EBF3FD; z-index: 1;}',
+            '.jstree-grid-hidden {display: none;}',
 						'.jstree-grid-resizable-separator {cursor: col-resize; width: 2px;}',
 						'.jstree-grid-separator-regular {border-color: #d0d0d0; border-style: solid;}',
 						'.jstree-grid-cell-themeroller {border: none !important; background: transparent !important;}',
@@ -298,7 +297,7 @@
 
 					if (gs.sortOrder==='text') {
 						var caseInsensitiveSort = this.get_text(a).toLowerCase().localeCompare(this.get_text(b).toLowerCase());
-						bigger = gs.caseInsensitive ? (caseInsensitiveSort === 1) : (defaultSort(a, b) === 1); 
+						bigger = gs.caseInsensitive ? (caseInsensitiveSort === 1) : (defaultSort(a, b) === 1);
 					} else {
 						// gs.sortOrder just refers to the unique random name for this column
 						// we need to get the correct value
@@ -541,6 +540,8 @@
 				this.holdingCells = {};
         if (data.nodes.length) {
           var id = _guid();
+					// save the cells we will hide
+					var cells = grid.find('div.jstree-grid-cell-regular');
           this._detachColumns(id);
 					if(this._data.search.som) {
 						// create the list of nodes we want to look at
@@ -550,7 +551,7 @@
 						nodesToShow = (nodesToShow || data.nodes).add(data.nodes.parentsUntil(".jstree"));
 
 						// hide all of the grid cells
-						grid.find('div.jstree-grid-cell-regular').hide();
+						cells.hide();
 						// show only those that match
 						nodesToShow.filter(".jstree-node").each(function (i,node) {
 							var id = node.id;
@@ -856,9 +857,9 @@
         var cols = this._gridSettings.columns || [], treecol = this._gridSettings.treecol, mw = this.midWrapper;
         this._domManipulation = { id: id, columns: {} };
         for (var i = 0, len = cols.length; i < len; i++) {
-          if (treecol === i) {
-            continue;
-          }
+          //if (treecol === i) {
+          //  continue;
+          //}
           this._domManipulation.columns[i] = mw.children(".jstree-grid-column-" + i)[0];
           this._domManipulation.columns[i].parentNode.removeChild(this._domManipulation.columns[i]);
         }
@@ -871,9 +872,9 @@
       if (this._domManipulation.id === id) {
         var cols = this._gridSettings.columns || [], treecol = this._gridSettings.treecol, mw = this.midWrapper;
         for (var i = 0, len = cols.length; i < len; i++) {
-          if (treecol === i) {
-            continue;
-          }
+          //if (treecol === i) {
+          //  continue;
+          //}
           mw[0].appendChild(this._domManipulation.columns[i]);
         }
         this._domManipulation = null;
@@ -947,8 +948,8 @@
 			}
 			return result;
     };
-    
-    this._hideOrShowTree = function(node, hide) { 
+
+    this._hideOrShowTree = function(node, hide) {
       //Hides or shows a tree
       this._detachColumns(node.id);
       // show cells in each detachted column
@@ -986,8 +987,8 @@
         }
         if (child.state.opened) { this._hide_grid(child);}
       }
-			
-      
+
+
       this._reattachColumns(node.id);
 		};
 		this.holdingCells = {};

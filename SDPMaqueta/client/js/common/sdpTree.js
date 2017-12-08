@@ -13,15 +13,15 @@ function cargaArbol($scope, $state, datos) {
 
     var tipos =  {
         "valid_children" : [ "all" ]
-        ,"root"       : { "icon": "./img/root_16.png"        }
-        ,"area_closed": { "icon": "./img/folder_closed.png"}
-        ,"area_open"  : { "icon": "./img/folder_open.png"  }
-        ,"appl_closed": { "icon": "./img/folder_closed.png"}
-        ,"appl_open"  : { "icon": "./img/folder_closed.png"}
-        ,"cobol"      : { "icon": "./img/cobol2.png"        }
-        ,"cics"       : { "icon": "./img/cics2.png"         }
-        ,"db2"        : { "icon": "./img/db2.png"           }
-        ,"cicsdb2"    : { "icon": "./img/cicsdb22.png"      }
+        ,"root"       : { "icon": "../img/root_16.png"        }
+        ,"area_closed": { "icon": "../img/folder_closed.png"}
+        ,"area_open"  : { "icon": "../img/folder_open.png"  }
+        ,"appl_closed": { "icon": "../img/folder_closed.png"}
+        ,"appl_open"  : { "icon": "../img/folder_closed.png"}
+        ,"cobol"      : { "icon": "../img/cobol2.png"        }
+        ,"cics"       : { "icon": "../img/cics2.png"         }
+        ,"db2"        : { "icon": "../img/db2.png"           }
+        ,"cicsdb2"    : { "icon": "../img/cicsdb22.png"      }
     }
 
     for (var idx = 0; idx < datos.length; idx++) {
@@ -36,7 +36,7 @@ function cargaArbol($scope, $state, datos) {
 
         if (idx == 0) {
             nodo.type = "root";
-            nodo.icon = "./img/root.png"
+            nodo.icon = "../img/root.png"
             raiz = nodo.id;
             nodo.state = { opened: true, selected: true};
         }
@@ -49,7 +49,7 @@ function cargaArbol($scope, $state, datos) {
             'data': data
             ,themes: {
                 "name": "default"
-                ,'url': 'lib/jstree/themes/default/style.css'
+                ,'url': '.../lib/jstree/themes/default/style.css'
             }
 
         }
