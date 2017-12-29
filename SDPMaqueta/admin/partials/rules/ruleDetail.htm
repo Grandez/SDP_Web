@@ -1,0 +1,130 @@
+<div class="container col-lg-12">
+    <h2 class="text-center">{{rule.name}}</h2>
+
+    <div class="container">
+        <table class="col-lg-6">
+            <tr>
+                <td>{{MSG.RUL_TYPE}}</td>
+                <td>{{MSG.RUL_TYPES[rule.nodeType]}}</td>
+            </tr>
+            <tr>
+                <td>{{MSG.RUL_ID}}</td>
+                <td>{{rule.id}}</td>
+            </tr>
+            <tr ng-show="rule.idParent != 0">
+                <td>{{MSG.RUL_PARENT}}</td>
+                <td>{{rule.idParent}}</td>
+            </tr>
+            <tr>
+                <td>{{MSG.RUL_PREFIX}}</td>
+                <td>{{rule.prefix}}</td>
+            </tr>
+            <tr>
+                <td>{{MSG.RUL_STATUS}}</td>
+                <td ng-show="rule.status ==  1">{{MSG.RUL_STATUS_OK}}</td>
+                <td ng-show="rule.status == -1">{{MSG.RUL_STATUS_KO}}</td>
+                <td ng-show="rule.status >   1">{{MSG.RUL_STATUS_CD}}</td>
+                <td ng-show="rule.status <  -1">{{MSG.RUL_STATUS_KD}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="panel panel-primary" data-ng-show="rule.description.length">
+        <div class="panel-heading">
+            {{MSG.RUL_DESC}}
+            <a class="pull-right" href="" ng-click="isDescCollapsed = !isDescCollapsed">
+                <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-up': !isDescCollapsed, 'glyphicon-chevron-down': isDescCollapsed}"></i>
+            </a>
+        </div>
+        <div class="panel-body"  >
+            <div collapse="isDescCollapsed" ng-bind-html="rule.description"></div>
+        </div>
+
+    </div>
+
+    <div class="panel panel-primary">
+         <!--data-ng-show="group.conds.length">-->
+        <div class="panel-heading">
+            {{MSG.RUL_COND}}
+            <a class="pull-right" href="" ng-click="isCondCollapsed = !isCondCollapsed">
+                <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-up': !isCondCollapsed, 'glyphicon-chevron-down': isCondCollapsed}"></i>
+            </a>
+        </div>
+
+        <div class="panel-body" collapse="isCondCollapsed" >
+            <table class="table-listado table-hover">
+                <tr>
+                    <th class="col-md-7" >{{MSG.RUL_LVALUE}}</th>
+                    <th class="col-md-7" >{{MSG.RUL_LVALUE_TYPE}}</th>
+                    <th class="col-md-7" >{{MSG.RUL_OPERATOR}}</th>
+                    <th class="col-md-7" >{{MSG.RUL_RVALUE}}</th>
+                    <th class="col-md-7" >{{MSG.RUL_RVALUE_TYPE}}</th>
+
+                    <td class="col-md-5 text-right tbLinea">
+                        {{node.summary.fileName}}
+                    </td>
+                </tr>
+
+                <tr class="clickable"
+                    ng-repeat="x in rule.conds">
+                    <td class="col-md-5" >{{x.label}}</td>
+                    <td class="col-md-5 text-right">{{x.actual}}</td>
+                    <td class="col-md-1" align="center" ng-show="x.delta == 0">
+                        <span class="glyphicon glyphicon-triangle-right" style="color: yellow"/>
+                    </td>
+                    <td class="col-md-1" align="center" ng-show="x.delta > 0">
+                        <span class="glyphicon glyphicon-triangle-top" style="color: green"/>
+                    </td>
+                    <td class="col-md-1" align="center" ng-show="x.delta < 0">
+                        <span class="glyphicon glyphicon-triangle-bottom" style="color: red"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+         <!--data-ng-show="group.children.length">-->
+        <div class="panel-heading">
+            {{MSG.RUL_RULE}}
+            <a class="pull-right" href="" ng-click="isItemCollapsed = !isCondCollapsed">
+                <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-up': !isItemCollapsed, 'glyphicon-chevron-down': isItemCollapsed}"></i>
+            </a>
+        </div>
+
+        <div class="panel-body" collapse="isItemCollapsed" >
+            <table class="table-listado table-hover">
+                <tr class="clickable"
+                    data-ng-click="cambiaPieModulo(2)"
+                    ng-repeat="x in group.children">
+                    <td class="col-md-5" >{{x.label}}</td>
+                    <td class="col-md-5 text-right">{{x.actual}}</td>
+                    <td class="col-md-1" align="center" ng-show="x.delta == 0">
+                        <span class="glyphicon glyphicon-triangle-right" style="color: yellow"/>
+                    </td>
+                    <td class="col-md-1" align="center" ng-show="x.delta > 0">
+                        <span class="glyphicon glyphicon-triangle-top" style="color: green"/>
+                    </td>
+                    <td class="col-md-1" align="center" ng-show="x.delta < 0">
+                        <span class="glyphicon glyphicon-triangle-bottom" style="color: red"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+         <!--data-ng-show="group.sample.length">-->
+        <div class="panel-heading">
+            {{MSG.RUL_SAMPLE}}
+            <a class="pull-right" href="" ng-click="isSampleCollapsed = !isSampleCollapsed">
+                <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-up': !isSampleCollapsed, 'glyphicon-chevron-down': isSampleCollapsed}"></i>
+            </a>
+        </div>
+
+        <div class="panel-body" collapse="isSampleCollapsed">
+            <div class="panel-body" ng-bind-html="rule.sample.desc"/>
+        </div>
+    </div>
+
+</div>

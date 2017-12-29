@@ -17,9 +17,9 @@ function rulesCtrl ($rootScope, $scope, $http, $state) {
     function initRulesCtrl() {
         $scope.loaded = true;
         $scope.nombre = "rulesCtrl";
-        $scope.sdp = getSDP($scope);
-        loadLabels(2, $http, $scope, $state);
-        sdpAjax($http, $scope, $state, 'rulesTree', cargaRules);
+        $scope.sdpadm = getSDPAdmin($scope);
+        loadAdminLabels($http, $scope, $state, 200);
+        sdpAjaxAdmin($http, $scope, $state, 'rulesTree', cargaRules);
     }
 
 }

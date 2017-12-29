@@ -344,3 +344,8 @@ li.jstree-closed > a .jstree-icon {
 .sdpCollapsable {
     color: #000000;
 }
+
+.mnuActivo {
+    color: red;
+    font-weight: bold;
+}

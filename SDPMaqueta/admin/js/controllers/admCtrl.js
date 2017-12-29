@@ -28,9 +28,9 @@ function admCtrl($rootScope, $scope , $http, $state, $cookies) {
         root.showPeriodLabel = 1;
         root.periodLabel = "pending";
 
-        if (root.sdp === undefined || root.sdp === null) {
-            root.sdp = new SDP();
-            loadAdminLabels($http, $scope, $state);
+        if (root.sdpadm === undefined || root.sdpadm === null) {
+            root.sdpadm = new SDPADM();
+            loadAdminLabels($http, $scope, $state, 100);
         }
 
         root.vertSplitter = { width: '100%'

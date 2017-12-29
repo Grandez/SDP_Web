@@ -14,7 +14,10 @@
                 <div id="arbAreas" data-ng-model="arbAreas"> </div>
             </div>
             <div ui-layout-container >
-
+                <div id="divAreaArea"    data-ng-show="view ==  1" data-ng-include="'partials/area/area.htm'"/>
+                <div id="divAreaAppl"    data-ng-show="view ==  2" data-ng-include="'partials/area/appl.htm'"/>
+                <div id="divAreaModule"  data-ng-show="view ==  4" data-ng-include="'partials/area/module.htm'"/>
+                <div id="divAreaRoot"    data-ng-show="view ==  8" data-ng-include="'partials/area/root.htm'"/>
             </div>
         </div>
     </div>

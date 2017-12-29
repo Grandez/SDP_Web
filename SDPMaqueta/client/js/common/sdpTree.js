@@ -1,4 +1,4 @@
-function cargaArbol($scope, $state, datos) {
+function cargaArbolAreas($scope, $state, datos) {
     var oldState = -1;
 
     var arbol = angular.element($("#arbol"));

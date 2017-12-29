@@ -17,9 +17,9 @@
     <script src="../lib/jquery-3.2.1.js"></script>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap-theme.css">
-    <script src="../lib/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../lib/bootstrap-3.3.7/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../lib/bootstrap-3.3.7/dist/css/bootstrap-theme.css">
+    <script src="../lib/bootstrap-3.3.7/dist/js/bootstrap.js"></script>
 
     <!-- Bootstrap table -->
     <link rel="stylesheet" href="../lib/bootstrap-table/bootstrap-table.css">
@@ -57,10 +57,8 @@
     <script src="js/controllers/admCtrl.js"></script>
     <script src="js/controllers/rulesCtrl.js"></script>
     <script src="js/controllers/configCtrl.js"></script>
-
-
-    <script src="js/controllers/moduleCtrl.js"></script>
-    <script src="js/controllers/codeCtrl.js"></script>
+    <script src="js/controllers/areasCtrl.js"></script>
+    <script src="js/controllers/usersCtrl.js"></script>
 
 </head>
 
@@ -72,17 +70,17 @@
              role="navigation"
              ng-style="{marginLeft: sizeSplit}">
             <ul class="nav navbar-nav">
-                <li ng-class="{'active': global.mnuItem == 1}">
-                    <a ng-click="global.mnuType = 1">{{MSG.MNU_APPL}}</a>
+                <li ng-class="{'mnuActivo': global.mnuItem == 1}">
+                    <a ui-sref="areas" ng-click="global.mnuType = 1">{{MSG.MNU_APPL}}</a>
                 </li>
-                <li ng-class="{'active': global.mnuItem == 2}">
-                    <a ng-click="global.mnuType = 2">{{MSG.MNU_CONFIG}}</a>
+                <li ng-class="{'mnuActivo': global.mnuItem == 2}">
+                    <a ui-sref="config" ng-click="global.mnuType = 2">{{MSG.MNU_CONFIG}}</a>
                 </li>
-                <li ng-class="{'active': mnuItem == 3}">
-                    <a ng-click="global.mnuType = 3">{{MSG.MNU_RULES}}</a>
+                <li ng-class="{'mnuActivo': mnuItem == 3}">
+                    <a ui-sref="rules" ng-click="global.mnuType = 3">{{MSG.MNU_RULES}}</a>
                 </li>
-                <li ng-class="{'active': mnuItem == 4}">
-                    <a ng-click="global.mnuType = 4">{{MSG.MNU_USERS}}</a>
+                <li ng-class="{'mnuActivo': mnuItem == 4}">
+                    <a ui-sref="users" ng-click="global.mnuType = 4">{{MSG.MNU_USERS}}</a>
                 </li>
             </ul>
         </nav>
@@ -99,16 +97,13 @@
    <!--<script src="../lib/sdpcobol.js"></script>-->
 
 
-   <script src="js/common/sdpBase.js"></script>
+   <script src="../js/sdpBase.js"></script>
    <script src="js/common/JavaCodes.js"></script>
    <script src="js/common/WebCodes.js"></script>
 
-   <script src="js/factory/sdpSdp.js"></script>
-   <script src="js/factory/sdpAppl.js"></script>
-   <script src="js/factory/sdpArea.js"></script>
-   <script src="js/factory/sdpModule.js"></script>
+   <script src="js/factory/objAdmin.js"></script>
 
-   <script src="js/loaders/sdpAjax.js"></script>
+   <script src="js/loaders/sdpAjaxAdmin.js"></script>
    <script src="js/loaders/sdpLoader.js"></script>
    <script src="js/loaders/sdpLoadBase.js"></script>
    <script src="js/loaders/sdpLoadArea.js"></script>
@@ -116,35 +111,10 @@
 
    <script src="js/graficos/grfModulo.js"></script>
 
-   <!-- Debug -->
-   <!--<script src="../data/msg.js"></script>-->
-
-   <!--<script src="../data/data.js"></script>-->
-   <!--<script src="../data/dataArea.js"></script>-->
-   <!--<script src="../data/dataMod.js"></script>-->
-   <!--<script src="../data/dataTree.js"></script>-->
-
-   <!--<script src="../data/module0.js"></script>-->
-   <!--<script src="../data/module1.js"></script>-->
-   <!--<script src="../data/module2.js"></script>-->
-
-   <!--<script src="../data/source0.js"></script>-->
-   <!--<script src="../data/source1.js"></script>-->
-   <!--<script src="../data/source2.js"></script>-->
-
-   <!--<script src="../data/parrafos0.js"></script>-->
-   <!--<script src="../data/parrafos1.js"></script>-->
-   <!--<script src="../data/parrafos2.js"></script>-->
-
-  <!--<script src="../data/status0.js"></script>-->
-  <!--<script src="../data/status1.js"></script>-->
-  <!--<script src="../data/status2.js"></script>-->
-
-   <!--<script src="../data/log.js"></script>-->
-
-
     <script src="js/loaders/sdpLoadAdmin.js"></script>
     <script src="js/loaders/sdpLoadConfig.js"></script>
+    <script src="js/loaders/sdpLoadRules.js"></script>
+
     <script src="js/common/admTree.js"></script>
 
     <script src="js/sdpAdmin.js"></script>

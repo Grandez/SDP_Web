@@ -15,6 +15,7 @@ function areasCtrl ($rootScope, $scope, $http, $state, $window) {
         $scope.sdp = getSDP($scope);
 //        loadLabels(2, $http, $scope, $state);
 //        sdpAjax($http, $scope, $state, 'configuration', cargaConfiguration);
+        sdpAjax($http, $scope, $state, 'areaTree', loadAreaTree);
     }
 
 }

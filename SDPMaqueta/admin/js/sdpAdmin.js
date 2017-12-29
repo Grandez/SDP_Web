@@ -16,25 +16,29 @@
     sdpadm.config(function ($stateProvider, $urlRouterProvider, $sceProvider) {
 
             $sceProvider.enabled(false);
-            $urlRouterProvider.otherwise("/config");
+//            $urlRouterProvider.otherwise("/areas");
 
             $stateProvider
-                .state('rules', {
-                    url: "/rules"
-                    , templateUrl: "partials/rules.htm"
-                    , controller: "rulesCtrl"
-                })
-                .state('config', {
-                    url: "/config"
-                    , templateUrl: "partials/config.htm"
-                    , controller: "configCtrl"
-                })
                 .state('areas', {
-                    url: "/areas"
-                    , templateUrl: "partials/areas.htm"
+//                    url: "/areas"
+                      templateUrl: "partials/areas.htm"
                     , controller: "areasCtrl"
                 })
-
+                .state('config', {
+//                    url: "/config"
+                      templateUrl: "partials/config.htm"
+                    , controller: "configCtrl"
+                })
+                .state('rules', {
+//                    url: "/rules"
+                      templateUrl: "partials/rules.htm"
+                    , controller: "rulesCtrl"
+                })
+                .state('users', {
+//                    url: "/users"
+                      templateUrl: "partials/users.htm"
+                    , controller: "usersCtrl"
+                })
         }
     );
 
