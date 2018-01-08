@@ -113,22 +113,11 @@ function loadRules($scope, $state, datos) {
 
     var arbol = angular.element($(arbol));
 
-    var sdp = getSDPAdmin($scope);
+    var adm = getSDPAdmin($scope);
     var raiz;
-    var data = [];
-//    var nodoRaiz = datos[0].id;
 
-    var tipos =  {
-        "valid_children" : [ "all" ]
-        ,"root"       : { "icon": "../img/root_16.png"        }
-        ,"area_closed": { "icon": "../img/folder_closed.png"}
-        ,"area_open"  : { "icon": "../img/folder_open.png"  }
-        ,"appl_closed": { "icon": "../img/folder_closed.png"}
-        ,"appl_open"  : { "icon": "../img/folder_closed.png"}
-        ,"cobol"      : { "icon": "../img/cobol2.png"        }
-        ,"cics"       : { "icon": "../img/cics2.png"         }
-        ,"db2"        : { "icon": "../img/db2.png"           }
-        ,"cicsdb2"    : { "icon": "../img/cicsdb22.png"      }
+    for (rule of datos) {
+        adm.setRuleDetail(rule.id, rule.data)
     }
 
     arbol.jstree({
@@ -147,47 +136,38 @@ function loadRules($scope, $state, datos) {
             "case_insensitive": true
             , "show_only_matches": true
         }
-        ,"types": tipos
+//        ,"types": tipos
     })
         .on('loaded.jstree', function() { // node, data) {
             $.jstree.reference(arbol).select_node(datos.id, false, true);
-            changeState(data[0]); // No se lanza el evento
+            changeState(datos[0]); // No se lanza el evento
         })
         .on('select_node.jstree', function(event, selected) {
             var node = selected.node;
+            var urlParms = "ruleDetail/";
+
             $scope.rulePage = node.data.nodeType;
-            var ruleDetail = sdp.getRuleDetail(node.id);
-            var urlParms = "ruleDetail/"
-            if (ruleDetail == undefined || ruleDetail == null) {
+            $scope.rule = adm.getRuleDetail(node.id);
+
+            if ($scope.rule.expanded == false) {
                 switch ($scope.rulePage) {
                     case 0:
-                        urlParms = urlParms + node.id;
-                        break;
-                    case 1:
-                        urlParms = urlParms + node.id;
-                        break;
-                    case 2:
-                        urlParms = urlParms + node.data.idGroup + "/" +
-                                              node.data.idItem;
-                        break;
-                    case 3:
-                        urlParms = urlParms + node.data.idGroup + "/" +
-                                              node.data.idItem + "/" +
-                                              node.data.idRule;
-                        break;
+                    case 1: urlParms = urlParms + node.id; break;
+                    case 2: urlParms = urlParms + node.data.idGroup + "/" +
+                                                  node.data.idItem;
+                            break;
                 }
                 sdpAjaxAdmin($scope.http, $scope, $state, urlParms, cargaRulesDetail);
             }
-            changeState(selected.node);
         })
-/*
+
         .on('open_node.jstree', function (event, data) {
             data.instance.set_type(data.node,'area_open');
         })
         .on('close_node.jstree', function (event, data) {
             data.instance.set_type(data.node,'area_closed');
         })
-*/
+
     arbol.jstree(true).refresh();
 
     function changeState(node) {

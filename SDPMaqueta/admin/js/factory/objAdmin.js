@@ -19,6 +19,7 @@ SDPADM.prototype = {
     , config: null  // Connfguracion de la base de datos
     , _debug: false
     , _rulesDetail: []
+
     ,setConfiguration: function(cfg) {
         config = cfg;
         this.config = cfg;
