@@ -51,7 +51,7 @@ function sdpCtrl($rootScope, $scope , $http, $state, $cookies) {
             $cookies.put("periodId", root.periodId);
         }
 
-        sdpAjax($http, $scope, $state, 'areaTree', cargaArbol);
+        sdpAjax($http, $scope, $state, 'areaTree', cargaArbolAreas);
 
     }
 }

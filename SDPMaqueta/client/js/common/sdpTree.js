@@ -49,7 +49,7 @@ function cargaArbolAreas($scope, $state, datos) {
             'data': data
             ,themes: {
                 "name": "default"
-                ,'url': '.../lib/jstree/themes/default/style.css'
+                ,'url': '../lib/jstree/themes/default/style.css'
             }
 
         }
@@ -167,7 +167,7 @@ function cargaCodigo($scope, $state, datos) {
             'data': data
             ,themes: {
                  "name": "code"
-                ,'url': 'lib/jstree/themes/code/code.css'
+                ,'url': '../lib/jstree/themes/code/code.css'
                 //,'url': 'lib/jstree/themes/proton/style.css'
 //                ,'icons': false
             }
@@ -193,85 +193,4 @@ function cargaCodigo($scope, $state, datos) {
         })
 
 //    arbol.jstree(true).refresh();
-}
-
-function cargaRules($scope, $state, datos) {
-    var id = "#rules";
-
-    var oldState = -1;
-
-    var arbol = angular.element($(id));
-    var nodoRaiz = datos[0].id;
-
-    var sdp = getSDPAdmin($scope);
-    sdp.setRules(datos);
-
-    var raiz;
-    var data = [];
-
-    for (var idx = 0; idx < datos.length; idx++) {
-        var nodo = {};
-        nodo.id     = datos[idx].id;
-        nodo.text   = datos[idx].desc;
-        nodo.parent = (datos[idx].idParent > 0) ? datos[idx].idParent : "#";
-        nodo.data   = datos[idx];
-        switch (nodo.data.active) {
-            case  0: nodo.data.idActive = 0; break;
-            case -1: nodo.data.idActive = 1; break;
-            case -2: nodo.data.idActive = 2; break;
-            default: nodo.data.idActive = 3;
-        }
-        setStatus(nodo.data.items0);
-        setStatus(nodo.data.items1);
-
-        nodo.state = (idx == 0) ? { opened: true, selected: true} : {opened: true, selected: false};
-        data.push(nodo);
-    }
-
-    arbol.jstree({
-        'plugins': ["search", "ui", "types"]
-        ,core: {
-            'data': data
-            , dblclick_toggle : false
-            ,themes: {
-                "name": "classic"
-                ,'url': 'lib/jstree/themes/classic/style.css'
-            }
-
-        }
-        , 'ui': {'select_limit': 1}
-        , 'search': {
-            "case_insensitive": true
-            , "show_only_matches": true
-        }
-        ,"types": {
-              "active"  : {"a_attr": {"style" : "color:black"}}
-            , "inactive": {"a_attr": {"style" : "color:grey; font-style: italic"}}
-        }
-    })
-        .on('loaded.jstree', function() { // node, data) {
-            $.jstree.reference(id).select_node(nodoRaiz, false, true);
-        })
-        .on('select_node.jstree', function(event, selected) {
-            $scope.ruleLeaf = (selected.node.children.length == 0);
-            $scope.node = selected.node.data;
-        })
-/*
-        .on('click', '.jstree-anchor', function (e, data) {
-            $(id).jstree(true).toggle_node(e.target);
-
-        })
-*/
-    arbol.jstree(true).refresh();
-
-    function  setStatus(items) {
-        for (var i = 0; i < items.length; i++) {
-            switch (nodo.data.items0[i].active) {
-                case  0: items[i].idActive = 0; break;
-                case -1: items[i].idActive = 1; break;
-                case -2: items[i].idActive = 2; break;
-                default: items[i].idActive = 3;
-            }
-        }
-    }
 }

@@ -29,5 +29,3 @@ function areaCtrl ($rootScope, $scope, $http, $state) {
         loadLabels(1, $http, $scope, $state);
     }
 }
-
-

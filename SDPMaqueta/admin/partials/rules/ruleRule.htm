@@ -1,0 +1,75 @@
+<h2 class="text-center"><span>{{rule.label + " - "}}</span><span>{{rule.name}}</span></h2>
+
+<div class="panel panel-primary" data-ng-show="rule.description.length">
+    <div class="panel-heading">
+        {{MSG.RUL_DESC}}
+        <a class="pull-right" href="" ng-click="isDescCollapsed = !isDescCollapsed">
+            <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-up': !isDescCollapsed, 'glyphicon-chevron-down': isDescCollapsed}"></i>
+        </a>
+    </div>
+    <div class="panel-body"  >
+        <div collapse="isDescCollapsed" ng-bind-html="rule.description"></div>
+    </div>
+
+</div>
+
+<div class="panel panel-primary" data-ng-show="rule.activations.length">
+    <div class="panel-heading">
+        {{MSG.RUL_COND}}
+        <a class="pull-right" href="" ng-click="isActCollapsed = !isActCollapsed">
+            <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-up': !isActCollapsed, 'glyphicon-chevron-down': isActCollapsed}"></i>
+        </a>
+    </div>
+
+    <div class="panel-body" collapse="isActCollapsed" >
+        <table class="table-listado table-hover">
+            <tr>
+                <th class="col-md-6" >{{MSG.RUL_HEAD_M}}</th>
+                <th class="col-md-6" >Cabecera</th>
+            </tr>
+
+            <tr class="clickable" ng-repeat="x in rule.activations">
+                <td class="col-md-6" ng-bind-html="x.message"></td>
+            </tr>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+<div class="panel panel-primary" data-ng-show="rule.sample">
+    <div class="panel-heading">
+        {{MSG.RUL_SAMP}}
+        <a class="pull-right" href="" ng-click="isSampCollapsed = !isSampCollapsed">
+            <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-up': !isSampCollapsed, 'glyphicon-chevron-down': isSampCollapsed}"></i>
+        </a>
+    </div>
+
+    <div class="panel-body" collapse="isSampDescCollapsed" >
+        <div class="panel panel-primary" data-ng-show="rule.sample.desc">
+            <div class="panel-heading">
+                {{MSG.RUL_DESC}}
+                <a class="pull-right" href="" ng-click="isSampDescCollapsed = !isSampDescCollapsed">
+                    <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-up': !isSampDescCollapsed, 'glyphicon-chevron-down': isSampDescCollapsed}"></i>
+                </a>
+            </div>
+            <div class="panel-body"  >
+                <div collapse="isSampDescCollapsed" ng-bind-html="rule.sample.desc"></div>
+            </div>
+        </div>
+
+        <table class="table-listado table-hover">
+            <tr>
+                <th class="col-md-6" >{{MSG.RUL_SAMP_OK}}</th>
+                <th class="col-md-6" >{{MSG.RUL_SAMP_KO}}</th>
+            </tr>
+
+            <tr>
+                <td class="col-md-6" ng-bind-html="rule.sample.ok"></td>
+                <td class="col-md-6" ng-bind-html="rule.sample.ko"></td>
+            </tr>
+            </tr>
+        </table>
+    </div>
+
+</div>

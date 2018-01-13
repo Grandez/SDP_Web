@@ -146,11 +146,11 @@ function loadRules($scope, $state, datos) {
             var node = selected.node;
             var urlParms = "ruleDetail/";
 
-            $scope.rulePage = node.data.nodeType;
+            $scope.nodeType = node.data.nodeType;
             $scope.rule = adm.getRuleDetail(node.id);
 
             if ($scope.rule.expanded == false) {
-                switch ($scope.rulePage) {
+                switch ($scope.nodeType) {
                     case 0:
                     case 1: urlParms = urlParms + node.id; break;
                     case 2: urlParms = urlParms + node.data.idGroup + "/" +

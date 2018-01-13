@@ -1,5 +1,5 @@
-<div class="container col-lg-12">
-    <h2 class="text-center">{{rule.title}}</h2>
+<!--<div class="container col-lg-12"> -->
+    <h2 class="text-center">{{rules.title}}</h2>
 
     <div class="panel panel-primary">
         <div class="panel-heading">
@@ -12,39 +12,39 @@
             <table class="col-lg-6">
                 <tr>
                     <td>{{MSG.RUL_TYPE}}</td>
-                    <td>{{MSG.RUL_TYPES[rule.nodeType]}}</td>
+                    <td>{{MSG.RUL_TYPES[rules.nodeType]}}</td>
                 </tr>
                 <tr>
                     <td>{{MSG.RUL_ID}}</td>
-                    <td>{{rule.id}}</td>
+                    <td>{{rules.id}}</td>
                 </tr>
-                <tr ng-show="rule.idParent == 1">
+                <tr ng-show="rules.idParent == 1">
                     <td>{{MSG.RUL_PARENT}}</td>
-                    <td>{{rule.idParent}}</td>
+                    <td>{{rules.idParent}}</td>
                 </tr>
-                <tr ng-show="rule.idParent == 2">
+                <tr ng-show="rules.idParent == 2">
                     <td>{{MSG.RUL_GROUP}}</td>
-                    <td>{{rule.idGroup}}</td>
+                    <td>{{rules.idGroup}}</td>
                 </tr>
 
                 <tr>
                     <td>{{MSG.RUL_PREFIX}}</td>
-                    <td>{{rule.prefix}}</td>
+                    <td>{{rules.prefix}}</td>
                 </tr>
                 <tr>
                     <td>{{MSG.RUL_STATUS}}</td>
-                    <td ng-show="rule.status ==  1">{{MSG.RUL_STATUS_OK}}</td>
-                    <td ng-show="rule.status == -1">{{MSG.RUL_STATUS_KO}}</td>
-                    <td ng-show="rule.status >   1">{{MSG.RUL_STATUS_CD}}</td>
-                    <td ng-show="rule.status <  -1">{{MSG.RUL_STATUS_KD}}</td>
+                    <td ng-show="rules.status ==  1">{{MSG.RUL_STATUS_OK}}</td>
+                    <td ng-show="rules.status == -1">{{MSG.RUL_STATUS_KO}}</td>
+                    <td ng-show="rules.status >   1">{{MSG.RUL_STATUS_CD}}</td>
+                    <td ng-show="rules.status <  -1">{{MSG.RUL_STATUS_KD}}</td>
                 </tr>
                 <tr>
                     <td>{{MSG.RUL_TMS}}</td>
-                    <td>{{rule.tms | date : 'shortDate'}}</td>
+                    <td>{{rules.tms | date : 'shortDate'}}</td>
                 </tr>
                 <tr>
                     <td>{{MSG.RUL_UID}}</td>
-                    <td>{{rule.uid}}</td>
+                    <td>{{rules.uid}}</td>
                 </tr>
 
             </table>
@@ -54,7 +54,7 @@
     </div>
 
 
-    <div class="panel panel-primary" data-ng-show="rule.description.length">
+    <div class="panel panel-primary" data-ng-show="rules.description.length">
         <div class="panel-heading">
             {{MSG.RUL_DESC}}
             <a class="pull-right" href="" ng-click="isDescCollapsed = !isDescCollapsed">
@@ -62,12 +62,12 @@
             </a>
         </div>
         <div class="panel-body"  >
-            <div collapse="isDescCollapsed" ng-bind-html="rule.description"></div>
+            <div collapse="isDescCollapsed" ng-bind-html="rules.description"></div>
         </div>
 
     </div>
 
-    <div class="panel panel-primary" data-ng-show="rule.activations.length">
+    <div class="panel panel-primary" data-ng-show="rules.activations.length">
         <div class="panel-heading">
             {{MSG.RUL_COND}}
             <a class="pull-right" href="" ng-click="isActCollapsed = !isActCollapsed">
@@ -82,7 +82,7 @@
                     <th class="col-md-6" >Cabecera</th>
                 </tr>
 
-                <tr class="clickable" ng-repeat="x in rule.activations">
+                <tr class="clickable" ng-repeat="x in rules.activations">
                     <td class="col-md-6" ng-bind-html="x.message"></td>
                 </tr>
                 </tr>
@@ -91,7 +91,7 @@
 
     </div>
 
-    <div class="panel panel-primary" data-ng-show="rule.sample">
+    <div class="panel panel-primary" data-ng-show="rules.sample">
         <div class="panel-heading">
             {{MSG.RUL_SAMP}}
             <a class="pull-right" href="" ng-click="isSampCollapsed = !isSampCollapsed">
@@ -100,7 +100,7 @@
         </div>
 
         <div class="panel-body" collapse="isSampDescCollapsed" >
-            <div class="panel panel-primary" data-ng-show="rule.sample.desc">
+            <div class="panel panel-primary" data-ng-show="rules.sample.desc">
                 <div class="panel-heading">
                     {{MSG.RUL_DESC}}
                     <a class="pull-right" href="" ng-click="isSampDescCollapsed = !isSampDescCollapsed">
@@ -108,9 +108,9 @@
                     </a>
                 </div>
                 <div class="panel-body"  >
-                    <div collapse="isSampDescCollapsed" ng-bind-html="rule.sample.desc"></div>
+                    <div collapse="isSampDescCollapsed" ng-bind-html="rules.sample.desc"></div>
                 </div>
-        </div>
+            </div>
 
             <table class="table-listado table-hover">
                 <tr>
@@ -119,8 +119,8 @@
                 </tr>
 
                 <tr>
-                    <td class="col-md-6" ng-bind-html="rule.sample.ok"></td>
-                    <td class="col-md-6" ng-bind-html="rule.sample.ko"></td>
+                    <td class="col-md-6" ng-bind-html="rules.sample.ok"></td>
+                    <td class="col-md-6" ng-bind-html="rules.sample.ko"></td>
                 </tr>
                 </tr>
             </table>
@@ -128,7 +128,7 @@
 
     </div>
 
-    <div class="panel panel-primary" data-ng-show="rule.rules.length">
+    <div class="panel panel-primary" data-ng-show="rules.rules.length">
         <div class="panel-heading">
             {{MSG.RUL_RULE}}
             <a class="pull-right" href="" ng-click="isRuleCollapsed = !isRuleCollapsed">
@@ -143,10 +143,9 @@
                     <th class="col-md-1" >{{MSG.RUL_HEAD_S}}</th>
                     <th class="col-md-2" >{{MSG.RUL_HEAD_K}}</th>
                     <th class="col-md-3" >{{MSG.RUL_HEAD_M}}</th>
-                    <th class="col-md-5" >Cabecera</th>
                 </tr>
 
-                <tr class="clickable" ng-repeat="x in rule.rules">
+                <tr class="clickable" data-ng-click="ruleDetail($index)" ng-repeat="x in rules.rules">
                     <td class="col-md-1" >{{x.priority}}</td>
                     <td class="col-md-1">{{x.severity}}</td>
                     <td class="col-md-2">{{x.label}}</td>
@@ -156,4 +155,4 @@
         </div>
     </div>
 
-</div>
+<!-- </div> -->

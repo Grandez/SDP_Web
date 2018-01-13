@@ -5,14 +5,11 @@ function rulesCtrl ($rootScope, $scope, $http, $state) {
     if ($scope.loaded == undefined) initRulesCtrl();
     console.log("Entra en el controlador " + $scope.nombre);
 
-    root.pageType = 2;
+    if ($scope.loaded == undefined) initRulesCtrl();
 
-    if ($scope.loaded == undefined) {
-        initRulesCtrl();
+    function ruleDetail(index) {
+        $scope.rule = $scope.rules.rules[index];
     }
-
-
-    getRootScope($scope).pageType = 2;
 
     function initRulesCtrl() {
         $scope.loaded = true;
@@ -22,5 +19,18 @@ function rulesCtrl ($rootScope, $scope, $http, $state) {
         sdpAjaxAdmin($http, $scope, $state, 'rulesTree', cargaRules);
     }
 
+    function merge() {
+        var txt;
+        while(index < arguments.length) {
+            if(typeof arguments[index] !== 'undefined') {
+                txt = txt + " " + arguments[index];
+            }
+            index++;
+        }
+        return txt.trim();
+    }
+
+    $scope.ruleDetail = ruleDetail;
+    $scope.merge = merge;
 }
 

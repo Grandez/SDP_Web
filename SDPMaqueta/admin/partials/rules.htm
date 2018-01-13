@@ -14,7 +14,8 @@
                 <div id="arbRules" data-ng-model="arbRules"> </div>
             </div>
             <div ui-layout-container >
-                 <div ng-include="'partials/rules/ruleDetail.htm'"/>
+                 <div ng-include="'partials/rules/ruleHead.htm'" ng-show="nodeType  < 2"/>
+                 <div ng-include="'partials/rules/ruleItem.htm'" ng-show="nodeType == 2"/>
             </div>
 
         </div>
