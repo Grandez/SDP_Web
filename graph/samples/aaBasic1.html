@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Mas group mas explorar -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Minimal GoJS Sample</title>
+    <meta name="description" content="An almost minimal diagram using a very simple node template and the default link template." />
+    <!-- Copyright 1998-2018 by Northwoods Software Corporation. -->
+    <meta charset="UTF-8">
+    <script src="../release/go.js"></script>
+    <!--<script src="../assets/js/goSamples.js"></script>  &lt;!&ndash; this is only for the GoJS Samples framework &ndash;&gt;-->
+    <script id="code">
+        function init() {
+//            if (window.goSamples) goSamples();  // init for these samples -- you don't need to call this
+
+            var $ = go.GraphObject.make;  // for conciseness in defining templates
+            diagram = $(go.Diagram, "myDiagramDiv",  // create a Diagram for the DIV HTML element
+                {
+                    initialContentAlignment: go.Spot.Center,  // center the content
+                    "undoManager.isEnabled": true  // enable undo & redo
+                });
+            var node1 =
+                $(go.Node, "Auto",
+                    $(go.Shape,
+                        { figure: "RoundedRectangle",
+                            fill: "lightblue" }),
+                    $(go.TextBlock,
+                        { text: "Alpha",
+                            margin: 5 })
+                )
+            diagram.add(node1);
+
+            var node2 =
+                $(go.Node, "Auto",
+                    $(go.Shape,
+                        { figure: "RoundedRectangle",
+                            fill: "pink" }),
+                    $(go.TextBlock,
+                        { text: "Beta",
+                            margin: 5 })
+                );
+            diagram.add(node2);
+
+            diagram.add(
+                $(go.Link,
+                    { fromNode: node1, toNode: node2 },
+                    $(go.Shape)
+                ));
+        }
+    </script>
+</head>
+<body onload="init()">
+<div id="sample">
+    <!-- The DIV for the Diagram needs an explicit size or else we won't see anything.
+         This also adds a border to help see the edges of the viewport. -->
+    <div id="myDiagramDiv" style="border: solid 1px black; width:400px; height:400px"></div>
+</div>
+</body>
+</html>

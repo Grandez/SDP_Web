@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Minimal GoJS Sample</title>
+    <meta name="description" content="An almost minimal diagram using a very simple node template and the default link template." />
+    <!-- Copyright 1998-2018 by Northwoods Software Corporation. -->
+    <meta charset="UTF-8">
+    <script src="../release/go.js"></script>
+    <!--<script src="../assets/js/goSamples.js"></script>  &lt;!&ndash; this is only for the GoJS Samples framework &ndash;&gt;-->
+    <script id="code">
+        function init() {
+//            if (window.goSamples) goSamples();  // init for these samples -- you don't need to call this
+
+            var $ = go.GraphObject.make;  // for conciseness in defining templates
+            diagram = $(go.Diagram, "grafo",  // create a Diagram for the DIV HTML element
+                {
+                    layout: $(go.LayeredDigraphLayout,
+                        {
+                            direction: 90
+//                            , initialContentAlignment: go.Spot.Center
+                        })
+                });
+
+            var terminal =
+                $(go.Node, "Auto",
+                    $(go.Shape, "Ellipse",
+                        new go.Binding("fill", "color")),
+                    $(go.TextBlock,
+                        new go.Binding("text", "key")),
+                    {
+                        toolTip:
+                            $(go.Adornment, "Auto",
+                                $(go.Shape, { fill: "#FFFFCC" }),
+                                $(go.TextBlock, { margin: 4 },
+                                    new go.Binding("text", "desc"))
+                            )
+                    }
+                );
+
+            var connector =
+                $(go.Node, "Auto",
+                    $(go.Shape, "Circle",
+                        new go.Binding("fill", "color")),
+                    $(go.TextBlock,
+                        new go.Binding("text", "key")),
+                    {
+                        toolTip:
+                            $(go.Adornment, "Auto",
+                                $(go.Shape, { fill: "#FFFFCC" }),
+                                $(go.TextBlock, { margin: 4 },
+                                    new go.Binding("text", "desc"))
+                            )
+                    }
+                );
+
+            var module =
+                $(go.Node, "Auto",
+                    $(go.Shape, "Procedure",
+                        new go.Binding("fill", "color")),
+                    $(go.TextBlock,
+                        new go.Binding("text", "key")),
+                    {
+                        toolTip:
+                            $(go.Adornment, "Auto",
+                                $(go.Shape, { fill: "#FFFFCC" }),
+                                $(go.TextBlock, { margin: 4 },
+                                    new go.Binding("text", "desc"))
+                            )
+                    }
+                );
+            var paragraph =
+                $(go.Node, "Auto",
+                    $(go.Shape, "RoundedRectangle",
+                        new go.Binding("fill", "color")),
+                    $(go.TextBlock,
+                        new go.Binding("text", "key")),
+                    {
+                        toolTip:
+                            $(go.Adornment, "Auto",
+                                $(go.Shape, { fill: "#FFFFCC" }),
+                                $(go.TextBlock, { margin: 4 },
+                                    new go.Binding("text", "desc"))
+                            )
+                    }
+                );
+
+            // create the nodeTemplateMap, holding three node templates:
+            var templmap = new go.Map("string", go.Node);
+            // for each of the node categories, specify which template to use
+            templmap.add("terminal", terminal);
+            templmap.add("connector", connector);
+            templmap.add("module", module);
+            templmap.add("paragraph", paragraph);
+            // for the default category, "", use the same template that Diagrams use by default;
+            // this just shows the key value as a simple TextBlock
+            templmap.add("", diagram.nodeTemplate);
+
+            diagram.nodeTemplateMap = templmap;
+
+            var nodeDataArray = [
+//                { key: "Alpha", desc: "first letter", color: "green" },  // uses default category: ""
+                { key: "Inicio", desc: "Inicio tooltip", color: "lightblue", category: "terminal" },
+                { key: "Fin", desc: "Final", color: "red", category: "terminal" },
+                { key: "000-PARRAFO1", desc: "pARRAFO", color: "yellow", category: "paragraph" }
+                ,{ key: "000-PARRAFO2", desc: "Parrafo", color: "yellow", category: "paragraph" }
+                ,{ key: "000-PARRAFO3", desc: "Parrafo", color: "yellow", category: "paragraph" }
+            ];
+
+            var linkDataArray = [
+                 { from: "Inicio", to: "000-PARRAFO1" }
+                ,{ from: "000-PARRAFO1", to: "000-PARRAFO2" }
+                ,{ from: "000-PARRAFO2", to: "000-PARRAFO3" }
+                ,{ from: "000-PARRAFO3", to: "000-PARRAFO1" , fromSpot: "Left", toSpot: "Left"}
+                ,{ from: "000-PARRAFO3", to: "Fin" }
+            ];
+            diagram.model = new go.GraphLinksModel(nodeDataArray, linkDataArray);
+        }
+    </script>
+</head>
+<body onload="init()">
+<div id="sample">
+    <!-- The DIV for the Diagram needs an explicit size or else we won't see anything.
+         This also adds a border to help see the edges of the viewport. -->
+    <div id="grafo" style="border: solid 1px black; width:400px; height:400px"></div>
+</div>
+</body>
+</html>
